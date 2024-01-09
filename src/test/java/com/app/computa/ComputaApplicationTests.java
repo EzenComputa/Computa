@@ -1,4 +1,4 @@
-package com.computa.computa;
+package com.app.computa;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
