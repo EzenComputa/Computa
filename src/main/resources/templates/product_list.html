@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product List</title>
+</head>
+<body>
+<h1 th:text="${productType} + ' List'"></h1>
+<div th:each="product : ${products}">
+    <div th:if="${productType == 'CPU'}">
+        <p>Name: <span th:text="${product.fullname}"></span></p>
+        <p>Socket Type: <span th:text="${product.socket}"></span></p>
+        <p>Cores: <span th:text="${product.cores}"></span></p>
+        <p>Threads: <span th:text="${product.threads}"></span></p>
+        <!-- More CPU attributes -->
+        <!-- Add to wishlist form -->
+        <form action="/wishlist/add" method="post">
+            <input type="hidden" th:value="${product.id}" name="productId"/>
+            <button type="submit">Add to wishlist</button>
+        </form>
+    </div>
+
+    <div th:if="${productType == 'GPU'}">
+        <p>Name: <span th:text="${product.fullname}"></span></p>
+        <p>Core Clock: <span th:text="${product.vram}"></span></p>
+        <!-- More GPU attributes -->
+        <!-- Add to wishlist form -->
+        <form action="/wishlist/add" method="post">
+            <input type="hidden" th:value="${product.id}" name="productId"/>
+            <button type="submit">Add to wishlist</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

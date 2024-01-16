@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>General Questions</title>
+</head>
+<body>
+<h1>General Questions</h1>
+<a th:href="@{/writePost/GENERAL_QUESTIONS}">Create Post</a>
+<ul>
+    <li th:each="post : ${posts}">
+        <a th:href="@{/postDetails/{id}(id=${post.id})}" th:text="${post.title}"></a>
+        <p th:text="${post.content}"></p>
+    </li>
+</ul>
+</body>
+</html>

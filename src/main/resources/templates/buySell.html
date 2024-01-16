@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Buy and Sell</title>
+</head>
+<body>
+<h1>Buy and Sell</h1>
+<a th:href="@{/writePost/BUY_SELL}">Create Post</a>
+<ul>
+    <li th:each="post : ${posts}">
+        <a th:href="@{/postDetails/{id}(id=${post.id})}" th:text="${post.title}"></a>
+        <p th:text="${post.content}"></p>
+    </li>
+</ul>
+</body>
+</html>
