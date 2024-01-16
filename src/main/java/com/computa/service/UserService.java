@@ -1,13 +1,17 @@
 package com.computa.service;
 
+import com.computa.dto.UserDto;
+import com.computa.entity.User;
+
 import java.util.List;
 
-import com.computa.domain.User;
-
 public interface UserService {
-    List<User> getAllUsers();
-    User getUserById(String id);
-    void saveUser(User user);
-    User getUserByEmail(String email);
-    User getUserBySsid(String ssid);
+    
+    void saveUser(UserDto userDto);
+
+    User findUserByEmail(String email);
+
+    User findUserByUsername(String username);
+
+    List<UserDto> findAllUsers();
 }
