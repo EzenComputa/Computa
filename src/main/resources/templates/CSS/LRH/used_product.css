@@ -1,0 +1,76 @@
+.used_wrap{   
+    
+    width: 1000px;    
+    position: fixed;
+    left: 50%;    
+    transform: translate(-50%);
+    font-size: 10px;
+}
+.used_list{  
+    z-index: 1; 
+    padding-left:30px;    
+    border: 4px solid #1fa098;   
+    border-top: none;
+}
+.used_product{      
+    display: inline-block; 
+    width: 160px;
+    margin: 12px;
+    border: 1px solid #1fa098;  
+}
+
+.used_product > p {
+    text-align: left;
+    
+}
+
+
+.txt_tit_brand{        
+    font-size: 1.2rem;    
+    text-align: center;
+}
+
+.txt_origin_price{
+    font-size: 1.1rem;
+}
+
+.like_tap{        
+    width: 25px;    
+    color: #dfd7d7;
+    
+    
+}
+.used_btn{
+    background-color: #1fa098;
+    border-top-left-radius: 8px ;
+    border-bottom-left-radius: 8px ;
+           
+}
+.prod_btn{
+    background-color: #187771;
+    border-top-left-radius: 8px ;
+    border-bottom-left-radius: 8px ;
+      
+}
+.used_btn2{
+    background-color: #187771;
+    border-top-left-radius: 8px ;
+    border-bottom-left-radius: 8px ;
+           
+}
+.prod_btn2{
+    background-color: #1fa098;
+    border-top-left-radius: 8px ;
+    border-bottom-left-radius: 8px ;
+      
+}
+.tap{       
+    width: 1049px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 13px;  
+    text-align: center;
+      
+}
+

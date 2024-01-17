@@ -1,0 +1,94 @@
+.detail_img{    
+    text-align: center;
+}
+
+.비슷한상품{        
+    position: relative;    
+    left: 50%;
+    top: 20px;
+    transform: translate(-50%);
+    width: 1000px;
+    height: 150px;    
+    font-size: 10px;
+    
+    border-bottom: 1px solid #ddd;
+
+}
+
+.비슷한상품_title{           
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 1.5rem;    
+    border-bottom: 1px solid #ddd;
+}
+
+.비슷한상품_img{     
+    display: flex; /* 플렉스 컨테이너로 설정하여 내부 아이템을 가로로 배열 */
+    justify-content: center; /* 가로로 중앙 정렬을 위한 속성 */
+    gap: 30px;   
+    
+}
+
+
+
+.detail_img{
+    border-right: 1px solid #ddd;
+    width: 30%;   
+}
+
+.product_info{
+    margin-left: 5%;    
+    width: 60%;    
+}
+
+.tit{
+    padding-left:10px;
+    padding-right: 10px;
+    outline: 1px solid #ddd;
+    
+}
+.used_product_spec{
+    font-size: 1.4rem;
+    text-align: left;    
+}
+
+.used_product_detail_spec td{
+    outline: 1px solid #ddd;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.sub_tit{   
+    text-align: center;    
+    font-size: 1.5rem;
+}
+
+.cp_hide{
+    font-size: 1.5rem;    
+}
+
+.upside {    
+    
+    font-size: 1.7rem;    
+}
+.progress{
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.detail_product{
+    
+    outline: 1px solid #ddd;
+    display: inline-flex;
+    position: relative;    
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%);
+    width: 1000px;
+    height: 410px;    
+    font-size: 10px;
+}
+

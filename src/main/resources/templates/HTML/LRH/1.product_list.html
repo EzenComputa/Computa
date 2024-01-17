@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/list.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/764963a2f9.js" crossorigin="anonymous"></script>
+    <script src="./js/js17_menu.js"></script>  
+    <script>
+        function like(){
+                let like = document. getElementById("like");
+                if(like.className=='fa-regular fa-heart fa-2x')
+                {
+                    like.className='fa-solid fa-heart fa-2x'
+                }
+                else{
+                    like.className='fa-regular fa-heart fa-2x'
+                }
+            }
+    </script>
+    <title>Document</title>   
+
+</head>
+<body>
+
+    <div class="top">
+        <div class="logo_wrap">
+            <a href="/6.main_page.html" class="computa_logo"><img src="./login img/computa icon.png" alt="logo" width="100"></a>
+        </div>
+        
+        <div class="search">
+            <input type="text" placeholder="검색어 입력">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" >
+        </div>
+        <div class="myinfo">
+            <div class="myinfo_icon">
+                <a href=""><img src="./icon/recent.png">최근내역</a>
+                <a href=""><img src="./icon/tea-bag.png">마이티백</a>
+                <a href=""><img src="./icon/login.png">로그인</a>
+            </div>            
+        </div>
+    </div>
+
+    <div class="navbar">      
+        <ul class="navbar_menu">
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="#">PC견적</a></li>
+            <li><a href="#">부품</a></li>            
+            <li><a href="#">문의</a></li>
+            <li><a href="#" style="color: red;">우려먹기</a></li>                    
+        </ul>        
+    </div>
+
+    <table class="product_list">
+        <colgroup>
+            <col class="product_img">
+            <col class="title_price">
+            <col class="rig_line">
+        </colgroup>
+        <thead></thead>
+        <tbody>
+            <tr class="product_list">
+                <td class="product_img">
+                    <div class="product_img_box">
+                        <img src="./img/인텔 코어i9-14세대 14900K.jpg" alt="인텔 코어i9-14세대 14900K" width="150">
+                    </div>                
+                    <div class="container">
+                        <i class="fa-regular fa-heart fa-2x" onclick="like()" id="like"></i>
+                    </div>
+                        
+                    
+                    
+                </td>
+                <td class="title_price">
+                    <p class="subject">
+                        <a href onclick="">인텔 코어i9-14세대 14900K</a>
+                    </p>
+                    <div class="sepc_wrap">
+                        <div class="spec_bg">
+                            <p class="spec">
+                                인텔(소켓1700) / 10nm(인텔7) / P8+E16코어 / 16+16쓰레드 / 기본 클럭: 3.2GHz /
+                                최대 클럭: 6.0GHz / L2 캐시: 32MB / L3 캐시: 36MB / PBP-MTP: 125-253W / PCIe5.0, 4.0 /
+                                메모리 규격: DDR5, DDR4 / 5600, 3200MHz / 내장그래픽: 탑재 / 인텔 UHD 770 /
+                                기술 지원: 하이퍼스레딩 / 쿨러: 미포함 / 시네벤치R23(싱글): 2289 / 시네벤치R23(멀티): 38134 /
+                                출시가: 589달러 (VAT별도)                                
+                            </p>                            
+                        </div>
+                    </div>
+                </td>
+                <td class="rig_line">
+                    <p class="low_price">
+                        <span class="prod_price">최소가격</span><br>
+                        <span class="prod_price">770,000원</span>
+                    </p>
+                </td>            
+            </tr>
+            
+                        
+        </tbody>
+    </table>
+
+    <div class="board_page">
+        <a href="a" class="bt first"><<</a>
+        <a href="a" class="bt prev" ><</a>
+        <a href="a" class="num on">1</a>
+        <a href="a" class="num">2</a>
+        <a href="a" class="num">3</a>
+        <a href="a" class="num">4</a>
+        <a href="a" class="num">5</a>
+        <a href="a" class="num">6</a>
+        <a href="a" class="bt next">></a>
+        <a href="a" class="bt last">>></a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/list.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/764963a2f9.js" crossorigin="anonymous"></script>
+    <script src="./js/js17_menu.js"></script>  
+    <script>
+        function like(element) {
+            element.classList.toggle('fa-regular');
+            element.classList.toggle('fa-solid');
+        }                             
+    </script>
+
+    <script>
+        $(document).ready(function(){
+        $("#pr_dt_report").click(function(){
+            $(".dropdown_content").toggle();
+        });
+        });
+    </script>
+
+    <script>
+        function showRepPop() {
+            window.open("report_popup.html", "a", "width=600, height=500, left=100, top=50");
+        }
+        function showDelPop(){
+            window.open("del_popup.html", "a", "width=600, height=500, left=500, top=300");
+        }
+    </script>   
+        <title>Document</title>
+</head>
+<body>
+    <div class="top">
+        <div class="logo_wrap">
+            <a href="/6.main_page.html" class="computa_logo"><img src="./login img/computa icon.png" alt="logo" width="100"></a>
+        </div>
+        
+        <div class="search">
+            <input type="text" placeholder="검색어 입력">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" >
+        </div>
+        <div class="myinfo">
+            <div class="myinfo_icon">
+                <a href=""><img src="./icon/recent.png">최근내역</a>
+                <a href=""><img src="./icon/tea-bag.png">마이티백</a>
+                <a href=""><img src="./icon/login.png">로그인</a>
+            </div>            
+        </div>
+        
+    </div>
+    
+    <nav class="navbar">        
+        <ul class="navbar_menu">
+            <li><a href="./4.like_prod.html">관심상품</a></li>
+            <li><a href="#">우려먹기 내역</a></li>
+            <li><a href="./2.list.html">문의게시판 내역</a></li>
+            <li><a href="#">나의 티백</a></li>
+        </ul>        
+    </nav>
+
+    <div class="detail_product">
+        <div class="detail_img">
+            <div class="main_img">
+                <img src="./img/cpu_i7.jpg" alt="제품이미지" style="width: 300px;" id="pr_dt_photo">
+            </div>
+            <div class="sub_img">
+                <img src="./img/cpu_i7.jpg" alt="제품이미지" style="width: 97px;" id="pr_dt_img1">
+                <img src="./img/6.jpg" alt="제품이미지" style="width: 97px;" id="pr_dt_img2">
+                <img src="./img/4.jpg" alt="제품이미지" style="width: 97px;" id="pr_dt_img3">   
+                            
+            </div>
+        </div>
+        <table class="product_info">      
+            <thead></thead>
+            <tbody>
+               <tr>
+                    <td>
+                        <div class="upside">
+                        <p class="progress">판매중/예약중/거래완료</p>
+                        <p class="used_product_title">제품명:<span id="used_product_name">등록되어 들어올 제품명</span></p>  
+                        <p class="category">카테고리 : CPU</p>
+                        </div>
+                        <p>
+                            <table class="used_product_detail_spec">                            
+                                    <caption class="cp_hide">
+                                        <strong>상품 상세 스펙</strong>                                    
+                                    </caption>
+                                    <tbody class="used_product_spec">
+                                        <tr>
+                                            <th scope="row" class="tit">
+                                                제조회사
+                                            </th>
+                                            <td>
+                                                인텔
+                                            </td>                                        
+                                            <th scope="row" class="tit">
+                                                등록년월
+                                            </th>
+                                            <td>
+                                                2019년 03월
+                                            </td>
+                                            <th scope="row" class="tit">
+                                                인텔 CPU종류
+                                            </th>
+                                            <td>
+                                                인텔(코어i7-9세대)
+                                            </td>
+                                        </tr>                          
+                                        <tr>
+                                            <th scope="row" class="tit">
+                                                소켓 구분
+                                            </th>
+                                            <td>
+                                                인텔(소켓1151v2)
+                                            </td>                                        
+                                            <th scope="row" class="tit">
+                                                출시일
+                                            </th>
+                                            <td>
+                                                2019년 1분기
+                                            </td>
+                                            <th scope="row" class="tit">
+                                                제조 공정
+                                            </th>
+                                            <td>
+                                                14nm
+                                            </td>
+                                        </tr>   
+                                        <tr>
+                                            <th  scope="row" colspan="6" class="sub_tit">사양</th>
+                                        </tr>                                 
+                                        <tr>
+                                            <th scope="row" class="tit">
+                                                소켓 구분
+                                            </th>
+                                            <td>
+                                                인텔(소켓1151v2)
+                                            </td>                                        
+                                            <th scope="row" class="tit">
+                                                출시일
+                                            </th>
+                                            <td>
+                                                2019년 1분기
+                                            </td>
+                                            <th scope="row" class="tit">
+                                                제조 공정
+                                            </th>
+                                            <td>
+                                                14nm
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="tit">
+                                                코어 수
+                                            </th>
+                                            <td>
+                                                8코어
+                                            </td>                                        
+                                            <th scope="row" class="tit">
+                                                쓰레드 수
+                                            </th>
+                                            <td>
+                                                8쓰레드
+                                            </td>
+                                            <th scope="row" class="tit">
+                                                기본 클럭
+                                            </th>
+                                            <td>
+                                                3.6GHz
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="tit">
+                                                최대 클럭
+                                            </th>
+                                            <td>
+                                                4.9GHz
+                                            </td>                                        
+                                            <th scope="row" class="tit">
+                                                L3 캐시
+                                            </th>
+                                            <td>
+                                                12MB
+                                            </td>
+                                            <th scope="row" class="tit">
+                                                연산 체계
+                                            </th>
+                                            <td>
+                                                64비트
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="tit">
+                                                버스 속도
+                                            </th>
+                                            <td>
+                                                DMI3.0 8GT/s
+                                            </td>                                        
+                                            <th scope="row" class="tit">
+                                                TDP
+                                            </th>
+                                            <td>
+                                                95W
+                                            </td>
+                                            <th scope="row" class="tit">
+                                                최대 PCle 레인수
+                                            </th>
+                                            <td>
+                                                16레인
+                                            </td>
+                                        </tr>
+    
+                                    </tbody>
+                                
+                            </table>
+                        </p>
+                    </td>                
+               </tr>                       
+            </tbody>
+        </table>
+    </div>
+   
+   <div class="비슷한상품">      
+    <div>
+        <strong class="비슷한상품_title">비슷한 상품</strong>
+    </div>        
+        <div class="비슷한상품_img">
+            <a href=""><img src="./img/cpu_i7.jpg" alt="제품이미지" style="width: 100px;" class="비슷한상품_img_detail"></a>
+            <a href=""><img src="./img/cpu_i7.jpg" alt="제품이미지" style="width: 100px;" class="비슷한상품_img_detail"></a>
+            <a href=""><img src="./img/cpu_i7.jpg" alt="제품이미지" style="width: 100px;" class="비슷한상품_img_detail"></a>
+            <a href=""><img src="./img/cpu_i7.jpg" alt="제품이미지" style="width: 100px;" class="비슷한상품_img_detail"></a>
+            <a href=""><img src="./img/cpu_i7.jpg" alt="제품이미지" style="width: 100px;" class="비슷한상품_img_detail"></a>
+            <a href=""><img src="./img/cpu_i7.jpg" alt="제품이미지" style="width: 100px;" class="비슷한상품_img_detail"></a>
+            <a href=""><img src="./img/cpu_i7.jpg" alt="제품이미지" style="width: 100px;" class="비슷한상품_img_detail"></a>
+        </div>
+   </div>
+        <div class="pr_dt_com_write">
+      <table  class="pr_dt_com_table">
+          <tr>
+              <td id="pr_dt_write_1"><img src="../img/ham3.jpg" alt="" width="100px" style="border-radius: 50%;" ></td>
+              <td id="pr_dt_write_2" rowspan="2"><textarea name="qna_reply_write" id="qna_reply_write" cols="50" rows="10"></textarea></td>
+              <td id="pr_dt_write_3" rowspan="2"><button type="submit" id="qna_rewrite_btn">답변하기</button></td>
+          </tr>
+          <tr><td id="pr_dt_write_1"><span>닉네임</span></td></tr>
+      </table>
+
+        </div>
+
+  <div class="pr_dt_com_view">
+      <table class="pr_dt_comview_table">
+          <tr>
+              <td id="pr_dt_view_1"><img src="../img/ham3.jpg" alt="" width="100px" style="border-radius: 50%;" >
+              </td>
+              <td id="pr_dt_view_2">
+                  <span style="font-weight: bold;" id="pr_dt_nickname" name="pr_dt_nickname">닉네임</span>
+                  <span style="color: gray;">2024.01.11 18:52</span>
+              </td>
+              <td>
+              <!--신고영역-->
+                  <div class="pr_dt_report">
+                      <div class="report_drop">
+                          <img src="../img/photo.png" alt=""width="20px" style="border-radius: 40%;" id="pr_dt_report" >
+                          <div class="dropdown_content">
+                              <span style="background-color: antiquewhite;">신고사유를 선택해 주세요.</span>
+                              <hr>
+                              <input type="button" value="비속어를 사용하였습니다." onclick="showRepPop()"><hr>
+                              <input type="button" value="잘못된 정보를 게재했습니다." onclick="showRepPop()"><hr>
+                              <input type="button" value="광고 글 입니다." onclick="showRepPop()"><hr>
+                          </div> 
+                      </div> 
+                  </div>
+              </td>
+
+              <td id="pr_dt_view_3"><button type="button" id="qna_review_btn_mod">수정하기</button></td>
+              <td id="pr_dt_view_4"><button id="qna_review_btn_del" onclick="showDelPop()">삭제하기</button></td>
+          </tr>
+          <tr>
+              <td colspan="5">
+                  <div class="pr_dt_comview_view">
+                      문의주셔서 감사합니다.<br> 관리자 답변입니다. <br>흐겸소입니다. <br>문의주셔서 감사합니다. 
+                  </div>
+              </td>
+          </tr>
+      </table>        
+  </div>
+  
+ 
+  
+<script>
+    
+const myImg = document.getElementById("pr_dt_photo");
+const mysmall1 = document.getElementById("pr_dt_img1");
+const mysmall2 = document.getElementById("pr_dt_img2");
+const mysmall3 = document.getElementById("pr_dt_img3");
+
+mysmall1.addEventListener("click", function() {
+myImg.src = mysmall1.src;
+});
+
+mysmall2.addEventListener("click", function() {
+myImg.src = mysmall2.src;
+});
+
+mysmall3.addEventListener("click", function() {
+myImg.src = mysmall3.src;
+});
+
+</script>
+</body>
+</html>

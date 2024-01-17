@@ -1,0 +1,99 @@
+tbody{
+    font-size: 10px;
+}
+.product_list{
+    width: 1025px;
+    padding-top: 15px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+.product_img{
+    border-bottom: 1px solid #ddd;
+}
+
+.title_price{    
+    width: 800px;
+    border-bottom: 1px solid #ddd;           
+}
+
+.title_price > p {    
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 500px;
+    border-bottom: 1px solid #ddd;    
+    
+}
+
+.title_price > div > div > p{
+    
+    width: 500px;
+    position:relative;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-right: 150px;
+    text-align: left;
+    font-size: 1.1rem;
+    color: #9d9b9b;
+}
+
+.rig_line{        
+    border-left: 1px solid #ddd;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;    
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.fig_line > p > span{
+     
+    text-align: left;
+}
+.product_img_box > i{
+    position: relative;
+    background-color: transparent;
+    bottom: 120px;
+    left: 10px;
+    
+}
+
+.container{    
+    width: 20px;
+    position: relative;
+    bottom:130px;
+    left:5px;
+    color: red;
+}
+.like_icon{
+    position: relative;    
+    top: 130px;
+    
+}
+
+.container_2{
+    width: 0;
+    height: 0;        
+    position: relative;
+    bottom:134px;
+}
+.triangle_1 {    
+    width: 0;
+    height: 0;
+    border-top: 50px solid #187771;
+    border-right: 50px solid transparent;
+    position: relative;    
+    margin: 0px;
+  }
+
+.triangle_2 {    
+    width: 0;
+    height: 0;
+    border-top: 50px solid #1fa098;
+    border-right: 50px solid transparent;
+    position: relative;    
+    margin: 0px;
+}
+
