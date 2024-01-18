@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/list.css">
+    <link rel="stylesheet" href="/src/main/resources/templates/CSS/LRH/list.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/764963a2f9.js" crossorigin="anonymous"></script>
-    <script src="./js/js17_menu.js"></script>  
+    <script src="/src/main/resources/templates/JS/LRH/js17_menu.js"></script>
+    <script src="/src/main/resources/templates/JS/LRH/hvoer.js"></script>   
     <title>관심 상품</title>
     <script>
         function like(element) {
@@ -23,7 +24,7 @@
 <body>
     <div class="top">
         <div class="logo_wrap">
-            <a href="/6.main_page.html" class="computa_logo"><img src="./login img/computa icon.png" alt="logo" width="100"></a>
+            <a href="/src/main/resources/templates/HTML/LRH/6.main_page.html" class="computa_logo"><img src="/src/main/resources/templates/IMG/LRH/computa icon.png" alt="logo" width="100"></a>
         </div>
         
         <div class="search">
@@ -32,19 +33,18 @@
         </div>
         <div class="myinfo">
             <div class="myinfo_icon">
-                <a href=""><img src="./icon/recent.png">최근내역</a>
-                <a href=""><img src="./icon/tea-bag.png">마이티백</a>
-                <a href=""><img src="./icon/login.png">로그인</a>
+                <a href=""><img src="/src/main/resources/templates/IMG/LRH/recent.png">최근내역</a>
+                <a href=""><img src="/src/main/resources/templates/IMG/LRH/tea-bag.png">마이티백</a>
+                <a href=""><img src="/src/main/resources/templates/IMG/LRH/login.png">로그인</a>
             </div>            
         </div>
-        
     </div>
 
     <nav class="navbar">        
         <ul class="navbar_menu">
-            <li><a href="./4.like_prod.html">관심상품</a></li>
+            <li><a href="/src/main/resources/templates/HTML/LRH/4.like_prod.html">관심상품</a></li>
             <li><a href="#">우려먹기 내역</a></li>
-            <li><a href="./2.list.html">문의게시판 내역</a></li>
+            <li><a href="/src/main/resources/templates/HTML/LRH/2.list.html">문의게시판 내역</a></li>
             <li><a href="#">나의 티백</a></li>
         </ul>        
     </nav>
@@ -66,8 +66,8 @@
     <div class="used_wrap">
         <div class="used_list">
             <div class="used_product">                 
-                <a href="./5.used_list_detail.html" class="used_img">
-                    <img src="./img/21314.jpg" alt="중고1" style="width: 160px;">
+                <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
+                    <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1" style="width: 160px;">
                 </a>         
                 <div class="like_icon">
                     <div class="container">
@@ -103,17 +103,12 @@
             <a href="a" class="bt next">></a>
             <a href="a" class="bt last">>></a>
         </div>
-    
-        <div class="like_bt_wrap">
-            <a href="a" class="on">글쓰기</a>
-            <a href="a" class="on">티백만들기</a>        
-        </div>
 
     </div>   
     <div class="tap">
         <div class="like_tap">
             <div class="used_btn">
-                <a href="./4.like_prod.html">
+                <a href="/src/main/resources/templates/HTML/LRH/4.like_prod.html">
                     <p>관</p>
                     <p>심</p>
                     <p>상</p>
@@ -121,7 +116,7 @@
                 </a>
             </div>        
             <div class="prod_btn">
-                <a href="./4-1.like_prod.html">
+                <a href="/src/main/resources/templates/HTML/LRH/4-1.like_prod.html">
                     <p>우</p>
                     <p>려</p>
                     <p>먹</p>
