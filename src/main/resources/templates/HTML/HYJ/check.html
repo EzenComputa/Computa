@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showPopup_unregi() {
+            window.open("unregister.html", "a", "width=400, height=300, left=100, top=50")
+        }
+    </script>
+</head>
+<body>
+    <div id="check" onload="window.resizeTo(400,200)">
+        <fieldset>
+            <h3>정말로 탈퇴 하시겠습니까?</h3>
+            <input type="button"  value="네" onclick=showPopup_unregi()>
+            <input type="button" value="아니요" onclick="window.close()" style="float: center;" >
+        </fieldset>
+    </div>
+</body>
+</html>
