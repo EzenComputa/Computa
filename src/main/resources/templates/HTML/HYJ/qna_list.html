@@ -1,0 +1,189 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문의게시판(글목록)페이지</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        
+    </script>
+    <link rel="stylesheet" href="../../CSS/HYJ/hyj_list.css" type="text/css">
+    <link rel="stylesheet" href="../../CSS/HSJ/css_lee/list.css" type="text/css">    
+</head>
+<body>
+    <!--  로고  -->
+    <div class="admin_logo_wrap">
+        <img src="../../IMG/HYJ/computa_logo.png" alt="" width="100px">
+    </div>
+
+
+   	<!-- 메인 navbar 영역  -->   
+	   <div class="navbar">      
+        <ul class="navbar_menu">
+            <li><a href="#" class="lee_a">조립PC</a></li>
+            <li><a href="#" class="lee_a">PC견적</a></li>
+            <li><a href="#" class="lee_a">부품</a></li>
+            <li><a href="#" class="lee_a">노트북</a></li>
+            <li><a href="#" class="lee_a">문의</a></li>
+            <li><a href="#" class="lee_a">우려먹기</a></li>
+            <li><a href="#" class="lee_a">파격할인</a></li>
+            <li><a href="#" class="lee_a">이벤트</a></li>
+            <li><a href="#" class="lee_a">브랜드스토어</a></li>            
+        </ul>        
+    </div>
+
+
+    <!--  검색 & 글쓰기 버튼 영역 -->
+	<div id="wrap">
+        <h2>검색 &nbsp;<input type="text" style="margin-top: 20px;">
+        <input type="button" value="글쓰기"  style="margin-top: 20px; margin-left: 10px;">
+    </div> 
+    
+    
+    <br><br><br><br>
+
+    <!-- <select id="dataPerPage" style="float: right;">
+        <option value="10">10개씩보기</option>
+        <option value="15">15개씩보기</option>
+        <option value="20">20개씩보기</option>
+    </select>
+    <br>
+
+    2. 페이징 표시할 부분 html 
+    <ul id="pagingul">
+        
+    </ul> 
+    -->
+
+
+    <!-- 3. 데이터 표시할 테이블 html -->
+    <span id="displayCount"></span>
+
+
+    <table border="1" class = "dataTableBody"> 
+            <tr style="font-size: medium; background-color: antiquewhite;">
+                <th style="width: 100px;">글번호 </th>
+                <th style="width: 300px; height: 30px;">글제목 </th>
+                <th style="width: 100px;">닉네임 </th>
+                <th style="width: 200px;">등록일 </th>
+                <th style="width: 100px;">조회수 </th>
+            </tr>
+            <tr class=notice style="text-align: center;">
+                <td>공지사항</td>
+                <td>공지사항 입니다.</td>
+                <td>관리자</td>
+                <td>2023-01-10</td>
+                <td>124</td>
+            </tr>
+            <tr class=notice style="text-align: center;">
+                <td>공지사항</td>
+                <td>공지사항 입니다.</td>
+                <td>관리자</td>
+                <td>2023-01-10</td>
+                <td>465</td>
+            </tr>
+            <tr class=notice style="text-align: center;">
+                <td>공지사항</td>
+                <td>공지사항 입니다.</td>
+                <td>관리자</td>
+                <td>2023-01-10</td>
+                <td>75</td>
+            </tr>
+            <tr class=notice style="text-align: center;">
+                <td>공지사항</td>
+                <td>공지사항 입니다.</td>
+                <td>관리자</td>
+                <td>2023-01-10</td>
+                <td>438</td>
+            </tr>
+            <tr style="text-align: center;">
+                <td id="qna_list_num">1</td>
+                <td id="qna_list_title">글제목 입니다.</td>
+                <td id="qna_list_nick">닉네임</td>
+                <td id="qna_list_date">2023-01-10</td>
+                <td id="qna_list_view">23</td>
+            </tr>
+            <tr style="text-align: center;">
+                <td>2</td>
+                <td>글제목 입니다.</td>
+                <td>닉네임</td>
+                <td>2023-01-10</td>
+                <td>23</td>
+            </tr>
+            <tr style="text-align: center;">
+                <td>3</td>
+                <td>글제목 입니다.</td>
+                <td>닉네임</td>
+                <td>2023-01-10</td>
+                <td>23</td>
+            </tr>
+            <tr style="text-align: center;">
+                <td>4</td>
+                <td>글제목 입니다.</td>
+                <td>닉네임</td>
+                <td>2023-01-10</td>
+                <td>23</td>
+            </tr>
+            <tr style="text-align: center;">
+                <td>5</td>
+                <td>글제목 입니다.</td>
+                <td>닉네임</td>
+                <td>2023-01-10</td>
+                <td>23</td>
+            </tr>
+            <tr style="text-align: center;">
+                <td>6</td>
+                <td>글제목 입니다.</td>
+                <td>닉네임</td>
+                <td>2023-01-10</td>
+                <td>23</td>
+            </tr>
+            <tr style="text-align: center;">
+                <td>7</td>
+                <td>글제목 입니다.</td>
+                <td>닉네임</td>
+                <td>2023-01-10</td>
+                <td>23</td>
+            </tr>
+            <tr style="text-align: center;">
+                <td>8</td>
+                <td>글제목 입니다.</td>
+                <td>닉네임</td>
+                <td>2023-01-10</td>
+                <td>23</td>
+            </tr>
+            <tr style="text-align: center;">
+                <td>9</td>
+                <td>글제목 입니다.</td>
+                <td>닉네임</td>
+                <td>2023-01-10</td>
+                <td>23</td>
+            </tr>
+            <tr style="text-align: center;">
+                <td>10</td>
+                <td>글제목 입니다.</td>
+                <td>닉네임</td>
+                <td>2023-01-10</td>
+                <td>23</td>
+            </tr>
+    </table>
+    
+
+
+    <!-- js 페이징 -->
+
+    <div id="qna_pagination">
+        <div class="a_div"><a href="url" class="a_css"><</a></div>
+        <div class="a_div"><a href="url" class="a_css"><<</a></div>
+        <div class="a_div"><a href="url" class="a_css">1</a></div>
+        <div class="a_div"><a href="url" class="a_css">2</a></div>
+        <div class="a_div"><a href="url" class="a_css">3</a></div>
+        <div class="a_div"><a href="url" class="a_css">4</a></div>
+        <div class="a_div"><a href="url" class="a_css">5</a></div>
+        <div class="a_div"><a href="url" class="a_css">></a></div>
+        <div class="a_div"><a href="url" class="a_css">>></a></div>
+     </div>  
+</body>
+</html>

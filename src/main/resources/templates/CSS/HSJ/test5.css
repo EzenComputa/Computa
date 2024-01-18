@@ -1,0 +1,86 @@
+#whole{
+    margin: 50px;
+    outline: solid 1px;
+    width: 40rem;
+    padding:0.5rem;
+    height: auto;
+}
+
+.tea{
+    display: flex;
+}
+
+#tea1{
+    background-color: burlywood;
+    width:100px;
+    height: 3rem;
+    text-align: center;
+}
+
+#tb1{
+    display: inline-block;
+    margin-top: 0.5rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#tea2{
+    background-color: grey;
+    width:100px;
+    height: 3rem;
+}
+
+#tea3{
+    background-color: yellowgreen;
+    width:100px;
+    height: 3rem;
+}
+
+
+
+
+#cup{
+    position: relative;
+}
+
+#line1{
+    border-left: 2px solid gray;
+    height: 300px;
+    margin-left: 50px;
+    z-index: 99999;
+}
+
+
+#mug{
+    width: 500px;
+    background-color: antiquewhite;
+    z-index: -3;
+    height:50rem;
+}
+
+#son{
+    width: 100px;
+    background-color: antiquewhite;
+    min-height: 20px;
+}
+
+
+#table{
+    
+    position:absolute;
+    margin-left: 1.9rem;
+    width: 300px;
+    height: 300px;
+    z-index: 99999;
+    background-color: wheat;
+}
+#water1{
+    background-color: burlywood;
+    width: 440px;
+    height: 28rem;
+    z-index: 1;
+    position: fixed;
+    top:26rem;
+    left: 6rem;
+}

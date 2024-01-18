@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제품 상세페이지</title>
+    <link rel="stylesheet" href="../../CSS/HSJ/hsj_list.css">
+    <link rel="stylesheet" href="../../CSS/HSJ/css_lee/list.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../../js/HSJ/popup.js"></script>
+    <script>
+        //신고하기
+      $(document).ready(function(){
+        $("#pr_dt_report").click(function(){
+          $(".dropdown_content").toggle();
+        });
+      });
+    </script>
+    
+</head>
+<body id="body">
+        <!--logo-->
+        <div class="admin_logo_wrap">
+            <img src="../../img/HSJ/computa.png" alt="" width="100px">
+        </div>
+        
+        <!--navbar-->
+        <div class="navbar">      
+            <ul class="navbar_menu">
+                <li><a href="#" class="lee_a">조립PC</a></li>
+                <li><a href="#" class="lee_a">PC견적</a></li>
+                <li><a href="#" class="lee_a">부품</a></li>
+                <li><a href="#" class="lee_a">노트북</a></li>
+                <li><a href="#" class="lee_a">문의</a></li>
+                <li><a href="#" class="lee_a">우려먹기</a></li>
+                <li><a href="#" class="lee_a">파격할인</a></li>
+                <li><a href="#" class="lee_a">이벤트</a></li>
+                <li><a href="#" class="lee_a">브랜드스토어</a></li>            
+            </ul>        
+        </div>
+
+
+
+    <!--의견으로 바로가기 버튼-->
+    <div id="remote">
+        <table border="1" class="remote">
+            <tr>
+                <td class="pr_dt_short"><a href="#pr_dt_com_write" id="pr_dt_shortcut">의견보기</a></td>
+            </tr>
+            <tr>
+                <td class="pr_dt_short"><a href="#body" id="pr_dt_top">맨위로</a></td></tr>
+        </table>
+    </div>
+
+    <!--제품영역-->     
+    <div class="pr_dt_pf">            
+        <table   class="pr_dt_table">
+            <tr>
+                <td rowspan="3" colspan="5" class="pr_dt_photo"><img src="../../img/HSJ/ham.jpg" alt="" width="400px" height="400px" id="pr_dt_photo"></td>
+                <td class="pr_dt_name"><span id="pr_dt_name">SSD-Ham9700ster</span></td>         
+            </tr>
+            <tr>
+                <td class="pr_dt_price"><span id="pr_dt_price">53,000원</span></td>
+            </tr>
+            <tr>
+                <!--가격비교 영역-->
+                <td rowspan="2" class="price_compare_td" ><div class="price_compare">가격비교영역 </div></td>
+            </tr>
+            <tr>
+                <td class="pr_dt_photos"><img src="../../img/HSJ/ham.jpg" alt="" width="90px" height="90px" class="small" id="pr_dt_img1"></td>
+                <td class="pr_dt_photos"><img src="../../img/HSJ/ham2.jpg" alt="" width="90px" height="90px" class="small" id="pr_dt_img2"></td>
+                <td class="pr_dt_photos"><img src="../../img/HSJ/ham3.jpg" alt="" width="90px" height="90px" class="small" id="pr_dt_img3"></td>
+                <td class="pr_dt_photos"><img src="../../img/HSJ/ham4.jpg" alt="" width="90px" height="90px" class="small" id="pr_dt_img4"></td>
+                <td class="pr_dt_photos" id="pr_dt_photos"><img src="../../img/HSJ/ham5.jpg" alt="" width="90px" height="90px" id="pr_dt_img5"></td>
+            </tr>
+                <!--제품상세사양 영역-->
+                <td colspan="6">
+                    <div class="pr_detail">
+                        제품상세사양 
+                    </div></td>
+            </tr>
+        </table>
+    </div>
+
+    <!--댓글 영역-->
+    <div class="pr_dt_reply">
+    <div class="pr_dt_com_write" id="pr_dt_com_write">
+        <table  class="pr_dt_com_table">
+            <tr>
+                <td>
+                    <table >
+                        <tr>
+                            <td id="pr_dt_write_1"> <img src="../../IMG/HSJ/ham3.jpg" alt="" width="100px" style="border-radius: 50%;" ></td>
+                        </tr>
+                        <tr>
+                            <td id="pr_dt_write_1"> <span>닉네임</span></td>
+                        </tr>
+                    </table>
+                </td>
+
+                <td id="pr_dt_write_2">
+                    <textarea name="qna_reply_write" id="qna_reply_write" cols="77" rows="10"></textarea>
+                </td>
+
+                <td>
+                    <table class="pr_dt_tbl_3">
+                        <tr>
+                            <td><input type="checkbox">비밀글</td>
+                        </tr>
+                        <tr>
+                            <td id="pr_dt_write_3" ><button type="submit" id="qna_rewrite_btn">답변하기</button></td>
+                        </tr>
+                            
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="pr_dt_com_view">
+        <table class="pr_dt_comview_table">
+            <tr>
+                <td id="pr_dt_view_1"><img src="../../IMG/HSJ/ham3.jpg" alt="" width="100px" style="border-radius: 50%;" >
+                </td>
+                <td id="pr_dt_view_2">
+                    <span style="font-weight: bold;" id="pr_dt_nickname" name="pr_dt_nickname">닉네임</span>
+                    <span style="color: gray;">2024.01.11 18:52</span>
+                </td>
+                <td>
+                <!--신고영역-->
+                    <div class="pr_dt_report">
+                        <div class="report_drop">
+                            <img src="../../IMG/HSJ/photo1.png" alt=""width="20px" style="border-radius: 40%;" id="pr_dt_report" >
+                            <div class="dropdown_content">
+                                <span style="background-color: antiquewhite;">신고사유를 선택해 주세요.</span>
+                                <hr>
+                                <input type="button" value="비속어를 사용하였습니다." onclick="showRepPop()"><hr>
+                                <input type="button" value="잘못된 정보를 게재했습니다." onclick="showRepPop()"><hr>
+                                <input type="button" value="광고 글 입니다." onclick="showRepPop()"><hr>
+                            </div> 
+                        </div> 
+                    </div>
+                </td>
+
+                <td id="pr_dt_view_3"><button type="button" id="qna_review_btn_mod">수정하기</button></td>
+                <td id="pr_dt_view_4"><button id="qna_review_btn_del" onclick="showDelPop()">삭제하기</button></td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <div class="pr_dt_comview_view">
+                        문의주셔서 감사합니다.<br> 관리자 답변입니다. <br>흐겸소입니다. <br>문의주셔서 감사합니다. 
+                    </div>
+                </td>
+            </tr>
+        </table>        
+    </div>
+</div>
+    <script src="../../JS/HSJ/change_img.js"></script>
+</body>
+</html>

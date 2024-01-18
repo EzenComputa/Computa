@@ -1,0 +1,163 @@
+.navbar {
+      
+  width: 1000px;
+  height: 20px;
+  margin-left: auto;
+  margin-right: auto;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #187771;
+  padding: 8px 12px;
+  
+  
+}
+.sortbar {
+  outline: 1px solid;
+  width: 995px;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7eedf;
+  padding: 8px 12px;
+  
+  
+}
+
+.navbar_menu {    
+  width: 1000px;
+  height: 30px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;  
+}
+.sortbar_menu {  
+  
+  width: 1000px;
+  height: 10px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+.navbar_menu li {  
+  position: relative; 
+  top: 3px;
+  text-align: center;  
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.sortbar_menu li {
+  
+  position: relative; 
+  bottom: 4px;
+  text-align: center;  
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.navbar_menu li:last-child{
+  border: none;
+}
+
+.navbar_menu > li > a {     
+  
+  position: relative;   
+  color: #e3eedd;
+  font-size: 14px;
+  
+}
+
+.sortbar_menu > li > a {     
+  
+  position: relative;   
+  color: #187771;
+  font-size: 12px;
+  
+}
+
+.admin_logo_wrap{  
+  width: 1025px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.admin_board_wrap{  
+  text-align: left;
+}
+
+.admin_board_wrap .board_title{
+  margin-left: 20px;
+}
+
+.search {
+  position: relative;  
+  bottom: 40px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.search > input {
+  box-sizing:border-box;  
+  width: 100%;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  position: relative;
+  top: 28px;
+}
+
+.search > img {
+  
+  position : absolute;
+  width: 17px;
+  top: 38px;
+  right: 12px;
+  margin: 0;
+}
+
+
+.like_search {
+  position: relative;  
+  top:80px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;       
+}
+
+.like_search > input {
+  box-sizing:border-box;  
+  width: 100%;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  position: relative;
+  top: 28px;
+
+}
+
+
+.like_search > img {
+  position : absolute;
+  width: 17px;
+  top: 38px;
+  right: 12px;
+  margin: 0;
+}
+
+
+.logo_wrap{  
+  width: 1025px;
+  margin-left: auto;
+  margin-right: auto; 
+}

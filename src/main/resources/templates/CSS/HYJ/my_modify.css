@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@600&display=swap');
+
+#logo{
+    background-color:#187771;
+    width: 100px;
+    height: 80px;
+    padding:0px;
+    margin:0px;
+    
+}
+
+#mainnav{
+    background-color: #1fa098;
+    height: 80px;
+}
+
+#profile{
+    /* 회원정보 form 비율 맞추기 */
+    font-family: 'Hahmlet', serif;
+    text-align: center;
+    /* outline: dashed 1px black; */
+    width: 800px;
+    height: 700px;
+    margin-top: 0.5rem;
+    margin-left : auto;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
+}
+
+#pf_photo{
+    padding: 0.5rem;
+    height: 0px;
+}
+
+.profileform{
+    font-size: medium;
+}
+
+.modi_title{
+    margin-right: 20px;
+}
+
+.pf_input{
+    text-align: left;
+}
+
+.pf_list{
+    padding-left:20rem;
+    width:13rem;
+    font-size: 15px;
+    text-align: left;
+}
+
+#pf_out{
+    margin-top: 0.5rem;
+}
+#pf_mod{padding-left:24rem;}
+
+#tr_pr_img{
+    display: none;
+}

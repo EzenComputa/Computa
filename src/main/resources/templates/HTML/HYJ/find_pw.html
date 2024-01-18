@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호찾기페이지</title>
+    <script src="js/jquery3.7.1.js"></script>
+    <script src="js/jquery.innerfade.js"></script>
+    <script>
+         function showPopup() { 
+          window.open("show_pw.html", "a", "width=400, height=300, left=100, top=50"); 
+        }
+        
+        var popup = popupOpen('show_pw.html' ,"비밀번호",0,0,500,500);
+        // var popup = popupOpen('http://www.naver.com' ,"네이버");
+        //var popup = popupOpen('http://www.naver.com' );
+
+
+
+        // 빈칸 공백시 alert 경고창으로 출력하기 구현 1
+        //   $('.button').click(function(){
+        //     if($("#userid").val().trim()==""){
+        //         alert("내용을 입력하세요");
+        //         return false;
+        //     }
+        //     return true;
+        //   })
+
+
+
+        // 빈칸 공백시 alert 경고창으로 출력하기 구현 2
+
+        // document.querySelector('.submit').addEventListener('click', function(e) {
+        //     if (document.querySelector('#userid').val().trim() == '') {
+        //         // id라는 id를 선택하고 해당 input이 공백일 경우
+        //         e.preventDefault() // 폼 전송을 막음
+        //         alert('아이디를 입력해주세요') // '아이디를 입력해주세요' 라는 경고창을 띄움
+        //     }
+        //     if (document.querySelector('#username').val().trim() == '') {
+        //         // pw라는 id를 선택하고 해당 input이 공백일 경우
+        //         e.preventDefault()  // 폼 전송을 막음
+        //         alert('이름을 입력해주세요')  // '비밀번호를 입력해주세요' 라는 경고창을 띄움
+        //     }
+        //     if (document.querySelector('#ssd1' && '#ssd2').val().trim() == '') {
+        //         // ssd1과 ssd2 id를 동시에 선택하고 해당 input이 공백일 경우
+        //         e.preventDefault()  // 폼 전송을 막음
+        //         alert('주민번호를 입력해주세요') // '주민번호를 입력해주세요' 라는 경고창을 띄움
+        //     }
+
+        //     else{
+        //         showPopup();
+        //     }
+
+        // });
+
+    </script>
+
+    <link rel="stylesheet" href="../../CSS/HSJ/css_lee/list.css" type="text/css">
+    <link rel="stylesheet" href="../../CSS/HYJ/hyj_list.css" type="text/css">
+    <link rel="stylesheet" href="../../CSS/HSJ/hsj_list.css" type="text/css">
+
+</head>
+<body>
+
+    <!-- 로고영역 -->
+    <div class="admin_logo_wrap">
+        <img src="../../IMG/HYJ/computa_logo.png" alt="" width="100px">
+    </div>
+
+    
+    <!-- 비밀번호 찾기 form -->
+    <div id="findpass">
+        <h2>비밀번호 찾기</h2>
+        <form action="" method="get">
+            <fieldset>
+            <div class = "passform">
+            <table class="pw_table">
+            <tr class="pw_title">
+                <td  class="pw_title">
+                  <label for="userid">아이디 </label>
+                </td>
+                <td class="pw_con">
+			      <input type="text" placeholder="아이디" class="pw_userid"  maxlength="20" name="userid" required/>
+                </td>  <br>
+            </tr>
+            <tr>
+                <td  class="pw_title">
+                    <label for="username">이름 </label>
+                </td>
+                <td class="pw_con">
+                    <input type="text" placeholder="이름" class="pw_username" maxlength="20"  name="username" required/><br />
+                </td>
+            </tr>
+            <tr>
+                <td  class="pw_title">
+                    <label for="rrn">주민번호 </label>
+                </td>
+                <td class="pw_con">
+                    <input type="text" maxlength="6"   name="ssd1" class="pw_rrd" required/> - 
+                    <input type="password" maxlength="7"  name="ssd2" class="pw_rrd" required/>
+                </td>
+            </tr>
+        </table>
+        <div class="pw_btn">
+        <input type="submit" class="submit" value="확인" id="pw_btn">
+        </div>
+    </div>
+        </fieldset>
+    </div>  
+    </form> 
+</div>
+
+</body>
+</html>

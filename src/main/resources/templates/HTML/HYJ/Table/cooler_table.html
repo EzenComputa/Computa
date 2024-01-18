@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/hyj_css/table.css">
+</head>
+<body>
+    <h1 style="margin-left: 50px;">cooler table</h1>
+
+    <table border="1" id="prod_table">
+        <tr>
+            <td class="prod_title">제조회사</td>
+            <td class="content"><span><input type="text" id="company"></span></td>
+            <td class="prod_title">등록년월</td>
+            <td class="content"><span><input type="date" id="date"></span></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4"></td></tr>
+        <tr>
+            <td class="prod_title">냉각 방식</td>
+            <td id="kind" class="content">공랭</td>
+            <td class="prod_title">히트파이프</td>
+            <td id="socket" class="content">6mm 4개</td>
+        </tr>
+        <tr>
+            <td class="prod_title">TDP</td>
+            <td id="" class="content">200W</td>
+            <td class="prod_title">A/S기간</td>
+            <td id="ver" class="content">2년</td>
+        </tr>
+        <tr>
+            <td class="prod_title">가로</td>
+            <td class="content">130mm</td>
+            <td class="prod_title">높이</td>
+            <td class="content">157mm</td>
+        </tr>
+        <tr>
+            <td class="prod_title">무게</td>
+            <td class="content">700g</td>
+            <td class="prod_title">[구성품/기타]</td>
+            <td class="content">[구성품/기타]</td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">인텔 소켓</td></tr>
+        <tr>
+            <td class="prod_title">LGA1700</td>
+            <td class="content"><input type="radio" name="intel_socket1">O 
+                <input type="radio" name="intel_socket1">X </td>
+            <td class="prod_title">LGA1200</td>
+            <td class="content"><input type="radio" name="intel_socket2">O 
+                <input type="radio" name="intel_socket2">X </td>
+        </tr>
+        <tr>
+            <td class="prod_title">LGA115x</td>
+            <td class="content"><input type="radio" name="intel_socket3">O 
+                <input type="radio" name="intel_socket3">X </td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">AMD 소켓</td></tr>
+        <tr>
+            <td class="prod_title">AM5</td>
+            <td class="content"><input type="radio" name="amd_socket1">O 
+                <input type="radio" name="amd_socket1">X </td>
+            <td class="prod_title">AM4</td>
+            <td class="content"><input type="radio" name="amd_socket2">O 
+                <input type="radio" name="amd_socket2">X </td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">[쿨링팬]</td></tr>
+        <tr>
+            <td class="prod_title">팬 크기</td>
+            <td class="content">130mm</td>
+            <td class="prod_title">팬 개수</td>
+            <td class="content">1개</td>
+        </tr>
+        <tr>
+            <td class="prod_title">팬 크기</td>
+            <td class="content">130mm</td>
+            <td class="prod_title">팬 개수</td>
+            <td class="content">1개</td>
+        </tr>
+        <tr>
+            <td class="prod_title">팬 두께</td>
+            <td class="content">25T</td>
+            <td class="prod_title">팬 커넥터</td>
+            <td class="content">4핀</td>
+        </tr>
+        <tr>
+            <td class="prod_title">베어링</td>
+            <td class="content">Hydraulic(유체)</td>
+            <td class="prod_title">최대 팬속도</td>
+            <td class="content">1600 RPM</td>
+        </tr>
+        <tr>
+            <td class="prod_title">최대 풍량</td>
+            <td class="content">81 CFM</td>
+            <td class="prod_title">풍압(정압)</td>
+            <td class="content">2.18mmH₂O</td>
+        </tr>
+        <tr>
+            <td class="prod_title">최대 팬소음</td>
+            <td class="content">28.6dBA</td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">부가기능</td></tr>
+        <tr>
+            <td class="prod_title">LED 라이트</td>
+            <td class="content"><input type="radio" name="led">O 
+                <input type="radio" name="led">X </td>
+            <td class="prod_title">PWM 지원</td>
+            <td class="content"><input type="radio" name="pwm">O 
+                <input type="radio" name="pwm">X </td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">인증</td></tr>
+        <tr>
+            <td class="prod_title">적합성평가인증</td>
+            <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="rra" onclick="window.open('https://www.rra.go.kr/ko/index.do')">인증번호 확인</button> </td>
+        </tr>
+        <tr>
+            <td class="prod_title">안전확인인증</td>
+            <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="safetykorea" onclick="window.open('https://www.safetykorea.kr/')">인증번호 확인</button> </td>
+        </tr>
+       
+    </table>
+</body>
+</html>

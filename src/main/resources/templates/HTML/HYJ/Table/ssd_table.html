@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/hyj_css/table.css">
+</head>
+<body>
+    <h1 style="margin-left: 50px;">ssd table</h1>
+
+    <table border="1" id="prod_table">
+        <tr>
+            <td class="prod_title">제조회사</td>
+            <td class="content"><span><input type="text" id="company"></span></td>
+            <td class="prod_title">등록년월</td>
+            <td class="content"><span><input type="date" id="date"></span></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4"></td></tr>
+        <tr>
+            <td class="prod_title">사용 장치</td>
+            <td class="content"><span><input type="text" id="kind"></span> 데스크탑용</td>
+            <td class="prod_title">제품 분류</td>
+            <td id="socket" class="content">DDR4</td>
+        </tr>
+        <tr>
+            <td class="prod_title">메모리 규격</td>
+            <td class="content">DIMM</td>
+            <td class="prod_title">메모리 용량</td>
+            <td class="content">16GB</td>
+        </tr>
+        <tr>
+            <td class="prod_title">동작클럭(대역폭)</td>
+            <td class="content">3200MHz (PC4-25600)</td>
+            <td class="prod_title">램개수</td>
+            <td class="content">1개</td>
+        </tr>
+        <tr>
+            <td class="prod_title">히트싱크</td>
+            <td class="content">미포함</td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+       
+        <tr style="height: 20px;" class="title"><td colspan="4">인증</td></tr>
+        <tr>
+            <td class="prod_title">적합성평가인증</td>
+            <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="rra" onclick="window.open('https://www.rra.go.kr/ko/index.do')">인증번호 확인</button> </td>
+        </tr>
+        <tr>
+            <td class="prod_title">안전확인인증</td>
+            <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="safetykorea" onclick="window.open('https://www.safetykorea.kr/')">인증번호 확인</button> </td>
+        </tr>
+       
+    </table>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ask del</title>
+    <style>
+        #div_pop{
+            outline: solid 3px green;
+
+            margin-top: 3rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding:3rem;
+
+            width: 20rem;
+            height: 10rem;
+
+            text-align: center;
+        }
+
+        #text_pop{
+            margin-top: 3rem;
+            margin-left: auto;
+            margin-right: auto;            
+        }
+    </style>
+    <script>
+        function check_DelPop(){
+            window.open("check_del_popup.html", "a", "width=600, height=500, left=500, top=300");
+        }
+    </script>
+</head>
+<body>
+    <div id="div_pop">
+        <p id="text_pop">정말 삭제하시겠습니까?</p>
+        <input type='BUTTON' value="네"  onclick="check_DelPop()">
+        <input type='BUTTON' value="아니요" onClick='window.close()'>
+        
+    </div>
+    
+</body>
+</html>
