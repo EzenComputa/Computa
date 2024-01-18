@@ -127,7 +127,6 @@
     margin-left: auto;
     margin-right: auto;
     padding:0.5rem;
-
     width:750px;
 }
 
@@ -144,16 +143,17 @@
 #qna_reply_write{
     resize:none;
     border-radius: 2%;
-    border-color: #1fa097e3;   
+    border-color: #1fa097e3;
 }
 
 /* 관리자 보내기버튼 */
 #qna_rewrite_btn{
     padding:1rem;
     cursor: pointer;
-    border-radius: 8%;    
-    background-color: #1fa097e3;
+    border-radius: 8%;   
+    background-color: transparent;
     color: gold;
+    border: none;
 }
 /*================================*/
 

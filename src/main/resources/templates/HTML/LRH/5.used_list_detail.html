@@ -62,17 +62,17 @@
     </nav>
 
         <nav class="navbar">        
-        <ul class="navbar_menu">
-            <li><a href="#">CPU</a></li>
-            <li><a href="#">GPU</a></li>
-            <li><a href="#">마더보드</a></li>
-            <li><a href="#">HDD</a></li>
-            <li><a href="#">SDD</a></li>
-            <li><a href="#">램카드</a></li>
-            <li><a href="#">파워</a></li>
-            <li><a href="#">케이스</a></li>
-            <li><a href="#">쿨러</a></li>
-        </ul>        
+            <ul class="navbar_menu">
+                <li><a href="#">CPU</a></li>
+                <li><a href="#">GPU</a></li>
+                <li><a href="#">마더보드</a></li>
+                <li><a href="#">HDD</a></li>
+                <li><a href="#">SDD</a></li>
+                <li><a href="#">램카드</a></li>
+                <li><a href="#">파워</a></li>
+                <li><a href="#">케이스</a></li>
+                <li><a href="#">쿨러</a></li>
+            </ul>        
     </nav>
 
     <div class="detail_product">
@@ -251,56 +251,10 @@
             <a href=""><img src="/src/main/resources/templates/IMG/LRH/cpu_i7.jpg" alt="제품이미지" style="width: 100px;" class="비슷한상품_img_detail"></a>
         </div>
    </div>
+
+   
     <div class="reply">
-        <div class="pr_dt_com_write">
-            <table  class="pr_dt_com_table">
-                <tr>
-                    <td id="pr_dt_write_1"><img src="../img/ham3.jpg" alt="" width="100px" style="border-radius: 50%;" ></td>
-                    <td id="pr_dt_write_2" rowspan="2"><textarea name="qna_reply_write" id="qna_reply_write" cols="50" rows="10"></textarea></td>
-                    <td id="pr_dt_write_3" rowspan="2"><button type="submit" id="qna_rewrite_btn">답변하기</button></td>
-                </tr>
-                <tr><td id="pr_dt_write_1"><span>닉네임</span></td></tr>
-            </table>
-        </div>
 
-        <div class="pr_dt_com_view">
-            <table class="pr_dt_comview_table">
-                <tr>
-                    <td id="pr_dt_view_1"><img src="../img/ham3.jpg" alt="" width="100px" style="border-radius: 50%;" >
-                    </td>
-                    <td id="pr_dt_view_2">
-                        <span style="font-weight: bold;" id="pr_dt_nickname" name="pr_dt_nickname">닉네임</span>
-                        <span style="color: gray;">2024.01.11 18:52</span>
-                    </td>
-                    <td>
-                    <!--신고영역-->
-                        <div class="pr_dt_report">
-                            <div class="report_drop">
-                                <img src="/src/main/resources/templates/IMG/LRH/5.jpg" alt=""width="20px" style="border-radius: 40%;" id="pr_dt_report" >
-                                <div class="dropdown_content">
-                                    <span style="background-color: antiquewhite;">신고사유를 선택해 주세요.</span>
-                                    <hr>
-                                    <input type="button" value="비속어를 사용하였습니다." onclick="showRepPop()"><hr>
-                                    <input type="button" value="잘못된 정보를 게재했습니다." onclick="showRepPop()"><hr>
-                                    <input type="button" value="광고 글 입니다." onclick="showRepPop()"><hr>
-                                </div> 
-                            </div> 
-                        </div>
-                    </td>
-
-                    <td id="pr_dt_view_3"><button type="button" id="qna_review_btn_mod">수정하기</button></td>
-                    <td id="pr_dt_view_4"><button id="qna_review_btn_del" onclick="showDelPop()">삭제하기</button></td>
-                </tr>
-                <tr>
-                    <td colspan="5">
-                        <div class="pr_dt_comview_view">
-                            문의주셔서 감사합니다.<br> 관리자 답변입니다. <br>흐겸소입니다. <br>문의주셔서 감사합니다. 
-                        </div>
-                    </td>
-                </tr>
-            </table>        
-        </div>
-    </div>
  
   
 <script>
