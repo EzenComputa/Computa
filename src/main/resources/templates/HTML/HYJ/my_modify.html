@@ -47,6 +47,7 @@
     <table  id="profile">
         <tr>
             <td colspan="2"><h1 style="text-align: center;">회원정보 수정</h1></td>
+            <td></td>
         </tr>
         <tr>
             <td colspan="2" id="pf_photo">
@@ -59,11 +60,12 @@
                     <input type="file" id="tr_pr_img" name="tr_pr_img" accept="image/*" onchange="loadFile(this)" required> 
                 </form>
         </td>
+        <td></td>
         </tr>
         <tr>
             <td class="pf_list"><label for="userid" style="margin-top: 20px;" class="modi_title">닉네임 </label></td>
             <td class="pf_input"><input type="text" id="userid"  maxlength="10" />
-            <input type="button" value="중복확인"></td>
+            <input type="button" id="btn_check" value="중복확인"></td>
         </tr>
         <tr>
             <td class="pf_list"><label for="pw" class="modi_title">비밀번호 </label></td>
@@ -96,9 +98,9 @@
         </tr>
         <tr>
             <td></td>
-                <td id="pf_mod" class="pf_input">
-                <input type="button" value="수정하기"  onclick=showPopup_modi() style="align-items: center;">  
-                <input type="button" value="탈퇴하기" onclick=showPopup_check() style="align: center;">
+            <td id="pf_mod" class="pf_input">
+                <input type="button" id="btn_modi" value="수정하기"  onclick=showPopup_modi()>  
+                <input type="button" id="btn_unregi" value="탈퇴하기" onclick=showPopup_check()>
             </td>
         </tr>
     </table>

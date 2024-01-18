@@ -45,7 +45,7 @@
 }
 
 .pf_list{
-    padding-left:20rem;
+    padding-left:12rem;
     width:13rem;
     font-size: 15px;
     text-align: left;
@@ -54,8 +54,48 @@
 #pf_out{
     margin-top: 0.5rem;
 }
-#pf_mod{padding-left:24rem;}
+#pf_mod{padding-left:5rem;}
 
 #tr_pr_img{
     display: none;
+}
+
+#btn_modi{
+    width: 75px;
+    height: 25px;
+    color: white;
+    background-color: #1fa098;
+    border: white;
+    border-radius: 10%;
+}
+
+#btn_modi:hover{
+    background-color:rgba(31, 160, 152, 0.8);
+}
+
+#btn_unregi{
+    width: 75px;
+    height: 25px;
+    color: white;
+    background-color:rgb(31, 160, 152);
+    border: white;
+    border-radius: 10%;
+    margin-left: 12px;
+}
+
+#btn_unregi:hover{
+    background-color:rgba(31, 160, 152, 0.8);
+}
+
+#btn_check{
+    width: 75px;
+    height: 23px;
+    color: white;
+    background-color:rgb(31, 160, 152);
+    border: none;
+    border-radius: 10%;
+}
+
+#btn_check:hover{
+    background-color:rgba(31, 160, 152, 0.8);
 }
