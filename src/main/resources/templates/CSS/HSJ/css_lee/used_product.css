@@ -1,0 +1,33 @@
+.used_wrap{    
+    width: 1022px;    
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+}
+.used_list{
+    padding-left:30px;    
+    border: 3px solid #1fa098;   
+    border-top: none;
+}
+.used_product{      
+    display: inline-block; 
+    width: 160px;
+    margin: 12px;
+    border: 1px solid #1fa098;  
+}
+
+.used_product > p {
+    text-align: left;
+    
+}
+
+
+.txt_tit_brand{        
+    font-size: 1.2rem;    
+    text-align: center;
+}
+
+.txt_origin_price{
+    font-size: 1.1rem;
+}
+
