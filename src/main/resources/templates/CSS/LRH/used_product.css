@@ -1,22 +1,53 @@
-.used_wrap{   
-    
+.used_wrap{       
+    z-index: -1;
     width: 1000px;    
     position: fixed;
     left: 50%;    
     transform: translate(-50%);
     font-size: 10px;
 }
-.used_list{  
+.used_list{ 
     z-index: 1; 
     padding-left:30px;    
     border: 4px solid #1fa098;   
-    border-top: none;
+    border-top: none; 
 }
-.used_product{      
+
+.used_product{    
+    position: relative;
     display: inline-block; 
     width: 160px;
+    height: 220px;
     margin: 12px;
     border: 1px solid #1fa098;  
+    
+}
+
+.teabag{
+    position: absolute;    
+    bottom: 158px;
+}
+
+.triangle_1 {    
+    width: 0;
+    height: 0;
+    border-top: 50px solid #187771;
+    border-right: 50px solid transparent;
+    position: relative;    
+    margin: 0px;
+  }
+
+.triangle_2 {    
+    width: 0;
+    height: 0;
+    border-top: 50px solid #1fa098;
+    border-right: 50px solid transparent;
+    position: relative;    
+    margin: 0px;
+  }
+.used_product > a > img{   
+    width: 100%;
+    height: 73%;
 }
 
 .used_product > p {

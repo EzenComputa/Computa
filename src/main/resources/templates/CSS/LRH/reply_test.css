@@ -1,14 +1,22 @@
-#qna_reply_write{
+.reply{    
+    outline: 1px dashed blue;
+    width: 1000px;
+    position: relative;
+    left: 50%;
+    top: 60px;
+    transform: translate(-50%);
+
+}
+
+#qna_reply_write{      
+    width: 100%;
     resize: none;
+
 }
 .pr_dt_com_write{
-    margin-top: 0.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding:0.5rem;
-
-    width: 59rem;
-    outline: solid 1px gray;
+    outline: 2px dashed red;
+   
+    
 }
 
 #pr_dt_write_1{
