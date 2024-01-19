@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="../../CSS/LRH/style.css">
     <link rel="stylesheet" href="../../css/LRH/menubar.css">
     <link rel="stylesheet" href="../../CSS/HSJ/hsj_list.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     
+
 </head>
 
 
@@ -97,9 +99,7 @@
                 <td class="tr_pr_left">상세 스펙</td>
                 <td>
                     <div class="tr_pr_spec">
-                        <table border="1" id="tabletest">
-                            <tr><td>test</td><td>test</td></tr>
-                        </table>
+                        
                     </div>
                 </td>
             </tr>
@@ -188,8 +188,6 @@
           
            }, false)
         
-        
-        
            /*첨부된 이미지들을 배열에 넣고 미리보기 */
            
            imageLoader = function(file){
@@ -250,7 +248,33 @@
            }
           }
         )('att_zone', 'btnAtt')
-     
      </script>
+     <script>
+        $('#tr_pr_category').change(function(){
+            var selVar = $(this).val();
+            $('.tr_pr_spec').empty();
+
+            if(selVar =='cpu'){
+                $('.tr_pr_spec').load('../HYJ/Table/cpu_table.html #prod_table');
+            }else if(selVar =='gpu'){
+                $('.tr_pr_spec').load('../HYJ/Table/gpu_table.html #prod_table');
+            }else if(selVar == 'motherboard'){
+                $('.tr_pr_spec').load('../HYJ/Table/motherboard_table.html #prod_table');
+            }else if(selVar == 'ssd'){
+                $('.tr_pr_spec').load('../HYJ/Table/ssd_table.html #prod_table');                
+            }else if(selVar == 'hdd'){
+                $('.tr_pr_spec').load('../HYJ/Table/hdd_table.html #prod_table');                
+            }else if(selVar == 'ram'){
+                $('.tr_pr_spec').load('../HYJ/Table/ram_table.html #prod_table');                
+            }else if(selVar == 'case'){
+                $('.tr_pr_spec').load('../HYJ/Table/case_table.html #prod_table');                
+            }else if(selVar == 'cooler'){
+                $('.tr_pr_spec').load('../HYJ/Table/cooler_table.html #prod_table');                
+            }else if(selVar == 'power'){
+                $('.tr_pr_spec').load('../HYJ/Table/#_table.html #prod_table');                
+            }
+        })
+    </script>
+
 </body>
 </html>
