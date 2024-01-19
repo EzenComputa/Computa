@@ -5,6 +5,7 @@ const mysmall2 = document.getElementById("pr_dt_img2");
 const mysmall3 = document.getElementById("pr_dt_img3");
 const mysmall4 = document.getElementById("pr_dt_img4");
 const mysmall5 = document.getElementById("pr_dt_img5");
+const mysmall6 = document.getElementById("pr_dt_img6");
 
 
 mysmall1.addEventListener("click", function() {
@@ -25,4 +26,8 @@ myImg.src = mysmall4.src;
 
 mysmall5.addEventListener("click", function() {
 myImg.src = mysmall5.src;
+});
+
+mysmall6.addEventListener("click", function() {
+myImg.src = mysmall6.src;
 });

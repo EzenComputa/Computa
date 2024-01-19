@@ -6,12 +6,11 @@
   transform: translate(-50%);  
 }
 
-.navbar {     
-  
+.navbar {   
   text-align: center;
   width: 1000px;
   height: 20px; 
-  display: inline-block;  
+  display: flex;  
   align-items: center;
   background-color: #187771;
   padding: 8px 0px;
@@ -19,13 +18,13 @@
   left: 50%;
   transform: translate(-50%);
   border-bottom: 1px solid#1fa098;
+
 }
 
 .navbar_menu {      
   width: 1000px;
   height: 36px;
-  position: relative;
-  bottom: 8px;
+  position: relative;  
   display: flex;   
  }
  

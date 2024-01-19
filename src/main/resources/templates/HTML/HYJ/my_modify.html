@@ -16,94 +16,111 @@
         // var popup = popupOpen("check.html" ,"탈퇴확인", 0,0,500,500);
     </script>
 
-    <link rel="stylesheet" href="../../CSS/HSJ/css_lee/list.css">
+    <!-- <link rel="stylesheet" href="../../CSS/HSJ/css_lee/list.css"> -->
     <link rel="stylesheet" href="../../CSS/HYJ/hyj_list.css">
     <link rel="stylesheet" href="../../CSS/HSJ/hsj_list.css">
+    <link rel="stylesheet" href="../../CSS/LRH/list.css">
 
 </head>
 <body>
-    <!--  로고 영역 -->
-    <div class="admin_logo_wrap">
-        <img src="../../IMG/HYJ/computa_logo.png" alt="" width="100px">
+    <!-- top 로고 & 검색 & 메뉴navbar -->
+    <div class="top">
+        <div class="logo_wrap">
+            <a href="/src/main/resources/templates/HTML/LRH/6.main_page.html" class="computa_logo"><img src="/src/main/resources/templates/IMG/LRH/computa icon.png" alt="logo" width="100"></a>
+        </div>
+        
+        <div class="search">
+            <input type="text" placeholder="검색어 입력">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" >
+        </div>
+        <div class="myinfo">
+            <div class="myinfo_icon">
+                <a href=""><img src="/src/main/resources/templates/IMG/LRH/recent.png">최근내역</a>
+                <a href=""><img src="/src/main/resources/templates/IMG/LRH/tea-bag.png">마이티백</a>
+                <a href=""><img src="/src/main/resources/templates/IMG/LRH/login.png">로그인</a>
+            </div>            
+        </div>
     </div>
 
-
-   	<!-- 메인 navbar 영역  -->   
-	   <div class="navbar">      
+    <div class="navbar">      
         <ul class="navbar_menu">
-            <li><a href="#" class="lee_a">조립PC</a></li>
-            <li><a href="#" class="lee_a">PC견적</a></li>
-            <li><a href="#" class="lee_a">부품</a></li>
-            <li><a href="#" class="lee_a">노트북</a></li>
-            <li><a href="#" class="lee_a">문의</a></li>
-            <li><a href="#" class="lee_a">우려먹기</a></li>
-            <li><a href="#" class="lee_a">파격할인</a></li>
-            <li><a href="#" class="lee_a">이벤트</a></li>
-            <li><a href="#" class="lee_a">브랜드스토어</a></li>            
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="#">PC견적</a></li>
+            <li><a href="#">부품</a></li>            
+            <li><a href="#">문의</a></li>
+            <li><a href="#" style="color: red;">우려먹기</a></li>                    
         </ul>        
     </div>
 
+    
     <!-- 회원번호 수정 영역 -->
-    <table  id="profile">
+
+    <!-- 프로필이미지 선택하기 영역테이블 -->
+    <table class="pf_select" >
         <tr>
-            <td colspan="2"><h1 style="text-align: center;">회원정보 수정</h1></td>
-            <td></td>
+            <td colspan="6" class="pr_title_style">회원정보 수정</td>
         </tr>
         <tr>
-            <td colspan="2" id="pf_photo">
-                <form method="post" enctype="multipart/form-data">
-                    <div class= "button">
-                       <label for="tr_pr_img">
-                          <img src = "../../IMG/HYJ/upload.jpg" width="200" height="200" style="cursor:pointer;" id="preview_image"/>
-                    </label>
-                    </div>
-                    <input type="file" id="tr_pr_img" name="tr_pr_img" accept="image/*" onchange="loadFile(this)" required> 
-                </form>
-        </td>
-        <td></td>
+            <td colspan="6" style="text-align: center;"><img src="../../IMG/HSJ/ham.jpg" alt="" id="pr_dt_photo"></td>
         </tr>
+        <tr>
+            <td><img src="../../IMG/HSJ/ham.jpg" alt="" id="pr_dt_img1"></td>
+            <td><img src="../../IMG/HSJ/ham2.jpg" alt="" id="pr_dt_img2"></td>
+            <td><img src="../../IMG/HSJ/ham3.jpg" alt="" id="pr_dt_img4"></td>
+            <td><img src="../../IMG/HYJ/cat1.jpg" alt="" id="pr_dt_img3"></td>
+            <td><img src="../../IMG/HYJ/cat3.jpeg" alt="" id="pr_dt_img6"></td>
+            <td><img src="../../IMG/HYJ/cat2.jpg" alt="" id="pr_dt_img5"></td>
+        </tr>
+
+        </table>
+
+        <hr class="hr_style"></hr>
+
+
+        <table  class="pf_info">
         <tr>
             <td class="pf_list"><label for="userid" style="margin-top: 20px;" class="modi_title">닉네임 </label></td>
-            <td class="pf_input"><input type="text" id="userid"  maxlength="10" />
+            <td class="pf_input"><input type="text" id="userid" class="input_style" maxlength="10" />
             <input type="button" id="btn_check" value="중복확인"></td>
         </tr>
         <tr>
             <td class="pf_list"><label for="pw" class="modi_title">비밀번호 </label></td>
-            <td class="pf_input"><input id="pw" type="password" maxlength="20" />
+            <td class="pf_input"><input id="pw" class="input_style" type="password" maxlength="20" />
             </td>
         </tr>
         <tr>
             <td class="pf_list"><label for="pw" class="modi_title">비밀번호 확인 </label></td>
-            <td class="pf_input"><input id="checkpw" type="password" maxlength="20" />
+            <td class="pf_input"><input id="checkpw" class="input_style" type="password" maxlength="20" />
             </td>
         </tr>
         <tr>
             <td class="pf_list"><label for="userid" class="modi_title">이름</label></td>
              <td class="pf_input">
-                <input type="text" id="username"  maxlength="10" />
+                <input type="text" id="username" class="input_style" maxlength="10" />
             </td>
         </tr>
         <tr>
             <td class="pf_list"><label for="userid" class="modi_title">이메일 </label></td>
             <td class="pf_input">
-                <input type="email" id="email"  maxlength="40" />
+                <input type="email" id="email" class="input_style" maxlength="40" />
             </td>
         </tr>
         <tr>
             <td class="pf_list"><label for="rrn" class="modi_title">주민번호</label></td>
             <td class="pf_input">
-                <input id="rrn" type="text" maxlength="6" /> - 
-                <input type="password" maxlength="7" id="rrn" />
+                <input id="rrn" type="text" class="input_style" maxlength="6" /> - 
+                <input type="password" maxlength="7" id="rrn" class="input_style"/>
             </td>
         </tr>
         <tr>
-            <td></td>
-            <td id="pf_mod" class="pf_input">
+            <td colspan="2" id="pf_mod" class="pf_list">
                 <input type="button" id="btn_modi" value="수정하기"  onclick=showPopup_modi()>  
                 <input type="button" id="btn_unregi" value="탈퇴하기" onclick=showPopup_check()>
             </td>
         </tr>
     </table>
+
+
     <script>
         function readImage(input){
             if(input.files && input.files[0]){
@@ -122,5 +139,6 @@
         inputImage.addEventListener("change",function(e){
             readImage(e.target);});
     </script>
+    <script src="../../JS/HSJ/change_img.js"></script>
 </body>
 </html>
