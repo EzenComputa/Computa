@@ -40,15 +40,40 @@ for(let i = info.firstBottomNumber ; i <= info.lastBottomNumber; i++){
 
     </script>
    
-<link rel="stylesheet" href="../../CSS/HYJ/hyj_list.css" type="text/css">
-<link rel="stylesheet" href="../../CSS/HSJ/css_lee/list.css" type="text/css">
+   <link rel="stylesheet" href="../../CSS/HYJ/hyj_list.css">
+   <link rel="stylesheet" href="../../CSS/HSJ/hsj_list.css">
+   <link rel="stylesheet" href="../../CSS/LRH/list.css">
 
 </head>
 <body>
-    <!-- 로고영역 -->
-    <div class="admin_logo_wrap">
-        <img src="../../IMG/HYJ/computa_logo.png" alt="" width="100px">
+   <!-- top 로고 & 검색 & 메뉴navbar -->
+   <div class="top">
+    <div class="logo_wrap">
+        <a href="/src/main/resources/templates/HTML/LRH/6.main_page.html" class="computa_logo"><img src="/src/main/resources/templates/IMG/LRH/computa icon.png" alt="logo" width="100"></a>
     </div>
+    
+    <div class="search">
+        <input type="text" placeholder="검색어 입력">
+        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" >
+    </div>
+    <div class="myinfo">
+        <div class="myinfo_icon">
+            <a href=""><img src="/src/main/resources/templates/IMG/LRH/recent.png">최근내역</a>
+            <a href=""><img src="/src/main/resources/templates/IMG/LRH/tea-bag.png">마이티백</a>
+            <a href=""><img src="/src/main/resources/templates/IMG/LRH/login.png">로그인</a>
+        </div>            
+    </div>
+</div>
+
+<div class="navbar">      
+    <ul class="navbar_menu">
+        <li><a href="#">마이페이지</a></li>
+        <li><a href="#">PC견적</a></li>
+        <li><a href="#">부품</a></li>            
+        <li><a href="#">문의</a></li>
+        <li><a href="#" style="color: red;">우려먹기</a></li>                    
+    </ul>        
+</div>
 
     <table border="1" class="report_table" style="margin-top: 60px;">
         <tr style="font-size: medium; background-color: antiquewhite;">
@@ -202,16 +227,16 @@ for(let i = info.firstBottomNumber ; i <= info.lastBottomNumber; i++){
 
     <!-- js 페이징 처리 예정 -->
     <!-- <h4 style="text-align: center;"> << <  1 2 3 4 5 > >> </h4> -->
-    <div id="pagination">
-    <a href="url" id=""><</a>
-    <a href="url" id=""><<</a> &nbsp;
-    <a href="url" id="">1</a>
-    <a href="url" id="">2</a>
-    <a href="url" id="">3</a>
-    <a href="url" id="">4</a>
-    <a href="url" id="">5</a> &nbsp;
-    <a href="url" id="">></a>
-    <a href="url" id="">>></a>
+    <div id="report_pagination">
+        <div class="a_div"><a href="url" class="a_css"><</a></div>
+        <div class="a_div"><a href="url" class="a_css"><<</a></div>
+        <div class="a_div"><a href="url" class="a_css">1</a></div>
+        <div class="a_div"><a href="url" class="a_css">2</a></div>
+        <div class="a_div"><a href="url" class="a_css">3</a></div>
+        <div class="a_div"><a href="url" class="a_css">4</a></div>
+        <div class="a_div"><a href="url" class="a_css">5</a></div>
+        <div class="a_div"><a href="url" class="a_css">></a></div>
+        <div class="a_div"><a href="url" class="a_css">>></a></div>
     </div>    
 
 

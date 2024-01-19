@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@600&display=swap');
-
 #logo{
     background-color:#187771;
     width: 100px;
@@ -27,10 +25,6 @@
     margin-bottom: 0.5rem;
 }
 
-#pf_photo{
-    padding: 0.5rem;
-    height: 0px;
-}
 
 .profileform{
     font-size: medium;
@@ -38,6 +32,8 @@
 
 .modi_title{
     margin-right: 20px;
+    font-weight: 550;
+    color: #202222a8;
 }
 
 .pf_input{
@@ -45,8 +41,8 @@
 }
 
 .pf_list{
-    padding-left:20rem;
-    width:13rem;
+    padding-left:3rem;
+    width:12rem;
     font-size: 15px;
     text-align: left;
 }
@@ -54,8 +50,141 @@
 #pf_out{
     margin-top: 0.5rem;
 }
-#pf_mod{padding-left:24rem;}
+#pf_mod{
+    height: 100px;
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 20px;
+}
 
 #tr_pr_img{
     display: none;
+}
+
+#btn_modi{
+    width: 75px;
+    height: 25px;
+    color: white;
+    background-color: #1fa098;
+    border: white;
+    border-radius: 10%;
+}
+
+#btn_modi:hover{
+    background-color:rgba(31, 160, 152, 0.8);
+}
+
+#btn_unregi{
+    width: 75px;
+    height: 25px;
+    color: white;
+    background-color:rgb(31, 160, 152);
+    border: white;
+    border-radius: 10%;
+    margin-left: 12px;
+}
+
+#btn_unregi:hover{
+    background-color:rgba(31, 160, 152, 0.8);
+}
+
+#btn_check{
+    width: 75px;
+    height: 23px;
+    color: white;
+    background-color:rgb(31, 160, 152);
+    border: none;
+    border-radius: 10%;
+    margin-left: 20px;
+}
+
+#btn_check:hover{
+    background-color:rgba(31, 160, 152, 0.8);
+}
+
+.pf_select{
+    width: 400px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+#pr_dt_photo{
+    width: 150px;
+    height: 150px;
+    border: 5px solid #b6b8b73f;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-bottom: 1rem;
+}
+
+#pr_dt_img1{
+    width: 60px;
+    height: 60px;
+    margin: 1px;
+}
+
+#pr_dt_img2{
+    width: 60px;
+    height: 60px;
+    margin: 1px;
+}
+
+#pr_dt_img3{
+    width: 60px;
+    height: 60px;
+    margin: 1px;
+
+}
+
+#pr_dt_img4{
+    width: 60px;
+    height: 60px;
+    margin: 1px;
+}
+
+#pr_dt_img5{
+    width: 60px;
+    height: 60px;
+    margin: 1px;
+}   
+
+#pr_dt_img6{
+    width: 60px;
+    height: 60px;
+    margin: 1px;
+}
+
+.pf_info{
+    width: 650px;
+    height: 500px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+    
+}
+
+.input_style{
+    height: 22px;
+    font-size: 15px;
+}
+
+.hr_style{
+    width: 1000px; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top:1rem;
+    border-color: rgba(202, 196, 196, 0.575);
+    border-style: dotted;
+    border-style: ;
+}
+
+.pr_title_style{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    color: #122423ad;
+    padding-bottom: 30px;
 }

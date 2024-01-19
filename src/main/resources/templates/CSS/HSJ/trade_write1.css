@@ -3,23 +3,26 @@
     margin-top: 3%;
     margin-left: auto;
     margin-right: auto;
-    padding:3.5rem;
-
-    width:50rem;
+    padding: 8px 0px;
+    
+    width: 1000px;
     justify-content: center;
 }
 
 /* 테이블 */
 .tr_pr_table{
-    outline: 5px dashed #1fa098;
-    width: 50rem;
-    padding: 2rem;
+
+    margin-left: auto;
+    margin-right: auto;    
+    padding: 3rem;
+    
+    width: 1000px;
 }
 
 /* 이름 영역 */
 .tr_pr_left{
     padding:0.9rem;
-    width: 20rem;
+    width: 10rem;
 
     letter-spacing: -1.5px;
     word-spacing: 3px;
@@ -47,15 +50,18 @@
 #att_zone{
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
+    padding:1.5rem;
 
     outline: 1px dashed;
-    width: 560px;
-    min-height: 200px;
+    width: 800px;
+    min-height: 150px;
 }
 /*===================================*/
 
 /* 버튼 영역(div) */
 .tr_pr_btn{
+    width: 970px;
+    padding: 8px 0px;
     text-align: right;
 }
 
