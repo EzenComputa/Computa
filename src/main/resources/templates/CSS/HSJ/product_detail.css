@@ -83,9 +83,9 @@
 
 /* 상품명 & 가격 */
 .pr_dt_name{border-bottom: 3px rgba(74, 150, 108, 0.103) dotted;}
-#pr_dt_name{font-size: 30px; padding-left: 0.5rem;}
+#pr_dt_name{font-size: 30px; padding-left: 1.5rem;}
 .pr_dt_price{border-bottom: 3px rgba(74, 150, 108, 0.103) dotted;}
-#pr_dt_price{font-weight: bold;font-size: 30px; padding-left: 0.5rem;}
+#pr_dt_price{font-weight: bold;font-size: 30px; padding-left: 1.5rem;}
 /*============================================================================*/
 
 /*가격 비교 영역*/
