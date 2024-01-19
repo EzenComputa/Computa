@@ -61,8 +61,6 @@
         </ul>        
     </nav>
 
-
-
     <!--의견으로 바로가기 버튼-->
     <div id="remote">
         <table border="1" class="remote">
@@ -76,7 +74,7 @@
 
     <!--제품영역-->     
     <div class="pr_dt_pf">            
-        <table border="1"  class="pr_dt_table">
+        <table class="pr_dt_table">
             <tr>
                 <td rowspan="3" colspan="5" class="pr_dt_photo"><img src="../../img/HSJ/ham.jpg" alt="" width="400px" height="400px" id="pr_dt_photo"></td>
                 <td class="pr_dt_name"><span id="pr_dt_name">SSD-Ham9700ster</span></td>         
@@ -115,22 +113,22 @@
                             <td id="pr_dt_write_1"> <img src="../../IMG/HSJ/ham3.jpg" alt="" width="100px" style="border-radius: 50%;" ></td>
                         </tr>
                         <tr>
-                            <td id="pr_dt_write_1"> <span>닉네임</span></td>
+                            <td id="pr_dt_write_2"> <span>닉네임</span></td>
                         </tr>
                     </table>
                 </td>
 
-                <td id="pr_dt_write_2">
+                <td id="pr_dt_write_3">
                     <textarea name="qna_reply_write" id="qna_reply_write" cols="77" rows="10"></textarea>
                 </td>
 
                 <td>
                     <table class="pr_dt_tbl_3">
                         <tr>
-                            <td><input type="checkbox">비밀글</td>
+                            <td id="pr_dt_write_4"><input type="checkbox">비밀글</td>
                         </tr>
                         <tr>
-                            <td id="pr_dt_write_3" ><button type="submit" id="qna_rewrite_btn">답변하기</button></td>
+                            <td id="pr_dt_write_4" ><button type="submit" id="qna_rewrite_btn">댓글쓰기</button></td>
                         </tr>
                             
                     </table>
@@ -155,11 +153,16 @@
                         <div class="report_drop">
                             <img src="../../IMG/HSJ/photo1.png" alt=""width="20px" style="border-radius: 40%;" id="pr_dt_report" >
                             <div class="dropdown_content">
-                                <span style="background-color: antiquewhite;">신고사유를 선택해 주세요.</span>
+                                <table class="report_ddt">
+                                    <tr><td id="ddt1">신고사유를 선택해 주세요.</td></tr>
+                                    <tr><td class="ddtd"><input type="button" value="비속어를 사용하였습니다." onclick="showRepPop()">
+                                        </td></tr>
+                                    <tr><td class="ddtd"><input type="button" value="잘못된 정보를 게재했습니다." onclick="showRepPop()">
+                                        </td></tr>
+                                    <tr><td class="ddtd"><input type="button" value="광고 글 입니다." onclick="showRepPop()"></td></tr>
+                                </table>
                                 <hr>
-                                <input type="button" value="비속어를 사용하였습니다." onclick="showRepPop()"><hr>
-                                <input type="button" value="잘못된 정보를 게재했습니다." onclick="showRepPop()"><hr>
-                                <input type="button" value="광고 글 입니다." onclick="showRepPop()"><hr>
+                                
                             </div> 
                         </div> 
                     </div>
