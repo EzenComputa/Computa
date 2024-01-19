@@ -1,6 +1,6 @@
 /* 전체영역(div) */
 .tr_pr{
-    margin-top: 3%;
+    margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
     padding: 8px 0px;
@@ -39,12 +39,26 @@
     font-size: 16px;
 }
 
-/* 상품설명 부분 */
-#tr_pr_detail{
-    margin-top: 1rem;
-    resize: none;
-}
 /* 이미지 영역 */
+.image_preview{
+    outline: 1px solid black;
+
+    width: 150px;
+    height: 30px;
+    
+    background-color: black;
+    
+    border: 1px solid rgb(77,77,77);
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#btnAtt{
+   
+}
 #tr_pr_img{visibility: hidden;}
 
 #att_zone{
@@ -52,9 +66,25 @@
     margin-bottom: 1.5rem;
     padding:1.5rem;
 
-    outline: 1px dashed;
+    border-radius: 5px;
+    outline: 1px solid #ccc;
     width: 800px;
     min-height: 150px;
+}
+
+/*상세스펙*/
+.tr_pr_spec{
+    
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    width: 83rem;
+}
+
+/* 상품설명 부분 */
+#tr_pr_detail{
+    margin-top: 1rem;
+    resize: none;
 }
 /*===================================*/
 

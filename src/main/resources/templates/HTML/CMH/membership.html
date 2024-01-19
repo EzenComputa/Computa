@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- 제작자: 최민혁 -->
+<!-- 프로그램: 회원가입 화면 -->
+<!-- 사용된 외부 파일  membership.css -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+    <link rel="stylesheet" href="./membership.css">
+</head>
+
+<body class="membership_body">
+    <form method="post" action="서버의url" class="membership">
+        
+        <div class="membership_head">
+            <h1>회원가입</h1>  
+        </div>
+
+        <!-- <div class="middle-user-inf"></div> -->
+        <div class="membership_information">
+            <label for="username" class="user_name">사용자 이름<span style="color: black;">*</span></label>
+            <input type="text" id="username" name="username" placeholder="Enter your name" required>
+            <br>
+
+            <label for="phone" class="user_phone_number">전화번호<span style="color: black;">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="-없이 번호 등록" required>
+            <br>
+
+            <label for="email" class="user_email">이메일<span style="color: black;">*</span></label>
+            <input type="text" id="email" name="email" placeholder="Email"  style="margin-left: 0px; width: 250px;"  required> 
+            <span>@</span>
+            <select class="box" id="email_list"  style="margin-left: 0px; width: 120px;" required>
+                <option value="1">naver.com</option>
+                <option value="2">google.com</option>
+                <option value="3">hanmail.net</option>
+                <option value="4">nate.com</option>
+                <option value="5">kakao.com</option>
+            </select>
+            <br>
+
+            <label for="jumin" class="user_jumin">주민번호<span style="color: black;">*</span></label>
+            <input type="text" maxlength="6"  style="margin-left: 0px; width: 230px;" placeholder="xxxxxx" required> 
+            - 
+            <input type="password" maxlength="7" style="margin-left: 0px; width: 230px;" placeholder="xxxxxx" required>
+
+            <label for="ID" class="user_id">아이디<span style="color: black;">*</span></label>
+            <input class="id_box" type="text" id="ID" name="ID" placeholder="Enter your ID" required>
+
+            <input type="button" class="duplication_butten" value="중복확인" onclick="alert('사용이 OO합니다.')" />
+            <br>
+
+            <label for="password" class="user_password">비밀번호<span style="color: black;">*</span></label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <br>
+
+            <label for="password_req" class="user_password_req">비밀번호 확인<span style="color: black;">*</span></label>
+            <input type="text" id="password_req" name="password_req" placeholder="Enter your password" required>
+
+            <label for="nickname" class="user_nickname">닉네임<span style="color: black;">*</span></label>
+            <input type="text" id="nickname" style="width: 300px;" placeholder="Enter your nickname" required>
+
+            <input type="button" class="duplication_butten" value="중복확인" onclick="alert('사용이 OO합니다.')" />
+            <br>
+            <span class="nickname_warning"> < 경고:  비속어 사용시 닉네임 사용에 제한됩니다.> </span>
+
+            <button type="submit" class="join_button">가입하기</button>
+        </div>
+
+    </form>
+</body>
+</html>
