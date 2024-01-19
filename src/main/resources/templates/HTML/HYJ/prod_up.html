@@ -6,30 +6,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>제품등록페이지</title>
-	<link rel="stylesheet" href="../../CSS/HSJ/css_lee/list.css" type="text/css">
+	<!-- <link rel="stylesheet" href="../../CSS/HSJ/css_lee/list.css" type="text/css"> -->
 	<link rel="stylesheet" href="../../CSS/HYJ/hyj_list.css" type="text/css">
 	<link rel="stylesheet" href="../../CSS/HSJ/hsj_list.css" type="text/css">
+	<link rel="stylesheet" href="../../CSS/LRH/menubar.css" type="text/css">
+	<link rel="stylesheet" href="../../CSS/LRH/style.css"  type="text/css">
 
 </head>
 <body>
 
-	<!--logo-->
-    <div class="admin_logo_wrap">
-        <img src="../../IMG/HYJ/computa_logo.png" alt="" width="100px">
+	<!--top-->
+	<div class="top">
+        <div class="logo_wrap">
+            <a href="/src/main/resources/templates/HTML/LRH/6.main_page.html" class="computa_logo"><img src="/src/main/resources/templates/IMG/LRH/computa icon.png" alt="logo" width="100"></a>
+        </div>
+        
+        <div class="search">
+            <input type="text" placeholder="검색어 입력">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" >
+        </div>
+        <div class="myinfo">
+            <div class="myinfo_icon">
+                <a href=""><img src="/src/main/resources/templates/IMG/LRH/recent.png">최근내역</a>
+                <a href=""><img src="/src/main/resources/templates/IMG/LRH/tea-bag.png">마이티백</a>
+                <a href=""><img src="/src/main/resources/templates/IMG/LRH/login.png">로그인</a>
+            </div>            
+        </div>
     </div>
-    <!--navbar-->
+    <!--menubar-->
     <div class="navbar">      
         <ul class="navbar_menu">
-            <li><a href="#" class="lee_a">조립PC</a></li>
-            <li><a href="#" class="lee_a">PC견적</a></li>
-            <li><a href="#" class="lee_a">부품</a></li>
-            <li><a href="#" class="lee_a">노트북</a></li>
-            <li><a href="#" class="lee_a">문의</a></li>
-            <li><a href="#" class="lee_a">우려먹기</a></li>
-            <li><a href="#" class="lee_a">파격할인</a></li>
-            <li><a href="#" class="lee_a">이벤트</a></li>
-            <li><a href="#" class="lee_a">브랜드스토어</a></li>            
-        </ul>        
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="#">PC견적</a></li>
+            <li><a href="#">부품</a></li>            
+            <li><a href="#">문의</a></li>
+            <li><a href="#" style="color: red;">우려먹기</a></li>                    
+        </ul>    
     </div>
 
 
@@ -64,8 +76,9 @@
 					var img_style = 'width:100%;height:100%;z-index:none';
 					
 					// 이미지안에 표시되는 체크박스의 속성
-					var chk_style = 'width:22px;height:30px;position:absolute;font-size:23px;'
-								  + 'right:0px;bottom:0px;z-index:999;background-color:rgba(255,255,255,0.1);color:#f00';
+					var chk_style = 'width:20px;height:20px;position:absolute;font-size:15px;'
+								  + 'right:0px;bottom:0px;z-index:999;background-color:rgba(255,255,255,0.9); color:lighslategray;'
+								  +'border:1px solid gray; cursor:pointer';
 				
 					btnAtt.onchange = function(e){
 					  var files = e.target.files;
@@ -134,9 +147,12 @@
 					//  X 버튼 만들기  
 					  var btn = document.createElement('input')
 					  btn.setAttribute('type', 'button')
-					  btn.setAttribute('value', 'x')
+					  btn.setAttribute('value', 'X')
 					  btn.setAttribute('delFile', file.name);
 					  btn.setAttribute('style', chk_style);
+					//   btn.setAttribute('style', 'border:1px solid')
+
+					
 
 					//  X 버튼 클릭 시 삭제
 

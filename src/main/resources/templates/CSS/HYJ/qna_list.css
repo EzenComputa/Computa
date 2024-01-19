@@ -7,9 +7,8 @@
 
 
 #wrap{
-   font-family: 'Hahmlet', serif;
    /* outline: 1px solid; */
-   width: 1022px;
+   width: 1000px;
    text-align: right;
    margin-left: auto;
    margin-right: auto;
@@ -50,15 +49,9 @@
    
 }
 
-.a_div{
-   outline: 1px solid rgb(8, 121, 46);
-   width: 20px;
-   height: 20px;
-   padding: 0.2rem;
-}
-
-.a_css{
-   text-decoration: none;
-   color: black;
+.board_page a.num {
+   padding-top: 9px;
+   font-size: 1.4rem;
+   border-left: 1px solid #1fa098;
    
 }
