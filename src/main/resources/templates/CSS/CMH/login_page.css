@@ -1,0 +1,92 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login_page_form {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.login_head h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.login_box {
+    text-align: left;
+}
+
+.login_id,
+.login_password {
+    display: block;
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.user_remember_id {
+    margin-right: 20px;
+}
+
+.three_other_link ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.three_other_link ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.three_other_link a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s;
+}
+
+.three_other_link a:hover {
+    color: #2078b8;
+}
+
+/* 추가된 로그인 버튼 스타일 */
+.user_login {
+    background-color: rgb(68, 172, 68);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 250px;
+    margin: 10px auto;
+    display: block;
+}
+
+/* 마우스 클릭 시 색상 변화 */
+.user_login:hover {
+    background-color: #2078b8;
+}
