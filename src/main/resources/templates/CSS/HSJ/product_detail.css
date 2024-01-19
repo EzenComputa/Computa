@@ -4,8 +4,8 @@
     border-color: rgba(68, 102, 69, 0.788);
     
     position:fixed;
-    top:50rem;
-    right:1rem;
+    bottom:3rem;
+    right:3rem;
     z-index: 9999;
 }
 
@@ -41,7 +41,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1.5rem;
-    padding:0;
+    padding:8px 0px;
 
     width: 1000px;
     height:auto;
@@ -51,8 +51,9 @@
 .pr_dt_table{
     margin-left: auto;
     margin-right: auto;
+    padding:8px 0px;
 
-    width: 60rem;
+    width: 1000px;
 
     border-collapse: collapse;
     border-bottom: 0.5rem #187771  solid;
@@ -68,7 +69,7 @@
 
 /* 작은 사진 */
 .pr_dt_photos{
-    padding: 0.5rem;
+    padding: 1rem;
 
     width:2rem;
     border-bottom: 3px rgba(74, 150, 108, 0.103) dotted;
@@ -92,23 +93,24 @@
     border-bottom: 3px rgba(74, 150, 108, 0.103) dotted;
 }
 .price_compare{
-    outline: solid 1px black;
+    outline: solid 1px #187771;
 
     margin-top: 0.5rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-
+    margin-left: 2.5rem;
+    
+    width: 400px;
+    min-height: 300px;
     height:auto;
 }
 
 
 /*제품 상세 영역*/
 .pr_detail{
-    margin-top: 0.5rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    margin-bottom: 2.5rem;
+    padding: 1rem;
 
     height: auto;
 
@@ -122,8 +124,10 @@
 .pr_dt_reply{
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1rem;    
-    width:70rem;
+    margin-bottom: 1rem;  
+    padding: 8px 0px;  
+
+    width:1000px;
     height: 500px;    
     display: relative;
 }
@@ -134,66 +138,95 @@
     margin-top: 0.5rem;
     margin-left: auto;
     margin-right: auto;
-    padding:1.5rem;
+    padding: 8px 0px;  
 
-    width:57rem;
+    width:1000px;
     outline: dashed 1px #187771;
+    background-color: #bee2e0;
 }
 
 /* 댓글 유저 프로필 */
 #pr_dt_write_1{
-    padding:0.5rem;
-    padding-right: 2rem;
+    padding-left: 8rem;
+    padding-right: 4.5rem;
     text-align: center;
 }
 
+/* 댓글 유저 닉네임 */
 #pr_dt_write_2{
-    padding-right: 2rem;
+    padding-left: 6rem;
+    padding-right: 3rem;
+    
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center; 
+}
+
+#pr_dt_write_3{
+    padding-right: 3rem;
+}
+
+#pr_dt_write_4{
+    padding-left: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
 }
 
 .pr_dt_tbl_3{
     text-align: center;
 }
-
-
 /*============================================================================*/
 
 /* 댓글 보기 영역(div) */
 .pr_dt_com_view{
-    margin-top: 0.5rem;
+    outline: dashed 1px #187771;
+
+    margin-top: 1.5rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2.5rem;
-    padding:0.5rem;
-    outline: dashed 1px #187771;
+    padding: 8px 0px;  
 
-    width: 59rem;
+    width:1000px;
+
+    background-color: #bee2e0;
 }
 
 /* 댓글 보기 테이블 */
 .pr_dt_comview_table{
-    outline: 2px solid black;
-    padding:rem;
+    padding-top: 1rem;
+    padding-left: 1.8rem;
 }
 
 /* 댓글 보기 사진*/
 #pr_dt_view_1{
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+
     width: 120px;
+
     text-align: center;
 }
 
 /* 댓글 닉네임 & 등록일 */
-#pr_dt_view_2{width: 200px;}
+#pr_dt_view_2{
+    width: 200px;
+    font-size: 1.8rem;
+}
 
 /* 댓글 수정 &삭제 버튼*/
-#pr_dt_view_3{width:50px}
-#pr_dt_view_4{width:50px}
+#pr_dt_view_3{width:4rem}
+#pr_dt_view_4{width:4rem; padding-right: 0.5rem;}
 
 /* 댓글 글내용 */
 .pr_dt_comview_view{
     margin: 0.5rem;
     padding:0.5rem;
+
+    width: 94rem;
     height:auto;
+    
+    font-size: 15px;
     background-color: white;
     outline: dotted 1px;
 }
@@ -215,21 +248,53 @@
 
 /* 신고사유 영역 */
 .dropdown_content{
-    display: none;
-    text-align: center;
-    outline: solid 2px #187771;
+    outline: solid 1px #3d4747;
+    
+    display: none; 
+    border-radius: 2%;  
+    
     position:absolute;
     z-index: 1;
-    background-color: white;
+   
     top:3rem;
     left:1.5rem;
-    width:200px;
+
+    font-size: 13px;
+    text-align: center;
+    background-color: rgb(215, 235, 226);
 }
+
+.report_ddt{
+    margin: 0.5rem;    
+
+    border-collapse: collapse;
+    
+    text-align: center;
+}
+
+#ddt1{
+    padding: 1.5rem;
+    background-color: #6ea8a5;
+
+    font-size: 18px;
+    font-weight: bold;
+    color: #bee2e0;
+}
+
+.ddtd{
+    padding: 0.5rem;
+    border-top: 1px solid #6ea8a5;
+}
+.ddtd:hover{background-color: #bee2e0;}
+
 
 /* 신고사유 버튼 */
 .dropdown_content input{
     border:none;
-    background-color: white;
+    
+    color: #304645;
+    background-color: rgb(215, 235, 226);
+    font-size: 15px;
     cursor: pointer;
 }
 /*============================================================================*/
