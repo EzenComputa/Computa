@@ -1,0 +1,95 @@
+.find_user_body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.find_user_form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.find_user_id_head {
+    color: #333;
+    font-size: 20px;
+    
+}
+
+
+.find_user_id_name,
+.find_user_id_phone_number,
+.find_user_id_email,
+.find_user_id_jumin {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.user_id_name,
+.id_phone_number,
+.user_id_email,
+.find_user_id_jumin {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 10px);
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.domain_list {
+    margin-left: 5px;
+    padding: 7px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    display: inline-block;
+    width: calc(33.33% - 6px); /* 2/3로 줄이기 */
+}
+
+.find_user_id_email select {
+    width: auto;
+}
+
+.find_user_id_button input[type="button"] {
+    background-color: rgb(68, 172, 68);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.find_user_id_button input[type="button"]:hover {
+    background-color: rgb(61, 114, 211);
+}
+span{
+    font-size: 20px;
+}
