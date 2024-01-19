@@ -122,11 +122,9 @@
 .pr_dt_reply{
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1rem;
-    
+    margin-bottom: 1rem;    
     width:70rem;
-    height: 500px;
-    
+    height: 500px;    
     display: relative;
 }
 
@@ -146,7 +144,6 @@
 #pr_dt_write_1{
     padding:0.5rem;
     padding-right: 2rem;
-
     text-align: center;
 }
 
@@ -175,6 +172,7 @@
 
 /* 댓글 보기 테이블 */
 .pr_dt_comview_table{
+    outline: 2px solid black;
     padding:rem;
 }
 

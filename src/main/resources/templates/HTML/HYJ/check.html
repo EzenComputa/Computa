@@ -9,13 +9,16 @@
             window.open("unregister.html", "a", "width=400, height=300, left=100, top=50")
         }
     </script>
+    <link rel="stylesheet" href="../../CSS/HYJ/hyj_list.css">
 </head>
 <body>
     <div id="check" onload="window.resizeTo(400,200)">
         <fieldset>
-            <h3>정말로 탈퇴 하시겠습니까?</h3>
-            <input type="button"  value="네" onclick=showPopup_unregi()>
-            <input type="button" value="아니요" onclick="window.close()" style="float: center;" >
+            <h3 style="text-align: center;">정말로 탈퇴 하시겠습니까?</h3>
+            <div class="btn_yn">
+            <input type="button" id="btn_yes"  value="네" onclick=showPopup_unregi()>
+            <input type="button" id="btn_no" value="아니요" onclick="window.close()" style="float: center;" >
+            </div>
         </fieldset>
     </div>
 </body>

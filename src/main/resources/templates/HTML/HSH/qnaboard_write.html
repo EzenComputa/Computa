@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="texttable.css">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <!--navbar-->
+    <div class="navbar">      
+        <ul class="navbar_menu">
+            <li><a href="#" class="lee_a">조립PC</a></li>
+            <li><a href="#" class="lee_a">PC견적</a></li>
+            <li><a href="#" class="lee_a">부품</a></li>
+            <li><a href="#" class="lee_a">노트북</a></li>
+            <li><a href="#" class="lee_a">문의</a></li>
+            <li><a href="#" class="lee_a">우려먹기</a></li>
+            <li><a href="#" class="lee_a">파격할인</a></li>
+            <li><a href="#" class="lee_a">이벤트</a></li>
+            <li><a href="#" class="lee_a">브랜드스토어</a></li>            
+        </ul>        
+    </div>
+
+    <form class="qnawrite">
+     <!---테이블영역-->
+    <div class="qnadiv">
+        <table class="qnatable">
+            <tr>
+                <td><span>문의유형</span></td>
+                <td class="table_left" id="qnatype">
+                    <select name="" class="qnaselect">
+                    <option value="servicequestion">서비스 문의</option>
+                    <option value="report">신고</option>
+                    <option value="proposal">제안</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td><span>제목</span></td>
+                <td class="table_left"><input type="text" style="width: 400px;"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td><span>내용</span>
+                </td>
+                <td class="table_left">
+                    <textarea name="" id="qnatextarea" cols="55" rows="30"></textarea><br>
+                    사진첨부 : <input type="file" onchange="addFile(this);" multiple />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <span>비밀글여부</span>
+                </td>
+                <td class="table_left">
+                    <input type="checkbox" value="비밀글"><span>비밀글</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+
+    <!--버튼영역-->
+    <div class="qnaregister">
+        <input type="submit" value="등록하기" class="register_button" onclick="window.open('qnaregistered.html', 'window_name', 'width=430, height=300, location=no, status=no');"></button>
+    </div>
+</body>
+</html>

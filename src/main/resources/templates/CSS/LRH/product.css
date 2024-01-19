@@ -60,33 +60,18 @@ tbody{
     
 }
 
-.container{    
-    width: 20px;
-    position: relative;
-    bottom:130px;
+.container{      
+    position: relative;    
     left:5px;
     color: red;
 }
-.like_icon{
-    position: relative;    
-    top: 130px;
-    
-}
 
-.container_2{
-    width: 0;
-    height: 0;        
-    position: relative;
-    bottom:134px;
+.like_icon{          
+    height: 10%;
 }
-.triangle_1 {    
-    width: 0;
-    height: 0;
-    border-top: 50px solid #187771;
-    border-right: 50px solid transparent;
-    position: relative;    
-    margin: 0px;
-  }
+.recent_like_icon{
+    height: 10%;
+}
 
 .triangle_2 {    
     width: 0;
