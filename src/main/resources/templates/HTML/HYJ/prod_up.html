@@ -47,19 +47,85 @@
 
 
    	<!-- 상품 등록 영역 -->
-   	<div id="content">
-   			<div class="title" style="float: left">
-   				<h2>상품 이미지 <span style="color: red;">*</span></h2>
-   			</div>   
-
-			<!-- 상품이미지 등록하기 -->
-
-			<div id='image_preview'>
-				<h3>이미지 미리보기 </h3>
-				<input type='file' id='btnAtt' multiple='multiple'/>
-				<div id='att_zone' 
-					 dataplaceholder='파일을 첨부 하려면 파일 선택 버튼을 클릭하거나 파일을 드래그앤드롭 하세요'></div>
+	   <table border="0" class="tr_pr_table">
+            
+		<!-- 상품 이미지-->
+		<tr>
+			<td class="tr_pr_left">상품이미지<span id="star">*</span></td>
+			<td>
+				<!-- 상품이미지 등록하기 -->
+				<div id='image_preview'>
+					<input type='file' id='btnAtt' multiple='multiple'/>
+					<br>
+					<br>
+					<span style="color: lightslategrey;">* 최대 200x200(20mb) 사이즈로 올려주세요.</span>
+					<br>
+					<span style="color: lightslategrey;"></spanstyle>* 최대 5개까지만 올려주세요.</span>
+					<br>
+					<div id='att_zone'></div>
 				</div>
+			</td>
+		</tr>
+		<tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+		
+		<!-- 상품명 -->
+		<tr>
+			<td class="tr_pr_left">상품명<span id="star">*</span></td>
+			<td><input type="text" id="tr_pr_name" required></td>
+		</tr>
+		<tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+
+		<!--카테고리(select)-->
+		<tr>
+			<td class="tr_pr_left">카테고리<span id="star">*</span></td>
+			<td><select name="tr_pr_category" id="tr_pr_category" required>
+				<option value="">종류를 선택해주세요!</option>
+				<option value="cpu">CPU</option>
+				<option value="gpu">그래픽카드</option>
+				<option value="motherboard">메인보드</option>
+				<option value="ssd">SSD</option>
+				<option value="hdd">HDD</option>
+				<option value="ram">RAM</option>
+				<option value="case">케이스</option>
+				<option value="cooler">쿨러</option>
+				<option value="power">파워</option>
+			</select></td>
+		</tr>
+		<tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+
+
+		<!-- 상품가격 -->
+		<tr>
+			<td class="tr_pr_left">상품가격<span id="star">*</span></td>
+			<td><input type="text" id="tr_pr_price" required></td>
+		</tr>
+		<tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+
+
+		<!-- 상세스펙 -->
+		<tr>
+			<td class="tr_pr_left">상세 스펙</td>
+			<td>
+				<div class="tr_pr_spec">
+					
+				</div>
+			</td>
+		</tr>
+		<tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+
+		<!-- 상품설명 -->
+		<tr>
+			<td class="tr_pr_left2">상품설명</td>
+			<td><textarea name="tr_pr_detail" id="tr_pr_detail" cols="68" rows="20" placeholder="-상품의 하자정도 &#13;-연락처 남겨주세요&#13;-최대3000자"></textarea></td>
+		</tr>
+
+		<!-- 상세 이미지 -->
+		<tr>
+			<td class="tr_pr_left">상세이미지<span id="star">*</span></td>
+			<td><input type="file" value="upload"></td>
+		</tr>
+		<tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+	</table>
 
 			<script>
 				( /* att_zone : 이미지들이 들어갈 위치 id, btn : file tag id */
@@ -199,57 +265,7 @@
 				}
 			  </script>  -->
 
-<hr>   
-   			<div class="title" style="float: left">
-   			<h2>상품명 <span style="color: red;">*</span></h2>
-   			</div>   
-   			<div class= "input">
-   				<input type="text">
-   			</div>   
-   		<hr/> 
-		
-		
-   			<div class="title" style="float: left">
-   				<h2>카테고리 <span style="color: red;">*</span> </h2>
-   			</div>   
-   			<div class="input" id="open" onclick="showDetail()">
-   				<select name="categorie" id="categorie">
-   					<option value="cpu">CPU</option>
-   					<option value="gpu">GPU</option>
-   					<option value="ram">RAM</option>
-   					<option value="ssd">SSD</option>
-   					<option value="hdd">HDD</option>
-   					<option value="motherboard">메인보드</option>
-   					<option value="cooler">쿨러</option>
-   					<option value="case">케이스</option>
-				</select>
-				<span style="float: center;"></span>
-			</div>   
-				<hr/>   
-   			<div class="title" style="float: left">
-   				<h2>가격 <span style="color: red;">*</span> </h2>
-   			</div>
-   			<div class= "input">
-   				<input type="text">
-   			</div>
-   			<hr/>   
-   			<div class="title" style="float: left">
-   				<h2>상품 설명</h2>
-   			</div>   
-   			<div class="input">
-   				<textarea name="prod_desc" id="desc" cols="50" rows="10" placeholder="상품 설명을 적어주세요"></textarea>
-   				</textarea>
-   			</div>   
-   			<hr/>   
-   			<div class="title" style="float: left">
-   				<h2>상세 이미지 <span style="color: red;">*</span></h2>
-   			</div>   
-   			<div class="input">
-   				<input type="text" placeholder="선택된 파일 없음"> 
-   				<input type="file" name="upload" >
-   			</div>
-   			
-   		</div>   
+			
    		<br><br>
    		<div style="text-align:center;">
    		<button style="display: inline-block;">등록하기</button>
