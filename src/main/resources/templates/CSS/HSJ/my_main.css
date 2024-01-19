@@ -1,11 +1,11 @@
  /* 마이페이지 전체 영역(위쪽) */
  .my_main_container{
-         margin-top: 3%;
+         margin-top: 0;
          margin-left: auto;
          margin-right: auto;
-         padding:1.5rem;
+         padding: 8px 0px;
 
-         width: 976px;
+         width: 1000px;
          height:383px;
 
          background-color: #187771;
@@ -26,7 +26,7 @@
 }
 /* 유저 프로필(테이블) */
 .my_user{
-    margin-top: 1.5rem;
+    margin-top: 5rem;
     margin-left: auto;
     margin-right: auto;
 
@@ -50,6 +50,9 @@
 
 /* 유저 이름 칸*/
 #my_td_1{
+    padding-left: 0.5rem;
+    padding-right: 0.6rem;
+
     text-align: right;
     font-size: 15px;
     color: antiquewhite;
@@ -61,6 +64,8 @@
 /* 회원수정 버튼 */  
 #my_main_modify{
     padding: 0.2rem;
+    padding-bottom: 2rem;
+    padding-right: 0.5rem;
 
     height: 2rem;
 
@@ -69,7 +74,7 @@
 
     background-color: rgba(127, 255, 212, 0.562);
     color:rgb(75, 59, 31);
-    letter-spacing: -2px;
+    letter-spacing:-3px;
 
     cursor: pointer;
 }
@@ -77,12 +82,12 @@
 
 /* 마이페이지 전체 영역(아래쪽) */
 .select_container{
-    margin-left: -24px;
+    margin-top: 7rem;
+    margin-left: auto;
     margin-right:auto;
-    margin-top: 3.2rem;
-    padding: 1.5rem; 
+    padding: 8px 0px; 
 
-    width: 976px;
+    width: 1000px;
     height: 130px;
 
     background-color: #1fa097e3;
@@ -94,11 +99,16 @@
 
 /* a태그 */
 .my_main_a{
-    text-decoration: none;
-    color:whitesmoke;
-    text-align: center;
-    height: 100px;
+    margin-top: 1.5rem;
 
+    height: 100px;
+    
+    text-decoration: none;
+    text-align: center;
+    color:whitesmoke;
+    
     letter-spacing: -4px;
-    }
+}
+
+/* a태그 글자크기*/
 .a_tbl_d{font-size: 25px;}
