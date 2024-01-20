@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@600&display=swap');
 
-#findpass{
-    
+#findpass{    
     width: 500px;
     height: 400px;
     margin-top: 50px;
@@ -42,6 +41,7 @@
 }
 
 .pw_title{
+    
     width: 220px;
 }
 
@@ -53,16 +53,19 @@
     margin-left: 10px;
     margin-right:10px;
     width: 130px;
+    height: 20px;
 }
 
 .pw_userid{
     margin-left: 10px;
-    width: 160px;
+    width: 170px;
+    height: 20px;
 }
 
 .pw_username{
     margin-left: 10px;
-    width: 160px;
+    width: 170px;
+    height: 20px;
 }
 
 check:active{}

@@ -1,142 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../../CSS/HYJ/table.css">
-</head>
-<body>
-    <h1 style="margin-left: 50px;">case table</h1>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../../../CSS/HYJ/table.css" />        
+    </head>
+    <body>
+        <h1 style="margin-left: 50px">case table</h1>
 
-    <table border="1" id="prod_table">
-        <tr>
-            <td class="prod_title">제조회사</td>
-            <td class="content"><span><input type="text" id="company"></span></td>
-            <td class="prod_title">등록년월</td>
-            <td class="content"><span><input type="date" id="date"></span></td>
-        </tr>
-        <tr style="height: 20px;" class="title"><td colspan="4"></td></tr>
-        <tr>
-            <td class="prod_title">제품 분류</td>
-            <td id="kind" class="content">PC케이스(ATX)</td>
-            <td class="prod_title">케이스 크기</td>
-            <td id="socket" class="content">미들타워</td>
-        </tr>
-        <tr>
-            <td class="prod_title">파워포함여부</td>
-            <td id="" class="content">파워미포함</td>
-            <td class="prod_title">높이(H)</td>
-            <td id="ver" class="content">475mm</td>
-        </tr>
-        <tr style="height: 20px;" class="title"><td colspan="4">지원보드규격</td></tr>
-        <tr>
-            <td class="prod_title">표준-ATX</td>
-            <td class="content"><input type="radio" name="board1">O
-                <input type="radio" name="board1">X</td>
-            <td class="prod_title">Micro-ATX</td>
-            <td class="content"><input type="radio" name="board2">O 
-                                 <input type="radio" name="board2">X </td>
-        </tr>
-        <tr>
-            <td class="prod_title">Mini-ITX</td>
-            <td class="content"><input type="radio" name="board3">O 
-                                 <input type="radio" name="board3">X </td>
-            <td class="prod_title"></td>
-            <td class="content"></td>
-        </tr>
-        <tr style="height: 20px;" class="title"><td colspan="4">내부 확장</td></tr>
-        <tr>
-            <td class="prod_title">8.9cm베이</td>
-            <td class="content">2개</td>
-            <td class="prod_title">6.4cm베이</td>
-            <td class="content">4개</td>
-        </tr>
-        <tr>
-            <td class="prod_title">저장장치 장착</td>
-            <td class="content">2개</td>
-            <td class="prod_title">폼팩터</td>
-            <td class="content"><span><input type="text" id="form_factor"></span></td>
-        </tr>
-        <tr style="height: 20px;" class="title"><td colspan="4">쿨러 / 튜닝</td></tr>
-        <tr>
-            <td class="prod_title">쿨링팬</td>
-            <td class="content">총6개</td>
-            <td class="prod_title">LED팬</td>
-            <td class="content">4개</td>
-        </tr>
-        <tr>
-            <td class="prod_title">전면 패널 타입</td>
-            <td class="content">메쉬</td>
-            <td class="prod_title">측면</td>
-            <td class="content">강화유리</td>
-        </tr>
-        <tr>
-            <td class="prod_title">후면</td>
-            <td class="content">120mm LED x1</td>
-            <td class="prod_title">전면</td>
-            <td class="content">120mm LED x3</td>
-        </tr>
-        <tr>
-            <td class="prod_title">상단</td>
-            <td class="content">120mm x2</td>
-            <td class="prod_title"></td>
-            <td class="content"></td>
-        </tr>
-        <tr style="height: 20px;" class="title"><td colspan="4">외부포트</td></tr>
-        <tr>
-            <td class="prod_title">USB</td>
-            <td class="content"><input type="radio" name="port1">O 
-                                <input type="radio" name="port1">X </td>
-            <td class="prod_title">USB 3.0</td>
-            <td class="content"><input type="radio" name="port2">O 
-                                <input type="radio" name="port2">X </td>
-        </tr>
-        <tr style="height: 20px;" class="title"><td colspan="4">크기</td></tr>
-        <tr>
-            <td class="prod_title">너비(W)</td>
-            <td class="content">210mm</td>
-            <td class="prod_title">깊이(D)</td>
-            <td class="content">352mm이하</td>
-        </tr>
-        <tr style="height: 20px;" class="title"><td colspan="4">호환성</td></tr>
-        <tr>
-            <td class="prod_title">VGA 장착 길이</td>
-            <td class="content">335mm</td>
-            <td class="prod_title">CPU쿨러 장착높이</td>
-            <td class="content">165mm</td>
-        </tr>
-        <tr>
-            <td class="prod_title">수랭쿨러 규격</td>
-            <td class="content">최대2열 지원</td>
-            <td class="prod_title">라디에이터(상단)</td>
-            <td class="content">최대280mm</td>
-        </tr>
-        <tr>
-            <td class="prod_title">라디에이터(전면)</td>
-            <td class="content">최대360mm</td>
-            <td class="prod_title">라디에이터(후면)</td>
-            <td class="content">최대120mm</td>
-        </tr>
-        <tr style="height: 20px;" class="title"><td colspan="4">컨트롤러 지원</td></tr>
-        <tr>
-            <td class="prod_title">팬 컨트롤</td>
-            <td class="content"><input type="radio" name="controler">O 
-                                <input type="radio" name="controler">X </td>
-            <td class="prod_title"></td>
-            <td class="content"></td>
-        </tr>
-        
-        <tr style="height: 20px;" class="title"><td colspan="4">인증</td></tr>
-        <tr>
-            <td class="prod_title">적합성평가인증</td>
-            <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="rra" onclick="window.open('https://www.rra.go.kr/ko/index.do')">인증번호 확인</button> </td>
-        </tr>
-        <tr>
-            <td class="prod_title">안전확인인증</td>
-            <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="safetykorea" onclick="window.open('https://www.safetykorea.kr/')">인증번호 확인</button> </td>
-        </tr>
-       
-    </table>
-</body>
+        <table border="1" id="prod_table">
+            <tr>
+                <td class="prod_title">제조회사</td>
+                <td class="content">
+                    <span><input type="text" id="company" /></span>
+                </td>
+                <td class="prod_title">등록년월</td>
+                <td class="content">
+                    <span><input type="date" id="date" /></span>
+                </td>
+            </tr>
+            <tr style="height: 20px" class="title">
+                <td colspan="4"></td>
+            </tr>
+            <tr>
+                <td class="prod_title">제품 분류</td>
+                <td id="kind" class="content">PC케이스(ATX)</td>
+                <td class="prod_title">케이스 크기</td>
+                <td id="socket" class="content">미들타워</td>
+            </tr>
+            <tr>
+                <td class="prod_title">파워포함여부</td>
+                <td id="" class="content">파워미포함</td>
+                <td class="prod_title">높이(H)</td>
+                <td id="ver" class="content">475mm</td>
+            </tr>
+            <tr style="height: 20px" class="title">
+                <td colspan="4">지원보드규격</td>
+            </tr>
+            <tr>
+                <td class="prod_title">표준-ATX</td>
+                <td class="content"><input type="radio" name="board1" />O <input type="radio" name="board1" />X</td>
+                <td class="prod_title">Micro-ATX</td>
+                <td class="content"><input type="radio" name="board2" />O <input type="radio" name="board2" />X</td>
+            </tr>
+            <tr>
+                <td class="prod_title">Mini-ITX</td>
+                <td class="content"><input type="radio" name="board3" />O <input type="radio" name="board3" />X</td>
+                <td class="prod_title"></td>
+                <td class="content"></td>
+            </tr>
+            <tr style="height: 20px" class="title">
+                <td colspan="4">내부 확장</td>
+            </tr>
+            <tr>
+                <td class="prod_title">8.9cm베이</td>
+                <td class="content">2개</td>
+                <td class="prod_title">6.4cm베이</td>
+                <td class="content">4개</td>
+            </tr>
+            <tr>
+                <td class="prod_title">저장장치 장착</td>
+                <td class="content">2개</td>
+                <td class="prod_title">폼팩터</td>
+                <td class="content">
+                    <span><input type="text" id="form_factor" /></span>
+                </td>
+            </tr>
+            <tr style="height: 20px" class="title">
+                <td colspan="4">쿨러 / 튜닝</td>
+            </tr>
+            <tr>
+                <td class="prod_title">쿨링팬</td>
+                <td class="content">총6개</td>
+                <td class="prod_title">LED팬</td>
+                <td class="content">4개</td>
+            </tr>
+            <tr>
+                <td class="prod_title">전면 패널 타입</td>
+                <td class="content">메쉬</td>
+                <td class="prod_title">측면</td>
+                <td class="content">강화유리</td>
+            </tr>
+            <tr>
+                <td class="prod_title">후면</td>
+                <td class="content">120mm LED x1</td>
+                <td class="prod_title">전면</td>
+                <td class="content">120mm LED x3</td>
+            </tr>
+            <tr>
+                <td class="prod_title">상단</td>
+                <td class="content">120mm x2</td>
+                <td class="prod_title"></td>
+                <td class="content"></td>
+            </tr>
+            <tr style="height: 20px" class="title">
+                <td colspan="4">외부포트</td>
+            </tr>
+            <tr>
+                <td class="prod_title">USB</td>
+                <td class="content"><input type="radio" name="port1" />O <input type="radio" name="port1" />X</td>
+                <td class="prod_title">USB 3.0</td>
+                <td class="content"><input type="radio" name="port2" />O <input type="radio" name="port2" />X</td>
+            </tr>
+            <tr style="height: 20px" class="title">
+                <td colspan="4">크기</td>
+            </tr>
+            <tr>
+                <td class="prod_title">너비(W)</td>
+                <td class="content">210mm</td>
+                <td class="prod_title">깊이(D)</td>
+                <td class="content">352mm이하</td>
+            </tr>
+            <tr style="height: 20px" class="title">
+                <td colspan="4">호환성</td>
+            </tr>
+            <tr>
+                <td class="prod_title">VGA 장착 길이</td>
+                <td class="content">335mm</td>
+                <td class="prod_title">CPU쿨러 장착높이</td>
+                <td class="content">165mm</td>
+            </tr>
+            <tr>
+                <td class="prod_title">수랭쿨러 규격</td>
+                <td class="content">최대2열 지원</td>
+                <td class="prod_title">라디에이터(상단)</td>
+                <td class="content">최대280mm</td>
+            </tr>
+            <tr>
+                <td class="prod_title">라디에이터(전면)</td>
+                <td class="content">최대360mm</td>
+                <td class="prod_title">라디에이터(후면)</td>
+                <td class="content">최대120mm</td>
+            </tr>
+            <tr style="height: 20px" class="title">
+                <td colspan="4">컨트롤러 지원</td>
+            </tr>
+            <tr>
+                <td class="prod_title">팬 컨트롤</td>
+                <td class="content"><input type="radio" name="controler" />O <input type="radio" name="controler" />X</td>
+                <td class="prod_title"></td>
+                <td class="content"></td>
+            </tr>
+
+            <tr style="height: 20px" class="title">
+                <td colspan="4">인증</td>
+            </tr>
+            <tr>
+                <td class="prod_title">적합성평가인증</td>
+                <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="rra" onclick="window.open('https://www.rra.go.kr/ko/index.do')">인증번호 확인</button></td>
+            </tr>
+            <tr>
+                <td class="prod_title">안전확인인증</td>
+                <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="safetykorea" onclick="window.open('https://www.safetykorea.kr/')">인증번호 확인</button></td>
+            </tr>
+        </table>
+    </body>
 </html>
