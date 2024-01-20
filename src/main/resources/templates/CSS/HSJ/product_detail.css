@@ -103,6 +103,17 @@
     height:auto;
 }
 
+.price_tbl{
+    width:400px;
+    text-align: center;
+}
+
+#com_img_td{width:50px;}
+#com_name_td{width:60px;}
+#com_price_td{width:auto; font-weight: bold;font-size: 20px;}
+#com_link_td{width:60px;}
+
+/*============================================================================*/
 
 /*제품 상세 영역*/
 .pr_detail{
