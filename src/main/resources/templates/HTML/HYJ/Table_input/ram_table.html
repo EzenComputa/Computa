@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../CSS/HYJ/table.css">
+</head>
+<body>
+    <h1 style="margin-left: 50px;">ram table</h1>
+
+    <table border="1" class="ram_table" id="prod_table">
+        <tr>
+            <td class="prod_title">제조회사</td>
+            <td class="content"><input type="text" id="company"></td>
+            <td class="prod_title">등록년월</td>
+            <td class="content"><input type="date" id="date"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">칩셋 사양</td></tr>
+        <tr>
+            <td class="prod_title">칩셋제조사</td>
+            <td id="kind" class="content"><input type="text" id=""></td>
+            <td class="prod_title">제품 시리즈</td>
+            <td id="socket" class="content"><input type="text" id=""></td>
+        </tr>
+        <tr>
+            <td class="prod_title">GPU 제조 공정</td>
+            <td id="" class="content"><input type="text" id="">nm</td>
+            <td class="prod_title">NVIDIA 칩셋</td>
+            <td id="ver" class="content"><input type="text" id=""></td>
+        </tr>
+        <tr>
+            <td class="prod_title">부스트클럭</td>
+            <td class="content"><input type="text" id="">MHz</td>
+            <td class="prod_title">쿠다 프로세서</td>
+            <td class="content"><input type="text" id="">개</td>
+        </tr>
+        <tr>
+            <td class="prod_title">인터페이스</td>
+            <td class="content"><input type="text" id=""></td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">메모리 사양</td></tr>
+        <tr>
+            <td class="prod_title">메모리 종류</td>
+            <td class="content"><input type="text" id=""></td>
+            <td class="prod_title">메모리 클럭</td>
+            <td class="content"><input type="text" id="">MHz</td>
+        </tr>
+        <tr>
+            <td class="prod_title">메모리 용량</td>
+            <td class="content"><input type="text" id="">GB</td>
+            <td class="prod_title">메모리 버스</td>
+            <td class="content"><input type="text" id="">bit</td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">그래픽 출력</td></tr>
+        <tr>
+            <td class="prod_title">HDMI</td>
+            <td class="content"><input type="number" id="">개</td>
+            <td class="prod_title">DisplayPort</td>
+            <td class="content"><input type="number" id="">개</td>
+        </tr>
+        <tr>
+            <td class="prod_title">모니터 지원</td>
+            <td class="content">최대 모니터 <input type="number" id="">개</td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">부가기능</td></tr>
+        <tr>
+            <td class="prod_title">제로팬(0-dB기술)</td>
+            <td class="content"><input type="radio" name="zero">O <input type="radio" name="zero">X</td>
+            <td class="prod_title">8K 지원</td>
+            <td class="content"><input type="radio" name="8k_2">O <input type="radio" name="8k_2">X</td>
+        </tr>
+        <tr>
+            <td class="prod_title">4K 지원</td>
+            <td class="content"><input type="radio" name="4k_2">O <input type="radio" name="4k_2">X</td>
+            <td class="prod_title">HDR 지원</td>
+            <td class="content"><input type="radio" name="hdr_2">O <input type="radio" name="hdr_2">X</td>
+        </tr>
+        <tr>
+            <td class="prod_title">HDCP 2.3</td>
+            <td class="content"><input type="radio" name="hdcp_2">O <input type="radio" name="hdcp_2">X</td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">전력 관련</td></tr>
+        <tr>
+            <td class="prod_title">권장 파워용량</td>
+            <td class="content"><input type="text" id=""></td>
+            <td class="prod_title">전원 포트</td>
+            <td class="content"><input type="text" id=""></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">냉각방식</td></tr>
+        <tr>
+            <td class="prod_title">방열판</td>
+            <td class="content"><input type="radio" name="cway1">O <input type="radio" name="cway1">X</td>
+            <td class="prod_title">히트파이프</td>
+            <td class="content"><input type="radio" name="cway2">O <input type="radio" name="cway2">X</td>
+        </tr>
+        <tr>
+            <td class="prod_title">팬쿨러</td>
+            <td class="content"><input type="radio" name="cway3">O <input type="radio" name="cway3">X</td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">제품 외형</td></tr>
+        <tr>
+            <td class="prod_title">팬 개수</td>
+            <td class="content"><input type="text" id=""></td>
+            <td class="prod_title">가로(길이)</td>
+            <td class="content"><input type="text" id="">mm</td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">추가 구성</td></tr>
+        <tr>
+            <td class="prod_title">백플레이트</td>
+            <td class="content"><input type="radio" name="Add1">O <input type="radio" name="Add1">X</td>
+            <td class="prod_title">LED 라이트</td>
+            <td class="content"><input type="radio" name="Add2">O <input type="radio" name="Add2">X</td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">LED 위치</td></tr>
+        <tr>
+            <td class="prod_title">전면 LED</td>
+            <td class="content"><input type="radio" name="Led">O <input type="radio" name="Led">X</td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">인증</td></tr>
+        <tr>
+            <td class="prod_title">적합성평가인증</td>
+            <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="rra" onclick="window.open('https://www.rra.go.kr/ko/index.do')">인증번호 확인</button> </td>
+        </tr>
+        <tr>
+            <td class="prod_title">안전확인인증</td>
+            <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="safetykorea" onclick="window.open('https://www.safetykorea.kr/')">인증번호 확인</button> </td>
+        </tr>
+       
+    </table>
+</body>
+</html>

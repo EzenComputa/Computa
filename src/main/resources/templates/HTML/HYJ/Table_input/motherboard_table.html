@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../CSS/HYJ/table.css">
+</head>
+<body>
+    <h1 style="margin-left: 50px;">motherboard table</h1>
+
+    <table border="1"class="motherboard_table" id="prod_table">
+        <tr>
+            <td class="prod_title">제조회사</td>
+            <td class="content"><input type="text" id="company"></td>
+            <td class="prod_title">등록년월</td>
+            <td class="content"><input type="date" id="date"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">기본 사양 </td></tr>
+        <tr>
+            <td class="prod_title">제품 분류</td>
+            <td id="kind" class="content"><input type="text" id=""></td>
+            <td class="prod_title">CPU 소켓</td>
+            <td id="socket" class="content"><input type="text" id="socket"></td>
+        </tr>
+        <tr>
+            <td class="prod_title">세부 칩셋</td>
+            <td id="" class="content"><input type="text" id=""></td>
+            <td class="prod_title">CPU 장착수</td>
+            <td id="ver" class="content"><input type="number" id="">개</td>
+        </tr>
+        <tr>
+            <td class="prod_title">폼팩터</td>
+            <td class="content"><input type="text" id="form_factor"></td>
+            <td class="prod_title">쓰레드수</td>
+            <td class="content"><input type="text" id="threads"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">메모리</td></tr>
+        <tr>
+            <td class="prod_title">메모리 종류</td>
+            <td class="content"><input type="text" id="ram_kind"></td>
+            <td class="prod_title">메모리 속도</td>
+            <td class="content"><input type="text" id="ram_speed">5600MHz (PC5-44800)</td>
+        </tr>
+        <tr>
+            <td class="prod_title">메모리 슬롯</td>
+            <td class="content"><input type="text" id="ram_slots"></td>
+            <td class="prod_title">메모리 채널</td>
+            <td class="content"><input type="text" id=""></td>
+        </tr>
+        <tr>
+            <td class="prod_title">메모리 용량</td>
+            <td class="content">최대 <input type="text" id="">GB</td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">확장슬롯</td></tr>
+        <tr>
+            <td class="prod_title">VGA 연결</td>
+            <td class="content"><input type="text" id=""></td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">PCIe버전 </td></tr>
+        <tr>
+            <td class="prod_title">PCIe4.0</td>
+            <td class="content"><input type="radio" name="pci1">O <input type="radio" name="pci1">X </td>
+            <td class="prod_title">PCIe3.0</td>
+            <td class="content"><input type="radio" name="pci2">O <input type="radio" name="pci2">X </td>
+        </tr>
+        <tr>
+            <td class="prod_title">PCI</td>
+            <td class="content"><input type="radio" name="pci3">O <input type="radio" name="pci3">X </td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">PCIe슬롯</td></tr>
+         <tr>
+            <td class="prod_title">PCIex16</td>
+            <td class="content"><input type="number" id="">개</td>
+            <td class="prod_title">PCIex1</td>
+            <td class="content"><input type="number" id="">개</td>
+        </tr>
+        <tr>
+            <td class="prod_title">PCI</td>
+            <td class="content"><input type="number" id="">개</td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">저장장치인터페이스</td></tr>
+        <tr>
+            <td class="prod_title">M.2</td>
+            <td class="content"><input type="radio" name="m1">O <input type="radio" name="m1">X </td>
+            <td class="prod_title">SATA3(6Gb/s)</td>
+            <td class="content"><input type="radio" name="m2">O <input type="radio" name="m2">X </td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4"></td></tr>
+        <tr>
+            <td class="prod_title">M.2</td>
+            <td class="content"><input type="number" id="">개</td>
+            <td class="prod_title">SATA3</td>
+            <td class="content"><input type="number" id="">개</td>
+        </tr>
+        <tr>
+            <td class="prod_title">USB 3.0</td>
+            <td class="content">후면 <input type="number" id="">개</td>
+            <td class="prod_title">USB 2.0</td>
+            <td class="content">후면 <input type="number" id="">개</td>
+        </tr>
+        <tr>
+            <td class="prod_title">시스템팬 4핀</td>
+            <td class="content"><input type="number" id="">개</td>
+            <td class="prod_title">USB2.0 헤더</td>
+            <td class="content"><input type="number" id="">개</td>
+        </tr>
+        <tr>
+            <td class="prod_title">USB3.0 헤더</td>
+            <td class="content"><input type="number" id="">개</td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">M.2 연결</td></tr>
+        <tr>
+            <td class="prod_title">PCIe</td>
+            <td class="content"><input type="radio" name="m2_con_1">O <input type="radio" name="m2_con_1">X </td>
+            <td class="prod_title">NVMe</td>
+            <td class="content"><input type="radio" name="m2_con_2">O <input type="radio" name="m2_con_2">X </td>
+        </tr>
+        <tr>
+            <td class="prod_title">SATA</td>
+            <td class="content"><input type="radio" name="m2_con_3">O <input type="radio" name="m2_con_3">X </td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">M.2 폼팩터</td></tr>
+        <tr>
+            <td class="prod_title">2242</td>
+            <td class="content"><input type="radio" name="m2_form_1">O <input type="radio" name="m2_form_1">X </td>
+            <td class="prod_title">2260</td>
+            <td class="content"><input type="radio" name="m2_form_2">O <input type="radio" name="m2_form_2">X </td>
+        </tr>
+        <tr>
+            <td class="prod_title">2280</td>
+            <td class="content"><input type="radio" name="m2_form_3">O <input type="radio" name="m2_form_3">X </td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">그래픽 출력</td></tr>
+        <tr>
+            <td class="prod_title">D-SUB</td>
+            <td class="content"><input type="radio" name="gr1">O <input type="radio" name="gr1">X </td>
+            <td class="prod_title">DVI</td>
+            <td class="content"><input type="radio" name="gr2">O <input type="radio" name="gr2">X </td>
+        </tr>
+        <tr>
+            <td class="prod_title">HDMI</td>
+            <td class="content"><input type="radio" name="gr3">O <input type="radio" name="gr3">X </td>
+            <td class="prod_title">DP</td>
+            <td class="content"><input type="radio" name="gr4">O <input type="radio" name="gr4">X </td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">후면단자</td></tr>
+        <tr>
+            <td class="prod_title">USB 3.0</td>
+            <td class="content"><input type="radio" name="back1">O <input type="radio" name="back1">X </td>
+            <td class="prod_title">USB 2.0</td>
+            <td class="content"><input type="radio" name="back2">O <input type="radio" name="back2">X </td>
+        </tr>
+        <tr>
+            <td class="prod_title">RJ-45</td>
+            <td class="content"><input type="radio" name="back3">O <input type="radio" name="back3">X </td>
+            <td class="prod_title">오디오잭</td>
+            <td class="content"><input type="radio" name="back4">O <input type="radio" name="back4">X </td>
+        </tr>
+        <tr>
+            <td class="prod_title">PS/2</td>
+            <td class="content"><input type="radio" name="back5">O <input type="radio" name="back5">X </td>
+            <td class="prod_title">시리얼포트</td>
+            <td class="content"><input type="radio" name="back6">O <input type="radio" name="back6">X </td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">네트워크</td></tr>
+        <tr>
+            <td class="prod_title">유선랜 칩셋</td>
+            <td class="content"><input type="text" id=""></td>
+            <td class="prod_title">유선랜 속도</td>
+            <td class="content"><input type="text" id=""></td>
+        </tr>
+        <tr>
+            <td class="prod_title">RJ-45</td>
+            <td class="content"><input type="number" id="">개</td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">오디오</td></tr>
+        <tr>
+            <td class="prod_title">오디오 칩셋</td>
+            <td class="content"><input type="text" id=""></td>
+            <td class="prod_title">아날로그 출력</td>
+            <td class="content"><input type="text" id=""></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">I/O 헤더</td></tr>
+        <tr>
+            <td class="prod_title">USB 3.0 헤더</td>
+            <td class="content"><input type="radio" name="header1">O <input type="radio" name="header1">X </td>
+            <td class="prod_title">	USB 2.0 헤더</td>
+            <td class="content"><input type="radio" name="header2">O <input type="radio" name="header2">X </td>
+        </tr>
+        <tr>
+            <td class="prod_title">TPM 헤더</td>
+            <td class="content"><input type="radio" name="header3">O <input type="radio" name="header3">X </td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">특징</td></tr>
+        <tr>
+            <td class="prod_title">UEFI</td>
+            <td class="content"><input type="radio" name="char">O <input type="radio" name="char">X </td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">인증</td></tr>
+        <tr>
+            <td class="prod_title">적합성평가인증</td>
+            <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="rra" onclick="window.open('https://www.rra.go.kr/ko/index.do')">인증번호 확인</button> </td>
+        </tr>
+        <tr>
+            <td class="prod_title">안전확인인증</td>
+            <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="safetykorea" onclick="window.open('https://www.safetykorea.kr/')">인증번호 확인</button> </td>
+        </tr>
+    </table>
+</body>
+</html>
