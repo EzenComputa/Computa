@@ -13,7 +13,8 @@
            
            // 이미지안에 표시되는 체크박스의 속성
            var chk_style = 'width:22px;height:30px;position:absolute;font-size:23px;'
-                      + 'right:0px;bottom:0px;z-index:999;background-color:rgba(255,255,255,0.1);color:#f00';
+                         + 'right:0px;bottom:0px;z-index:999;background-color:rgba(255,255,255,0.9); color:lighslategray;'
+                         +'border:1px solid gray; cursor:pointer';
         
            btnAtt.onchange = function(e){
              var files = e.target.files;
