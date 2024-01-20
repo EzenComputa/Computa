@@ -4,6 +4,11 @@
            var attZone = document.getElementById(att_zone);
            var btnAtt = document.getElementById(btn)
            var sel_files = [];
+
+           const realUpload = document.querySelector('#btnAtt');
+           const upload = document.querySelector('.file_upload');
+
+           upload.addEventListener('click', () => realUpload.click());
         
            // 이미지와 체크 박스를 감싸고 있는 div 속성
            var div_style = 'display:inline-block;position:relative;'
