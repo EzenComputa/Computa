@@ -54,8 +54,9 @@
                     
                     <div id='image_preview'>
                         <input type='file' id='btnAtt' multiple='multiple'/>
-                        <br>
-                        <br>
+                        <label for="file">
+                            <div class="file_upload">파일 업로드하기</div>
+                        </label>
                         <span style="color: lightslategrey;">* 최대 200x200(20mb) 사이즈로 올려주세요.</span>
                         <br>
                         <span style="color: lightslategrey;"></spanstyle>* 최대 5개까지만 올려주세요.</span>
@@ -119,33 +120,7 @@
         
     </form>  
      <script src="../../JS/HSJ/upload_img.js"></script>
-
-     <script>
-        $('#tr_pr_category').change(function(){
-            var selVar = $(this).val();
-            $('.tr_pr_spec').empty();
-
-            if(selVar =='cpu'){
-                $('.tr_pr_spec').load('../HYJ/Table/cpu_table.html #prod_table');
-            }else if(selVar =='gpu'){
-                $('.tr_pr_spec').load('../HYJ/Table/gpu_table.html #prod_table');
-            }else if(selVar == 'motherboard'){
-                $('.tr_pr_spec').load('../HYJ/Table/motherboard_table.html #prod_table');
-            }else if(selVar == 'ssd'){
-                $('.tr_pr_spec').load('../HYJ/Table/ssd_table.html #prod_table');                
-            }else if(selVar == 'hdd'){
-                $('.tr_pr_spec').load('../HYJ/Table/hdd_table.html #prod_table');                
-            }else if(selVar == 'ram'){
-                $('.tr_pr_spec').load('../HYJ/Table/ram_table.html #prod_table');                
-            }else if(selVar == 'case'){
-                $('.tr_pr_spec').load('../HYJ/Table/case_table.html #prod_table');                
-            }else if(selVar == 'cooler'){
-                $('.tr_pr_spec').load('../HYJ/Table/cooler_table.html #prod_table');                
-            }else if(selVar == 'power'){
-                $('.tr_pr_spec').load('../HYJ/Table/#_table.html #prod_table');                
-            }
-        })
-    </script>
+     <script src="../../js/HSJ/call_tbl.js"></script>
 
 </body>
 </html>

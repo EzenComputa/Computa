@@ -21,10 +21,8 @@
              var fileArr = Array.prototype.slice.call(files)
              for(f of fileArr){
               imageLoader(f);
-             }
-             
-           }  
-        
+             }          
+           }          
         
            // 탐색기에서 드래그앤 드롭 사용
            attZone.addEventListener('dragenter', function(e){
@@ -45,8 +43,7 @@
              files = dt.files;
              for(f of files){
               imageLoader(f);
-             }
-          
+             }          
            }, false)
         
            /*첨부된 이미지들을 배열에 넣고 미리보기 */

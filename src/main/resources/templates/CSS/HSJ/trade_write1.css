@@ -56,8 +56,25 @@
     align-items: center;
     justify-content: center;
 }
+.file_upload{
+    width: 150px;
+    height:30px;
+    background: #fff;
+    border:1px solid #1fa098;
+    border-radius: 10px;
+    font-weight: 10px;
+    font-weight:500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        background: #1fa098;
+        color: #fff;
+      }
+}
 #btnAtt{
-   
+   display: none;
 }
 #tr_pr_img{visibility: hidden;}
 
@@ -74,7 +91,6 @@
 
 /*상세스펙*/
 .tr_pr_spec{
-    
     margin-top: 1rem;
     margin-bottom: 1rem;
 
