@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/main/resources/templates/CSS/LRH/list.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../CSS/HYJ/table.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/764963a2f9.js" crossorigin="anonymous"></script>
     <script src="/src/main/resources/templates/JS/LRH/js17_menu.js"></script>  
@@ -93,9 +94,9 @@
                <tr>
                     <td>
                         <div class="upside">
-                        <p class="progress">판매중/예약중/거래완료</p>
+                        <p class="progress" id="">판매중/예약중/거래완료</p>    <!--id추가-->
                         <p class="used_product_title">제품명:<span id="used_product_name">등록되어 들어올 제품명</span></p>  
-                        <p class="category">카테고리 : CPU</p>
+                        <p class="category">카테고리 : <span id="">CPU</span></p>   <!--id추가-->
                         </div>
                         <p>
                             <table class="used_product_detail_spec">                            
@@ -236,6 +237,12 @@
             </tbody>
         </table>
     </div>
+
+    <div class="pr_detail">
+        제품상세사양 
+    </div></td>
+
+
    
    <div class="비슷한상품">      
     <div>
@@ -278,6 +285,9 @@ myImg.src = mysmall3.src;
 
 </script>
 <div id="disqus_thread"></div>
+<script>
+    $('.pr_detail').load('../HYJ/Table/cpu_table.html #prod_table');
+</script>
 <script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
