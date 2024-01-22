@@ -37,6 +37,10 @@
    font-size: 0;
 }
 
+.click_con{
+   cursor: pointer;
+}
+
 #qna_pagination{
   
   margin-top: 25px;
