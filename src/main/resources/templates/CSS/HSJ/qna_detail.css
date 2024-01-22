@@ -1,191 +1,165 @@
 /* 전체 */
 .qna_detail_container{
-
-    margin-top: 0.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 100px;
+    
     padding:1.5rem;
-
     width: 900px;
-    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 /* 글 영역 */
-.qna_detail{
-    margin-top: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0px;
-    padding-top:0.5rem;
-
-    width: 800px;
+.qna_detail{    
+    
+    width: 100%;
     height: auto;
 }
 
 /* 글 박스 영역 */
-#qna_detail{
-    margin-top: 0.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto;
-
-    width: 750px;
-    height: 550px;
-
+#qna_detail{    
+    margin-top: 0.5rem;    
+    height: 500px;
     border : 2.5px solid #1fa097e3;
     border-collapse : collapse;
 }
 
 /* 글 제목 */
-#qna_detail_title{
+#qna_detail_title{    
     padding-left: 1rem;
-
-    height: 70px;
-
+    height: 40px;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 /* 글쓴이+등록일 */
 .qna_detail_nick{
     padding: 0.5rem;
     padding-left: 1rem;
-
     height:5px;
-
-    font-size: 20px;
+    font-size: 15px;
 }
 
 /* 글 내용 */
-#qna_detail_write{
-    padding-top: 1.5rem;
-    padding-left: 1.5rem;    
-    padding-right: 1.5rem;
-    padding-bottom: 2rem;
-
-    text-align: left;
+#qna_detail_write{    
+    padding : 1.5rem 1.5rem 2rem 1.5rem;    
     vertical-align : top;
-
-    font-size:15px;
-    font-size: 17px;
-    line-height: 1.7rem;
-}
+    font-size:15px;        
+ }
 /*================================*/
 
 /* 버튼영역 */
-.qna_modndel{
-    margin-top: 0.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0.5rem;
-
-    width: 750px;
-    height: 25px;
-
-    position: relative;
+.qna_modndel{    
+    display : inline-block;
+    min-width: 80px;
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #187771;
+    border-radius: 2px;
+    font-size: 1.4rem;
 }
 
 /* 수정버튼 */
-#btn_modify{
-    border-radius: 10%;
-    position: absolute;
-    top: 0;
-    right: 10%;
-
-    background-color: #1fa097e3;
-    color: gold;
-
+#btn_modify{    
     cursor: pointer;
 }
 
 /* 삭제버튼 */
 #btn_delete{
-    border-radius: 10%;
-    position: absolute;
-    top: 0;
-    right: 0;
     cursor: pointer;
-
-    background-color: #1fa097e3;
-    color: gold;
 }
 /*================================*/
 
 /* 관리자 답변쓰기 영역*/
-.qna_replyarea{
-    margin-left: auto;
-    margin-right: auto;
+.qna_replyarea{    
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 900px;
+    
+}
 
-    width: 750px;
-
-    background-color: rgb(220, 241, 232);
+.qna_reply_container{    
+    position: relative;        
+}
+.qna_reply_container button{    
+    position: absolute;
+    right: 0px;
+    bottom:5px;
+    width: 80px;
+    background-color: transparent;    
 }
 
 /* 관리자 답변 테이블 */
-.qna_reply_table{
-    margin-left: auto;
-    margin-right: auto;
+.qna_reply_table{    
     padding:0.5rem;
-
-    width:750px;
+    width:100%;
 }
 
 /* 관리자 이름 칸 */
-#qna_reply_1{
-    padding:1rem;
+#qna_reply_1{    
+    width:100%;
+    padding: 10px;
+    font-weight: bold; 
+    text-align: left;
+    font-size: 12px;
+}
 
-    width:3.5rem;
-
-    font-weight: bold;
+.reply_write{
+    display: inline-flex;
+}
+#qna_reply_3{   
 }
 
 /* 관리자 쓰기(textarea) */
 #qna_reply_write{
     resize:none;
-    border-radius: 2%;
+    border-radius: 5px;
     border-color: #1fa097e3;   
 }
 
 /* 관리자 보내기버튼 */
 #qna_rewrite_btn{
     padding:1rem;
-    cursor: pointer;
-    border-radius: 8%;    
-    background-color: #1fa097e3;
-    color: gold;
+    cursor: pointer;     
+    background-color: rgba(31, 160, 151, 0.8);
+    font-weight: bold;
+    border-radius: 10px;
 }
 /*================================*/
 
 /* 관리자 답변보기 영역 */
-.qna_replyview_table{
-    
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1.5rem;
-    padding:0.5rem;
-    width:750px;
+.qna_replyview_table{    
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 890px;
+    top: 20px;
+    outline: 1px solid #1fa097e3;
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+.reply_view_btn{
+    display: flex;  
+    align-items: center; 
+}
+
+.reply_view_btn  button{
+    align-items: center;
 }
 
 /* 관리자 이름 칸 */
-#qna_replyview_2{
+
+.qna_admin{    
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    width: 800px;
+    height: 30px;
+    align-items: center;
+    border-bottom: 2px solid #1fa097e3;
     
-    padding:1rem;
-    width:80px;
-    text-align: center;
-    font-weight: bold;
 }
-
-/* 관리자 등록일 칸 */
-#qna_replyview_3{
-    padding:1rem;
-
-    width:500px;
-
-    font-weight: bold;
-    color:gray;
-}
-
 /* 관리자 답변보기 */
 .qna_review_view{
     padding: 0.5rem;
@@ -198,16 +172,18 @@
 #qna_review_btn_mod{
     border-radius: 10%;
     background-color: #1fa097e3;
-    color: gold;
-
+    color: #fff;
     cursor: pointer;
+    height: 30px;
 }
 
 #qna_review_btn_del{
     border-radius: 10%;
     background-color: #1fa097e3;
-    color: gold;
+    color: #fff;
     cursor: pointer;
+    height: 30px;
+    
 }
 /*================================*/
 
@@ -222,10 +198,5 @@
 }
 /* 돌아가기 버튼 */
 #btn_back{
-    width:400px;
-    height:80px;
-    background-color: #1fa097e3;
-    color: gold;
-
     cursor: pointer;    
 }

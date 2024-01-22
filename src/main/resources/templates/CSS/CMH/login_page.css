@@ -73,7 +73,7 @@ input[type="password"] {
 
 /* 추가된 로그인 버튼 스타일 */
 .user_login {
-    background-color: rgb(68, 172, 68);
+    background-color: #1fa098;
     color: #fff;
     padding: 12px 20px;
     border: none;

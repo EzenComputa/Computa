@@ -10,15 +10,21 @@ div>h1 {
 }
 
 .membership_head {
-    background-color: #67cc4e;
-    color: #ffffff;
-    padding: 10px;
-    width: 600px;
-    margin: 20px auto;
-    font-size: 30px;
+    background-color: #1fa098;
+    color: #ffffff;    
+    width: 550px;  
+    height: 50px;    
     text-align: center;
-    border-radius: 25px;
-    border: 1px solid #67cc4e
+    border-radius: 25px;   
+    position: relative;
+    top: 16px;
+    left: 50%;
+    transform: translate(-50%); 
+}
+
+.membership_head > h2{
+    position: relative;
+    top: 8px;
 }
 
 .membership_information,
@@ -62,7 +68,7 @@ input, .select-box, .box {
 }
 
 button {
-    background-color: #41b929;
+    background-color: #1fa098;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -84,7 +90,8 @@ button:hover {
 
 /* 중복확인 버튼 line: 43, 56 */
 .duplication_butten{
-    background-color: #41b929;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #1fa098;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -110,6 +117,7 @@ button:hover {
 
 /* 가입하기 버튼 line: 60 */
 .join_button{
+    font-family: 'Noto Sans KR', sans-serif;
     margin-top: 30px;
     height: 60px;
     border-radius: 10PX;
