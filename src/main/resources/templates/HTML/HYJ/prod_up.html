@@ -46,143 +46,89 @@
         </ul>    
     </div>
 
-
-
-   	<!-- 상품 등록 영역 -->
-	   <table border="0" class="tr_pr_table">
+    <form action="" method="get"><div class="tr_pr">
+        <table border="0" class="tr_pr_table">
             
-		<!-- 상품 이미지-->
-		<tr>
-			<td class="tr_pr_left">상품이미지<span id="star">*</span></td>
-			<td>
-				<!-- 상품이미지 등록하기 -->
-				<div id='image_preview'>
-					<input type='file' id='btnAtt' multiple='multiple'/>
-					<label for="file">
-						<div class="file_upload" style="margin-top: 10px; font-size: 13px;">파일 업로드하기</div>
-					</label>
-					<span style="color: lightslategrey; font-size: 12px;">* 최대 150x150 사이즈로 올려주세요.</span>
-					<br>
-					<span style="color: lightslategrey; font-size: 12px;"></spanstyle>* 최대 5개까지만 올려주세요.</span>
-					<br>
-					<div id='att_zone'></div>
-				</div>
-			</td>
-		</tr>
-		<tr><td colspan="2"><hr class="hsj_hr"></td></tr>
-		
-		<!-- 상품명 -->
-		<tr>
-			<td class="tr_pr_left">상품명<span id="star">*</span></td>
-			<td><input type="text" id="tr_pr_name" class="input_prod" required></td>
-		</tr>
-		<tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+            <!-- 상품 이미지-->
+            <tr>
+                <td class="tr_pr_left">상품이미지<span id="star">*</span></td>
+                <td>
+                    <!-- 상품이미지 등록하기 -->
+                    
+                    <div id='image_preview'>
+                        <input type='file' id='btnAtt' multiple='multiple'/>
+                        <label for="file">
+                            <div class="file_upload"><span style="font-size: 13px;">파일 업로드하기</span></div>
+                        </label>
+                        <span style="color: lightslategrey; font-size: 12px;">* 최대 150x150 사이즈로 올려주세요.</span>
+                        <br>
+                        <span style="color: lightslategrey; font-size: 12px;"></spanstyle>* 최대 5개까지만 올려주세요.</span>
+                        <br>
+                        <div id='att_zone'></div>
+                    </div>
+                </td>
+            </tr>
+            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+            
+            <!-- 상품명&상품가격 -->
+            <tr>
+                <td class="tr_pr_left">상품명<span id="star">*</span></td>
+                <td><input type="text" id="tr_pr_name" required></td>
+            </tr>
+            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+            <tr>
+                <td class="tr_pr_left">상품가격<span id="star">*</span></td>
+                <td><input type="text" id="tr_pr_price" required></td>
+            </tr>
+            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
 
-		<!--카테고리(select)-->
-		<tr>
-			<td class="tr_pr_left">카테고리<span id="star">*</span></td>
-			<td><select name="tr_pr_category" id="tr_pr_category"  required>
-				<option value="">종류를 선택해주세요!</option>
-				<option value="cpu">CPU</option>
-				<option value="gpu">그래픽카드</option>
-				<option value="motherboard">메인보드</option>
-				<option value="ssd">SSD</option>
-				<option value="hdd">HDD</option>
-				<option value="ram">RAM</option>
-				<option value="case">케이스</option>
-				<option value="cooler">쿨러</option>
-				<option value="power">파워</option>
-			</select></td>
-		</tr>
-		<tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+            <!--상품종류(select)-->
+            <tr>
+                <td class="tr_pr_left">상품종류<span id="star">*</span></td>
+                <td><select name="tr_pr_category" id="tr_pr_category" required>
+                    <option value="">종류를 선택해주세요!</option>
+                    <option value="cpu">CPU</option>
+                    <option value="gpu">그래픽카드</option>
+                    <option value="motherboard">메인보드</option>
+                    <option value="ssd">SSD</option>
+                    <option value="hdd">HDD</option>
+                    <option value="ram">RAM</option>
+                    <option value="case">케이스</option>
+                    <option value="cooler">쿨러</option>
+                    <option value="power">파워</option>
+                </select></td>
+            </tr>
+            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
 
-		
-		
-		<!-- 상세스펙 -->
-		<tr>
-			<td class="tr_pr_left">상세 스펙</td>
-			<td>
-				<div class="tr_pr_spec">
-					
-				</div>
-			</td>
-		</tr>
-		<tr><td colspan="2"><hr class="hsj_hr"></td></tr>
-		
-		<!-- 상품가격 -->
-		<tr>
-			<td class="tr_pr_left">상품가격<span id="star">*</span></td>
-			<td><input type="text" id="tr_pr_price" class="input_prod" required></td>
-		</tr>
-		<tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+            <!-- 상세스펙 -->
+            <tr>
+                <td class="tr_pr_left">상세 스펙</td>
+                <td>
+                    <div class="tr_pr_spec"></div>
+                </td>
+            </tr>
+            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
 
-		<!-- 상품설명 -->
-		<tr>
-			<td class="tr_pr_left2">상품설명</td>
-			<td><textarea name="tr_pr_detail" id="tr_pr_detail" cols="68" rows="20" 
-				placeholder="-상품의 하자정도 &#13;-최대3000자" style="padding-left: 5px; padding-top: 5px;"></textarea></td>
-		</tr>
+            <!-- 상품설명 -->
+            <tr>
+                <td class="tr_pr_left2">상품설명</td>
+                <td><textarea name="tr_pr_detail" id="tr_pr_detail" cols="68" rows="20" placeholder="-상품의 하자정도 &#13;-연락처 남겨주세요&#13;-최대3000자"></textarea></td>
+            </tr>
+			<tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+			<!-- 상세 이미지 -->
+			<tr>
+				<td class="tr_pr_left">상세이미지<span id="star">*</span></td>
+				<td><input type="file" value="upload"></td>
+			</tr>
+			<tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+        </table>
 
-		<!-- 상세 이미지 -->
-		<tr>
-			<td class="tr_pr_left">상세이미지<span id="star">*</span></td>
-			<td><input type="file" value="upload"></td>
-		</tr>
-		<tr><td colspan="2"><hr class="hsj_hr"></td></tr>
-	</table>
-
-	<script src="../../JS/HSJ/upload_img.js"></script>
-	<script src="../../js/HSJ/call_tbl_input.js"></script>
-
-			<!--
-			<script>
-				function setThumbnail(event) {
-				  var reader = new FileReader();
-		  
-				  reader.onload = function(event) {
-					var img = document.createElement("img");
-					img.setAttribute("src", event.target.result);
-					document.querySelector("div#image_container").appendChild(img);
-				  };
-		  
-				  reader.readAsDataURL(event.target.files[0]);
-				}
-			  </script>  -->
-
-			
-   		<br><br>
-   		 <!-- 등록버튼 -->
-			<div class="tr_pr_btn">
-				<input type="submit" id="tr_pr_btn" value="등록하기">
-			</div>
-   </div>
-
-   <script>
-	$('#tr_pr_category').change(function(){
-		var selVar = $(this).val();
-		$('.tr_pr_spec').empty();
-
-		if(selVar =='cpu'){
-			$('.tr_pr_spec').load('../HYJ/Table/cpu_table.html #prod_table');
-		}else if(selVar =='gpu'){
-			$('.tr_pr_spec').load('../HYJ/Table/gpu_table.html #prod_table');
-		}else if(selVar == 'motherboard'){
-			$('.tr_pr_spec').load('../HYJ/Table/motherboard_table.html #prod_table');
-		}else if(selVar == 'ssd'){
-			$('.tr_pr_spec').load('../HYJ/Table/ssd_table.html #prod_table');                
-		}else if(selVar == 'hdd'){
-			$('.tr_pr_spec').load('../HYJ/Table/hdd_table.html #prod_table');                
-		}else if(selVar == 'ram'){
-			$('.tr_pr_spec').load('../HYJ/Table/ram_table.html #prod_table');                
-		}else if(selVar == 'case'){
-			$('.tr_pr_spec').load('../HYJ/Table/case_table.html #prod_table');                
-		}else if(selVar == 'cooler'){
-			$('.tr_pr_spec').load('../HYJ/Table/cooler_table.html #prod_table');                
-		}else if(selVar == 'power'){
-			$('.tr_pr_spec').load('../HYJ/Table/#_table.html #prod_table');                
-		}
-	})
-</script>
-
+        <!-- 등록버튼 -->
+        <div class="tr_pr_btn">
+            <input type="submit" id="tr_pr_btn" value="등록하기"></div>
+        </div>        
+    </form>  
+     <script src="../../JS/HSJ/upload_img.js"></script>
+     <script src="../../js/HSJ/call_tbl_input.js"></script>
 </body>
 </html>
