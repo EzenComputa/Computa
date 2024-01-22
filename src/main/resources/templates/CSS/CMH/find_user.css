@@ -71,7 +71,7 @@ input[type="password"] {
     width: auto;
 }
 
-.find_user_id_button input[type="button"] {
+.find_user_id_button input[type="submit"] {
     background-color: rgb(68, 172, 68);
     color: #fff;
     padding: 12px 20px;
@@ -87,7 +87,7 @@ input[type="password"] {
     font-weight: bold;
 }
 
-.find_user_id_button input[type="button"]:hover {
+.find_user_id_button input[type="submit"]:hover {
     background-color: rgb(61, 114, 211);
 }
 span{
