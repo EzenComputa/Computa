@@ -19,6 +19,6 @@ $('#tr_pr_category').change(function(){
     }else if(selVar == 'cooler'){
         $('.tr_pr_spec').load('../HYJ/Table/cooler_table.html #prod_table');                
     }else if(selVar == 'power'){
-        $('.tr_pr_spec').load('../HYJ/Table/#_table.html #prod_table');                
+        $('.tr_pr_spec').load('../HYJ/Table/power_table.html #prod_table');                
     }
 })
