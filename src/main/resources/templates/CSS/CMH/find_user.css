@@ -59,20 +59,20 @@ input[type="password"] {
 
 .domain_list {
     margin-left: 5px;
-    padding: 7px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 14px;
     display: inline-block;
-    width: calc(33.33% - 6px); /* 2/3로 줄이기 */
+    width: calc(33.33% - 3px); /* 2/3로 줄이기 */
 }
 
 .find_user_id_email select {
     width: auto;
 }
 
-.find_user_id_button input[type="submit"] {
-    background-color: rgb(68, 172, 68);
+.find_user_id_button input[type="button"] {
+    background-color: #1fa098;
     color: #fff;
     padding: 12px 20px;
     border: none;
@@ -87,7 +87,7 @@ input[type="password"] {
     font-weight: bold;
 }
 
-.find_user_id_button input[type="submit"]:hover {
+.find_user_id_button input[type="button"]:hover {
     background-color: rgb(61, 114, 211);
 }
 span{
