@@ -90,6 +90,7 @@
 
 /*가격 비교 영역*/
 .price_compare_td{
+    
     border-bottom: 3px rgba(74, 150, 108, 0.103) dotted;
 }
 .price_compare{
@@ -117,14 +118,13 @@
 
 /*제품 상세 영역*/
 .pr_detail{
+
     margin-top: 1rem;
     margin-left: 2.5rem;
     margin-right: 2.5rem;
     margin-bottom: 2.5rem;
     padding: 1rem;
-
     height: auto;
-
 }
 /*============================================================================*/
 /* 댓글 전체 영역(div) */
