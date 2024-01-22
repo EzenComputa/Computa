@@ -49,3 +49,10 @@ table {
     font-size: 17px;
     background-color: #1fa098;
 }
+.cpu_table{
+    outline: 1px solid red;       
+    position: relative;
+    left: 50%;
+    top: 30px;
+    transform: translate(-50%);
+}
