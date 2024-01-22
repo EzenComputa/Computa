@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&display=swap");
+
+/* // <uniquifier>: Use a uniquifier for the class name
+// <weight>: Use a value from 100 to 900 */
+
+table {
+    border-collapse: collapse;
+}
+
+.noto-sans kr {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.nanum-gothic-regular {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#prod_table {
+    height: 50px;
+    width: 83rem;
+}
+
+.prod_title {
+    width: 150px;
+    height: 30px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #e1f4f3;
+}
+
+.content {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.title {
+    color: #e1f4f3;
+    text-align: left;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: #1fa098;
+}
+.cpu_table{
+    outline: 1px solid red;       
+    position: relative;
+    left: 50%;
+    top: 30px;
+    transform: translate(-50%);
+}
