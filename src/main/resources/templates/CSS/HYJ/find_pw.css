@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@600&display=swap');
-
-#findpass{    
+#findpass{
+    
     width: 500px;
     height: 400px;
     margin-top: 50px;
@@ -16,26 +15,34 @@
 }
 
 .pw_btn{
-    width: 400px;
+    width: 450px;
     margin-top: 30px;
     text-align: center;
 }
 
+label{
+    font-size: 17px;
+}
+
+.input_con{
+    height: 22px;
+    padding-left: 5px;
+}
+
 .passform{
-    font-family: 'Hahmlet', serif;
-    font-size: 14px;
+    font-size: 17px;
     margin: 5%;
 }
 
 .showpw{
-    font-size: 14px;
+    font-size: 15px;
     width: 300px;
     height: 100px;
 }
 
 .pw_table{
-    width: 400px;
-    height: 150px;
+    width: 500px;
+    height: 200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -68,5 +75,18 @@
     height: 20px;
 }
 
+.submit{
+    border: none;
+    width: 45px;
+    height: 25px;
+    cursor: pointer;
+    background-color: rgba(172, 172, 172, 0.562);
+}
+
+.input_pw{
+    padding-left: 7px;
+    height: 22px;
+}
+
 check:active{}
-button:hangover{color:darkgray}
+.submit:hover{background-color:rgba(216, 214, 214, 0.842)}

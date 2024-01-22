@@ -43,6 +43,7 @@ for(let i = info.firstBottomNumber ; i <= info.lastBottomNumber; i++){
    <link rel="stylesheet" href="../../CSS/HYJ/hyj_list.css">
    <link rel="stylesheet" href="../../CSS/HSJ/hsj_list.css">
    <link rel="stylesheet" href="../../CSS/LRH/list.css">
+   <link rel="stylesheet" href="../../CSS/LRH/style.css">
 
 </head>
 <body>
@@ -76,9 +77,9 @@ for(let i = info.firstBottomNumber ; i <= info.lastBottomNumber; i++){
 </div>
 
     <table border="1" class="report_table" style="margin-top: 60px;">
-        <tr style="font-size: medium; background-color: antiquewhite;">
+        <tr style="font-size: 14px;">
             <th style="width: 100px;">글번호 </th>
-            <th style="width: 300px; height: 30px;">신고유형 </th>
+            <th style="width: 300px; height: 45px;">신고유형 </th>
             <th style="width: 100px;">신고자 </th>
             <th style="width: 200px;">신고 등록일 </th>
             <th style="width: 200px;">신고 출처 </th>
@@ -227,17 +228,19 @@ for(let i = info.firstBottomNumber ; i <= info.lastBottomNumber; i++){
 
     <!-- js 페이징 처리 예정 -->
     <!-- <h4 style="text-align: center;"> << <  1 2 3 4 5 > >> </h4> -->
-    <div id="report_pagination">
-        <div class="a_div"><a href="url" class="a_css"><</a></div>
-        <div class="a_div"><a href="url" class="a_css"><<</a></div>
-        <div class="a_div"><a href="url" class="a_css">1</a></div>
-        <div class="a_div"><a href="url" class="a_css">2</a></div>
-        <div class="a_div"><a href="url" class="a_css">3</a></div>
-        <div class="a_div"><a href="url" class="a_css">4</a></div>
-        <div class="a_div"><a href="url" class="a_css">5</a></div>
-        <div class="a_div"><a href="url" class="a_css">></a></div>
-        <div class="a_div"><a href="url" class="a_css">>></a></div>
-    </div>    
+    <div class="board_page">
+        <a href="a" class="bt first"><<</a>
+        <a href="a" class="bt prev" ><</a>
+        <a href="a" class="num on">1</a>
+        <a href="a" class="num">2</a>
+        <a href="a" class="num">3</a>
+        <a href="a" class="num">4</a>
+        <a href="a" class="num">5</a>
+        <a href="a" class="num">6</a>
+        <a href="a" class="bt next">></a>
+        <a href="a" class="bt last">>></a>
+
+    </div>
 
 
 </body>

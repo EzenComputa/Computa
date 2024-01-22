@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@600&display=swap');
-
 .computa_logo{
     width: 80px;
     height: 100px;
@@ -8,15 +6,17 @@
 
 .report_table{
     width: 1000px;
-    height: 700px;
+    height: 900px;
     margin-top: 20px; 
     margin-left:auto;
     margin-right:auto;
+    border: 1px solid #187771;
+    border-collapse: collapse;
 }
 
 
 td{
-    font-size: 15px;
+    font-size: 14px;
 }
 
 #report_pagination{
