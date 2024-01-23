@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+<!-- &nbsp; 공백 칸 -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제품등록페이지</title>
+
+    <script src="/js/LRH/js17_menu.js"></script>
+    <script src="/js/LRH/hover.js"></script>
+
+	<!-- <link rel="stylesheet" href="../../CSS/HSJ/css_lee/list.css" type="text/css"> -->
+	<link rel="stylesheet" th:href="@{/css/HSJ/hyj_list.css}" type="text/css">
+	<link rel="stylesheet" th:href="@{/css/HSJ/hsj_list.css}" type="text/css">
+	<link rel="stylesheet" th:href="@{/css/LRH/menubar.css}" type="text/css">
+	<link rel="stylesheet" th:href="@{/css/LRH/style.css}"  type="text/css">
+	<link rel="stylesheet" th:href="@{/css/HYJ/table.css}" ttpe="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
+</head>
+<body>
+
+	<!-- top 로고 & 검색 & 메뉴navbar -->
+	<div class="top">
+        <div class="logo_wrap">
+            <a th:href="@{/index}" class="computa_logo"><img src="/images/LRH/computa icon.png" alt="logo" width="100"></a>
+        </div>
+        
+        <div class="search">
+            <input type="text" placeholder="검색어 입력">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" >
+        </div>
+        <div class="myinfo">
+            <div class="myinfo_icon">
+                <a th:href="@{recent_test1.html}"><img src="/images/LRH/recent.png">최근내역</a>
+                <a th:href="@{}"><img src="/images/LRH/tea-bag.png">마이티백</a>
+                <a th:href="@{/login}"><img src="/images/LRH/login.png">로그인</a>
+            </div>            
+        </div>
+    </div>
+
+    <div class="navbar">      
+        <ul class="navbar_menu">
+            <li><a th:href="@{my_main.html}">마이페이지</a></li>
+            <li><a th:href="@{}">PC견적</a></li>
+            <li><a th:href="@{1.product_list.html}">부품</a></li>            
+            <li><a th:href="@{2.list.html}">문의</a></li>
+            <li><a th:href="@{7.used_product_list.html}" style="color: red;">우려먹기</a></li>                    
+        </ul>        
+    </div>
+
+	
+
+    <form action="" method="get"><div class="tr_pr">
+        <table border="0" class="tr_pr_table">
+
+           <!--상품종류(select)-->
+           <tr>
+            <td class="tr_pr_left">상품종류<span id="star">*</span></td>
+            <td>
+                <div class="pcpart">
+                    <span>쿨러</span>
+                </div>
+            </td>
+        </tr>
+        <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+
+
+            <!-- 상세스펙 -->
+            <tr>
+                <td class="tr_pr_left">상세 스펙</td>
+                <td>
+                    <div class="tr_pr_spec">
+                        <table border="1" class="cooler_table_i" id="prod_table">
+                            <tr>
+                                <td class="prod_title">제조회사</td>
+                                <td class="content"><input type="text" id="company"></td>
+                                <td class="prod_title">등록년월</td>
+                                <td class="content"><input type="date" id="date"></td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4"></td></tr>
+                            <tr>
+                                <td class="prod_title">냉각 방식</td>
+                                <td class="content"><input type="text" id="kind"></td>
+                                <td class="prod_title">히트파이프</td>
+                                <td class="content"><input type="text" id="socket"></td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">TDP</td>
+                                <td class="content"><input type="text" id="TDP">W</td>
+                                <td class="prod_title">A/S기간</td>
+                                <td class="content"><input type="text" id="AS">년</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">가로</td>
+                                <td class="content"><input type="text" id="width">mm</td>
+                                <td class="prod_title">높이</td>
+                                <td class="content"><input type="text" id="height">mm</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">무게</td>
+                                <td class="content"><input type="text" id="weight">g</td>
+                                <td class="prod_title">[구성품/기타]</td>
+                                <td class="content">[<input type="text" id="components">/<input type="text" id="etc">]</td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">인텔 소켓</td></tr>
+                            <tr>
+                                <td class="prod_title">LGA1700</td>
+                                <td class="content"><input type="radio" name="intel_socket1">O 
+                                    <input type="radio" name="intel_socket1">X </td>
+                                <td class="prod_title">LGA1200</td>
+                                <td class="content"><input type="radio" name="intel_socket2">O 
+                                    <input type="radio" name="intel_socket2">X </td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">LGA115x</td>
+                                <td class="content"><input type="radio" name="intel_socket3">O 
+                                    <input type="radio" name="intel_socket3">X </td>
+                                <td class="prod_title"></td>
+                                <td class="content"></td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">AMD 소켓</td></tr>
+                            <tr>
+                                <td class="prod_title">AM5</td>
+                                <td class="content"><input type="radio" name="amd_socket1">O 
+                                    <input type="radio" name="amd_socket1">X </td>
+                                <td class="prod_title">AM4</td>
+                                <td class="content"><input type="radio" name="amd_socket2">O 
+                                    <input type="radio" name="amd_socket2">X </td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">[쿨링팬]</td></tr>
+                            <tr>
+                                <td class="prod_title">팬 크기</td>
+                                <td class="content"><input type="text" id="fan_size">mm</td>
+                                <td class="prod_title">팬 개수</td>
+                                <td class="content"><input type="text" id="fan_count">개</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">팬 크기</td>
+                                <td class="content"><input type="text" id="">mm</td><!--이거 왜 두개에요?.?-->
+                                <td class="prod_title">팬 개수</td>
+                                <td class="content"><input type="text" id="">개</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">팬 두께</td>
+                                <td class="content"><input type="text" id="fan_thick">T</td>
+                                <td class="prod_title">팬 커넥터</td>
+                                <td class="content"><input type="text" id="fan_conn">핀</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">베어링</td>
+                                <td class="content"><input type="text" id="fan_bearing"></td>
+                                <td class="prod_title">최대 팬속도</td>
+                                <td class="content"><input type="text" id="fan_MAxspeed">RPM</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">최대 풍량</td>
+                                <td class="content"><input type="text" id="fan_Maxwind">CFM</td>
+                                <td class="prod_title">풍압(정압)</td>
+                                <td class="content"><input type="text" id="fan_wind">mmH₂O</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">최대 팬소음</td>
+                                <td class="content"><input type="text" id="fan_loud">dBA</td>
+                                <td class="prod_title"></td>
+                                <td class="content"></td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">부가기능</td></tr>
+                            <tr>
+                                <td class="prod_title">LED 라이트</td>
+                                <td class="content"><input type="radio" name="led">O 
+                                    <input type="radio" name="led">X </td>
+                                <td class="prod_title">PWM 지원</td>
+                                <td class="content"><input type="radio" name="pwm">O 
+                                    <input type="radio" name="pwm">X </td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">인증</td></tr>
+                            <tr>
+                                <td class="prod_title">적합성평가인증</td>
+                                <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="rra" onclick="window.open('https://www.rra.go.kr/ko/index.do')">인증번호 확인</button> </td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">안전확인인증</td>
+                                <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="safetykorea" onclick="window.open('https://www.safetykorea.kr/')">인증번호 확인</button> </td>
+                            </tr>
+                           
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+            
+            <!-- 상품 이미지-->
+            <tr>
+                <td class="tr_pr_left">상품이미지<span id="star">*</span></td>
+                <td>
+                    <!-- 상품이미지 등록하기 -->
+                    
+                    <div id='image_preview'>
+                        <input type='file' id='btnAtt' multiple='multiple'/>
+                        <label for="file">
+                            <div class="file_upload"><span style="font-size: 13px;">파일 업로드하기</span></div>
+                        </label>
+                        <span style="color: lightslategrey; font-size: 12px;">* 최대 150x150 사이즈로 올려주세요.</span>
+                        <br>
+                        <span style="color: lightslategrey; font-size: 12px;"></spanstyle>* 최대 5개까지만 올려주세요.</span>
+                        <br>
+                        <div id='att_zone'></div>
+                    </div>
+                </td>
+            </tr>
+            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+            
+            <!-- 상품명&상품가격 -->
+            <tr>
+                <td class="tr_pr_left">상품명<span id="star">*</span></td>
+                <td><input type="text" id="tr_pr_name" required></td>
+            </tr>
+            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+            <tr>
+                <td class="tr_pr_left">상품가격<span id="star">*</span></td>
+                <td><input type="text" id="tr_pr_price" required></td>
+            </tr>
+            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+
+
+            <!-- 상품설명 -->
+            <tr>
+                <td class="tr_pr_left2">상품설명</td>
+                <td><textarea name="tr_pr_detail" id="tr_pr_detail" cols="68" rows="20" placeholder="-상품의 하자정도 &#13;-연락처 남겨주세요&#13;-최대3000자"></textarea></td>
+            </tr>
+			<tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+			<!-- 상세 이미지 -->
+			<tr>
+				<td class="tr_pr_left">상세이미지<span id="star">*</span></td>
+				<td><input type="file" value="upload"></td>
+			</tr>
+			<tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+        </table>
+
+        <!-- 등록버튼 지움-->
+        <!-- <div class="tr_pr_btn">
+            <input type="submit" id="tr_pr_btn" value="등록하기"></div>
+        </div>         -->
+    </form>  
+     <script src="/js/HSJ/upload_img.js"></script>
+     <script src="/js/HSJ/call_tbl_input.js"></script>
+</body>
+</html>
