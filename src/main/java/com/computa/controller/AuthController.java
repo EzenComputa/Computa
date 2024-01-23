@@ -94,7 +94,7 @@ public class AuthController {
     // handler method to handle login request
     @GetMapping("/login")
     public String login(){
-        return "login_page";
+        return "login";
     }    
 
     @GetMapping("/find_user")
