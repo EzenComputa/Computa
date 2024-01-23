@@ -90,11 +90,19 @@
 }
 
 /*상세스펙*/
-.tr_pr_spec{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+.gridClass{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 7px 7px;
+}
 
-    width: 83rem;
+.selection{
+    margin: 0.2rem;
+    padding: 0.5rem;
+    outline: solid 1px #187771;
+    background-color: #72cec8;
+
 }
 
 /* 상품설명 부분 */

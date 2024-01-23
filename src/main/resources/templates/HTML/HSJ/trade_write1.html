@@ -126,6 +126,60 @@
     
     <form action="" method="get"><div class="tr_pr">
         <table border="0" class="tr_pr_table">
+
+            <!--상품종류(select)-->
+            <tr>
+                <td class="tr_pr_left">상품종류<span id="star">*</span></td>
+                <td>
+                    <div class="gridClass">
+                        <div class="selection">
+                            <a href="#">CPU</a>
+                        </div>
+                        
+                        <div class="selection">
+                            <a href="#">그래픽카드</a>
+                        </div>
+                        
+                        <div class="selection">
+                            <a href="#">메인보드</a>
+                        </div>
+                        
+                        <div class="selection">
+                            <a href="#">SSD</a>
+                        </div>
+                        
+                        <div class="selection">
+                            <a href="#">HDD</a>
+                        </div>
+                        
+                        <div class="selection">
+                            <a href="#">RAM</a>
+                        </div>
+                        
+                        <div class="selection">
+                            <a href="#">케이스</a>
+                        </div>
+                        
+                        <div class="selection">
+                            <a href="#">쿨러</a>
+                        </div>
+                        <div class="selection">
+                            <a href="#">파워</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+
+
+            <!-- 상세스펙 -->
+            <tr>
+                <td class="tr_pr_left">상세 스펙</td>
+                <td>
+                    <div class="tr_pr_spec"></div>
+                </td>
+            </tr>
+            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
             
             <!-- 상품 이미지-->
             <tr>
@@ -160,32 +214,7 @@
             </tr>
             <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
 
-            <!--상품종류(select)-->
-            <tr>
-                <td class="tr_pr_left">상품종류<span id="star">*</span></td>
-                <td><select name="tr_pr_category" id="tr_pr_category" required>
-                    <option value="">종류를 선택해주세요!</option>
-                    <option value="cpu">CPU</option>
-                    <option value="gpu">그래픽카드</option>
-                    <option value="motherboard">메인보드</option>
-                    <option value="ssd">SSD</option>
-                    <option value="hdd">HDD</option>
-                    <option value="ram">RAM</option>
-                    <option value="case">케이스</option>
-                    <option value="cooler">쿨러</option>
-                    <option value="power">파워</option>
-                </select></td>
-            </tr>
-            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
-
-            <!-- 상세스펙 -->
-            <tr>
-                <td class="tr_pr_left">상세 스펙</td>
-                <td>
-                    <div class="tr_pr_spec"></div>
-                </td>
-            </tr>
-            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+            
 
             <!-- 상품설명 -->
             <tr>
@@ -201,6 +230,5 @@
         
     </form>  
      <script src="/js/HSJ/upload_img.js"></script>
-     <script src="/js/HSJ/call_tbl_input.js"></script>
 </body>
 </html>
