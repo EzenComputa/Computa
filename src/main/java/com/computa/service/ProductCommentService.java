@@ -8,6 +8,6 @@ public interface ProductCommentService {
     List<ProductComment> getAllProductComments();
     List<ProductComment> getProductCommentsByProductId(Long productId);
     ProductComment getProductCommentById(Long id);
-    ProductComment saveProductComment(ProductComment productComment, String content, Long productId, Long userId, Long parentId);
+    ProductComment saveProductComment(Long productId, Long userId, Long parentId, String content);
     void deleteProductComment(Long id);
 }
