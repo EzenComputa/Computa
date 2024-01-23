@@ -94,8 +94,13 @@ public class AuthController {
     // handler method to handle login request
     @GetMapping("/login")
     public String login(){
-        return "login";
+        return "login_page";
     }    
+
+    @GetMapping("/find_user")
+    public String findUserView(){
+        return "find_user";
+    }
 
     @GetMapping("/profile")
     public String showProfile(Model model, @AuthenticationPrincipal UserDetails currentUser) {

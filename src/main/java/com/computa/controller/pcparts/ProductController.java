@@ -1,4 +1,4 @@
-package com.computa.controller;
+package com.computa.controller.pcparts;
 
 import java.util.List;
 
