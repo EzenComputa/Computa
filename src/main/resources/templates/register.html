@@ -1,168 +1,75 @@
-
 <!DOCTYPE html>
-<html lang="en"
-  xmlns:th="http://www.thymeleaf.org"
->
+<html lang="ko">
+<!-- 원본: HTML/CMH/membership.html -->
+<!-- 제작자: 최민혁 -->
+<!-- 프로그램: 회원가입 화면 -->
+<!-- 사용된 외부 파일  membership.css -->
 <head>
     <meta charset="UTF-8">
-    <title>Registration and Login System</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-        crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+    <link rel="stylesheet" href="/src/main/resources/templates/CSS/CMH/membership.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" th:href="@{/index}">Registration and Login System</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" th:href="@{/login}">Login</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<br /><br /><br />
-<div class="container">
-  <div class="row col-md-8 offset-md-2">
-    <div class="card">
-      <div class="card-header">
-          <h2 class="text-center">Registration</h2>
-      </div>
-      <div th:if="${param.success}">
-          <div class="alert alert-info">
-            You have successfully registered our app!
-          </div>
-      </div>
-      <div class="card-body">
-          <form
-            method="post"
-            role="form"
-            th:action="@{/register/save}"
-            th:object="${user}"
-          >
-            <div class="form-group mb-3">
-              <label class="form-label">First Name</label>
-              <input
-                      class="form-control"
-                      id="firstName"
-                      name="firstName"
-                      placeholder="Enter first name"
-                      th:field="*{firstName}"
-                      type="text"
-              />
-              <p th:errors = "*{firstName}" class="text-danger"
-              th:if="${#fields.hasErrors('firstName')}"></p>
-            </div>
 
-            <div class="form-group mb-3">
-              <label class="form-label">Last Name</label>
-              <input
-                      class="form-control"
-                      id="lastName"
-                      name="lastName"
-                      placeholder="Enter last name"
-                      th:field="*{lastName}"
-                      type="text"
-              />
-              <p th:errors = "*{lastName}" class="text-danger"
-                 th:if="${#fields.hasErrors('lastName')}"></p>
-            </div>
+<body class="membership_body" style="font-family: 'Noto Sans KR', sans-serif;">
+    <form method="post" action="서버의url" class="membership">
+        
+        <div class="membership_head">
+            <h2>회원가입</h2>  
+        </div>
 
-            <div class="form-group mb-3">
-              <label class="form-label">Username</label>
-              <input
-                      class="form-control"
-                      id="username"
-                      name="username"
-                      placeholder="Enter username"
-                      th:field="*{username}"
-                      type="text"
-              />
-              <p th:errors = "*{username}" class="text-danger"
-                 th:if="${#fields.hasErrors('username')}"></p>
-            </div>
+        <!-- <div class="middle-user-inf"></div> -->
+        <div class="membership_information">
+            <label for="username" class="user_name">사용자 이름<span style="color: black;">*</span></label>
+            <input type="text" id="username" name="username" placeholder="Enter your name" required>
+            <br>
 
-            <div class="form-group mb-3">
-              <label class="form-label">Nickname</label>
-              <input
-                      class="form-control"
-                      id="nickname"
-                      name="nickname"
-                      placeholder="Enter nickname"
-                      th:field="*{nickname}"
-                      type="text"
-              />
-              <p th:errors = "*{nickname}" class="text-danger"
-                 th:if="${#fields.hasErrors('nickname')}"></p>
-            </div>
+            <label for="phone" class="user_phone_number">전화번호<span style="color: black;">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="-없이 번호 등록" required>
+            <br>
 
-            <div class="form-group mb-3">
-              <label class="form-label">Email</label>
-              <input
-                      class="form-control"
-                      id="email"
-                      name="email"
-                      placeholder="Enter email address"
-                      th:field="*{email}"
-                      type="email"
-              />
-              <p th:errors = "*{email}" class="text-danger"
-                 th:if="${#fields.hasErrors('email')}"></p>
-            </div>
+            <label for="email" class="user_email">이메일<span style="color: black;">*</span></label>
+            <input type="text" id="email" name="email" placeholder="Email"  style="margin-left: 0px; width: 250px;"  required> 
+            <span>@</span>
+            <select class="box" id="email_list"  style="margin-left: 0px; width: 120px;" required>
+                <option value="1">naver.com</option>
+                <option value="2">google.com</option>
+                <option value="3">hanmail.net</option>
+                <option value="4">nate.com</option>
+                <option value="5">kakao.com</option>
+            </select>
+            <br>
 
-            <div class="form-group mb-3">
-              <label class="form-label">Password</label>
-              <input
-                      class="form-control"
-                      id="password"
-                      name="password"
-                      placeholder="Enter password"
-                      th:field="*{password}"
-                      type="password"
-              />
-              <p th:errors = "*{password}" class="text-danger"
-                 th:if="${#fields.hasErrors('password')}"></p>
-            </div>
+            <label for="jumin" class="user_jumin">주민번호<span style="color: black;">*</span></label>
+            <input type="text" maxlength="6"  style="margin-left: 0px; width: 230px;" placeholder="xxxxxx" required> 
+            - 
+            <input type="password" maxlength="7" style="margin-left: 0px; width: 230px;" placeholder="xxxxxx" required>
 
-            <div class="form-group mb-3">
-              <label class="form-label">SSID</label>
-              <input
-                      class="form-control"
-                      id="firstSsid"
-                      name="firstSsid"
-                      placeholder="주민번호 앞 6자리"
-                      th:field="*{firstSsid}"
-                      type="text"
-              />
-              <p th:errors = "*{firstSsid}" class="text-danger"
-                 th:if="${#fields.hasErrors('firstSsid')}"></p>              
-              <input
-                      class="form-control"
-                      id="secondSsid"
-                      name="secondSsid"
-                      placeholder=""
-                      th:field="*{secondSsid}"
-                      type="text"
-              />
-              <p th:errors = "*{secondSsid}" class="text-danger"
-                 th:if="${#fields.hasErrors('secondSsid')}"></p>
-            </div>
+            <label for="ID" class="user_id">아이디<span style="color: black;">*</span></label>
+            <input class="id_box" type="text" id="ID" name="ID" placeholder="Enter your ID" required>
 
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit">Register</button>
-              <span>Already registered? <a th:href="@{/login}">Login here</a></span>
-            </div>
-          </form>
-      </div>
-    </div>
-  </div>
-</div>
+            <input type="button" class="duplication_butten" value="중복확인" onclick="alert('사용이 OO합니다.')" />
+            <br>
+
+            <label for="password" class="user_password">비밀번호<span style="color: black;">*</span></label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <br>
+
+            <label for="password_req" class="user_password_req">비밀번호 확인<span style="color: black;">*</span></label>
+            <input type="text" id="password_req" name="password_req" placeholder="Enter your password" required>
+
+            <label for="nickname" class="user_nickname">닉네임<span style="color: black;">*</span></label>
+            <input type="text" id="nickname" style="width: 300px;" placeholder="Enter your nickname" required>
+
+            <input type="button" class="duplication_butten" value="중복확인" onclick="alert('사용이 OO합니다.')" />
+            <br>
+            <span class="nickname_warning"> < 경고:  비속어 사용시 닉네임 사용에 제한됩니다.> </span>
+
+            <button type="submit" class="join_button">가입하기</button>
+        </div>
+
+    </form>
 </body>
 </html>
-
