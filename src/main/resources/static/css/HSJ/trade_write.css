@@ -104,6 +104,11 @@
     background-color: #72cec8;
 
 }
+.pcpart{
+    width:2rem;
+    height: 3rem;
+    font-size: 2rem;
+}
 
 /* 상품설명 부분 */
 #tr_pr_detail{
