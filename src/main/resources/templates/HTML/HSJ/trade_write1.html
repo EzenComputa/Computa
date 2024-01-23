@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>중고거래_글쓰기 페이지</title>
-    <link rel="stylesheet" th:href="@{css/HSJ/hsj_list.css}">
-    <link rel="stylesheet" th:href="@{css/LRH/style.css}">
-    <link rel="stylesheet" th:href="@{css/LRH/menubar.css}">
-    <link rel="stylesheet" th:href="@{css/HYJ/table.css}">
+    <link rel="stylesheet" th:href="@{/css/HSJ/hsj_list.css}">
+    <link rel="stylesheet" th:href="@{/css/LRH/style.css}">
+    <link rel="stylesheet" th:href="@{/css/LRH/menubar.css}">
+    <link rel="stylesheet" th:href="@{/css/HYJ/table.css}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/764963a2f9.js" crossorigin="anonymous"></script>
     <script src="/js/LRH/js17_menu.js"></script>  
@@ -38,7 +38,7 @@
                                 </div>
                                 <div class="recent_prod_list" >
                                     <div class="recent_prod">                                            
-                                        <a th:href="@{5.used_list_detail.html}" class="used_img">
+                                        <a th:href="@{/5.used_list_detail.html}" class="used_img">
                                             <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
@@ -54,7 +54,7 @@
                                         </p>  
                                     </div>          
                                     <div class="recent_prod">                                            
-                                        <a th:href="@{5.used_list_detail.html}" class="used_img">
+                                        <a th:href="@{/5.used_list_detail.html}" class="used_img">
                                             <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
@@ -70,7 +70,7 @@
                                         </p>  
                                     </div>
                                     <div class="recent_prod">                                            
-                                        <a th:href="@{5.used_list_detail.htm}l" class="used_img">
+                                        <a th:href="@{/5.used_list_detail.htm}l" class="used_img">
                                             <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
@@ -86,7 +86,7 @@
                                         </p>  
                                     </div>          
                                     <div class="recent_prod">                                            
-                                        <a th:href="@{5.used_list_detail.htm}l" class="used_img">
+                                        <a th:href="@{/5.used_list_detail.htm}l" class="used_img">
                                             <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
@@ -108,19 +108,19 @@
                     </li>
                 </ul>
 
-                <a th:href="@{}"><img src="/images/LRH/tea-bag.png">마이티백</a>
-                <a th:href="@{login_page.html}"><img src="/images/LRH/login.png">로그인</a>
+                <a th:href="@{/}"><img src="/images/LRH/tea-bag.png">마이티백</a>
+                <a th:href="@{/login_page.html}"><img src="/images/LRH/login.png">로그인</a>
             </div>            
         </div>
     </div>
 
     <div class="navbar" style="z-index: -1;">      
         <ul class="navbar_menu">
-            <li><a th:href="@{my_main.html}">마이페이지</a></li>
-            <li><a th:href="@{}">PC견적</a></li>
-            <li><a th:href="@{1.product_list.html}">부품</a></li>            
-            <li><a th:href="@{qna_list.html}">문의</a></li>
-            <li><a th:href="@{7.used_product_list.html}" style="color: red;">우려먹기</a></li>                    
+            <li><a th:href="@{/my_main.html}">마이페이지</a></li>
+            <li><a th:href="@{/}">PC견적</a></li>
+            <li><a th:href="@{/1.product_list.html}">부품</a></li>            
+            <li><a th:href="@{/qna_list.html}">문의</a></li>
+            <li><a th:href="@{/7.used_product_list.html}" style="color: red;">우려먹기</a></li>                    
         </ul>        
     </div>
     
