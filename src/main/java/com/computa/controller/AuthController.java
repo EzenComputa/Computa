@@ -84,11 +84,11 @@ public class AuthController {
         return "redirect:/register?success";
     }
 
-    @GetMapping("/users")
+    @GetMapping("/manage_users")
     public String users(Model model){
         List<UserDto> users = userService.findAllUsers();
         model.addAttribute("users", users);
-        return "users";
+        return "user_management";
     }
 
     // handler method to handle login request

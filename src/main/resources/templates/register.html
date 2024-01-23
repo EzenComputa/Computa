@@ -2,6 +2,7 @@
 <html lang="ko"
     xmlns:th="http://www.thymeleaf.org"
 >
+<!-- 원본: HTML/CMH/membership.html -->
 <!-- 제작자: 최민혁 -->
 <!-- 프로그램: 회원가입 화면 -->
 <!-- 사용된 외부 파일  membership.css -->
@@ -13,11 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
 
 </head>
-<div th:if="${param.success}">
-    <div class="alert alert-info">
-      You have successfully registered our app!
-    </div>
-</div>
 <body class="membership_body" style="font-family: 'Noto Sans KR', sans-serif;">
     <form method="post" th:action="@{/register/save}" th:object="${user}" class="membership">
         
@@ -26,7 +22,7 @@
         </div>
         <div th:if="${param.success}">
             <div class="alert alert-info">
-              You have successfully registered our app!
+              가입성공!
             </div>
         </div>
         <!-- <div class="middle-user-inf"></div> -->
