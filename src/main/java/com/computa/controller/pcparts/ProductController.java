@@ -49,6 +49,13 @@ public class ProductController {
     @Autowired
     private Map<String, ProductService> productServiceMap;
 
+    @GetMapping("/product")
+    public String showProductList(Model model) {
+        List<Product> products = productRepository.findAll();
+        model.addAttribute("products", products);
+        return "product_list";
+    }
+
     @GetMapping("/product_details")
     public String showProductDetails(@RequestParam("id") Long id, Model model) {
         Product product = productRepository.findById(id)

@@ -34,7 +34,7 @@ public class SpringSecurity {
                         authorize.requestMatchers("/register/**").permitAll() // anybody can access /register/**
                                 .requestMatchers("/login","/index","/","","/product/**", "/product_details","/addProduct/**","/saveProduct/**","/find_user").permitAll() // anybody can access 
                                 .requestMatchers("/wishlist/**", "/product/**", "/profile", "/user/**", "/postDetails/**","/writePost/**", "/savePost", "/saveComment", "/saveProductComment", "/uploadImage", "/images/**","/uploadCommentImage").hasRole("USER") // only users with USER role can access
-                                .requestMatchers("/users").hasRole("ADMIN") // only users with ADMIN role can access /users
+                                .requestMatchers("/manage_users").hasRole("ADMIN") // only users with ADMIN role can access /users
                 ).formLogin(
                         form -> form
                                 .loginPage("/login")
