@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+    xmlns:th="http://www.thymeleaf.org"
+>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,16 +19,20 @@
     </script>
 
     <!-- <link rel="stylesheet" href="../../CSS/HSJ/css_lee/list.css"> -->
-    <link rel="stylesheet" href="../../CSS/HYJ/hyj_list.css">
-    <link rel="stylesheet" href="../../CSS/HSJ/hsj_list.css">
-    <link rel="stylesheet" href="../../CSS/LRH/list.css">
+
+    <script src="/js/LRH/js17_menu.js"></script>
+    <script src="/js/LRH/hover.js"></script>
+
+    <link rel="stylesheet" th:href="@{css/HYJ/hyj_list.css}">
+    <link rel="stylesheet" href="@{css/HSJ/hsj_list.css}">
+    <link rel="stylesheet" href="@{css/LRH/list.css}">
 
 </head>
 <body>
     <!-- top 로고 & 검색 & 메뉴navbar -->
     <div class="top">
         <div class="logo_wrap">
-            <a href="/src/main/resources/templates/HTML/LRH/6.main_page.html" class="computa_logo"><img src="/src/main/resources/templates/IMG/LRH/computa icon.png" alt="logo" width="100"></a>
+            <a th:href="@{/index}" class="computa_logo"><img src="/images/LRH/computa icon.png" alt="logo" width="100"></a>
         </div>
         
         <div class="search">
@@ -35,20 +41,20 @@
         </div>
         <div class="myinfo">
             <div class="myinfo_icon">
-                <a href="../../HTML/LRH/recent_test1.html"><img src="/src/main/resources/templates/IMG/LRH/recent.png">최근내역</a>
-                <a href="#"><img src="/src/main/resources/templates/IMG/LRH/tea-bag.png">마이티백</a>
-                <a href="../../HTML/CMH/login_page.html"><img src="/src/main/resources/templates/IMG/LRH/login.png">로그인</a>
+                <a th:href=""><img src="/images/LRH/recent.png">최근내역</a>
+                <a th:href="#"><img src="/images/LRH/tea-bag.png">마이티백</a>
+                <a th:href="@{/login}"><img src="/images/LRH/login.png">로그인</a>
             </div>            
         </div>
     </div>
 
-    <div class="navbar">      
+    <div class="navbar" style="z-index: -1;">      
         <ul class="navbar_menu">
-            <li><a href="../../HTML/HSJ/my_main.html">마이페이지</a></li>
-            <li><a href="#">PC견적</a></li>
-            <li><a href="/src/main/resources/templates/HTML/LRH/1.product_list.html">부품</a></li>            
-            <li><a href="../../HTML/LRH/2.list.html">문의</a></li>
-            <li><a href="../../HTML/LRH/7.used_product_list.html" style="color: red;">우려먹기</a></li>                    
+            <li><a th:href="@{my_main.html}">마이페이지</a></li>
+            <li><a th:href="#">PC견적</a></li>
+            <li><a th:href="@{1.product_list.html}">부품</a></li>            
+            <li><a th:href="@{2.list.html}">문의</a></li>
+            <li><a th:href="@{7.used_product_list.html}" style="color: red;">우려먹기</a></li>                    
         </ul>        
     </div>
 
@@ -61,15 +67,15 @@
             <td colspan="6" class="pr_title_style">회원정보 수정</td>
         </tr>
         <tr>
-            <td colspan="6" style="text-align: center;"><img src="../../IMG/HSJ/ham.jpg" alt="" id="pr_dt_photo"></td>
+            <td colspan="6" style="text-align: center;"><img src="/images/HSJ/ham.jpg" alt="" id="pr_dt_photo"></td>
         </tr>
         <tr>
-            <td><img src="../../IMG/HSJ/ham.jpg" alt="" id="pr_dt_img1"></td>
-            <td><img src="../../IMG/HSJ/ham2.jpg" alt="" id="pr_dt_img2"></td>
-            <td><img src="../../IMG/HSJ/ham3.jpg" alt="" id="pr_dt_img4"></td>
-            <td><img src="../../IMG/HYJ/cat1.jpg" alt="" id="pr_dt_img3"></td>
-            <td><img src="../../IMG/HYJ/cat3.jpeg" alt="" id="pr_dt_img6"></td>
-            <td><img src="../../IMG/HYJ/cat2.jpg" alt="" id="pr_dt_img5"></td>
+            <td><img src="/images/HSJ/ham.jpg" alt="" id="pr_dt_img1"></td>
+            <td><img src="/images/HSJ/ham2.jpg" alt="" id="pr_dt_img2"></td>
+            <td><img src="/images/HSJ/ham3.jpg" alt="" id="pr_dt_img4"></td>
+            <td><img src="/images/HYJ/cat1.jpg" alt="" id="pr_dt_img3"></td>
+            <td><img src="/images/HYJ/cat3.jpeg" alt="" id="pr_dt_img6"></td>
+            <td><img src="/images/HYJ/cat2.jpg" alt="" id="pr_dt_img5"></td>
         </tr>
 
         </table>
@@ -139,6 +145,6 @@
         inputImage.addEventListener("change",function(e){
             readImage(e.target);});
     </script>
-    <script src="../../JS/HSJ/change_img.js"></script>
+    <script src="/js/HSJ/change_img.js"></script>
 </body>
 </html>
