@@ -32,14 +32,14 @@ public class SpringSecurity {
         http.csrf().disable()
                 .authorizeHttpRequests((authorize) ->
                         authorize.requestMatchers("/register/**").permitAll() // anybody can access /register/**
-                                .requestMatchers("/login","/index","/","","/product/**","/general_questions", "/product_details","/addProduct/**","/saveProduct/**","/find_user").permitAll() // anybody can access 
-                                .requestMatchers("/wishlist/**", "/product/**", "/profile", "/user/**", "/buy_sell", "/postDetails/**","/writePost/**","/support_tickets", "/savePost", "/saveComment", "/saveProductComment", "/uploadImage", "/images/**","/uploadCommentImage").hasRole("USER") // only users with USER role can access /wishlist
-                                .requestMatchers("/users", "/support_tickets").hasRole("ADMIN") // only users with ADMIN role can access /users
+                                .requestMatchers("/login","/index","/","","/product/**", "/product_details","/addProduct/**","/saveProduct/**","/find_user").permitAll() // anybody can access 
+                                .requestMatchers("/wishlist/**", "/product/**", "/profile", "/user/**", "/postDetails/**","/writePost/**", "/savePost", "/saveComment", "/saveProductComment", "/uploadImage", "/images/**","/uploadCommentImage").hasRole("USER") // only users with USER role can access
+                                .requestMatchers("/users").hasRole("ADMIN") // only users with ADMIN role can access /users
                 ).formLogin(
                         form -> form
                                 .loginPage("/login")
                                 .loginProcessingUrl("/login") // url for login form's POST request 
-                                .defaultSuccessUrl("/index") // If user successfully logs in, redirect to /index
+                                .defaultSuccessUrl("/index", true) // If user successfully logs in, redirect to /index
                                 .permitAll() // This is necessary because users need to be able to access these URLs before they're authenticated
                 ).logout(
                         logout -> logout

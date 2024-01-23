@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+    xmlns:th="http://www.thymeleaf.org"
+>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>문의게시판(글목록)페이지</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/src/main/resources/templates/JS/LRH/js17_menu.js"></script>  
-    <script src="/src/main/resources/templates/JS/LRH/hvoer.js"></script> 
+    <script src="/js/LRH/js17_menu.js"></script>  
+    <script src="/js/LRH/hvoer.js"></script> 
     <script>
         
     </script>
-    <link rel="stylesheet" href="../../CSS/HYJ/hyj_list.css">
-    <link rel="stylesheet" href="../../CSS/HSJ/hsj_list.css">
-    <link rel="stylesheet" href="../../CSS/LRH/list.css">
+    <link rel="stylesheet" th:href="@{/css/HYJ/hyj_list.css}">
+    <link rel="stylesheet" th:href="@{/css/HSJ/hsj_list.css}">
+    <link rel="stylesheet" th:href="@{/css/LRH/list.css}">
 </head>
 <body>
      <!-- top 로고 & 검색 & 메뉴navbar -->
      <div class="top" style="z-index: 1;">
         <div class="logo_wrap">
-            <a href="/src/main/resources/templates/HTML/LRH/6.main_page.html" class="computa_logo"><img src="/src/main/resources/templates/IMG/LRH/computa icon.png" alt="logo" width="100"></a>
+            <a th:href="@{/index}" class="computa_logo"><img src="/images/LRH/computa icon.png" alt="logo" width="100"></a>
         </div>
         
         <div class="search">
@@ -27,17 +29,11 @@
             <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" >
         </div>
         <div class="myinfo">
-<<<<<<< HEAD
-            <div class="myinfo_icon">
-                <a href="../../HTML/LRH/recent_test1.html"><img src="/src/main/resources/templates/IMG/LRH/recent.png">최근내역</a>
-                <a href="#"><img src="/src/main/resources/templates/IMG/LRH/tea-bag.png">마이티백</a>
-                <a href="../../HTML/CMH/login_page.html"><img src="/src/main/resources/templates/IMG/LRH/login.png">로그인</a>
-=======
             <div class="myinfo_icon">                
                 <ul class="recent" id="gnb">
                     <li class="m">
-                        <a href="#">
-                            <img src="/src/main/resources/templates/IMG/LRH/recent.png" >최근내역<!--최근내역-->
+                        <a th:href="@{#}">
+                            <img src="/images/LRH/recent.png" >최근내역<!--최근내역-->
                         </a> 
                         <ul>
                             <div class="recent_area">
@@ -46,8 +42,8 @@
                                 </div>
                                 <div class="recent_prod_list">
                                     <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        <a th:href="@{5.used_list_detail.html}" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
                                         <div class="recent_like_icon">
@@ -62,8 +58,8 @@
                                         </p>  
                                     </div>          
                                     <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        <a th:href="@{5.used_list_detail.html}" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
                                         <div class="recent_like_icon">
@@ -78,8 +74,8 @@
                                         </p>  
                                     </div>
                                     <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        <a th:href="@{5.used_list_detail.html}" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
                                         <div class="recent_like_icon">
@@ -94,8 +90,8 @@
                                         </p>  
                                     </div>          
                                     <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        <a th:href="@{5.used_list_detail.html}" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
                                         <div class="recent_like_icon">
@@ -116,9 +112,8 @@
                     </li>
                 </ul>
 
-                <a href=""><img src="/src/main/resources/templates/IMG/LRH/tea-bag.png">마이티백</a>
-                <a href="/src/main/resources/templates/HTML/CMH/login_page.html"><img src="/src/main/resources/templates/IMG/LRH/login.png">로그인</a>
->>>>>>> 4b4452e3e4958aae3f3a190cccebcd048efe751c
+                <a th:href="@{}"><img src="/imges/LRH/tea-bag.png">마이티백</a>
+                <a th:href="@{/login}"><img src="/images/LRH/login.png">로그인</a>
             </div>            
         </div>
         
@@ -126,19 +121,11 @@
 
     <div class="navbar">      
         <ul class="navbar_menu">
-<<<<<<< HEAD
-            <li><a href="../../HTML/HSJ/my_main.html">마이페이지</a></li>
-            <li><a href="#">PC견적</a></li>
-            <li><a href="/src/main/resources/templates/HTML/LRH/1.product_list.html">부품</a></li>            
-            <li><a href="../../HTML/LRH/2.list.html">문의</a></li>
-            <li><a href="../../HTML/LRH/7.used_product_list.html" style="color: red;">우려먹기</a></li>                    
-=======
-            <li><a href="/src/main/resources/templates/HTML/HSJ/my_main.html">마이페이지</a></li>
-            <li><a href="#">PC견적</a></li>
-            <li><a href="/src/main/resources/templates/HTML/LRH/1.product_list.html">부품</a></li>            
-            <li><a href="/src/main/resources/templates/HTML/HYJ/qna_list.html">문의</a></li>
-            <li><a href="/src/main/resources/templates/HTML/LRH/7.used_product_list.html" style="color: red;">우려먹기</a></li>                    
->>>>>>> 4b4452e3e4958aae3f3a190cccebcd048efe751c
+            <li><a th:href="@{my_main.html}">마이페이지</a></li>
+            <li><a th:href="@{#}">PC견적</a></li>
+            <li><a th:href="@{1.product_list.html}">부품</a></li>            
+            <li><a th:href="@{qna_list.html}">문의</a></li>
+            <li><a th:href="@{7.used_product_list.html}" style="color: red;">우려먹기</a></li>                    
         </ul>        
     </div>
 
@@ -171,15 +158,9 @@
     <!-- 3. 데이터 표시할 테이블 html -->
     <span id="displayCount"></span>
 
-<<<<<<< HEAD
 <div  class = "dataTableBody">
     <table border="1"  class = "dataTableBody"> 
             <tr style="font-size: medium;">
-=======
-
-    <table border="1" class = "dataTableBody"> 
-            <tr style="font-size: medium; background-color: antiquewhite;">
->>>>>>> 4b4452e3e4958aae3f3a190cccebcd048efe751c
                 <th style="width: 100px;">글번호 </th>
                 <th style="width: 300px; height: 30px;">글제목 </th>
                 <th style="width: 100px;">닉네임 </th>
@@ -216,7 +197,7 @@
             </tr>
             <tr style="text-align: center;">
                 <td id="qna_list_num">1</td>
-                <td id="qna_list_title" class="click_con"><a href="/src/main/resources/templates/HTML/HSJ/qna_detail.html">글제목 입니다.</a></td>
+                <td id="qna_list_title" class="click_con"><a th:href="@{qna_detail.html}">글제목 입니다.</a></td>
                 <td id="qna_list_nick">닉네임</td>
                 <td id="qna_list_date">2023-01-10</td>
                 <td id="qna_list_view">23</td>

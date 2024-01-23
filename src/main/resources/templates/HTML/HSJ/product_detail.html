@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+    xmlns:th="http://www.thymeleaf.org"
+>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>제품 상세페이지</title>
-    <link rel="stylesheet" href="../../CSS/HSJ/hsj_list.css">
-    <link rel="stylesheet" href="../../CSS/LRH/style.css">
-    <link rel="stylesheet" href="../../css/LRH/menubar.css">
-    <link rel="stylesheet" href="../../CSS/HYJ/table.css">
+    <link rel="stylesheet" th:href="@{/css/HSJ/hsj_list.css}">
+    <link rel="stylesheet" th:href="@{/css/LRH/style.css}">
+    <link rel="stylesheet" th:href="@{/css/LRH/menubar.css}">
+    <link rel="stylesheet" th:href="@{/css/HYJ/table.css}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="../../js/HSJ/popup.js"></script>
+    <script src="/js/HSJ/popup.js"></script>
     <script src="https://kit.fontawesome.com/764963a2f9.js" crossorigin="anonymous"></script>
-    <script src="/src/main/resources/templates/JS/LRH/js17_menu.js"></script>  
-    <script src="/src/main/resources/templates/JS/LRH/hvoer.js"></script>
+    <script src="/js/LRH/js17_menu.js"></script>  
+    <script src="/js/LRH/hvoer.js"></script>
     <script>
         //신고하기
       $(document).ready(function(){
@@ -26,7 +28,7 @@
 <body id="body">
     <div class="top">
         <div class="logo_wrap">
-            <a href="/src/main/resources/templates/HTML/LRH/6.main_page.html" class="computa_logo"><img src="/src/main/resources/templates/IMG/LRH/computa icon.png" alt="logo" width="100"></a>
+            <a th:href="@{/index}" class="computa_logo"><img src="/images/LRH/computa icon.png" alt="logo" width="100"></a>
         </div>
         
         <div class="search">
@@ -38,17 +40,17 @@
                 <ul class="recent" id="gnb">
                     <li class="m">
                         <a href="#">
-                            <img src="/src/main/resources/templates/IMG/LRH/recent.png" >최근내역<!--최근내역-->
+                            <img src="/images/LRH/recent.png" >최근내역<!--최근내역-->
                         </a> 
                         <ul>
-                            <div class="recent_area">
+                            <div class="recent_area" >
                                 <div class="recent_title">
                                     <p><strong>최근내역</strong><p>
                                 </div>
-                                <div class="recent_prod_list">
+                                <div class="recent_prod_list" >
                                     <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        <a th:href="@{/5.used_list_detail.html}" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
                                         <div class="recent_like_icon">
@@ -63,8 +65,8 @@
                                         </p>  
                                     </div>          
                                     <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        <a th:href="@{/5.used_list_detail.html}" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
                                         <div class="recent_like_icon">
@@ -79,8 +81,8 @@
                                         </p>  
                                     </div>
                                     <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        <a th:href="@{/5.used_list_detail.htm}l" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
                                         <div class="recent_like_icon">
@@ -95,8 +97,8 @@
                                         </p>  
                                     </div>          
                                     <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        <a th:href="@{/5.used_list_detail.htm}l" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
                                         <div class="recent_like_icon">
@@ -117,32 +119,32 @@
                     </li>
                 </ul>
 
-                <a href=""><img src="/src/main/resources/templates/IMG/LRH/tea-bag.png">마이티백</a>
-                <a href="/src/main/resources/templates/HTML/CMH/login_page.html"><img src="/src/main/resources/templates/IMG/LRH/login.png">로그인</a>
+                <a th:href="@{/}"><img src="/images/LRH/tea-bag.png">마이티백</a>
+                <a th:href="@{/login_page.html}"><img src="/images/LRH/login.png">로그인</a>
             </div>            
         </div>
     </div>
 
     <div class="navbar" style="z-index: -1;">      
-        <ul class="navbar_menu" >
-            <li><a href="../HSJ/my_main.html">마이페이지</a></li>
-            <li><a href="#">PC견적</a></li>
-            <li><a href="../LRH/1.product_list.html">부품</a></li>            
-            <li><a href="../HYJ/qna_list.html">문의</a></li>
-            <li><a href="../LRH/7.used_product_list.html" style="color: red;">우려먹기</a></li>                    
+        <ul class="navbar_menu">
+            <li><a th:href="@{/my_main.html}">마이페이지</a></li>
+            <li><a th:href="@{/}">PC견적</a></li>
+            <li><a th:href="@{/1.product_list.html}">부품</a></li>            
+            <li><a th:href="@{/qna_list.html}">문의</a></li>
+            <li><a th:href="@{/7.used_product_list.html}" style="color: red;">우려먹기</a></li>                    
         </ul>        
     </div>
     <nav class="navbar" style="z-index: -1;">        
         <ul class="navbar_menu">
-            <li><a href="#">CPU</a></li>
-            <li><a href="#">GPU</a></li>
-            <li><a href="#">마더보드</a></li>
-            <li><a href="#">HDD</a></li>
-            <li><a href="#">SDD</a></li>
-            <li><a href="#">램카드</a></li>
-            <li><a href="#">파워</a></li>
-            <li><a href="#">케이스</a></li>
-            <li><a href="#">쿨러</a></li>
+            <li><a th:href="@{/}">CPU</a></li>
+            <li><a th:href="@{/}">GPU</a></li>
+            <li><a th:href="@{/}">마더보드</a></li>
+            <li><a th:href="@{/}">HDD</a></li>
+            <li><a th:href="@{/}">SDD</a></li>
+            <li><a th:href="@{/}">램카드</a></li>
+            <li><a th:href="@{/}">파워</a></li>
+            <li><a th:href="@{/}">케이스</a></li>
+            <li><a th:href="@{/}">쿨러</a></li>
         </ul>        
     </nav>
 
@@ -161,7 +163,7 @@
     <div class="pr_dt_pf">            
         <table class="pr_dt_table">
             <tr>
-                <td rowspan="3" colspan="5" class="pr_dt_photo"><img src="../../img/HSJ/cpu1.png" alt="" width="400px" height="400px" id="pr_dt_photo"></td>
+                <td rowspan="3" colspan="5" class="pr_dt_photo"><img src="/images/HSJ/cpu1.png" alt="" width="400px" height="400px" id="pr_dt_photo"></td>
                 <td class="pr_dt_name"><span id="pr_dt_name">SSD-Ham9700ster</span></td>         
             </tr>
             <tr>
@@ -173,7 +175,7 @@
                     <div class="price_compare">
                         <table border="1" class="price_tbl">
                             <tr class="company">
-                                <td id="com_img_td"><img src="../../IMG/HSJ/computa.png" alt="" width="40px" height="40px" id="com_img"></td>
+                                <td id="com_img_td"><img src="/images/HSJ/computa.png" alt="" width="40px" height="40px" id="com_img"></td>
                                 <td id="com_name_td"><span id="com_name">회사명</span></td>
                                 <td id="com_price_td"><span id="com_price">53,000원</span></td>    
                                 <td id="com_link_td"><a href="" id="com_link">링크</a></td>
@@ -183,11 +185,11 @@
                 </td>
             </tr>
             <tr>
-                <td class="pr_dt_photos"><img src="../../img/HSJ/cpu1.png" alt="" width="90px" height="90px" class="small" id="pr_dt_img1"></td>
-                <td class="pr_dt_photos"><img src="../../img/HSJ/cpu2.png" alt="" width="90px" height="90px" class="small" id="pr_dt_img2"></td>
-                <td class="pr_dt_photos"><img src="../../img/HSJ/cpu3.png" alt="" width="90px" height="90px" class="small" id="pr_dt_img3"></td>
-                <td class="pr_dt_photos"><img src="../../img/HSJ/cpu2.png" alt="" width="90px" height="90px" class="small" id="pr_dt_img4"></td>
-                <td class="pr_dt_photos" id="pr_dt_photos"><img src="../../img/HSJ/cpu3.png" alt="" width="90px" height="90px" id="pr_dt_img5"></td>
+                <td class="pr_dt_photos"><img src="/images/HSJ/cpu1.png" alt="" width="90px" height="90px" class="small" id="pr_dt_img1"></td>
+                <td class="pr_dt_photos"><img src="/images/HSJ/cpu2.png" alt="" width="90px" height="90px" class="small" id="pr_dt_img2"></td>
+                <td class="pr_dt_photos"><img src="/images/HSJ/cpu3.png" alt="" width="90px" height="90px" class="small" id="pr_dt_img3"></td>
+                <td class="pr_dt_photos"><img src="/images/HSJ/cpu2.png" alt="" width="90px" height="90px" class="small" id="pr_dt_img4"></td>
+                <td class="pr_dt_photos" id="pr_dt_photos"><img src="/images/HSJ/cpu3.png" alt="" width="90px" height="90px" id="pr_dt_img5"></td>
             </tr>
                 <!--제품상세사양 영역-->
                 <td colspan="6">
@@ -206,7 +208,7 @@
                 <td>
                     <table >
                         <tr>
-                            <td id="pr_dt_write_1"> <img src="../../IMG/HSJ/ham3.jpg" alt="" width="100px" style="border-radius: 50%;" ></td>
+                            <td id="pr_dt_write_1"> <img src="/images/HSJ/ham3.jpg" alt="" width="100px" style="border-radius: 50%;" ></td>
                         </tr>
                         <tr>
                             <td id="pr_dt_write_2"> <span>닉네임</span></td>
@@ -237,7 +239,7 @@
     <div class="pr_dt_com_view">
         <table class="pr_dt_comview_table">
             <tr>
-                <td id="pr_dt_view_1"><img src="../../IMG/HSJ/ham3.jpg" alt="" width="100px" style="border-radius: 50%;" >
+                <td id="pr_dt_view_1"><img src="/images/HSJ/ham3.jpg" alt="" width="100px" style="border-radius: 50%;" >
                 </td>
                 <td id="pr_dt_view_2">
                     <span style="font-weight: bold;" id="pr_dt_nickname" name="pr_dt_nickname">닉네임</span>
@@ -247,7 +249,7 @@
                 <!--신고영역-->
                     <div class="pr_dt_report">
                         <div class="report_drop">
-                            <img src="../../IMG/HSJ/photo1.png" alt=""width="20px" style="border-radius: 40%;" id="pr_dt_report" >
+                            <img src="/images/HSJ/photo1.png" alt=""width="20px" style="border-radius: 40%;" id="pr_dt_report" >
                             <div class="dropdown_content">
                                 <table class="report_ddt">
                                     <tr><td id="ddt1">신고사유를 선택해 주세요.</td></tr>
@@ -277,7 +279,7 @@
         </table>        
     </div>
 </div>
-    <script src="../../JS/HSJ/change_img.js"></script>
+    <script src="/js/HSJ/change_img.js"></script>
     <script>
         $('.pr_detail').load('../HYJ/Table/cpu_table.html #prod_table');
     </script>
