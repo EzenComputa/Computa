@@ -44,21 +44,19 @@ public class ProductCommentServiceImpl implements ProductCommentService {
     }
 
     @Override
-    public ProductComment saveProductComment(ProductComment productComment, String content, Long productId, Long userId, Long parentId) {
+    public ProductComment saveProductComment(Long productId, Long userId, Long parentCommentId, String content) {
         Product product = productRepository.findById(productId)
             .orElseThrow(() -> new ResourceNotFoundException("Product not found"));
         User user = userRepository.findById(userId)
             .orElseThrow(() -> new ResourceNotFoundException("User not found"));
-        ProductComment parentComment = null;
-        if (parentId != null) {
-            parentComment = productCommentRepository.findById(parentId)
-                .orElseThrow(() -> new ResourceNotFoundException("Parent comment not found"));
-        }
+        ProductComment parentComment = parentCommentId != null ? productCommentRepository.findById(parentCommentId).orElseThrow(() -> new RuntimeException("Parent comment not found")) : null;
+        
+        ProductComment productComment = new ProductComment();
 
-        productComment.setContent(content);
-        productComment.setProduct(product);
         productComment.setUser(user);
+        productComment.setProduct(product);
         productComment.setParent(parentComment);
+        productComment.setContent(content);
 
         return productCommentRepository.save(productComment);
     }
