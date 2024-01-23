@@ -4,39 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="texttable.css">
+    <link rel="stylesheet" href="../../CSS/HSH/texttable.css">
     
     <link rel="stylesheet" href="../../CSS/LRH/style.css">
     <link rel="stylesheet" href="../../css/LRH/menubar.css">
 </head>
 <body>
-    <div class="top">
-        <div class="logo_wrap">
-            <a href="/src/main/resources/templates/HTML/LRH/6.main_page.html" class="computa_logo"><img src="/src/main/resources/templates/IMG/LRH/computa icon.png" alt="logo" width="100"></a>
-        </div>
-        
-        <div class="search">
-            <input type="text" placeholder="검색어 입력">
-            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" >
-        </div>
-        <div class="myinfo">
-            <div class="myinfo_icon">
-                <a href=""><img src="/src/main/resources/templates/IMG/LRH/recent.png">최근내역</a>
-                <a href=""><img src="/src/main/resources/templates/IMG/LRH/tea-bag.png">마이티백</a>
-                <a href=""><img src="/src/main/resources/templates/IMG/LRH/login.png">로그인</a>
-            </div>            
-        </div>
+  <!-- top 로고 & 검색 & 메뉴navbar -->
+  <div class="top">
+    <div class="logo_wrap">
+        <a href="/src/main/resources/templates/HTML/LRH/6.main_page.html" class="computa_logo"><img src="/src/main/resources/templates/IMG/LRH/computa icon.png" alt="logo" width="100"></a>
     </div>
+    
+    <div class="search">
+        <input type="text" placeholder="검색어 입력">
+        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" >
+    </div>
+    <div class="myinfo">
+        <div class="myinfo_icon">
+            <a href="../../HTML/LRH/recent_test1.html"><img src="/src/main/resources/templates/IMG/LRH/recent.png">최근내역</a>
+            <a href="#"><img src="/src/main/resources/templates/IMG/LRH/tea-bag.png">마이티백</a>
+            <a href="../../HTML/CMH/login_page.html"><img src="/src/main/resources/templates/IMG/LRH/login.png">로그인</a>
+        </div>            
+    </div>
+</div>
 
-    <div class="navbar">      
-        <ul class="navbar_menu">
-            <li><a href="../HSJ/my_main.html">마이페이지</a></li>
-            <li><a href="#">PC견적</a></li>
-            <li><a href="../LRH/1.product_list.html">부품</a></li>            
-            <li><a href="../HYJ/qna_list.html">문의</a></li>
-            <li><a href="../LRH/7.used_product_list.html" style="color: red;">우려먹기</a></li>                    
-        </ul>        
-    </div>
+<div class="navbar">      
+    <ul class="navbar_menu">
+        <li><a href="../../HTML/HSJ/my_main.html">마이페이지</a></li>
+        <li><a href="#">PC견적</a></li>
+        <li><a href="/src/main/resources/templates/HTML/LRH/1.product_list.html">부품</a></li>            
+        <li><a href="../../HTML/LRH/2.list.html">문의</a></li>
+        <li><a href="../../HTML/LRH/7.used_product_list.html" style="color: red;">우려먹기</a></li>                    
+    </ul>        
+</div>
+
 
     <form class="qnawrite">
      <!---테이블영역-->
@@ -58,7 +60,7 @@
             </tr>
             <tr>
                 <td><span>제목</span></td>
-                <td class="table_left"><input type="text" style="width: 400px;"></td>
+                <td class="table_left"><input type="text" class="text_css"></td>
             </tr>
             <tr>
                 <td colspan="2">
@@ -68,7 +70,7 @@
             <tr>
                 <td><span>내용</span>
                 </td>
-                <td class="table_left">
+                <td class="table_left" style="padding-bottom: 10px;">
                     <textarea name="" id="qnatextarea" cols="55" rows="30"></textarea><br>
                     사진첨부 : <input type="file" onchange="addFile(this);" multiple />
                 </td>
@@ -80,10 +82,10 @@
             </tr>
             <tr>
                 <td >
-                    <span>비밀글여부</span>
+                    <span class="bottom_con">비밀글여부</span>
                 </td>
                 <td class="table_left">
-                    <input type="checkbox" value="비밀글"><span>비밀글</span>
+                    <input type="checkbox" value="비밀글" class="bottom_con" ><span class="bottom_con">비밀글</span>
                 </td>
             </tr>
         </table>

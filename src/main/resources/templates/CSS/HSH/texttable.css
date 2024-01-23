@@ -1,5 +1,5 @@
 body {
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
 }
 
 .qnadiv {
@@ -10,20 +10,23 @@ body {
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    /* outline: 1px dashed; */
 }
 
 .register_button {
-    border: solid green 3px;
     margin-top: 30px;
     margin-bottom: 30px;
-    width: 800px;
+    width: 100px;
+    height: 40px;
     margin-left: auto;
     margin-right: auto;
-    background-color: green;
-    padding: 25px 10px;
+    padding: 10px 10px;
     border-radius: 2rem;
     color: white;
-    font-size: 25px;
+    font-size: 18px;
+    background-color: #1fa098;
+    border: white;
+    border-radius: 10%;
 }
 
 
@@ -38,15 +41,49 @@ body {
 .table_left {
     text-align: left;
     width: 500px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    /* outline: 1px dashed; */
+    font-size: 15px;
+    color: rgba(60, 61, 60, 0.863);
 }
 
 #qnatextarea {
     resize: none;
+    width: 395px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    font-size: 16px;
+    padding:2%;
 }
 
 .qnaregister {
     text-align: center;
 }
 
+span{
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
 
+.qnaselect{
+    height: 25px;
+    width: 100px;
+    margin-bottom: 7px;
+}
 
+.text_css{
+    /* outline: 1px dashed; */
+    width: 400px;
+    height: 20px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    font-size: 15px;
+    padding: 0.9%;
+}
+
+.bottom_con{
+    /* outline: 1px dashed; */
+    margin-top: 15px;
+}
