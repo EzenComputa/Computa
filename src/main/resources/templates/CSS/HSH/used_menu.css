@@ -8,6 +8,46 @@ a{text-decoration:none; color:#333;}
 
 .used_menu > li:hover .used_menubar {display:block;}
 
-.used_menu .used_menubar{display:none; position:absolute; text-align:center;}
 
-.used_menu .used_menubar a{display:block; padding:5px; background:#666; color:#fff; width:100px; height: 22px;}
+/*hover시 나오는 박스*/
+.used_menu .used_menubar{
+    display:none;
+    position:absolute;
+    text-align:center;
+}
+
+
+.used_menu .used_menubar a{
+    display:block;
+    padding:5px;
+    background:#666;
+    color:#fff;
+    width:150px;
+    height: 22px;
+}
+
+.whole{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+
+.myshop_list{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    padding: 8px 0px;
+    display: grid;
+    grid-template-columns:200px 200px 200px 200px 200px;
+}
+
+.myshop_tbl{
+    width: 200px;
+    padding:0;
+    margin: 0;
+    border-collapse: collapse;
+    border: green 1px solid;
+
+    font-size: 13px;
+}
+
