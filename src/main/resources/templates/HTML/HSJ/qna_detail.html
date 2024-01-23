@@ -7,21 +7,21 @@
     
     <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="../../js/HSJ/popup.js"></script>
-    <script src="/src/main/resources/templates/JS/LRH/js17_menu.js"></script>  
-    <script src="/src/main/resources/templates/JS/LRH/hvoer.js"></script> 
+    <script src="/js/HSJ/popup.js"></script>
+    <script src="/js/LRH/js17_menu.js"></script>  
+    <script src="/js/LRH/hvoer.js"></script>
        
     <!-- css -->
-    <link rel="stylesheet" href="../../CSS/HSJ/hsj_list.css">
-    <link rel="stylesheet" href="../../CSS/LRH/list.css">    
+    <link rel="stylesheet" th:href="@{/css/HSJ/hsj_list.css}">
+    <link rel="stylesheet" th:href="@{/css/LRH/hsj_list.css}">   
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
     
 
 </head>
 <body>
-    <div class="top" style="z-index: 1;">
+    <div class="top">
         <div class="logo_wrap">
-            <a href="/src/main/resources/templates/HTML/LRH/6.main_page.html" class="computa_logo"><img src="/src/main/resources/templates/IMG/LRH/computa icon.png" alt="logo" width="100"></a>
+            <a th:href="@{/index}" class="computa_logo"><img src="/images/LRH/computa icon.png" alt="logo" width="100"></a>
         </div>
         
         <div class="search">
@@ -33,17 +33,17 @@
                 <ul class="recent" id="gnb">
                     <li class="m">
                         <a href="#">
-                            <img src="/src/main/resources/templates/IMG/LRH/recent.png" >최근내역<!--최근내역-->
+                            <img src="/images/LRH/recent.png" >최근내역<!--최근내역-->
                         </a> 
                         <ul>
-                            <div class="recent_area">
+                            <div class="recent_area" >
                                 <div class="recent_title">
                                     <p><strong>최근내역</strong><p>
                                 </div>
-                                <div class="recent_prod_list">
+                                <div class="recent_prod_list" >
                                     <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        <a th:href="@{/5.used_list_detail.html}" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
                                         <div class="recent_like_icon">
@@ -58,8 +58,8 @@
                                         </p>  
                                     </div>          
                                     <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        <a th:href="@{/5.used_list_detail.html}" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
                                         <div class="recent_like_icon">
@@ -74,8 +74,8 @@
                                         </p>  
                                     </div>
                                     <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        <a th:href="@{/5.used_list_detail.htm}l" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
                                         <div class="recent_like_icon">
@@ -90,8 +90,8 @@
                                         </p>  
                                     </div>          
                                     <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        <a th:href="@{/5.used_list_detail.htm}l" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
                                         <div class="recent_like_icon">
@@ -112,20 +112,19 @@
                     </li>
                 </ul>
 
-                <a href=""><img src="/src/main/resources/templates/IMG/LRH/tea-bag.png">마이티백</a>
-                <a href="/src/main/resources/templates/HTML/CMH/login_page.html"><img src="/src/main/resources/templates/IMG/LRH/login.png">로그인</a>
+                <a th:href="@{/}"><img src="/images/LRH/tea-bag.png">마이티백</a>
+                <a th:href="@{/login_page.html}"><img src="/images/LRH/login.png">로그인</a>
             </div>            
         </div>
-        
     </div>
 
-    <div class="navbar">      
+    <div class="navbar" style="z-index: -1;">      
         <ul class="navbar_menu">
-            <li><a href="/src/main/resources/templates/HTML/HSJ/my_main.html">마이페이지</a></li>
-            <li><a href="#">PC견적</a></li>
-            <li><a href="/src/main/resources/templates/HTML/LRH/1.product_list.html">부품</a></li>            
-            <li><a href="/src/main/resources/templates/HTML/HYJ/qna_list.html">문의</a></li>
-            <li><a href="/src/main/resources/templates/HTML/LRH/7.used_product_list.html" style="color: red;">우려먹기</a></li>                    
+            <li><a th:href="@{/my_main.html}">마이페이지</a></li>
+            <li><a th:href="@{/}">PC견적</a></li>
+            <li><a th:href="@{/1.product_list.html}">부품</a></li>            
+            <li><a th:href="@{/qna_list.html}">문의</a></li>
+            <li><a th:href="@{/7.used_product_list.html}" style="color: red;">우려먹기</a></li>                    
         </ul>        
     </div>
 
@@ -187,7 +186,7 @@
         <div class="bt_wrap">               
                 <button type="submit" id="btn_modify" name="btn_modify">수정</button>
                 <button type="submit" id="btn_delete" name="btn_delete">삭제</button>
-                <a href="../../HTML/HYJ/qna_list.html" type="submit" id="btn_back" name="btn_back">목록</a>
+                <a th:href="@{qna_list.html}" type="submit" id="btn_back" name="btn_back">목록</a>
                       
         </div> 
         
