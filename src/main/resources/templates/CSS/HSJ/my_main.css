@@ -36,7 +36,8 @@
 /* 유저 사진 */
 #my_main_photo{
     display: flex; 
-    border-radius: 50%;           
+    border-radius: 50%;      
+    z-index: 0;     
 }
 /* 유저 닉네임 */
 #nickname{
