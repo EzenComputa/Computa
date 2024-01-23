@@ -1,41 +1,44 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko"
+    xmlns:th="http://www.thymeleaf.org" 
+>
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>티백 견적 페이지</title>
-  <link rel="stylesheet" href="/src/main/resources/templates/CSS/CMH/css/list.css"> 
+
+  <link rel="stylesheet" th:href="@{/css/CMH/css/list.css}"> 
+  <script src="/js/CMH/estimate.js"></script>
+  <script src="/js/CMH/estimate2.js"></script>
 </head>
 
 <body class="estimate_body">
   <form action="#">
-    <script src="/src/main/resources/templates/JS/CMH/estimate.js"></script>
-    <script src="/src/main/resources/templates/JS/CMH/estimate2.js"></script>
-
   <!-- 로고이미지 -->
   <div class="logo_wrap">
-    <a href="a" class="computa_logo"><img src="./login img/computa icon.png" alt="logo" width="100"></a>
+    <a th:href="@{/index}" class="computa_logo"><img src="/images/computa icon.png" alt="logo" width="100"></a>
   </div>
 
   <!-- 검색창 -->
    <div class="search">
     <input type="text" placeholder="검색어 입력">
     <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
-  </div> 
+  </div> {% comment %}  {% endcomment %}
 
   <!-- 네비바 -->
   <nav class="navbar">
     <ul class="navbar_menu">
-      <li><a href="#">조립PC</a></li>
-      <li><a href="#">PC견적</a></li>
-      <li><a href="#">부품</a></li>
-      <li><a href="#">노트북</a></li>
-      <li><a href="#">문의</a></li>
-      <li><a href="#">우려먹기</a></li>
-      <li><a href="#">파격할인</a></li>
-      <li><a href="#">이벤트</a></li>
-      <li><a href="#">브랜드스토어</a></li>
+      <li><a th:href="@{/}">조립PC</a></li>
+      <li><a th:href="@{/}">PC견적</a></li>
+      <li><a th:href="@{/}">부품</a></li>
+      <li><a th:href="@{/}">노트북</a></li>
+      <li><a th:href="@{/}">문의</a></li>
+      <li><a th:href="@{/}">우려먹기</a></li>
+      <li><a th:href="@{/}">파격할인</a></li>
+      <li><a th:href="@{/}">이벤트</a></li>
+      <li><a th:href="@{/}">브랜드스토어</a></li>
     </ul>
   </nav>
 
