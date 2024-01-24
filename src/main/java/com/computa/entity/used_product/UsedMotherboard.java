@@ -1,4 +1,4 @@
-package com.computa.entity.pcparts;
+package com.computa.entity.used_product;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,8 +15,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "motherboard")
-public class Motherboard extends Product {
+@Table(name = "used_motherboard")
+public class UsedMotherboard extends UsedProduct {
 
     @Column(name = "socket")
     private String socket;

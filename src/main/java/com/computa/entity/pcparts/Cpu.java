@@ -11,11 +11,11 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor 
-@AllArgsConstructor 
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "cpu")
-public class Cpu extends Product{
-    
+public class Cpu extends Product {
+
     @Column(name = "socket")
     private String socket;
 

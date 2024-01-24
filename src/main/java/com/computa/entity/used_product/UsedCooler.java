@@ -1,4 +1,4 @@
-package com.computa.entity.pcparts;
+package com.computa.entity.used_product;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -13,9 +13,12 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "pc_case")
-public class PcCase extends Product {
+@Table(name = "used_cooler")
+public class UsedCooler extends UsedProduct {
 
-    @Column(name = "form_factor")
-    private String formFactor;
+    @Column(name = "rpm_min")
+    private Integer rpmMin;
+
+    @Column(name = "rpm_max")
+    private Integer rpmMax;
 }

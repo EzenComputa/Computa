@@ -1,6 +1,6 @@
 package com.computa.entity;
 
-import com.computa.entity.pcparts.Product;
+import com.computa.entity.used_product.UsedProduct;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -22,7 +22,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "product_images")
-public class ProductImage {
+public class UsedProductImage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,6 +32,6 @@ public class ProductImage {
     private String url;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "product_id", referencedColumnName = "ID")
-    private Product product;
+    @JoinColumn(name = "used_product_id", referencedColumnName = "ID")
+    private UsedProduct usedProduct;
 }

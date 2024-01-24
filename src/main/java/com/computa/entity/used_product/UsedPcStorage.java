@@ -1,4 +1,4 @@
-package com.computa.entity.pcparts;
+package com.computa.entity.used_product;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -8,25 +8,22 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-// socket, formFactor, ramSlots, maxRam
+// capacity, storageType, formFactor
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "motherboard")
-public class Motherboard extends Product {
+@Table(name = "used_pc_storage")
+public class UsedPcStorage extends UsedProduct {
 
-    @Column(name = "socket")
-    private String socket;
+    @Column(name = "capacity")
+    private Integer capacity;
+
+    @Column(name = "storage_type")
+    private String storageType;
 
     @Column(name = "form_factor")
     private String formFactor;
-
-    @Column(name = "ram_slots")
-    private Integer ramSlots;
-
-    @Column(name = "max_ram")
-    private Integer maxRam;
 }

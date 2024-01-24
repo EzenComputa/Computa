@@ -1,0 +1,222 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/main/resources/templates/CSS/LRH/list.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/764963a2f9.js" crossorigin="anonymous"></script>
+    <script src="/src/main/resources/templates/JS/LRH/js17_menu.js"></script>
+    <script src="/src/main/resources/templates/JS/LRH/hvoer.js"></script>   
+    <title>우려먹기 게시글</title>
+    <script>
+        function like(element) {
+            element.classList.toggle('fa-regular');
+            element.classList.toggle('fa-solid');
+        }   
+        function teabag(element) {
+            element.classList.toggle('triangle_1');
+            element.classList.toggle('triangle_2');
+        }   
+    </script>
+</head>
+<body>
+    <div class="top">
+        <div class="logo_wrap">
+            <a href="/src/main/resources/templates/HTML/LRH/6.main_page.html" class="computa_logo"><img src="/src/main/resources/templates/IMG/LRH/computa icon.png" alt="logo" width="100"></a>
+        </div>
+        
+        <div class="search">
+            <input type="text" placeholder="검색어 입력">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" >
+        </div>
+        <div class="myinfo">
+            <div class="myinfo_icon">                
+                <ul class="recent" id="gnb">
+                    <li class="m">
+                        <a href="#">
+                            <img src="/src/main/resources/templates/IMG/LRH/recent.png" >최근내역<!--최근내역-->
+                        </a> 
+                        <ul>
+                            <div class="recent_area">
+                                <div class="recent_title">
+                                    <p><strong>최근내역</strong><p>
+                                </div>
+                                <div class="recent_prod_list">
+                                    <div class="recent_prod">                                            
+                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
+                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        </a>
+    
+                                        <div class="recent_like_icon">
+                                            <div class="container">
+                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
+                                            </div>
+                                        </div> 
+    
+                                        <p class="recent_prod_name">
+                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
+                                            <span class="txt_origin_price">76,000원</span>
+                                        </p>  
+                                    </div>          
+                                    <div class="recent_prod">                                            
+                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
+                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        </a>
+    
+                                        <div class="recent_like_icon">
+                                            <div class="container">
+                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
+                                            </div>
+                                        </div> 
+    
+                                        <p class="recent_prod_name">
+                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
+                                            <span class="txt_origin_price">76,000원</span>
+                                        </p>  
+                                    </div>
+                                    <div class="recent_prod">                                            
+                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
+                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        </a>
+    
+                                        <div class="recent_like_icon">
+                                            <div class="container">
+                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
+                                            </div>
+                                        </div> 
+    
+                                        <p class="recent_prod_name">
+                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
+                                            <span class="txt_origin_price">76,000원</span>
+                                        </p>  
+                                    </div>          
+                                    <div class="recent_prod">                                            
+                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
+                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        </a>
+    
+                                        <div class="recent_like_icon">
+                                            <div class="container">
+                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
+                                            </div>
+                                        </div> 
+    
+                                        <p class="recent_prod_name">
+                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
+                                            <span class="txt_origin_price">76,000원</span>
+                                        </p>  
+                                    </div>                                                              
+                                </div>
+                                
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+
+                <a href=""><img src="/src/main/resources/templates/IMG/LRH/tea-bag.png">마이티백</a>
+                <a href=""><img src="/src/main/resources/templates/IMG/LRH/login.png">로그인</a>
+            </div>            
+        </div>
+        
+    </div>
+
+    
+    <div class="used_wrap">
+        <div class="navbar">      
+            <ul class="navbar_menu">
+                <li><a href="#">마이페이지</a></li>
+                <li><a href="#">PC견적</a></li>
+                <li><a href="#">부품</a></li>            
+                <li><a href="#">문의</a></li>
+                <li><a href="#" style="color: red;">우려먹기</a></li>                    
+            </ul>        
+        </div>
+        <nav class="navbar">        
+            <ul class="navbar_menu">
+                <li><a href="#">CPU</a></li>
+                <li><a href="#">GPU</a></li>
+                <li><a href="#">마더보드</a></li>
+                <li><a href="#">HDD</a></li>
+                <li><a href="#">SDD</a></li>
+                <li><a href="#">램카드</a></li>
+                <li><a href="#">파워</a></li>
+                <li><a href="#">케이스</a></li>
+                <li><a href="#">쿨러</a></li>
+            </ul>        
+        </nav>
+        
+    
+        <div class="used_list">
+            <div class="used_product">                 
+                <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
+                    <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1" id="">     <!--id추가-->
+                </a>         
+                <div class="like_icon">
+                    <div class="container">
+                        <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
+                    </div>
+                </div>
+                <div class="teabag">
+                    <div class="container_2">
+                        <i class="triangle_1" onclick = "teabag(this)"></i>
+                    </div>
+                </div>
+                <p>
+                    <span class="txt_tit_brand" id="">No.13 Cut-Out Hoodie Ivory</span><br>     <!--id추가-->                
+                    <span class="txt_origin_price" id="">76,000원</span>     <!--id추가-->
+                </p>       
+            </div>  
+            <div class="used_product">                 
+                <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
+                    <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                </a>         
+                <div class="like_icon">
+                    <div class="container">
+                        <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
+                    </div>
+                </div>
+                <div class="teabag">
+                    <div class="container_2">
+                        <i class="triangle_1" onclick = "teabag(this)"></i>
+                    </div>
+                </div>
+                <p>
+                    <span class="txt_tit_brand">No.13 Cut-Out Hoodie Ivory</span><br>                
+                    <span class="txt_origin_price">76,000원</span>
+                </p>       
+            </div>  
+            
+            
+        </div>  
+        
+        <div class="like_search">
+            <input type="text" placeholder="검색어 입력">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" >
+        </div>  
+
+        <div class="board_page">
+            <a href="a" class="bt first"><<</a>
+            <a href="a" class="bt prev" ><</a>
+            <a href="a" class="num on">1</a>
+            <a href="a" class="num">2</a>
+            <a href="a" class="num">3</a>
+            <a href="a" class="num">4</a>
+            <a href="a" class="num">5</a>
+            <a href="a" class="num">6</a>
+            <a href="a" class="bt next">></a>
+            <a href="a" class="bt last">>></a>
+        </div>
+    
+        <div class="like_bt_wrap">
+            <a href="a" class="on">글쓰기</a>   
+        </div>
+
+    </div>      
+    
+    
+    
+    
+</body>
+</html>
