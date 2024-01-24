@@ -43,6 +43,10 @@ public class User{
     @Column(nullable=false)
     private String ssid;
 
+    // user report count
+    @Column(nullable = false)
+    private int reportcount;
+
     // fetch = FetchType.EAGER attribute means that when a User is loaded, JPA will also load its Roles. 
     // cascade = CascadeType.ALL attribute means that any changes made to the User will also be made to its Roles.
     // The @JoinTable annotation defines the table that will be used to manage the Many-To-Many relationship.

@@ -21,9 +21,9 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="product_images")
+@Table(name = "product_images")
 public class ProductImage {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -31,7 +31,7 @@ public class ProductImage {
     @Column(name = "url")
     private String url;
 
-    @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="product_id", referencedColumnName="ID")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_id", referencedColumnName = "ID")
     private Product product;
 }

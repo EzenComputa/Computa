@@ -78,7 +78,7 @@ public class ProductController {
         return "redirect:/product_details";
     }
 
-    @GetMapping("/addProduct/{type}")
+    @GetMapping("/product/add/{type}")
     public String addProduct(@PathVariable String type, Model model) {
         switch (type.toLowerCase()) {
             case "cooler":
@@ -93,10 +93,11 @@ public class ProductController {
             case "motherboard":
                 model.addAttribute("motherboard", new Motherboard());
                 return "addProduct/addMotherboard";
-            case "pc_case":
+            case "case":
                 model.addAttribute("pcCase", new PcCase());
-                return "addProduct/addPcCase";
-            case "pc_storage":
+                // return "addProduct/addPcCase";
+                return "prod_up_case.html";
+            case "storage":
                 model.addAttribute("pcStorage", new PcStorage());
                 return "addProduct/addPcStorage";
             case "psu":

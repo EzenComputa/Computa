@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en"
+    xmlns:th="http://www.thymeleaf.org"
+>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +9,10 @@
     <script src="js/jquery3.7.1.js"></script>
     <script src="js/jquery.innerfade.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="/src/main/resources/templates/JS/LRH/js17_menu.js"></script>
-    <link rel="stylesheet" href="../../CSS/HYJ/hyj_list.css">
-    <link rel="stylesheet" href="../../CSS/HSJ/hsj_list.css">
-    <link rel="stylesheet" href="../../CSS/LRH/list.css">
+    <script src="/js/LRH/js17_menu.js"></script>
+    <link rel="stylesheet" th:href="@{/css/HYJ/hyj_list.css}">
+    <link rel="stylesheet" th:href="@{/css/HSJ/hsj_list.css}">
+    <link rel="stylesheet" th:href="@{/css/LRH/list.css}">
     <!-- <link rel="stylesheet" href="../../CSS/LRH/style.css"> -->
     <script>
          function showPopup_showPw() { 
@@ -66,7 +68,7 @@
      <!-- top 로고 & 검색 & 메뉴navbar -->
      <div class="top">
         <div class="logo_wrap">
-            <a href="/src/main/resources/templates/HTML/LRH/6.main_page.html" class="computa_logo"><img src="/src/main/resources/templates/IMG/LRH/computa icon.png" alt="logo" width="100"></a>
+            <a th:href="@{6.main_page.html}" class="computa_logo"><img src="/images/LRH/computa icon.png" alt="logo" width="100"></a>
         </div>
         
         <div class="search">
@@ -75,20 +77,20 @@
         </div>
         <div class="myinfo">
             <div class="myinfo_icon">
-                <a href=""><img src="/src/main/resources/templates/IMG/LRH/recent.png">최근내역</a>
-                <a href="#"><img src="/src/main/resources/templates/IMG/LRH/tea-bag.png">마이티백</a>
-                <a href="../../HTML/CMH/login_page.html"><img src="/src/main/resources/templates/IMG/LRH/login.png">로그인</a>
+                <a th:href="@{}"><img src="/images/LRH/recent.png">최근내역</a>
+                <a th:href="@{#}"><img src="/images/LRH/tea-bag.png">마이티백</a>
+                <a th:href="@{/login}"><img src="/images/LRH/login.png">로그인</a>
             </div>            
         </div>
     </div>
 
     <div class="navbar" style="z-index: -1;">      
         <ul class="navbar_menu">
-            <li><a href="../../HTML/HSJ/my_main.html">마이페이지</a></li>
-            <li><a href="#">PC견적</a></li>
-            <li><a href="/src/main/resources/templates/HTML/LRH/1.product_list.html">부품</a></li>            
-            <li><a href="../../HTML/LRH/2.list.html">문의</a></li>
-            <li><a href="../../HTML/LRH/7.used_product_list.html" style="color: red;">우려먹기</a></li>                    
+            <li><a th:href="@{#}">PC견적</a></li>
+            <li><a th:href="@{1.product_list.html}">부품</a></li>            
+            <li><a th:href="@{my_main.html}">마이페이지</a></li>
+            <li><a th:href="@{2.list.html}">문의</a></li>
+            <li><a th:href="@{7.used_product_list.html}" style="color: red;">우려먹기</a></li>                    
         </ul>        
     </div>
 

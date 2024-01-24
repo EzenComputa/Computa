@@ -127,45 +127,12 @@
     <form action="" method="get"><div class="tr_pr">
         <table border="0" class="tr_pr_table">
 
-            <!--상품종류(select)-->
-            <tr>
+             <!--상품종류(select)-->
+             <tr>
                 <td class="tr_pr_left">상품종류<span id="star">*</span></td>
                 <td>
-                    <div class="gridClass">
-                        <div class="selection">
-                            <a href="#">CPU</a>
-                        </div>
-                        
-                        <div class="selection">
-                            <a href="#">그래픽카드</a>
-                        </div>
-                        
-                        <div class="selection">
-                            <a href="#">메인보드</a>
-                        </div>
-                        
-                        <div class="selection">
-                            <a href="#">SSD</a>
-                        </div>
-                        
-                        <div class="selection">
-                            <a href="#">HDD</a>
-                        </div>
-                        
-                        <div class="selection">
-                            <a href="#">RAM</a>
-                        </div>
-                        
-                        <div class="selection">
-                            <a href="#">케이스</a>
-                        </div>
-                        
-                        <div class="selection">
-                            <a href="#">쿨러</a>
-                        </div>
-                        <div class="selection">
-                            <a href="#">파워</a>
-                        </div>
+                    <div class="pcpart">
+                        <span>POWER</span>
                     </div>
                 </td>
             </tr>
@@ -176,7 +143,152 @@
             <tr>
                 <td class="tr_pr_left">상세 스펙</td>
                 <td>
-                    <div class="tr_pr_spec"></div>
+                    <div class="tr_pr_spec">
+                        <table border="1" class="cpu_table_i" id="prod_table">
+                            <tr>
+                                <td class="prod_title">제조회사</td>
+                                <td class="content"><input type="text" id="company"></td>
+                                <td class="prod_title">등록년월</td>
+                                <td class="content"><input type="date" id="date"></td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4"></td></tr>
+                            <tr>
+                                <td class="prod_title">제품 분류</td>
+                                <td id="kind" class="content"><input type="text" id=""></td>
+                                <td class="prod_title">정격출력</td>
+                                <td id="socket" class="content"><input type="text" id="">W</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">80PLUS인증</td>
+                                <td id="" class="content"><input type="text" id=""></td>
+                                <td class="prod_title">+12V 출력방식</td>
+                                <td id="ver" class="content"><input type="text" id=""></td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">+12V 가용률</td>
+                                <td class="content"><input type="text" id="">%</td>
+                                <td class="prod_title">PFC회로</td>
+                                <td class="content"><input type="text" id="">%</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">PF(역률)</td>
+                                <td class="content"><input type="text" id="">%</td>
+                                <td class="prod_title">쿨링팬 크기</td>
+                                <td class="content"><input type="text" id="">mm 팬</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">쿨링팬 개수</td>
+                                <td class="content"><input type="text" id="cores">개(팬)</td>
+                                <td class="prod_title">베어링</td>
+                                <td class="content"><input type="text" id="threads"></td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">깊이</td>
+                                <td class="content"><input type="text" id="">mm</td>
+                                <td class="prod_title">A/S 보증기간</td>
+                                <td class="content"><input type="text" id=""></td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">DC출력</td></tr>
+                            <tr>
+                                <td class="prod_title">+3.3V 출력</td>
+                                <td class="content"><input type="text" id="">A</td>
+                                <td class="prod_title">+5V 출력</td>
+                                <td class="content"><input type="text" id="">A</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">+12V 출력</td>
+                                <td class="content"><input type="text" id="">A</td>
+                                <td class="prod_title">-12V 출력</td>
+                                <td class="content"><input type="text" id="">A</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">+5Vsb 출력</td>
+                                <td class="content"><input type="text" id="">A</td>
+                                <td class="prod_title"></td>
+                                <td class="content"><input type="text" id=""></td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">[커넥터]</td></tr>
+                            <tr>
+                                <td class="prod_title">케이블연결</td>
+                                <td class="content"><input type="text" id=""></td>
+                                <td class="prod_title">메인전원</td>
+                                <td class="content"></td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">보조전원</td>
+                                <td class="content"><input type="text" id=""></td>
+                                <td class="prod_title">PCIe 8핀(6+2)</td>
+                                <td class="content"><input type="text" id="">개</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">SATA</td>
+                                <td class="content"><input type="text" id="">개</td>
+                                <td class="prod_title">SATA3.3</td>
+                                <td class="content">개</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">IDE 4핀</td>
+                                <td class="content"><input type="text" id="">개</td>
+                                <td class="prod_title"></td>
+                                <td class="content"></td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">부가기능</td></tr>
+                            <tr>
+                                <td class="prod_title">과전압(OVP)</td>
+                                <td class="content"><input type="radio" name="ovp">O<input type="radio" name="ovp">X </td>
+                                <td class="prod_title">저전압(UVP)</td>
+                                <td class="content"><input type="radio" name="uvp">O<input type="radio" name="uvp">X </td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">과전력(OPP)</td>
+                                <td class="content"><input type="radio" name="opp">O<input type="radio" name="opp">X </td>
+                                <td class="prod_title">과열(OTP/OHP)</td>
+                                <td class="content"><input type="radio" name="otp_ohp">O<input type="radio" name="otp_ohp">X </td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">단락(SCP)</td>
+                                <td class="content"><input type="radio" name="scp">O<input type="radio" name="scp">X </td>
+                                <td class="prod_title">서지+인러쉬(SIP)</td>
+                                <td class="content"><input type="radio" name="sip">O<input type="radio" name="sip">X </td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">무부하(NLP)</td>
+                                <td class="content"><input type="radio" name="nlp">O<input type="radio" name="nlp">X </td>
+                                <td class="prod_title"></td>
+                                <td class="content"></td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">인증</td></tr>
+                            <tr>
+                                <td class="prod_title">적합성평가인증</td>
+                                <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="rra" onclick="window.open('https://www.rra.go.kr/ko/index.do')">인증번호 확인</button> </td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">안전확인인증</td>
+                                <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="safetykorea" onclick="window.open('https://www.safetykorea.kr/')">인증번호 확인</button> </td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4"></td></tr>
+                            <tr><td colspan="4" class="prod_title" style="">구매 전 꼭 읽어주세요!</td></tr>
+                            <tr>
+                                <td class="prod_title">정품 CPU</td>
+                                <td colspan="3" class="content">국내 공인 대리점을 통해 수입, 유통, 판매되는 CPU를 말합니다. 정품 CPU의 모든 A/S는 공인 대리점에서 보통 3년간 무상으로 받을 수 있습니다.
+                                    자세한 사항은 각 대리점에 문의하시기 바랍니다. <br>
+                                -> 인텔 공인 대리점 : 인텍앤컴퍼니, 코잇, 피씨디렉트 / AMD 공인 대리점 : 제이씨현시스템, 바이코, 대원 CTS
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">병행 수입</td>
+                                <td colspan="3" class="content"> 국내 독점 판매권을 가지고 있는 업체 이외에 다른 유통 경로로 같은 상표의 정품을 수입하여 판매하는 것을 말합니다.
+                                    A/S 및 보상 규정을 판매처에 꼭 문의하시기 바랍니다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">벌크, 벌크+쿨러란?</td>
+                                <td colspan="3" class="content">CPU와 쿨러를 개별적으로 포장한 상품입니다. 구매 전 판매처에 보상 규정을 꼭 문의하시기 바랍니다.
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
                 </td>
             </tr>
             <tr><td colspan="2"><hr class="hsj_hr"></td></tr>

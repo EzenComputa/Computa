@@ -16,8 +16,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "motherboard")
-public class Motherboard extends Product{
-    
+public class Motherboard extends Product {
+
     @Column(name = "socket")
     private String socket;
 

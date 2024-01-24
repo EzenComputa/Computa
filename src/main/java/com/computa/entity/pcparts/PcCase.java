@@ -14,8 +14,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "pc_case")
-public class PcCase extends Product{
-    
+public class PcCase extends Product {
+
     @Column(name = "form_factor")
-    private String  formFactor;
+    private String formFactor;
 }
