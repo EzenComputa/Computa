@@ -1,0 +1,124 @@
+.membership_body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+div>h1 {
+    margin: 5px;
+}
+
+.membership_head {
+    background-color: #1fa098;
+    color: #ffffff;    
+    width: 550px;  
+    height: 50px;    
+    text-align: center;
+    border-radius: 25px;   
+    position: relative;
+    top: 16px;
+    left: 50%;
+    transform: translate(-50%); 
+}
+
+.membership_head > h2{
+    position: relative;
+    top: 8px;
+}
+
+.membership_information,
+.button {
+    background-color : rgb(255,255,255,0.93);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 30px;
+    width: 500px;
+    
+}
+
+.membership_information {
+    height: 800px;
+    margin-top: 30px;
+}
+
+.user_name, 
+.user_phone_number,
+.user_email,
+.user_jumin,
+.user_id,
+.user_password,
+.user_password_req,
+.user_nickname {
+    display: block;
+    margin-top: 10px;
+}
+
+.user_id {
+    width: 300px;
+}
+
+input, .select-box, .box {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #1fa098;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Set width to 100% to match other elements */
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* 닉네임 경고글 line:58 */
+.nickname_warning {
+    font-size: 12px;
+    color: grey;
+}
+
+/* 중복확인 버튼 line: 43, 56 */
+.duplication_butten{
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #1fa098;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30%; /* Set width to 100% to match other elements */
+    box-sizing: border-box;
+}
+
+/* 중복확인 버튼 호버 기능 */
+.duplication_butten:hover{
+    background-color: #2980b9;
+}
+
+/* 아이디 입력란  line: 41 */
+.id_box{ 
+    width: 50%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+/* 가입하기 버튼 line: 60 */
+.join_button{
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top: 30px;
+    height: 60px;
+    border-radius: 10PX;
+}

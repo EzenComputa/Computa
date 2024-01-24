@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" shrink-to-fit="no">  <!--shrink 줄어든다라는 뜻-->
+
+    <link rel="stylesheet" href="/src/main/resources/templates/CSS/LRH/list.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/764963a2f9.js" crossorigin="anonymous"></script>
+    <script src="/src/main/resources/templates/JS/LRH/js17_menu.js"></script>  
+    <script src="/src/main/resources/templates/JS/LRH/hvoer.js"></script> 
+    <title>문의게시판 내역</title>
+</head>
+<body>
+    <div class="top" style="z-index: 1;">
+        <div class="logo_wrap">
+            <a href="/src/main/resources/templates/HTML/LRH/6.main_page.html" class="computa_logo"><img src="/src/main/resources/templates/IMG/LRH/computa icon.png" alt="logo" width="100"></a>
+        </div>
+        
+        <div class="search">
+            <input type="text" placeholder="검색어 입력">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" >
+        </div>
+        <div class="myinfo">
+            <div class="myinfo_icon">                
+                <ul class="recent" id="gnb">
+                    <li class="m">
+                        <a href="#">
+                            <img src="/src/main/resources/templates/IMG/LRH/recent.png" >최근내역<!--최근내역-->
+                        </a> 
+                        <ul>
+                            <div class="recent_area">
+                                <div class="recent_title">
+                                    <p><strong>최근내역</strong><p>
+                                </div>
+                                <div class="recent_prod_list">
+                                    <div class="recent_prod">                                            
+                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
+                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        </a>
+    
+                                        <div class="recent_like_icon">
+                                            <div class="container">
+                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
+                                            </div>
+                                        </div> 
+    
+                                        <p class="recent_prod_name">
+                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
+                                            <span class="txt_origin_price">76,000원</span>
+                                        </p>  
+                                    </div>          
+                                    <div class="recent_prod">                                            
+                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
+                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        </a>
+    
+                                        <div class="recent_like_icon">
+                                            <div class="container">
+                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
+                                            </div>
+                                        </div> 
+    
+                                        <p class="recent_prod_name">
+                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
+                                            <span class="txt_origin_price">76,000원</span>
+                                        </p>  
+                                    </div>
+                                    <div class="recent_prod">                                            
+                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
+                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        </a>
+    
+                                        <div class="recent_like_icon">
+                                            <div class="container">
+                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
+                                            </div>
+                                        </div> 
+    
+                                        <p class="recent_prod_name">
+                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
+                                            <span class="txt_origin_price">76,000원</span>
+                                        </p>  
+                                    </div>          
+                                    <div class="recent_prod">                                            
+                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
+                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        </a>
+    
+                                        <div class="recent_like_icon">
+                                            <div class="container">
+                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
+                                            </div>
+                                        </div> 
+    
+                                        <p class="recent_prod_name">
+                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
+                                            <span class="txt_origin_price">76,000원</span>
+                                        </p>  
+                                    </div>                                                              
+                                </div>
+                                
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+
+                <a href=""><img src="/src/main/resources/templates/IMG/LRH/tea-bag.png">마이티백</a>
+                <a href="/src/main/resources/templates/HTML/CMH/login_page.html"><img src="/src/main/resources/templates/IMG/LRH/login.png">로그인</a>
+            </div>            
+        </div>
+        
+    </div>
+
+    <nav class="navbar">        
+        <ul class="navbar_menu">
+            <li><a href="/src/main/resources/templates/HTML/LRH/4.like_prod.html">관심상품</a></li>
+            <li><a href="/src/main/resources/templates/HTML/HSH/used_myshop.html">우려먹기 내역</a></li>
+            <li><a href="/src/main/resources/templates/HTML/LRH/2.list.html">문의게시판 내역</a></li>
+            <li><a href="#">나의 티백</a></li>
+        </ul>        
+    </nav>
+
+    <div class="board_wrap">
+        <div class="board_title">
+            <strong>문의게시판 내역</strong>
+            <p>마이페이지 > 문의게시판 내역</p>
+        </div>
+        <div class="board_list_wrap">
+            <div class="board_list">
+                <div class="list_top">
+                    <div class="num">글번호</div>
+                    <div class="title">제목</div>
+                    <div class="writer">답변</div>
+                    <div class="date">등록일</div>
+                    <div class="count">조회수</div> 
+                </div>
+                <div>               
+                    <div class="num"><span id="">1</span></div>    <!--id추가-->
+                    <div class="title"><a href="a"><span>곧 제목이 들어갑니다</span></a></div>     <!--id추가-->
+                    <div class="writer"><span id="">O</span></div>    <!--id추가-->
+                    <div class="date"><span id="">2024-01-10</span></div>    <!--id추가-->
+                    <div class="count"><span id="">1</span></div>    <!--id추가--> 
+                </div>
+                <div>               
+                    <div class="num">2</div>
+                    <div class="title"><a href="a">곧 제목이 들어갑니다</a></div>
+                    <div class="writer">O</div>
+                    <div class="date">2024-01-10</div>
+                    <div class="count">1</div> 
+                </div> 
+                <div>               
+                    <div class="num">3</div>
+                    <div class="title"><a href="a">곧 제목이 들어갑니다</a></div>
+                    <div class="writer">O</div>
+                    <div class="date">2024-01-10</div>
+                    <div class="count">1</div> 
+                </div> 
+                <div>               
+                    <div class="num">4</div>
+                    <div class="title"><a href="a">곧 제목이 들어갑니다</a></div>
+                    <div class="writer">O</div>
+                    <div class="date">2024-01-10</div>
+                    <div class="count">1</div> 
+                </div> 
+                <div>               
+                    <div class="num">5</div>
+                    <div class="title"><a href="a">곧 제목이 들어갑니다</a></div>
+                    <div class="writer">O</div>
+                    <div class="date">2024-01-10</div>
+                    <div class="count">1</div> 
+                </div>  
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="board_page">
+                <a href="a" class="bt first"><<</a>
+                <a href="a" class="bt prev" ><</a>
+                <a href="a" class="num on">1</a>
+                <a href="a" class="num">2</a>
+                <a href="a" class="num">3</a>
+                <a href="a" class="num">4</a>
+                <a href="a" class="num">5</a>
+                <a href="a" class="num">6</a>
+                <a href="a" class="bt next">></a>
+                <a href="a" class="bt last">>></a>
+    
+            </div>
+            <div class="bt_wrap">
+                <a href="a" class="on">목록</a>
+                <a href="a" >수정</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

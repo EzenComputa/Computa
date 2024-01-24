@@ -4,281 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
-  <link rel="stylesheet" href="myshop.css">
-  <link rel="stylesheet" href="menubar.css">
-  <link rel="stylesheet" href="used_menu.css">
+  <link rel="stylesheet" href="../../CSS/HSH/myshop.css">
+  <link rel="stylesheet" href="../../CSS/HSH/used_menu.css">
+  <link rel="stylesheet" href="../../CSS/LRH/style.css">
+  <link rel="stylesheet" href="../../css/LRH/menubar.css">
 </head>
 <body>
 
-  <div class="navbar">      
-    <ul class="navbar_menu">
-        <li><a href="#">조립PC</a></li>
-        <li><a href="#">PC견적</a></li>
-        <li><a href="#">부품</a></li>
-        <li><a href="#">노트북</a></li>
-        <li><a href="#">문의</a></li>
-        <li><a href="#">우려먹기</a></li>
-        <li><a href="#">파격할인</a></li>
-        <li><a href="#">이벤트</a></li>
-        <li><a href="#">브랜드스토어</a></li>            
-    </ul>  
-    </div><br>
-
-    <div class="myshop">
-        <h1>내 찻잔</h1>
-    </div>
-
-    <!--내찻잔 상품 리스트 컨테이너-->
-    <div class="adfaf">
-    <div class="used_container">
-        <!--내찻잔 상품1-->
-        <div class="used_items">
-            <div class="used_image">
-                <a href="http://www.naver.com"><img src="cpu.jpg" alt="중고" class="used_item"></a>        
-            </div>
-            <div class="used_name">
-                <p>상품명 : Intel CPU팝니다</p>
-            </div>
-            <div class="used_price">
-                <p>가격 :  30000</p>
-            </div>            
-            <!--상품 수정, 삭제할 수 있는 옵션 호버링-->
-            <div class="used_opt">
-            <ul class="used_menu">
-                <li>
-                    <a href="#"><img src="dot.png" alt="상품수정"></a>
-                    <ul class="used_menubar">
-                        <li><a href="#">수정하기</a></li>
-                        <li><a href="#">삭제하기</a></li>
-                    </ul>
-                </li>
-            </ul>
-            </div>
+    <div class="top">
+        <div class="logo_wrap">
+            <a href="/src/main/resources/templates/HTML/LRH/6.main_page.html" class="computa_logo"><img src="/src/main/resources/templates/IMG/LRH/computa icon.png" alt="logo" width="100"></a>
         </div>
-        <div class="used_items">
-            <div class="used_image">
-                <a href="http://www.naver.com"><img src="cpu.jpg" alt="중고" class="used_item"></a>        
-            </div>
-            <div class="used_name">
-                <p>상품명 : Intel CPU팝니다</p>
-            </div>
-            <div class="used_price">
-                <p>가격 :  30000</p>
-            </div>            
-            <!--상품 수정, 삭제할 수 있는 옵션 호버링-->
-            <div class="used_opt">
-            <ul class="used_menu">
-                <li>
-                    <a href="#"><img src="dot.png" alt="상품수정"></a>
-                    <ul class="used_menubar">
-                        <li><a href="#">수정하기</a></li>
-                        <li><a href="#">삭제하기</a></li>
-                    </ul>
-                </li>
-            </ul>
-            </div>
+        
+        <div class="search">
+            <input type="text" placeholder="검색어 입력">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" >
         </div>
-
-            <!--내찻잔 상품2-->
-        <div class="used_items">          
-            <div class="used_image">
-                <a href="http://www.naver.com"><img src="gpu.jpg" alt="중고" class="used_item"></a>         
-            </div>
-            <div class="used_name">
-                <p>상품명 : 갤럭시 2070 RTX팝니다</p>
-            </div>
-            <div class="used_price">
-                <p>가격 :  300000</p>
+        <div class="myinfo">
+            <div class="myinfo_icon">
+                <a href=""><img src="/src/main/resources/templates/IMG/LRH/recent.png">최근내역</a>
+                <a href=""><img src="/src/main/resources/templates/IMG/LRH/tea-bag.png">마이티백</a>
+                <a href=""><img src="/src/main/resources/templates/IMG/LRH/login.png">로그인</a>
             </div>            
-            <!--상품 수정, 삭제할 수 있는 옵션 호버링-->
-            <div class="used_opt">
-            <ul class="used_menu">
-                <li>
-                    <a href="#"><img src="dot.png" alt="상품수정"></a>
-                    <ul class="used_menubar">
-                        <li><a href="#">수정하기</a></li>
-                        <li><a href="#">삭제하기</a></li>
-                    </ul>
-                </li>
-            </ul>
-            </div>
-        </div>
-
-            <!--내찻잔 상품3-->
-        <div class="used_items">         
-            <div class="used_image">
-                <a href="http://www.naver.com"><img src="case.jpg" alt="중고" class="used_item"></a>         
-            </div>
-            <div class="used_name">
-                <p>상품명 : 사용 케이스 팝니다</p>
-            </div>
-            <div class="used_price">
-                <p>가격 :  20000</p>
-            </div>            
-            <!--상품 수정, 삭제할 수 있는 옵션 호버링-->
-            <div class="used_opt">
-            <ul class="used_menu">
-                <li>
-                    <a href="#"><img src="dot.png" alt="상품수정"></a>
-                    <ul class="used_menubar">
-                        <li><a href="#">수정하기</a></li>
-                        <li><a href="#">삭제하기</a></li>
-                    </ul>
-                </li>
-            </ul>
-            </div>
-        </div>
-
-            <!--내찻잔 상품4-->
-        <div class="used_items">        
-            <div class="used_image">
-                <a href="http://www.naver.com"><img src="hdd.jpg" alt="중고" class="used_item"></a>         
-            </div>
-            <div class="used_name">
-                <p>상품명 : 1TB 하드팝니다 </p>
-            </div>
-            <div class="used_price">
-                <p>가격 :  15000</p>
-            </div>            
-            <!--상품 수정, 삭제할 수 있는 옵션 호버링-->
-            <div class="used_opt">
-            <ul class="used_menu">
-                <li>
-                    <a href="#"><img src="dot.png" alt="상품수정"></a>
-                    <ul class="used_menubar">
-                        <li><a href="#">수정하기</a></li>
-                        <li><a href="#">삭제하기</a></li>
-                    </ul>
-                </li>
-            </ul>
-            </div>
-        </div>
-
-    </div>
-    <div class="used_container">
-        <!--내찻잔 상품1-->
-        <div class="used_items">
-            <div class="used_image">
-                <a href="http://www.naver.com"><img src="cpu.jpg" alt="중고" class="used_item"></a>        
-            </div>
-            <div class="used_name">
-                <p>상품명 : Intel CPU팝니다</p>
-            </div>
-            <div class="used_price">
-                <p>가격 :  30000</p>
-            </div>            
-            <!--상품 수정, 삭제할 수 있는 옵션 호버링-->
-            <div class="used_opt">
-            <ul class="used_menu">
-                <li>
-                    <a href="#"><img src="dot.png" alt="상품수정"></a>
-                    <ul class="used_menubar">
-                        <li><a href="#">수정하기</a></li>
-                        <li><a href="#">삭제하기</a></li>
-                    </ul>
-                </li>
-            </ul>
-            </div>
-        </div>
-        <div class="used_items">
-            <div class="used_image">
-                <a href="http://www.naver.com"><img src="cpu.jpg" alt="중고" class="used_item"></a>        
-            </div>
-            <div class="used_name">
-                <p>상품명 : Intel CPU팝니다</p>
-            </div>
-            <div class="used_price">
-                <p>가격 :  30000</p>
-            </div>            
-            <!--상품 수정, 삭제할 수 있는 옵션 호버링-->
-            <div class="used_opt">
-            <ul class="used_menu">
-                <li>
-                    <a href="#"><img src="dot.png" alt="상품수정"></a>
-                    <ul class="used_menubar">
-                        <li><a href="#">수정하기</a></li>
-                        <li><a href="#">삭제하기</a></li>
-                    </ul>
-                </li>
-            </ul>
-            </div>
-        </div>
-
-            <!--내찻잔 상품2-->
-        <div class="used_items">          
-            <div class="used_image">
-                <a href="http://www.naver.com"><img src="gpu.jpg" alt="중고" class="used_item"></a>         
-            </div>
-            <div class="used_name">
-                <p>상품명 : 갤럭시 2070 RTX팝니다</p>
-            </div>
-            <div class="used_price">
-                <p>가격 :  300000</p>
-            </div>            
-            <!--상품 수정, 삭제할 수 있는 옵션 호버링-->
-            <div class="used_opt">
-            <ul class="used_menu">
-                <li>
-                    <a href="#"><img src="dot.png" alt="상품수정"></a>
-                    <ul class="used_menubar">
-                        <li><a href="#">수정하기</a></li>
-                        <li><a href="#">삭제하기</a></li>
-                    </ul>
-                </li>
-            </ul>
-            </div>
-        </div>
-
-            <!--내찻잔 상품3-->
-        <div class="used_items">         
-            <div class="used_image">
-                <a href="http://www.naver.com"><img src="case.jpg" alt="중고" class="used_item"></a>         
-            </div>
-            <div class="used_name">
-                <p>상품명 : 사용 케이스 팝니다</p>
-            </div>
-            <div class="used_price">
-                <p>가격 :  20000</p>
-            </div>            
-            <!--상품 수정, 삭제할 수 있는 옵션 호버링-->
-            <div class="used_opt">
-            <ul class="used_menu">
-                <li>
-                    <a href="#"><img src="dot.png" alt="상품수정"></a>
-                    <ul class="used_menubar">
-                        <li><a href="#">수정하기</a></li>
-                        <li><a href="#">삭제하기</a></li>
-                    </ul>
-                </li>
-            </ul>
-            </div>
-        </div>
-
-            <!--내찻잔 상품4-->
-        <div class="used_items">        
-            <div class="used_image">
-                <a href="http://www.naver.com"><img src="hdd.jpg" alt="중고" class="used_item"></a>         
-            </div>
-            <div class="used_name">
-                <p>상품명 : 1TB 하드팝니다 </p>
-            </div>
-            <div class="used_price">
-                <p>가격 :  15000</p>
-            </div>            
-            <!--상품 수정, 삭제할 수 있는 옵션 호버링-->
-            <div class="used_opt">
-            <ul class="used_menu">
-                <li>
-                    <a href="#"><img src="dot.png" alt="상품수정"></a>
-                    <ul class="used_menubar">
-                        <li><a href="#">수정하기</a></li>
-                        <li><a href="#">삭제하기</a></li>
-                    </ul>
-                </li>
-            </ul>
-            </div>
         </div>
     </div>
+
+    <div class="navbar" style="z-index: -1;">      
+        <ul class="navbar_menu">
+            <li><a href="../HSJ/my_main.html">마이페이지</a></li>
+            <li><a href="#">PC견적</a></li>
+            <li><a href="../LRH/1.product_list.html">부품</a></li>            
+            <li><a href="../HYJ/qna_list.html">문의</a></li>
+            <li><a href="../LRH/7.used_product_list.html" style="color: red;">우려먹기</a></li>                    
+        </ul>        
+    </div>
+    <nav class="navbar">        
+        <ul class="navbar_menu">
+            <li><a href="#">CPU</a></li>
+            <li><a href="#">GPU</a></li>
+            <li><a href="#">마더보드</a></li>
+            <li><a href="#">HDD</a></li>
+            <li><a href="#">SDD</a></li>
+            <li><a href="#">램카드</a></li>
+            <li><a href="#">파워</a></li>
+            <li><a href="#">케이스</a></li>
+            <li><a href="#">쿨러</a></li>
+        </ul>        
+    </nav>
+
+
+    <div class="whole">
+        <div class="myshop">
+            <h1>내 찻잔</h1>
+        </div>
+
+        <!--내찻잔 상품 리스트 컨테이너-->
+        <div class="myshop_list">
+            <div class="one_set">
+                <table class="myshop_tbl">
+                    <tr>
+                        <td colspan="2">
+                            <a href="http://www.naver.com">
+                                <img src="../../IMG/HSH/cpu.jpg" alt="중고" class="used_item" id="img" style="width:120px;height:120px;">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>상품명: <span id="myshop_name">intel5420cpu</span></td>
+                        <td rowspan="2">
+                            <div class="used_opt">
+                                <ul class="used_menu">
+                                    <li>
+                                        <a href="#"><img src="../../img/HSH/dot.png" alt="상품수정"></a>
+                                        <ul class="used_menubar">
+                                            <li><a href="#">수정하기</a></li>
+                                            <li><a href="#">삭제하기</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>가격: <span id="myshop_price">30,000원</span></td>
+                    </tr>
+                </table>
+            </div>
+                
+                
+        </div>
     </div>
 </body>
 

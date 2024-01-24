@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@600&display=swap');
+
+.computa_logo{
+    width: 80px;
+    height: 100px;
+}
+
+
+#wrap{
+   /* outline: 1px solid; */
+   width: 1000px;
+   text-align: center;
+   position: relative;
+   left: 50%;
+   transform: translate(-50%);
+}
+
+.notice{
+   background-color: aliceblue;
+   font-size: 15px;
+   font-weight: bold;
+   color:brown;
+}
+
+.dataTableBody{
+  border-collapse: collapse;
+  border-color: #187771;
+  width: 900px;
+  height: 700px;
+  margin-top: 20px; 
+  margin-left: auto;
+  margin-right: auto;
+ 
+  /* outline: dashed 1px black; */
+}
+
+.dataTableBody > div {
+    
+   border-bottom: 1px solid #187771;
+   font-size: 0;
+}
+
+.click_con{
+   cursor: pointer;
+}
+
+#qna_pagination{
+   
+   margin-top: 25px;
+   margin-bottom: 10px;
+   text-align: center;
+   font-size: medium;
+
+   width: 250px;
+   display: flex;
+   margin-left: auto;
+   margin-right: auto;
+   justify-content: space-around;
+   
+   
+}
+
+.board_page a.num {
+   padding-top: 9px;
+   font-size: 1.4rem;
+   border-left: 1px solid #1fa098;
+   
+}

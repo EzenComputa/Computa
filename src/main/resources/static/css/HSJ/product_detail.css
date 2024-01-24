@@ -1,0 +1,330 @@
+/* 바로가기 버튼 영역 */
+.remote{
+    border-collapse: collapse;
+    border-color: rgba(68, 102, 69, 0.788);
+    
+    position:fixed;
+    bottom:3rem;
+    right:3rem;
+    z-index: 9999;
+}
+
+/* 바로가기 버튼 디자인*/
+.pr_dt_short{
+    padding: 10px;
+
+    text-align: center;
+    
+    background-color: rgba(62, 151, 78, 0.096);
+    font-size: 15px;
+}
+
+/* 바로가기 버튼 */
+#pr_dt_shortcut{
+    font-size: small;
+    font-weight: bold;
+    text-decoration-line: none;
+    color: darkgreen;    
+}
+/* 위로가기 버튼 */
+#pr_dt_top{
+    font-size: small;
+    font-weight: bold;
+    text-decoration-line: none;
+    color: darkgreen;    
+}
+/*==============================================*/
+
+/*제품 영역(div) */
+.pr_dt_pf{
+    margin-top: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    padding:8px 0px;
+
+    width: 1000px;
+    height:auto;
+}
+
+/* 제품 영역(테이블) */
+.pr_dt_table{
+    margin-left: auto;
+    margin-right: auto;
+    padding:8px 0px;
+
+    width: 1000px;
+
+    border-collapse: collapse;
+    border-bottom: 0.5rem #187771  solid;
+}
+
+/* 큰 사진 */
+.pr_dt_photo{
+    width:400px;
+    border-right: 3px rgba(74, 150, 108, 0.103) dotted;  
+
+    text-align: center;
+}
+
+/* 작은 사진 */
+.pr_dt_photos{
+    padding: 1rem;
+
+    width:2rem;
+    border-bottom: 3px rgba(74, 150, 108, 0.103) dotted;
+    
+    text-align: center;    
+    cursor: pointer;
+}
+#pr_dt_photos{
+    border-right: 3px rgba(74, 150, 108, 0.103) dotted;   
+}
+
+/* 상품명 & 가격 */
+.pr_dt_name{border-bottom: 3px rgba(74, 150, 108, 0.103) dotted;}
+#pr_dt_name{font-size: 30px; padding-left: 1.5rem;}
+.pr_dt_price{border-bottom: 3px rgba(74, 150, 108, 0.103) dotted;}
+#pr_dt_price{font-weight: bold;font-size: 30px; padding-left: 1.5rem;}
+/*============================================================================*/
+
+/*가격 비교 영역*/
+.price_compare_td{
+    
+    border-bottom: 3px rgba(74, 150, 108, 0.103) dotted;
+}
+.price_compare{
+    outline: solid 1px #187771;
+
+    margin-top: 0.5rem;
+    margin-left: 2.5rem;
+    
+    width: 400px;
+    min-height: 300px;
+    height:auto;
+}
+
+.price_tbl{
+    width:400px;
+    text-align: center;
+}
+
+#com_img_td{width:50px;}
+#com_name_td{width:60px;}
+#com_price_td{width:auto; font-weight: bold;font-size: 20px;}
+#com_link_td{width:60px;}
+
+/*============================================================================*/
+
+/*제품 상세 영역*/
+<<<<<<< HEAD:src/main/resources/templates/CSS/HSJ/product_detail.css
+.gridClass{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 7px 7px;
+=======
+.pr_detail{
+
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    margin-bottom: 2.5rem;
+    padding: 1rem;
+    height: auto;
+>>>>>>> 2aee66898072bba1577b231203f6d845d4a6bdf0:src/main/resources/static/css/HSJ/product_detail.css
+}
+
+.selection{
+    margin: 0.2rem;
+    padding: 0.5rem;
+    outline: solid 1px #187771;
+    background-color: #72cec8;
+
+}
+
+.pcpart{
+    width:2rem;
+    height: 3rem;
+    font-size: 2rem;
+}
+a{text-decoration: none; color: white;}
+/*============================================================================*/
+/* 댓글 전체 영역(div) */
+.pr_dt_reply{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;  
+    padding: 8px 0px;  
+
+    width:1000px;
+    height: 500px;    
+    display: relative;
+}
+
+
+/*댓글 쓰기 영역(div) */
+.pr_dt_com_write{
+    margin-top: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 0px;  
+
+    width:1000px;
+    outline: dashed 1px #187771;
+    background-color: #bee2e0;
+}
+
+/* 댓글 유저 프로필 */
+#pr_dt_write_1{
+    padding-left: 8rem;
+    padding-right: 4.5rem;
+    text-align: center;
+}
+
+/* 댓글 유저 닉네임 */
+#pr_dt_write_2{
+    padding-left: 6rem;
+    padding-right: 3rem;
+    
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center; 
+}
+
+#pr_dt_write_3{
+    padding-right: 3rem;
+}
+
+#pr_dt_write_4{
+    padding-left: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.pr_dt_tbl_3{
+    text-align: center;
+}
+/*============================================================================*/
+
+/* 댓글 보기 영역(div) */
+.pr_dt_com_view{
+    outline: dashed 1px #187771;
+
+    margin-top: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.5rem;
+    padding: 8px 0px;  
+
+    width:1000px;
+
+    background-color: #bee2e0;
+}
+
+/* 댓글 보기 테이블 */
+.pr_dt_comview_table{
+    padding-top: 1rem;
+    padding-left: 1.8rem;
+}
+
+/* 댓글 보기 사진*/
+#pr_dt_view_1{
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+
+    width: 120px;
+
+    text-align: center;
+}
+
+/* 댓글 닉네임 & 등록일 */
+#pr_dt_view_2{
+    width: 200px;
+    font-size: 1.8rem;
+}
+
+/* 댓글 수정 &삭제 버튼*/
+#pr_dt_view_3{width:4rem}
+#pr_dt_view_4{width:4rem; padding-right: 0.5rem;}
+
+/* 댓글 글내용 */
+.pr_dt_comview_view{
+    margin: 0.5rem;
+    padding:0.5rem;
+
+    width: 94rem;
+    height:auto;
+    
+    font-size: 15px;
+    background-color: white;
+    outline: dotted 1px;
+}
+/*============================================================================*/
+
+/*신고 메세지 영역*/
+.pr_dt_report{
+    position: relative;
+    width: 33.5rem;
+    height: 4.5rem;
+}
+
+/* 신고 버튼 */
+#pr_dt_report{
+    position: absolute;
+    top:1.56em;
+    cursor:pointer;
+}
+
+/* 신고사유 영역 */
+.dropdown_content{
+    outline: solid 1px #3d4747;
+    
+    display: none; 
+    border-radius: 2%;  
+    
+    position:absolute;
+    z-index: 1;
+   
+    top:3rem;
+    left:1.5rem;
+
+    font-size: 13px;
+    text-align: center;
+    background-color: rgb(215, 235, 226);
+}
+
+.report_ddt{
+    margin: 0.5rem;    
+
+    border-collapse: collapse;
+    
+    text-align: center;
+}
+
+#ddt1{
+    padding: 1.5rem;
+    background-color: #6ea8a5;
+
+    font-size: 18px;
+    font-weight: bold;
+    color: #bee2e0;
+}
+
+.ddtd{
+    padding: 0.5rem;
+    border-top: 1px solid #6ea8a5;
+}
+.ddtd:hover{background-color: #bee2e0;}
+
+
+/* 신고사유 버튼 */
+.dropdown_content input{
+    border:none;
+    
+    color: #304645;
+    background-color: rgb(215, 235, 226);
+    font-size: 15px;
+    cursor: pointer;
+}
+/*============================================================================*/

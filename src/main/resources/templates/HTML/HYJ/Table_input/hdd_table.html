@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../CSS/HYJ/table_input.css">
+</head>
+<body>
+    <h1 style="margin-left: 50px;">hdd table</h1>
+
+    <table border="1" class="hdd_table_i" id="prod_table">
+        <tr>
+            <td class="prod_title">제조회사</td>
+            <td class="content"><input type="text" id="company"></td>
+            <td class="prod_title">등록년월</td>
+            <td class="content"><input type="date" id="date"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4"></td></tr>
+        <tr>
+            <td class="prod_title">제품분류</td>
+            <td id="kind" class="content"><input type="text" id=""></td>
+            <td class="prod_title">디스크 크기</td>
+            <td id="socket" class="content"><input type="text" id=""></td>
+        </tr>
+        <tr>
+            <td class="prod_title">디스크 용량</td>
+            <td id="" class="content"><input type="text" id="">TB</td>
+            <td class="prod_title">인터페이스</td>
+            <td id="ver" class="content"><input type="text" id=""></td>
+        </tr>
+        <tr>
+            <td class="prod_title">회전수</td>
+            <td class="content"><input type="text" id="">RPM</td>
+            <td class="prod_title">버퍼 용량</td>
+            <td class="content">메모리 <input type="text" id="">MB</td>
+        </tr>
+        <tr>
+            <td class="prod_title">전송 속도</td>
+            <td class="content"><input type="text" id="">MB/s</td>
+            <td class="prod_title">기록방식</td>
+            <td class="content"><input type="text" id=""></td>
+        </tr>
+        <tr>
+            <td class="prod_title">두께</td>
+            <td class="content"><input type="text" id="">mm</td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">내구성/소음</td></tr>
+        <tr>
+            <td class="prod_title">소음(유휴/탐색)</td>
+            <td class="content"><input type="text" id="">dB</td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">A/S 정보</td></tr>
+        <tr>
+            <td class="prod_title">2년</td>
+            <td class="content"><input type="radio" name="a/s">O <input type="radio" name="a/s">X </td>
+            <td class="prod_title"></td>
+            <td class="content"></td>
+        </tr>
+        <tr style="height: 20px;" class="title"><td colspan="4">인증</td></tr>
+        <tr>
+            <td class="prod_title">적합성평가인증</td>
+            <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="rra" onclick="window.open('https://www.rra.go.kr/ko/index.do')">인증번호 확인</button> </td>
+        </tr>
+        <tr>
+            <td class="prod_title">안전확인인증</td>
+            <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="safetykorea" onclick="window.open('https://www.safetykorea.kr/')">인증번호 확인</button> </td>
+        </tr>
+       
+    </table>
+</body>
+</html>

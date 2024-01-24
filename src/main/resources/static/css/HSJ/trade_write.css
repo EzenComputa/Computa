@@ -1,0 +1,138 @@
+/* 전체영역(div) */
+.tr_pr{
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 0px;
+    
+    width: 1000px;
+    justify-content: center;
+}
+
+/* 테이블 */
+.tr_pr_table{
+
+    margin-left: auto;
+    margin-right: auto;    
+    padding: 3rem;
+    
+    width: 1000px;
+}
+
+/* 이름 영역 */
+.tr_pr_left{
+    padding:0.9rem;
+    width: 25rem;
+
+    letter-spacing: -1.5px;
+    word-spacing: 3px;
+    font-size: 16px;
+}
+
+.tr_pr_left2{
+    padding-left:0.9rem;
+    padding-top: 0.9rem;
+    padding-bottom: 17rem;
+
+    letter-spacing: -1.5px;
+    word-spacing: 3px;
+    font-size: 16px;
+}
+
+/* 이미지 영역 */
+.image_preview{
+    outline: 1px solid black;
+
+    width: 150px;
+    height: 30px;
+    
+    background-color: black;
+    
+    border: 1px solid rgb(77,77,77);
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.file_upload{
+    width: 150px;
+    height:30px;
+    background: #fff;
+    border:1px solid #1fa098;
+    border-radius: 10px;
+    font-weight: 10px;
+    font-weight:500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        background: #1fa098;
+        color: #fff;
+      }
+}
+#btnAtt{
+   display: none;
+}
+#tr_pr_img{visibility: hidden;}
+
+#att_zone{
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding:1.5rem;
+
+    border-radius: 5px;
+    outline: 1px solid #ccc;
+    width: 800px;
+    min-height: 150px;
+}
+
+/*상세스펙*/
+.gridClass{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 7px 7px;
+}
+
+.selection{
+    margin: 0.2rem;
+    padding: 0.5rem;
+    outline: solid 1px #187771;
+    background-color: #72cec8;
+
+}
+.pcpart{
+    width:2rem;
+    height: 3rem;
+    font-size: 2rem;
+}
+
+/* 상품설명 부분 */
+#tr_pr_detail{
+    margin-top: 1rem;
+    resize: none;
+}
+/*===================================*/
+
+/* 버튼 영역(div) */
+.tr_pr_btn{
+    width: 970px;
+    padding: 8px 0px;
+    text-align: right;
+}
+
+/* 버튼 */
+#tr_pr_btn{
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 10%;
+    
+    font-size: 15px;
+    background-color: #1fa098;
+    color: aliceblue;
+
+    cursor: pointer;
+}

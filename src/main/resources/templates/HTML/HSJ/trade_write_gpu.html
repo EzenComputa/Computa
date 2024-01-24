@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중고거래_글쓰기 페이지</title>
+    <link rel="stylesheet" th:href="@{/css/HSJ/hsj_list.css}">
+    <link rel="stylesheet" th:href="@{/css/LRH/style.css}">
+    <link rel="stylesheet" th:href="@{/css/LRH/menubar.css}">
+    <link rel="stylesheet" th:href="@{/css/HYJ/table.css}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/764963a2f9.js" crossorigin="anonymous"></script>
+    <script src="/js/LRH/js17_menu.js"></script>  
+    <script src="/js/LRH/hvoer.js"></script>
+</head>
+
+<body>
+    <div class="top">
+        <div class="logo_wrap">
+            <a th:href="@{/index}" class="computa_logo"><img src="/images/LRH/computa icon.png" alt="logo" width="100"></a>
+        </div>
+        
+        <div class="search">
+            <input type="text" placeholder="검색어 입력">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" >
+        </div>
+        <div class="myinfo">
+            <div class="myinfo_icon">                
+                <ul class="recent" id="gnb">
+                    <li class="m">
+                        <a href="#">
+                            <img src="/images/LRH/recent.png" >최근내역<!--최근내역-->
+                        </a> 
+                        <ul>
+                            <div class="recent_area" >
+                                <div class="recent_title">
+                                    <p><strong>최근내역</strong><p>
+                                </div>
+                                <div class="recent_prod_list" >
+                                    <div class="recent_prod">                                            
+                                        <a th:href="@{/5.used_list_detail.html}" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
+                                        </a>
+    
+                                        <div class="recent_like_icon">
+                                            <div class="container">
+                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
+                                            </div>
+                                        </div> 
+    
+                                        <p class="recent_prod_name">
+                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
+                                            <span class="txt_origin_price">76,000원</span>
+                                        </p>  
+                                    </div>          
+                                    <div class="recent_prod">                                            
+                                        <a th:href="@{/5.used_list_detail.html}" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
+                                        </a>
+    
+                                        <div class="recent_like_icon">
+                                            <div class="container">
+                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
+                                            </div>
+                                        </div> 
+    
+                                        <p class="recent_prod_name">
+                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
+                                            <span class="txt_origin_price">76,000원</span>
+                                        </p>  
+                                    </div>
+                                    <div class="recent_prod">                                            
+                                        <a th:href="@{/5.used_list_detail.htm}l" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
+                                        </a>
+    
+                                        <div class="recent_like_icon">
+                                            <div class="container">
+                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
+                                            </div>
+                                        </div> 
+    
+                                        <p class="recent_prod_name">
+                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
+                                            <span class="txt_origin_price">76,000원</span>
+                                        </p>  
+                                    </div>          
+                                    <div class="recent_prod">                                            
+                                        <a th:href="@{/5.used_list_detail.htm}l" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
+                                        </a>
+    
+                                        <div class="recent_like_icon">
+                                            <div class="container">
+                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
+                                            </div>
+                                        </div> 
+    
+                                        <p class="recent_prod_name">
+                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
+                                            <span class="txt_origin_price">76,000원</span>
+                                        </p>  
+                                    </div>                                                              
+                                </div>
+                                
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+
+                <a th:href="@{/}"><img src="/images/LRH/tea-bag.png">마이티백</a>
+                <a th:href="@{/login_page.html}"><img src="/images/LRH/login.png">로그인</a>
+            </div>            
+        </div>
+    </div>
+
+    <div class="navbar" style="z-index: -1;">      
+        <ul class="navbar_menu">
+            <li><a th:href="@{/my_main.html}">마이페이지</a></li>
+            <li><a th:href="@{/}">PC견적</a></li>
+            <li><a th:href="@{/1.product_list.html}">부품</a></li>            
+            <li><a th:href="@{/qna_list.html}">문의</a></li>
+            <li><a th:href="@{/7.used_product_list.html}" style="color: red;">우려먹기</a></li>                    
+        </ul>        
+    </div>
+    
+    <form action="" method="get"><div class="tr_pr">
+        <table border="0" class="tr_pr_table">
+
+             <!--상품종류(select)-->
+             <tr>
+                <td class="tr_pr_left">상품종류<span id="star">*</span></td>
+                <td>
+                    <div class="pcpart">
+                        <span>그래픽카드</span>
+                    </div>
+                </td>
+            </tr>
+            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+
+
+            <!-- 상세스펙 -->
+            <tr>
+                <td class="tr_pr_left">상세 스펙</td>
+                <td>
+                    <div class="tr_pr_spec">
+                        <table border="1" class="gpu_table_i" id="prod_table">
+                            <tr>
+                                <td class="prod_title">제조회사</td>
+                                <td class="content"><input type="text" id="company"></td>
+                                <td class="prod_title">등록년월</td>
+                                <td class="content"><input type="date" id="date"></td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">칩셋 사양</td></tr>
+                            <tr>
+                                <td class="prod_title">칩셋제조사</td>
+                                <td class="content"><input type="text" id="gpu_manu">NVIDIA</td>
+                                <td class="prod_title">제품 시리즈</td>
+                                <td class="content"><input type="text" id="gpu_name">지포스 RTX 30</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">GPU 제조 공정</td>
+                                <td id="" class="content"><input type="text" id="">nm</td>
+                                <td class="prod_title">NVIDIA 칩셋</td>
+                                <td id="ver" class="content"><input type="text" id=""></td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">부스트클럭</td>
+                                <td class="content"><input type="text" id="">MHz</td>
+                                <td class="prod_title">쿠다 프로세서</td>
+                                <td class="content"><input type="text" id="cuda">개</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">인터페이스</td>
+                                <td class="content"><input type="text" id="interface"></td>
+                                <td class="prod_title"></td>
+                                <td class="content"></td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">메모리 사양</td></tr>
+                            <tr>
+                                <td class="prod_title">메모리 종류</td>
+                                <td class="content"><input type="text" id="memory_kind"></td>
+                                <td class="prod_title">메모리 클럭</td>
+                                <td class="content"><input type="text" id="memory_clock">MHz</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">메모리 용량</td>
+                                <td class="content"><input type="text" id="memory_size">GB</td>
+                                <td class="prod_title">메모리 버스</td>
+                                <td class="content"><input type="text" id="memory_bus">bit</td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">그래픽 출력</td></tr>
+                            <tr>
+                                <td class="prod_title">HDMI</td>
+                                <td class="content"><input type="number" id="">개</td>
+                                <td class="prod_title">DisplayPort</td>
+                                <td class="content"><input type="number" id="">개</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">모니터 지원</td>
+                                <td class="content">최대 모니터 <input type="number" id="">개</td>
+                                <td class="prod_title"></td>
+                                <td class="content"></td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">부가기능</td></tr>
+                            <tr>
+                                <td class="prod_title">제로팬(0-dB기술)</td>
+                                <td class="content"><input type="radio" name="0-db">O <input type="radio" name="0-db">X</td>
+                                <td class="prod_title">8K 지원</td>
+                                <td class="content"><input type="radio" name="8k">O <input type="radio" name="8k">X</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">4K 지원</td>
+                                <td class="content"><input type="radio" name="4k">O <input type="radio" name="4k">X </td>
+                                <td class="prod_title">HDR 지원</td>
+                                <td class="content"><input type="radio" name="hdr">O <input type="radio" name="hdr">X </td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">HDCP 2.3</td>
+                                <td class="content"><input type="radio" name="hdcp">O <input type="radio" name="hdcp">X </td>
+                                <td class="prod_title"></td>
+                                <td class="content"></td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">전력 관련</td></tr>
+                            <tr>
+                                <td class="prod_title">권장 파워용량</td>
+                                <td class="content"><input type="text" id=""></td>
+                                <td class="prod_title">전원 포트</td>
+                                <td class="content"><input type="text" id=""></td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">냉각방식</td></tr>
+                            <tr>
+                                <td class="prod_title">방열판</td>
+                                <td class="content"><input type="radio" name="way1">O 
+                                    <input type="radio" name="way1">X </td>
+                                <td class="prod_title">히트파이프</td>
+                                <td class="content"><input type="radio" name="way2">O 
+                                    <input type="radio" name="way2">X </td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">팬쿨러</td>
+                                <td class="content"><input type="radio" name="way3">O 
+                                    <input type="radio" name="way3">X </td>
+                                <td class="prod_title"></td>
+                                <td class="content"></td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">제품 외형</td></tr>
+                            <tr>
+                                <td class="prod_title">팬 개수</td>
+                                <td class="content"><input type="number" id="">개 팬</td>
+                                <td class="prod_title">가로(길이)</td>
+                                <td class="content"><input type="text" id="">mm</td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">추가 구성</td></tr>
+                            <tr>
+                                <td class="prod_title">백플레이트</td>
+                                <td class="content"><input type="radio" name="add1">O 
+                                    <input type="radio" name="add1">X </td>
+                                <td class="prod_title">LED 라이트</td>
+                                <td class="content"><input type="radio" name="add2">O 
+                                    <input type="radio" name="add2">X </td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">LED 위치</td></tr>
+                            <tr>
+                                <td class="prod_title">전면 LED</td>
+                                <td class="content"><input type="radio" name="led1">O 
+                                    <input type="radio" name="led1">X </td>
+                                <td class="prod_title"></td>
+                                <td class="content"></td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">인증</td></tr>
+                            <tr>
+                                <td class="prod_title">적합성평가인증</td>
+                                <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="rra" onclick="window.open('https://www.rra.go.kr/ko/index.do')">인증번호 확인</button> </td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">안전확인인증</td>
+                                <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="safetykorea" onclick="window.open('https://www.safetykorea.kr/')">인증번호 확인</button> </td>
+                            </tr>
+                           
+                        </table> 
+                    </div>
+
+                </td>
+            </tr>
+            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+            
+            <!-- 상품 이미지-->
+            <tr>
+                <td class="tr_pr_left">상품이미지<span id="star">*</span></td>
+                <td>
+                    <!-- 상품이미지 등록하기 -->
+                    
+                    <div id='image_preview'>
+                        <input type='file' id='btnAtt' multiple='multiple'/>
+                        <label for="file">
+                            <div class="file_upload"><span style="font-size: 13px;">파일 업로드하기</span></div>
+                        </label>
+                        <span style="color: lightslategrey; font-size: 12px;">* 최대 150x150 사이즈로 올려주세요.</span>
+                        <br>
+                        <span style="color: lightslategrey; font-size: 12px;"></spanstyle>* 최대 5개까지만 올려주세요.</span>
+                        <br>
+                        <div id='att_zone'></div>
+                    </div>
+                </td>
+            </tr>
+            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+            
+            <!-- 상품명&상품가격 -->
+            <tr>
+                <td class="tr_pr_left">상품명<span id="star">*</span></td>
+                <td><input type="text" id="tr_pr_name" required></td>
+            </tr>
+            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+            <tr>
+                <td class="tr_pr_left">상품가격<span id="star">*</span></td>
+                <td><input type="text" id="tr_pr_price" required></td>
+            </tr>
+            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+
+            
+
+            <!-- 상품설명 -->
+            <tr>
+                <td class="tr_pr_left2">상품설명</td>
+                <td><textarea name="tr_pr_detail" id="tr_pr_detail" cols="68" rows="20" placeholder="-상품의 하자정도 &#13;-연락처 남겨주세요&#13;-최대3000자"></textarea></td>
+            </tr>
+        </table>
+        
+        <div class="tr_pr_btn">
+            <input type="submit" id="tr_pr_btn" value="등록하기"></div>
+        </div> 
+    </form>  
+     <script src="/js/HSJ/upload_img.js"></script>
+</body>
+</html>

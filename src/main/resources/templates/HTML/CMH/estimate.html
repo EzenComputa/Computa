@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko"
+    xmlns:th="http://www.thymeleaf.org" 
+>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>티백 견적 페이지</title>
+
+  <link rel="stylesheet" th:href="@{/css/CMH/css/list.css}"> 
+  <script src="/js/CMH/estimate.js"></script>
+  <script src="/js/CMH/estimate2.js"></script>
+</head>
+
+<body class="estimate_body">
+  <form action="#">
+  <!-- 로고이미지 -->
+  <div class="logo_wrap">
+    <a th:href="@{/index}" class="computa_logo"><img src="/images/computa icon.png" alt="logo" width="100"></a>
+  </div>
+
+  <!-- 검색창 -->
+   <div class="search">
+    <input type="text" placeholder="검색어 입력">
+    <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
+  </div> {% comment %}  {% endcomment %}
+
+  <!-- 네비바 -->
+  <nav class="navbar">
+    <ul class="navbar_menu">
+      <li><a th:href="@{/}">조립PC</a></li>
+      <li><a th:href="@{/}">PC견적</a></li>
+      <li><a th:href="@{/}">부품</a></li>
+      <li><a th:href="@{/}">노트북</a></li>
+      <li><a th:href="@{/}">문의</a></li>
+      <li><a th:href="@{/}">우려먹기</a></li>
+      <li><a th:href="@{/}">파격할인</a></li>
+      <li><a th:href="@{/}">이벤트</a></li>
+      <li><a th:href="@{/}">브랜드스토어</a></li>
+    </ul>
+  </nav>
+
+    <div class="b1">
+      <p>콤푸타 부품 리스트</p>
+      <div class="button-container">
+        <button class="button_1" onclick="showContent('content1')">조립: 1</button>
+        <button class="button_2" onclick="showContent('content2')">조립: 2</button>
+        <button class="button_3" onclick="showContent('content3')">조립: 3</button>
+      </div>
+
+      <div id="img" class="first_img"><img src="./img/images.png" alt="실패"></div>
+
+      <div id="content1" class="content">
+        <p class="h1">조립 PC(1)</p>
+        <table class="table1">
+          <tr class="p1">
+            <th>부품</th>
+                  <th>모델명</th>
+                  <th>가격</th>
+                  <th>링크</th>
+                </tr>
+                <tr class="p1">
+                  <th>CPU</th>
+                  <td>Intel i7-10700K</td>
+                  <td>$350</td>
+                  <td><a href="cpu_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>GPU</th>
+                  <td>NVIDIA RTX 3080</td>
+                  <td>$800</td>
+                  <td><a href="gpu_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>MD</th>
+                  <td>ASUS ROG Strix Z590-E</td>
+                  <td>$350</td>
+                  <td><a href="md_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>POWER</th>
+                  <td>Corsair RM850x</td>
+                  <td>$150</td>
+                  <td><a href="power_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>CASE</th>
+                  <td>NZXT H510</td>
+                  <td>$70</td>
+                  <td><a href="case_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>COOLER</th>
+                  <td>Noctua NH-D15</td>
+                  <td>$90</td>
+                  <td><a href="cooler_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>SSD</th>
+                  <td>Samsung 970 EVO 1TB</td>
+                  <td>$150</td>
+                  <td><a href="ssd_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>RAM</th>
+                  <td>Corsair Vengeance LPX 16GB</td>
+                  <td>$80</td>
+                  <td><a href="ram_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>HHD</th>
+                  <td>Seagate Barracuda 2TB</td>
+                  <td>$60</td>
+                  <td><a href="hhd_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <td colspan="2" id="td_last_1">총가격:</td>
+                  <td colspan="2" id="td_last_2">
+                    <button class="compatibility-button" onclick="checkCompatibility()">호환 확인</button>
+                  </td> 
+                </tr>
+        </table>
+      </div>
+
+      <div id="content2" class="content">
+        <p class="h1">조립 PC(2)</p>
+        <table class="table1">
+          <tr class="p1">
+            <th>부품</th>
+                  <th>모델명</th>
+                  <th>가격</th>
+                  <th>링크</th>
+                </tr>
+                <tr class="p1">
+                  <th>CPU</th>
+                  <td>Intel i7-10700K</td>
+                  <td>$350</td>
+                  <td><a href="cpu_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>GPU</th>
+                  <td>NVIDIA RTX 3080</td>
+                  <td>$800</td>
+                  <td><a href="gpu_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>MD</th>
+                  <td>ASUS ROG Strix Z590-E</td>
+                  <td>$350</td>
+                  <td><a href="md_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>POWER</th>
+                  <td>Corsair RM850x</td>
+                  <td>$150</td>
+                  <td><a href="power_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>CASE</th>
+                  <td>NZXT H510</td>
+                  <td>$70</td>
+                  <td><a href="case_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>COOLER</th>
+                  <td>Noctua NH-D15</td>
+                  <td>$90</td>
+                  <td><a href="cooler_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>SSD</th>
+                  <td>Samsung 970 EVO 1TB</td>
+                  <td>$150</td>
+                  <td><a href="ssd_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>RAM</th>
+                  <td>Corsair Vengeance LPX 16GB</td>
+                  <td>$80</td>
+                  <td><a href="ram_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>HHD</th>
+                  <td>Seagate Barracuda 2TB</td>
+                  <td>$60</td>
+                  <td><a href="hhd_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <td colspan="2" id="td_last_1">총가격:</td>
+                  <td colspan="2" id="td_last_2">
+                    <button class="compatibility-button" onclick="checkCompatibility()">호환 확인</button>
+                  </td>                
+                </tr>
+        </table>
+      </div>
+
+      <div id="content3" class="content">
+        <p class="h1">조립 PC(3)</p>
+        <table class="table1">
+          <tr class="p1">
+            <th>부품</th>
+                  <th>모델명</th>
+                  <th>가격</th>
+                  <th>링크</th>
+                </tr>
+                <tr class="p1">
+                  <th>CPU</th>
+                  <td>Intel i7-10700K</td>
+                  <td>$350</td>
+                  <td><a href="cpu_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>GPU</th>
+                  <td>NVIDIA RTX 3080</td>
+                  <td>$800</td>
+                  <td><a href="gpu_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>MD</th>
+                  <td>ASUS ROG Strix Z590-E</td>
+                  <td>$350</td>
+                  <td><a href="md_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>POWER</th>
+                  <td>Corsair RM850x</td>
+                  <td>$150</td>
+                  <td><a href="power_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>CASE</th>
+                  <td>NZXT H510</td>
+                  <td>$70</td>
+                  <td><a href="case_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>COOLER</th>
+                  <td>Noctua NH-D15</td>
+                  <td>$90</td>
+                  <td><a href="cooler_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>SSD</th>
+                  <td>Samsung 970 EVO 1TB</td>
+                  <td>$150</td>
+                  <td><a href="ssd_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>RAM</th>
+                  <td>Corsair Vengeance LPX 16GB</td>
+                  <td>$80</td>
+                  <td><a href="ram_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <th>HHD</th>
+                  <td>Seagate Barracuda 2TB</td>
+                  <td>$60</td>
+                  <td><a href="hhd_link_1" id="Link">Link</a></td>
+                </tr>
+                <tr class="p1">
+                  <td colspan="2" id="td_last_1">총가격:</td>
+                  <td colspan="2" id="td_last_2">
+                    <button class="compatibility-button" onclick="checkCompatibility()">호환 확인</button>
+                  </td>
+                </tr>
+        </table>
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>

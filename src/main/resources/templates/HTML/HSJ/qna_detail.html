@@ -4,28 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>문의게시판_상세페이지</title>
-    <link rel="stylesheet" href="../../CSS/HSJ/hsj_list.css">
-    <link rel="stylesheet" href="../../CSS/HSJ/css_lee/list.css">
-    <script src="../../js/HSJ/popup.js"></script>
+    
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/HSJ/popup.js"></script>
+    <script src="/js/LRH/js17_menu.js"></script>  
+    <script src="/js/LRH/hvoer.js"></script>
+       
+    <!-- css -->
+    <link rel="stylesheet" th:href="@{/css/HSJ/hsj_list.css}">
+    <link rel="stylesheet" th:href="@{/css/LRH/hsj_list.css}">   
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+    
+
 </head>
 <body>
-     <!--logo-->
-     <div class="admin_logo_wrap">
-        <img src="../../img/HSJ/computa.png" alt="" width="100px">
-    </div>
+    <div class="top">
+        <div class="logo_wrap">
+            <a th:href="@{/index}" class="computa_logo"><img src="/images/LRH/computa icon.png" alt="logo" width="100"></a>
+        </div>
+        
+        <div class="search">
+            <input type="text" placeholder="검색어 입력">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" >
+        </div>
+        <div class="myinfo">
+            <div class="myinfo_icon">                
+                <ul class="recent" id="gnb">
+                    <li class="m">
+                        <a href="#">
+                            <img src="/images/LRH/recent.png" >최근내역<!--최근내역-->
+                        </a> 
+                        <ul>
+                            <div class="recent_area" >
+                                <div class="recent_title">
+                                    <p><strong>최근내역</strong><p>
+                                </div>
+                                <div class="recent_prod_list" >
+                                    <div class="recent_prod">                                            
+                                        <a th:href="@{/5.used_list_detail.html}" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
+                                        </a>
     
-    <!--navbar-->
-    <div class="navbar">      
+                                        <div class="recent_like_icon">
+                                            <div class="container">
+                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
+                                            </div>
+                                        </div> 
+    
+                                        <p class="recent_prod_name">
+                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
+                                            <span class="txt_origin_price">76,000원</span>
+                                        </p>  
+                                    </div>          
+                                    <div class="recent_prod">                                            
+                                        <a th:href="@{/5.used_list_detail.html}" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
+                                        </a>
+    
+                                        <div class="recent_like_icon">
+                                            <div class="container">
+                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
+                                            </div>
+                                        </div> 
+    
+                                        <p class="recent_prod_name">
+                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
+                                            <span class="txt_origin_price">76,000원</span>
+                                        </p>  
+                                    </div>
+                                    <div class="recent_prod">                                            
+                                        <a th:href="@{/5.used_list_detail.htm}l" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
+                                        </a>
+    
+                                        <div class="recent_like_icon">
+                                            <div class="container">
+                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
+                                            </div>
+                                        </div> 
+    
+                                        <p class="recent_prod_name">
+                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
+                                            <span class="txt_origin_price">76,000원</span>
+                                        </p>  
+                                    </div>          
+                                    <div class="recent_prod">                                            
+                                        <a th:href="@{/5.used_list_detail.htm}l" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
+                                        </a>
+    
+                                        <div class="recent_like_icon">
+                                            <div class="container">
+                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
+                                            </div>
+                                        </div> 
+    
+                                        <p class="recent_prod_name">
+                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
+                                            <span class="txt_origin_price">76,000원</span>
+                                        </p>  
+                                    </div>                                                              
+                                </div>
+                                
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+
+                <a th:href="@{/}"><img src="/images/LRH/tea-bag.png">마이티백</a>
+                <a th:href="@{/login_page.html}"><img src="/images/LRH/login.png">로그인</a>
+            </div>            
+        </div>
+    </div>
+
+    <div class="navbar" style="z-index: -1;">      
         <ul class="navbar_menu">
-            <li><a href="#" class="lee_a">조립PC</a></li>
-            <li><a href="#" class="lee_a">PC견적</a></li>
-            <li><a href="#" class="lee_a">부품</a></li>
-            <li><a href="#" class="lee_a">노트북</a></li>
-            <li><a href="#" class="lee_a">문의</a></li>
-            <li><a href="#" class="lee_a">우려먹기</a></li>
-            <li><a href="#" class="lee_a">파격할인</a></li>
-            <li><a href="#" class="lee_a">이벤트</a></li>
-            <li><a href="#" class="lee_a">브랜드스토어</a></li>            
+            <li><a th:href="@{/my_main.html}">마이페이지</a></li>
+            <li><a th:href="@{/}">PC견적</a></li>
+            <li><a th:href="@{/1.product_list.html}">부품</a></li>            
+            <li><a th:href="@{/qna_list.html}">문의</a></li>
+            <li><a th:href="@{/7.used_product_list.html}" style="color: red;">우려먹기</a></li>                    
         </ul>        
     </div>
 
@@ -35,7 +134,7 @@
         <div class="qna_detail">
             <table border="1" id="qna_detail">
                 <tr>
-                    <td id="qna_detail_title">제목</td>
+                    <td id="qna_detail_title">여기에는 제목이 들어갈것이다.</td>
                 </tr>
                 <tr>
                     <td class="qna_detail_nick">
@@ -45,51 +144,51 @@
                         <span style="color: gray;" id="qna_detail_update">2024.01.11</span></td>
                 </tr>
                 <tr >
-                    <td id="qna_detail_write">표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?</td>
+                    <td id="qna_detail_write">표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?표준 발음법 제 15항에 받침 뒤 모음 'ㅏㅓㅗㅜㅟ'로 시작하는 실직 형태소 앞에서 대표음으로 바뀐다는데, 그럼 위 다섯 모음 외에는 끝소리 규칙을 적용하지 않고 연음 법칙만 적용되는 건가요? 흙염소는 [흘겸소]인가요 [흐겸소]인가요?</td>
                 </tr>
             </table>
-
-            <!--버튼영역-->
-            <div class="qna_modndel">
-                <form action="#" >
-                    <button type="submit" id="btn_modify" name="btn_modify">수정하기</button>
-                    <button type="submit" id="btn_delete" name="btn_delete" onclick="showDelPop()">삭제하기</button>
-                </form>
-            </div>
         </div>
 
-    
         <!--답글영역-->
-        <div class="qna_replyarea">
-            <hr class="hsj_hr">
+        <div class="qna_replyarea">            
             <table  class="qna_reply_table">
-                <tr>
-                    <td id="qna_reply_1"><span>관리자</span></td>
-                    <td id="qna_reply_2"><textarea name="qna_reply_write" id="qna_reply_write" cols="65" rows="10"></textarea></td>
-                    <td id="qna_reply_3"><button type="submit" id="qna_rewrite_btn">답변하기</button></td>
+                <th id="qna_reply_1"><span>관리자</span></th>
+                <tr>  
+                    <td class="reply_write">
+                        <div class="qna_reply_container">
+                            <div id="qna_reply_2"><textarea name="qna_reply_write" id="qna_reply_write" cols="103" rows="6"></textarea></div>
+                            <div id="qna_reply_3"><button type="submit" id="qna_rewrite_btn">답변하기</button></div>
+                        </div>
+                    </td>                  
                 </tr>
             </table>
-
-        <hr class="hsj_hr">
-
+        
             <table  class="qna_replyview_table">
                 <tr>
-                    <td id="qna_replyview_2"><span>관리자</span></td>
-                    <td id="qna_replyview_3"><span id="qna_review_update">2024.01.12  15:43</span></td>
-                    <td id="qna_replyview_4"><button type="button" id="qna_review_btn_mod">수정하기</button></td>
-                    <td id="qna_replyview_5"><button id="qna_review_btn_del" onclick="showDelPop()">삭제하기</button></td>
+                    <div class="reply_view_title">
+                        <td class="qna_admin">
+                            <div id="qna_replyview">관리자</div>
+                            <div id="qna_review_update">2024.01.12  15:43</div>
+                            <div class="reply_view_btn">
+                                <div id=""><button type="button" id="qna_review_btn_mod">수정</button></div>
+                                <div id=""><button id="qna_review_btn_del" onclick="showDelPop()">삭제</button></div>
+                            </div>
+                        </td>                    
+                    </div>
                 </tr>
                 <tr>
                     <td colspan="4"><div class="qna_review_view">문의주셔서 감사합니다.<br> 관리자 답변입니다. <br>흐겸소입니다. <br>문의주셔서 감사합니다. </div></td>
                 </tr>
             </table>
-        </div>
+        </div>          
+
+        <!--버튼영역-->    
+        <div class="bt_wrap">               
+                <button type="submit" id="btn_modify" name="btn_modify">수정</button>
+                <button type="submit" id="btn_delete" name="btn_delete">삭제</button>
+                <a th:href="@{qna_list.html}" type="submit" id="btn_back" name="btn_back">목록</a>
+                      
+        </div> 
         
-         <!--돌아가기영역-->
-         <div class="qna_back">
-            <form action="#" >
-                <button type="button" id="btn_back" name="btn_back">목록으로</button>
-            </form>
-        </div>
 </body>
 </html>

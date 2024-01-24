@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/main/resources/templates/CSS/CMH/find_user.css">
+    <title>유저 찾기</title>
+</head>
+
+<body class="find_user_body">
+    <form class="find_user_form" method="post" action="서버의url" id="find_user" >
+        <div class="find_user_id_head">
+            <h2>회원 아이디 찾기</h2>
+
+            <div class="find_user_id_name">
+                <label for="username" class="user_id_name"><span style="color: red;">*</span> 이름</label>
+                <input type="text" id="username" name="username" placeholder="Enter your name" required>
+            </div>
+
+            <div class="find_user_id_phone_number">
+                <label for="phone" class="id_phone_number"><span style="color: red;">*</span> 전화번호</label>
+                <input type="tel" id="phone" name="phone" maxlength="11" placeholder="-없이 번호 등록" required>
+            </div>
+
+            <div class="find_user_id_email">
+                <label for="email" class="user_id_email"><span style="color: red;">*</span> 이메일(Email)</label>
+                <input type="email" id="email" name="email" placeholder="Email" style="width: 200px;" required> <span>@</span>
+                <select class="domain_list" class="box" style="width: 152px;">
+                    <option value="1">naver.com</option>
+                    <option value="2">google.com</option>
+                    <option value="3">hanmail.net</option>
+                    <option value="4">nate.com</option>
+                    <option value="5">kakao.com</option>
+                </select>
+            </div>
+
+            <div class="find_user_id_jumin">
+                <label for="jumin" class="find_user_id_jumin"><span style="color: red;">*</span> 주민번호</label>
+                <input type="text" maxlength="6" placeholder="YYMMDD" style="width: 185px;" required>
+                -
+                <input type="password" maxlength="7" placeholder="XXXXXXX" style="margin-left: 0px; width: 185px;" required>
+            </div>
+
+            <div class="find_user_id_button">
+                <input type="button" class="find_id" value="아이디 찾기" />
+            </div>
+
+        </div>
+    </form>
+</body>
+
+</html>

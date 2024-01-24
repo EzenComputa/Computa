@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+    xmlns:th="http://www.thymeleaf.org"
+>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/main/resources/templates/CSS/LRH/list.css">
+    <link rel="stylesheet" th:href="@{/css/LRH/list.css}">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/764963a2f9.js" crossorigin="anonymous"></script>
     <script src="/src/main/resources/templates/JS/LRH/js17_menu.js"></script>  
+    <script src="/src/main/resources/templates/JS/LRH/hvoer.js"></script> 
     <script>
         function like(element) {
             element.classList.toggle('fa-regular');
@@ -20,7 +23,7 @@
 <body>
     <div class="top">
         <div class="logo_wrap">
-            <a href="/src/main/resources/templates/HTML/LRH/6.main_page.html" class="computa_logo"><img src="/src/main/resources/templates/IMG/LRH/computa icon.png" alt="logo" width="100"></a>
+            <a th:href="@{/index}" class="computa_logo"><img src="/images/LRH/computa icon.png" alt="logo" width="100"></a>
         </div>
         
         <div class="search">
@@ -29,9 +32,9 @@
         </div>
         <div class="myinfo">
             <div class="myinfo_icon">
-                <a href=""><img src="/src/main/resources/templates/IMG/LRH/recent.png">최근내역</a>
-                <a href=""><img src="/src/main/resources/templates/IMG/LRH/tea-bag.png">마이티백</a>
-                <a href=""><img src="/src/main/resources/templates/IMG/LRH/login.png">로그인</a>
+                <a href=""><img src="/images/LRH/recent.png">최근내역</a>
+                <a href=""><img src="/images/LRH/tea-bag.png">마이티백</a>
+                <a th:href="@{/login}"><img src="/images/LRH/login.png">로그인</a>
             </div>            
         </div>
         
@@ -49,9 +52,9 @@
 
     <div class="slide_img">
         <div class="slide slide_wrap">
-          <div class="slide_item"><img src="/src/main/resources/templates/IMG/LRH/1_page.jpg"></div>
-          <div class="slide_item"><img src="/src/main/resources/templates/IMG/LRH/2_page.jpg"></div>
-          <div class="slide_item"><img src="/src/main/resources/templates/IMG/LRH/3_page.jpg"></div>
+          <div class="slide_item"><img src="/images/LRH/1_page.jpg"></div>
+          <div class="slide_item"><img src="/images/LRH/2_page.jpg"></div>
+          <div class="slide_item"><img src="/images/LRH/3_page.jpg"></div>
           <div class="slide_prev_button slide_button"></div>
           <div class="slide_next_button slide_button"></div>
           <ul class="slide_pagination"></ul>
@@ -62,14 +65,14 @@
     <div class="area1">
         <div class="icon">
             <div class="sub_icon">
-                <img src="/src/main/resources/templates/IMG/LRH/alarm.png">
+                <img src="/images/LRH/alarm.png">
             </div>
             <div class="sub_title">오늘의 <span style="color: #1fa098;">특가</span></div>
         </div>
         <div class="hotdeal">
             <div class="hotdeal_product">          
                 <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                    <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1" style="width: 160px;">
+                    <img src="/images/LRH/21314.jpg" alt="중고1" style="width: 160px;">
                 </a>         
                 <div class="like_icon">
                     <div class="container">
@@ -83,7 +86,7 @@
             </div>  
             <div class="hotdeal_product">          
                 <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                    <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1" style="width: 160px;">
+                    <img src="/images/LRH/21314.jpg" alt="중고1" style="width: 160px;">
                 </a>         
                 <div class="like_icon">
                     <div class="container">
@@ -97,7 +100,7 @@
             </div>  
             <div class="hotdeal_product">          
                 <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                    <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1" style="width: 160px;">
+                    <img src="/images/LRH/21314.jpg" alt="중고1" style="width: 160px;">
                 </a>         
                 <div class="like_icon">
                     <div class="container">
@@ -111,7 +114,7 @@
             </div>  
             <div class="hotdeal_product">          
                 <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                    <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1" style="width: 160px;">
+                    <img src="/images/LRH/21314.jpg" alt="중고1" style="width: 160px;">
                 </a>         
                 <div class="like_icon">
                     <div class="container">
@@ -125,7 +128,7 @@
             </div>  
             <div class="hotdeal_product">          
                 <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                    <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1" style="width: 160px;">
+                    <img src="/images/LRH/21314.jpg" alt="중고1" style="width: 160px;">
                 </a>         
                 <div class="like_icon">
                     <div class="container">
@@ -142,14 +145,14 @@
     <div class="area2">
         <div class="icon">
             <div class="sub_icon">
-                <img src="/src/main/resources/templates/IMG/LRH/best-tea-bag.png" alt="">
+                <img src="/images/LRH/best-tea-bag.png" alt="">
             </div>
             <div class="sub_title">이번주 <span style="color: #1fa098;">인기제품</span></div>
         </div>
         <div class="hotdeal">
                         <div class="hotdeal_product">          
                 <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                    <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1" style="width: 160px;">
+                    <img src="/images/LRH/21314.jpg" alt="중고1" style="width: 160px;">
                 </a>         
                 <div class="like_icon">
                     <div class="container">
@@ -163,7 +166,7 @@
             </div>  
             <div class="hotdeal_product">          
                 <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                    <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1" style="width: 160px;">
+                    <img src="/images/LRH/21314.jpg" alt="중고1" style="width: 160px;">
                 </a>         
                 <div class="like_icon">
                     <div class="container">
@@ -177,7 +180,7 @@
             </div>  
             <div class="hotdeal_product">          
                 <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                    <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1" style="width: 160px;">
+                    <img src="/images/LRH/21314.jpg" alt="중고1" style="width: 160px;">
                 </a>         
                 <div class="like_icon">
                     <div class="container">
@@ -191,7 +194,7 @@
             </div>  
             <div class="hotdeal_product">          
                 <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                    <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1" style="width: 160px;">
+                    <img src="/images/LRH/21314.jpg" alt="중고1" style="width: 160px;">
                 </a>         
                 <div class="like_icon">
                     <div class="container">
@@ -205,7 +208,7 @@
             </div>  
             <div class="hotdeal_product">          
                 <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                    <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1" style="width: 160px;">
+                    <img src="/images/LRH/21314.jpg" alt="중고1" style="width: 160px;">
                 </a>         
                 <div class="like_icon">
                     <div class="container">
@@ -245,19 +248,19 @@
                     <div class="QA_icon_group">
                         <div class="QA_icon">
                             <a href="">
-                                <img src="/src/main/resources/templates/IMG/LRH/support.png" alt="">     
+                                <img src="/images/LRH/support.png" alt="">     
                                 <strong>고객센터 홈</strong>                       
                             </a>
                         </div>
                         <div class="QA_icon">
                             <a href="">
-                                <img src="/src/main/resources/templates/IMG/LRH/notes.png" alt="">
+                                <img src="/images/LRH/notes.png" alt="">
                                 <strong>신고/제안</strong>
                             </a>                    
                         </div>
                         <div class="QA_icon">
                             <a href="">
-                                <img src="/src/main/resources/templates/IMG/LRH/service help.png" alt="">
+                                <img src="/images/LRH/service help.png" alt="">
                                 <strong>서비스 도움말</strong>
                             </a>                    
                         </div>

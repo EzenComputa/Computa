@@ -1,0 +1,55 @@
+.computa_logo{
+    width: 80px;
+    height: 100px;
+}
+
+
+.report_table{
+    width: 1000px;
+    height: 900px;
+    margin-top: 0px; 
+    margin-left:auto;
+    margin-right:auto;
+    border: 1px solid #187771;
+    border-collapse: collapse;
+}
+
+.report_table > div {
+    
+    border-bottom: 1px solid #187771;
+    font-size: 0;
+ }
+
+
+td{
+    font-size: 14px;
+}
+
+#report_pagination{
+   
+    margin-top: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: medium;
+ 
+    width: 250px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    
+    
+ }
+ 
+ .a_div{
+    outline: 1px solid rgb(8, 121, 46);
+    width: 20px;
+    height: 20px;
+    padding: 0.2rem;
+ }
+ 
+ .a_css{
+    text-decoration: none;
+    color: black;
+    
+ }

@@ -84,11 +84,11 @@ public class AuthController {
         return "redirect:/register?success";
     }
 
-    @GetMapping("/users")
+    @GetMapping("/manage_users")
     public String users(Model model){
         List<UserDto> users = userService.findAllUsers();
         model.addAttribute("users", users);
-        return "users";
+        return "user_management";
     }
 
     // handler method to handle login request
@@ -96,6 +96,11 @@ public class AuthController {
     public String login(){
         return "login";
     }    
+
+    @GetMapping("/find_user")
+    public String findUserView(){
+        return "find_user";
+    }
 
     @GetMapping("/profile")
     public String showProfile(Model model, @AuthenticationPrincipal UserDetails currentUser) {
