@@ -19,7 +19,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="QnaList")
+@Table(name="qna_list")
 public class QnaList{
     
     @Id
