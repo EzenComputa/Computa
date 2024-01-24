@@ -38,6 +38,8 @@ public class ReportList {
     private User nickname;
 
     // 신고링크
+    @Column(name = "url")
+    private String url;
 
 
 }
