@@ -25,6 +25,7 @@ import lombok.Setter;
 @Table(name="QnaList")
 public class QnaList{
     
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)  // primaray 글 번호 id
     private Long id;
 
