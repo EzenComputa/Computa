@@ -37,6 +37,10 @@ public abstract class Product {
 
     private String productType;
 
+    private String price;
+
+    private String detail;
+
     @OneToMany(mappedBy="product", cascade = CascadeType.ALL, fetch=FetchType.LAZY)
     private List<ProductImage> productImages = new ArrayList<>();
 
