@@ -103,20 +103,27 @@
 
 
 /*제품 상세 영역*/
-.pr_detail{
-    margin-top: 0.5rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
-
-    height: auto;
-
-    line-height: 1.8rem;
-    letter-spacing: -2px;
-    word-spacing: 3px;
-    font-size: 20px;
+.gridClass{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 7px 7px;
 }
+
+.selection{
+    margin: 0.2rem;
+    padding: 0.5rem;
+    outline: solid 1px #187771;
+    background-color: #72cec8;
+
+}
+
+.pcpart{
+    width:2rem;
+    height: 3rem;
+    font-size: 2rem;
+}
+a{text-decoration: none; color: white;}
 /*============================================================================*/
 /* 댓글 전체 영역(div) */
 .pr_dt_reply{
