@@ -45,7 +45,7 @@
 
 // private Integer price;
 
-// private Integer view_count;
+// private Integer updateView;
 
 // @OneToMany(mappedBy = "used_product", cascade = CascadeType.ALL, fetch =
 // FetchType.LAZY)
