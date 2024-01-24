@@ -1,15 +1,12 @@
 package com.computa.entity;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -29,7 +26,7 @@ public class QnaList{
     @GeneratedValue(strategy = GenerationType.IDENTITY)  // primaray 글 번호 id
     private Long id;
 
-
+    @ManyToOne // One user can have many question posts
     @JoinColumn(name="user_id", referencedColumnName="ID", nullable=false)
     private User user;
 
