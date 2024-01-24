@@ -25,19 +25,18 @@ import lombok.Setter;
 @Table(name="QnaList")
 public class QnaList{
     
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)  // primaray 글 번호 id
     private Long id;
 
-
-    @JoinColumn(name="user_id", referencedColumnName="ID", nullable=false)
-    private User user;
-
+    // 질문
+    // 공지사항은 entity로 어떻게 작성을 하는 지
 
     @Column(nullable=false, unique=true)
     private String title;
 
-    @JoinColumn(name="nickname", referencedColumnName="NICKNAME", nullable=false)
-    private String nickname;
+    @JoinColumn(name="user_nickname", referencedColumnName="ID", nullable=false)
+    private User nickname;
 
     @Column(nullable=false)
     private String Date;
@@ -47,10 +46,10 @@ public class QnaList{
 
 
     // 보류 JoinTable
-    @JoinTable(
-            name="users_roles",
-            joinColumns={@JoinColumn(name="USER_ID", referencedColumnName="ID")},
-            inverseJoinColumns={@JoinColumn(name="ROLE_ID", referencedColumnName="ID")})
-    private List<Role> roles = new ArrayList<>();
+    // @JoinTable(
+    //         name="users_roles",
+    //         joinColumns={@JoinColumn(name="USER_ID", referencedColumnName="ID")},
+    //         inverseJoinColumns={@JoinColumn(name="ROLE_ID", referencedColumnName="ID")})
+    // private List<Role> roles = new ArrayList<>();
 
 }
