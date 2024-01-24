@@ -2,6 +2,8 @@ package com.computa.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -11,6 +13,7 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Getter
@@ -26,7 +29,8 @@ public class ReportList {
     private Long id;
 
     // 신고유형
-    @JoinColumn(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private ReportType report;
 
     // 신고자 닉네임
     @ManyToOne
@@ -35,10 +39,5 @@ public class ReportList {
 
     // 신고링크
 
-
-}
-
-// enum
-public enum ReportType {
 
 }
