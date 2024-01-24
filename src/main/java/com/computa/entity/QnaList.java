@@ -34,8 +34,8 @@ public class QnaList{
     @Column(nullable=false, unique=true)
     private String title;
 
-    @JoinColumn(name="nickname", referencedColumnName="NICKNAME", nullable=false)
-    private String nickname;
+    @JoinColumn(name="user_nickname", referencedColumnName="ID", nullable=false)
+    private User nickname;
 
     @Column(nullable=false)
     private String Date;
