@@ -1,11 +1,13 @@
-package com.computa.serviceImpl;
+// package com.computa.serviceImpl;
 
-import org.springframework.stereotype.Service;
+// import org.springframework.stereotype.Service;
 
-import com.computa.persistence.used_product.UsedProductRepository;
+// import com.computa.persistence.UsedProductRepository;
+// import com.computa.service.UsedProductService;
 
-@Service
-public class UsedProductServiceImpl implements UsedProductService {
-    private UsedProductRepository usedProductRepository;
+// @Service
+// public class UsedProductServiceImpl implements UsedProductService {
 
-}
+// private final UsedProductRepository usedProductRepository;
+
+// }

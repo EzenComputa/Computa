@@ -1,12 +1,12 @@
-package com.computa.service;
+// package com.computa.service;
 
-import java.util.List;
+// import java.util.List;
 
-import com.computa.entity.Usedlist;
+// import com.computa.entity.Usedlist;
 
-public interface UsedlistService {
+// public interface UsedlistService {
 
-    List<Usedlist> gUsedlists(Long userId);
+// List<Usedlist> gUsedlists(Long userId);
 
-    void addProductToUsedlist(Long userId, Long usedproductId);
-}
+// void addProductToUsedlist(Long userId, Long usedproductId);
+// }

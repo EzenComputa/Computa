@@ -27,13 +27,13 @@ import lombok.Setter;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Product {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "fullname")
-    private String fullname = new String();
+    private String fullname;
 
     private String productType;
 
@@ -41,7 +41,7 @@ public abstract class Product {
 
     private String detail;
 
-    @OneToMany(mappedBy="product", cascade = CascadeType.ALL, fetch=FetchType.LAZY)
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<ProductImage> productImages = new ArrayList<>();
 
 }

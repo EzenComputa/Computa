@@ -16,4 +16,3 @@ public enum ReportType {
 
         private final String desc;
 }
-
