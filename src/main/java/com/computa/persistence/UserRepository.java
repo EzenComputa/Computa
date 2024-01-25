@@ -6,7 +6,7 @@ import com.computa.entity.User;
 public interface UserRepository extends JpaRepository<User, Long> {
 
     User findByEmail(String email);
-
+    // User findBySsid(String ssid);
     User findByUsername(String username);
 
     // JpaRepository already has a findById(Id id) but it returns Optional<User> 

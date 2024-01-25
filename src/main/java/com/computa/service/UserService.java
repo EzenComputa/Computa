@@ -11,6 +11,8 @@ public interface UserService {
 
     User findUserByEmail(String email);
 
+    User findUserBySsid(String ssid);
+
     User findUserByUsername(String username);
 
     List<UserDto> findAllUsers();
