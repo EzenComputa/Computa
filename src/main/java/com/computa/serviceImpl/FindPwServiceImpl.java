@@ -11,19 +11,21 @@
 // @Service
 // public class FindPwServiceImpl implements FindPwService {
 
+//     private final UserRepository userRepository;
+
 //     @Autowired
-//     private UserRepository userRepository;
-
-//     @Override
-//     public User findUserByUsername(String username){
-//         return userRepository.findByUsername(username);
+//     public FindPwServiceImpl(UserRepository userRepository) {
+//         this.userRepository = userRepository;
 //     }
 
 //     @Override
-//     public User findUserBySsid(String ssid){
-//         return userRepository.findBySsid(ssid);
-//     }
+//     public String userCheck(String username, String ssid) {
+//         User user = userRepository.findByUsername(username);
 
-//     public void 
-    
+//         if (user == null || !user.getSsid().equals(ssid)) {
+//             throw new RuntimeException("다시입력해주세요~");
+//         } else {
+//             return user.getNickname();
+//         }
+//     }
 // }

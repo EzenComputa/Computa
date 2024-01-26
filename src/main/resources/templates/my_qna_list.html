@@ -1,24 +1,24 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en"
     xmlns:th="http://www.thymeleaf.org"
 >
 <head>
-    <!-- Required meta tags -->
+    Required meta tags
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" shrink-to-fit="no">  <!--shrink 줄어든다라는 뜻-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" shrink-to-fit="no">  shrink 줄어든다라는 뜻
 
-    <link rel="stylesheet" href="/src/main/resources/templates/CSS/LRH/list.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="/css/LRH/list.css">
+    <link th:href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/764963a2f9.js" crossorigin="anonymous"></script>
-    <script src="/src/main/resources/templates/JS/LRH/js17_menu.js"></script>  
-    <script src="/src/main/resources/templates/JS/LRH/hvoer.js"></script> 
+    <script src="/js/LRH/js17_menu.js"></script>  
+    <script src="/js/LRH/hvoer.js"></script> 
     <title>문의게시판 내역</title>
 </head>
 <body>
     <div class="top" style="z-index: 1;">
         <div class="logo_wrap">
-            <a href="/src/main/resources/templates/HTML/LRH/6.main_page.html" class="computa_logo"><img src="/src/main/resources/templates/IMG/LRH/computa icon.png" alt="logo" width="100"></a>
+            <a th:href="@{/index]}" class="computa_logo"><img src="/images/LRH/computa icon.png" alt="logo" width="100"></a>
         </div>
         
         <div class="search">
@@ -29,8 +29,8 @@
             <div class="myinfo_icon">                
                 <ul class="recent" id="gnb">
                     <li class="m">
-                        <a href="#">
-                            <img src="/src/main/resources/templates/IMG/LRH/recent.png" >최근내역<!--최근내역-->
+                        <a th:href="@{/#}">
+                            <img src="/images/LRH/recent.png" >최근내역
                         </a> 
                         <ul>
                             <div class="recent_area">
@@ -39,8 +39,8 @@
                                 </div>
                                 <div class="recent_prod_list">
                                     <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        <a th:href="@{/5.used_list_detail.html}" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
                                         <div class="recent_like_icon">
@@ -55,8 +55,8 @@
                                         </p>  
                                     </div>          
                                     <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        <a th:href="@{/5.used_list_detail.html}" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
                                         <div class="recent_like_icon">
@@ -71,8 +71,8 @@
                                         </p>  
                                     </div>
                                     <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        <a th:href="@{/5.used_list_detail.html}" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
                                         <div class="recent_like_icon">
@@ -87,8 +87,8 @@
                                         </p>  
                                     </div>          
                                     <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/src/main/resources/templates/IMG/LRH/21314.jpg" alt="중고1">
+                                        <a th:href="@{/5.used_list_detail.html}" class="used_img">
+                                            <img src="/images/LRH/21314.jpg" alt="중고1">
                                         </a>
     
                                         <div class="recent_like_icon">
@@ -109,8 +109,8 @@
                     </li>
                 </ul>
 
-                <a href=""><img src="/src/main/resources/templates/IMG/LRH/tea-bag.png">마이티백</a>
-                <a href="/src/main/resources/templates/HTML/CMH/login_page.html"><img src="/src/main/resources/templates/IMG/LRH/login.png">로그인</a>
+                <a th:href="@{/}"><img src="/images/LRH/tea-bag.png">마이티백</a>
+                <a th:href="@{/login}"><img src="/images/LRH/login.png">로그인</a>
             </div>            
         </div>
         
@@ -118,10 +118,10 @@
 
     <nav class="navbar">        
         <ul class="navbar_menu">
-            <li><a href="/src/main/resources/templates/HTML/LRH/4.like_prod.html">관심상품</a></li>
-            <li><a href="/src/main/resources/templates/HTML/HSH/used_myshop.html">우려먹기 내역</a></li>
-            <li><a href="/src/main/resources/templates/HTML/LRH/2.list.html">문의게시판 내역</a></li>
-            <li><a href="#">나의 티백</a></li>
+            <li><a th:href="@{/likeProd}">관심상품</a></li>
+            <li><a th:href="@{/usedMyshop}">우려먹기 내역</a></li>
+            <li><a th:href="@{/myQnaList}">문의게시판 내역</a></li>
+            <li><a th:href="@{/#}">나의 티백</a></li>
         </ul>        
     </nav>
 
@@ -140,36 +140,36 @@
                     <div class="count">조회수</div> 
                 </div>
                 <div>               
-                    <div class="num"><span id="">1</span></div>    <!--id추가-->
-                    <div class="title"><a href="a"><span>곧 제목이 들어갑니다</span></a></div>     <!--id추가-->
-                    <div class="writer"><span id="">O</span></div>    <!--id추가-->
-                    <div class="date"><span id="">2024-01-10</span></div>    <!--id추가-->
-                    <div class="count"><span id="">1</span></div>    <!--id추가--> 
+                    <div class="num"><span id="">1</span></div>    id추가
+                    <div class="title"><a th:href="@{/a}"><span>곧 제목이 들어갑니다</span></a></div>     id추가
+                    <div class="writer"><span id="">O</span></div>    id추가
+                    <div class="date"><span id="">2024-01-10</span></div>    id추가
+                    <div class="count"><span id="">1</span></div>    id추가 
                 </div>
                 <div>               
                     <div class="num">2</div>
-                    <div class="title"><a href="a">곧 제목이 들어갑니다</a></div>
+                    <div class="title"><a th:href="@{/a}">곧 제목이 들어갑니다</a></div>
                     <div class="writer">O</div>
                     <div class="date">2024-01-10</div>
                     <div class="count">1</div> 
                 </div> 
                 <div>               
                     <div class="num">3</div>
-                    <div class="title"><a href="a">곧 제목이 들어갑니다</a></div>
+                    <div class="title"><a th:href="@{/a}">곧 제목이 들어갑니다</a></div>
                     <div class="writer">O</div>
                     <div class="date">2024-01-10</div>
                     <div class="count">1</div> 
                 </div> 
                 <div>               
                     <div class="num">4</div>
-                    <div class="title"><a href="a">곧 제목이 들어갑니다</a></div>
+                    <div class="title"><a th:href="@{/a}">곧 제목이 들어갑니다</a></div>
                     <div class="writer">O</div>
                     <div class="date">2024-01-10</div>
                     <div class="count">1</div> 
                 </div> 
                 <div>               
                     <div class="num">5</div>
-                    <div class="title"><a href="a">곧 제목이 들어갑니다</a></div>
+                    <div class="title"><a th:href="@{/a}">곧 제목이 들어갑니다</a></div>
                     <div class="writer">O</div>
                     <div class="date">2024-01-10</div>
                     <div class="count">1</div> 
@@ -180,24 +180,24 @@
                 <div></div>
             </div>
             <div class="board_page">
-                <a href="a" class="bt first"><<</a>
-                <a href="a" class="bt prev" ><</a>
-                <a href="a" class="num on">1</a>
-                <a href="a" class="num">2</a>
-                <a href="a" class="num">3</a>
-                <a href="a" class="num">4</a>
-                <a href="a" class="num">5</a>
-                <a href="a" class="num">6</a>
-                <a href="a" class="bt next">></a>
-                <a href="a" class="bt last">>></a>
+                <a th:href="@{/a}" class="bt first"><<</a>
+                <a th:href="@{/a}" class="bt prev" ><</a>
+                <a th:href="@{/a}" class="num on">1</a>
+                <a th:href="@{/a}" class="num">2</a>
+                <a th:href="@{/a}" class="num">3</a>
+                <a th:href="@{/a}" class="num">4</a>
+                <a th:href="@{/a}" class="num">5</a>
+                <a th:href="@{/a}" class="num">6</a>
+                <a th:href="@{/a}" class="bt next">></a>
+                <a th:href="@{/a}" class="bt last">>></a>
     
             </div>
             <div class="bt_wrap">
-                <a href="a" class="on">목록</a>
-                <a href="a" >수정</a>
+                <a th:href="@{/a}" class="on">목록</a>
+                <a th:href="@{/a}" >수정</a>
             </div>
         </div>
     </div>
     
 </body>
-</html>
+</html> -->

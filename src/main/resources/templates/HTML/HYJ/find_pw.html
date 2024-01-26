@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"
-    xmlns:th="http://www.thymeleaf.org"
->
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,41 +23,8 @@
 
 
 
-        // 빈칸 공백시 alert 경고창으로 출력하기 구현 1
-        //   $('.button').click(function(){
-        //     if($("#userid").val().trim()==""){
-        //         alert("내용을 입력하세요");
-        //         return false;
-        //     }
-        //     return true;
-        //   })
 
-
-
-        // 빈칸 공백시 alert 경고창으로 출력하기 구현 2
-
-        // document.querySelector('.submit').addEventListener('click', function(e) {
-        //     if (document.querySelector('#userid').val().trim() == '') {
-        //         // id라는 id를 선택하고 해당 input이 공백일 경우
-        //         e.preventDefault() // 폼 전송을 막음
-        //         alert('아이디를 입력해주세요') // '아이디를 입력해주세요' 라는 경고창을 띄움
-        //     }
-        //     if (document.querySelector('#username').val().trim() == '') {
-        //         // pw라는 id를 선택하고 해당 input이 공백일 경우
-        //         e.preventDefault()  // 폼 전송을 막음
-        //         alert('이름을 입력해주세요')  // '비밀번호를 입력해주세요' 라는 경고창을 띄움
-        //     }
-        //     if (document.querySelector('#ssd1' && '#ssd2').val().trim() == '') {
-        //         // ssd1과 ssd2 id를 동시에 선택하고 해당 input이 공백일 경우
-        //         e.preventDefault()  // 폼 전송을 막음
-        //         alert('주민번호를 입력해주세요') // '주민번호를 입력해주세요' 라는 경고창을 띄움
-        //     }
-
-        //     else{
-        //         showPopup();
-        //     }
-
-        // });
+        // xmlns:th="http://www.thymeleaf.org"
 
     </script>
 </head>
@@ -68,7 +33,7 @@
      <!-- top 로고 & 검색 & 메뉴navbar -->
      <div class="top">
         <div class="logo_wrap">
-            <a th:href="@{6.main_page.html}" class="computa_logo"><img src="/images/LRH/computa icon.png" alt="logo" width="100"></a>
+            <!-- <a th:href="@{6.main_page.html}" class="computa_logo"><img src="/images/LRH/computa icon.png" alt="logo" width="100"></a> -->
         </div>
         
         <div class="search">
@@ -77,20 +42,20 @@
         </div>
         <div class="myinfo">
             <div class="myinfo_icon">
-                <a th:href="@{}"><img src="/images/LRH/recent.png">최근내역</a>
+                <!-- <a th:href="@{}"><img src="/images/LRH/recent.png">최근내역</a>
                 <a th:href="@{#}"><img src="/images/LRH/tea-bag.png">마이티백</a>
-                <a th:href="@{/login}"><img src="/images/LRH/login.png">로그인</a>
+                <a th:href="@{/login}"><img src="/images/LRH/login.png">로그인</a> -->
             </div>            
         </div>
     </div>
 
     <div class="navbar" style="z-index: -1;">      
         <ul class="navbar_menu">
-            <li><a th:href="@{#}">PC견적</a></li>
+            <!-- <li><a th:href="@{#}">PC견적</a></li>
             <li><a th:href="@{1.product_list.html}">부품</a></li>            
             <li><a th:href="@{my_main.html}">마이페이지</a></li>
             <li><a th:href="@{2.list.html}">문의</a></li>
-            <li><a th:href="@{7.used_product_list.html}" style="color: red;">우려먹기</a></li>                    
+            <li><a th:href="@{7.used_product_list.html}" style="color: red;">우려먹기</a></li>                     -->
         </ul>        
     </div>
 

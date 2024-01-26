@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en"
-    xmlns:th="http://www.thymeleaf.org"
+xmlns:th="http://www.thymeleaf.org"
 >
 <head>
     <meta charset="UTF-8">
@@ -13,59 +13,22 @@
     <link rel="stylesheet" th:href="@{/css/HYJ/hyj_list.css}">
     <link rel="stylesheet" th:href="@{/css/HSJ/hsj_list.css}">
     <link rel="stylesheet" th:href="@{/css/LRH/list.css}">
-    <!-- <link rel="stylesheet" href="../../CSS/LRH/style.css"> -->
+    <link rel="stylesheet" href="../../CSS/LRH/style.css">
     <script>
          function showPopup_showPw() { 
           window.open("show_pw.html", "a", "width=400, height=300, left=750, top=100"); 
         }
         
         var popup = popupOpen('show_pw.html' ,"비밀번호",0,0,500,500);
-        // var popup = popupOpen('http://www.naver.com' ,"네이버");
-        //var popup = popupOpen('http://www.naver.com' );
+        var popup = popupOpen('http://www.naver.com' ,"네이버");
+        var popup = popupOpen('http://www.naver.com' );
 
-
-
-        // 빈칸 공백시 alert 경고창으로 출력하기 구현 1
-        //   $('.button').click(function(){
-        //     if($("#userid").val().trim()==""){
-        //         alert("내용을 입력하세요");
-        //         return false;
-        //     }
-        //     return true;
-        //   })
-
-
-
-        // 빈칸 공백시 alert 경고창으로 출력하기 구현 2
-
-        // document.querySelector('.submit').addEventListener('click', function(e) {
-        //     if (document.querySelector('#userid').val().trim() == '') {
-        //         // id라는 id를 선택하고 해당 input이 공백일 경우
-        //         e.preventDefault() // 폼 전송을 막음
-        //         alert('아이디를 입력해주세요') // '아이디를 입력해주세요' 라는 경고창을 띄움
-        //     }
-        //     if (document.querySelector('#username').val().trim() == '') {
-        //         // pw라는 id를 선택하고 해당 input이 공백일 경우
-        //         e.preventDefault()  // 폼 전송을 막음
-        //         alert('이름을 입력해주세요')  // '비밀번호를 입력해주세요' 라는 경고창을 띄움
-        //     }
-        //     if (document.querySelector('#ssd1' && '#ssd2').val().trim() == '') {
-        //         // ssd1과 ssd2 id를 동시에 선택하고 해당 input이 공백일 경우
-        //         e.preventDefault()  // 폼 전송을 막음
-        //         alert('주민번호를 입력해주세요') // '주민번호를 입력해주세요' 라는 경고창을 띄움
-        //     }
-
-        //     else{
-        //         showPopup();
-        //     }
-
-        // });
 
     </script>
 </head>
 <body>
 
-     <!-- top 로고 & 검색 & 메뉴navbar -->
+     top 로고 & 검색 & 메뉴navbar
      <div class="top">
         <div class="logo_wrap">
             <a th:href="@{6.main_page.html}" class="computa_logo"><img src="/images/LRH/computa icon.png" alt="logo" width="100"></a>
@@ -96,7 +59,7 @@
 
 
     
-    <!-- 비밀번호 찾기 form -->
+    비밀번호 찾기 form
     <div id="findpass">
         <h2 style="font-size: 22px; margin-bottom: 7px;">비밀번호 찾기</h2>
         <form action="" method="get">
@@ -108,7 +71,7 @@
                   <label for="userid">아이디 </label>
                 </td>
                 <td class="pw_con">
-			      <input type="text" placeholder="hong123" id="pw_userid"  class="input_pw" maxlength="20" name="userid" required/>
+			      <input type="text" placeholder="hong123" id="pw_userid"  class="input_pw" maxlength="20" name="username"  required/>
                 </td>  <br>
             </tr>
             <tr>
@@ -116,7 +79,7 @@
                     <label for="username">이름 </label>
                 </td>
                 <td class="pw_con">
-                    <input type="text" placeholder="홍길동" id="pw_username" class="input_pw" maxlength="20"  name="username" required/><br />
+                    <input type="text" placeholder="홍길동" id="pw_username" class="input_pw" maxlength="20"  name="name"  required/><br />
                 </td>
             </tr>
             <tr>
@@ -124,8 +87,8 @@
                     <label for="rrn">주민번호 </label>
                 </td>
                 <td class="pw_con">
-                    <input type="text" maxlength="6" placeholder="991122"  name="ssd1" id="pw_rrd1" class="input_pw" required/> - 
-                    <input type="password" maxlength="7"  name="ssd2" id="pw_rrd2" class="input_pw" required/>
+                    <input type="text" maxlength="6" placeholder="991122"  id="pw_rrd1" class="input_pw" required/> - 
+                    <input type="password" maxlength="7"  id="pw_rrd2" class="input_pw" required/>
                 </td>
             </tr>
         </table>
@@ -137,6 +100,6 @@
     </form>
 </div>
 </div>
-
+</form>
 </body>
-</html>
+</html> -->

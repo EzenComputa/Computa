@@ -6,7 +6,6 @@
 
 // public interface FindPwRepository extends JpaRepository<User,Long>{
 
-//     User findByUsername(String username);
-//     User findbySsid(String ssid);
+//    User findByUsernameAndNameAndSsid(String username, String name, String ssid);
     
 // } 

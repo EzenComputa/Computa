@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="ko">
-<!-- 원본: HTML/CMH/login_page.html -->
-<!-- 제작자: 최민혁 -->
-<!-- 코드: 로그인 화면 -->
-<!-- 사용된 외부 파일: login_page.css -->
+<html lang="ko"
+    xmlns:th="http://www.thymeleaf.org" 
+>
+    
+<!-- 원본: HTML/CMH/login_page.html
+제작자: 최민혁
+코드: 로그인 화면
+사용된 외부 파일: login_page.css -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +15,6 @@
 </head>
 
 <body>
-
-    
     <form method="post" role="form" th:action="@{/login}" class="login_page_form">
         
         <div class="login_head">
@@ -40,7 +41,7 @@
             <ul>
                 <li><a th:href="@{/find_user}">아이디 찾기</a></li>
                 /
-                <li><a th:href="@{/find_pass}">비밀번호 찾기</a></li>
+                <li><a th:href="@{/findpw}">비밀번호 찾기</a></li>
                 /
                 <li><a th:href="@{/register}">회원가입</a></li>
             </ul>
