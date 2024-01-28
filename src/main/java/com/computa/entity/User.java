@@ -2,6 +2,7 @@ package com.computa.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,6 +15,7 @@ import java.util.List;
 @NoArgsConstructor // public User() {}
 @AllArgsConstructor // public User(all field) {all field arguments}
 @Entity
+@Builder
 @Table(name="users")
 public class User{
     private static final long serialVersionUID = 1L;

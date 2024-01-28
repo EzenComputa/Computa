@@ -1,14 +1,20 @@
-// package com.computa.service;
+package com.computa.service;
 
-// import com.computa.persistence.UsedProductRepository;
+import org.springframework.stereotype.Service;
 
-// import jakarta.transaction.Transactional;
+import com.computa.entity.UsedProduct;
+import com.computa.persistence.UsedProductRepository;
 
-// public interface UsedProductService<T> {
-// void save(T product);
-// }
+import jakarta.transaction.Transactional;
+import lombok.RequiredArgsConstructor;
+@Service
+@Transactional
+@RequiredArgsConstructor
+public class UsedProductService {
+    private final UsedProductRepository usedProductRepository;
 
-// @Transactional
-// public int updateView(Long id) {
-// return boardRepository.updateView(id);
-// }
+    public UsedProduct saveUsedProduct(UsedProduct usedProduct){
+        return usedProductRepository.save(usedProduct);
+    }
+}
+
