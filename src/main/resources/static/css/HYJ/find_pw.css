@@ -86,6 +86,7 @@ label{
 .input_pw{
     padding-left: 7px;
     height: 22px;
+    width:150px;
 }
 
 check:active{}

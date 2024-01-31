@@ -1,14 +1,11 @@
-// package com.computa.service;
+package com.computa.service;
 
+import com.computa.entity.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-// import org.springframework.beans.factory.annotation.Autowired;
-// import org.springframework.stereotype.Service;
-
-// import com.computa.entity.User;
-
-// @Service
-// public interface FindPwService {
-
-//     String userCheck(String username, String ssid);
-
-// }
+@Service
+public interface FindPwService {
+    String userCheck(String username);
+    void updateUserPassword(String username, String newPassword);
+}

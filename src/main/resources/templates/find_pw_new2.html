@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newpw</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호찾기페이지</title>
+    <script src="js/jquery3.7.1.js"></script>
+    <script src="js/jquery.innerfade.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="/js/LRH/js17_menu.js"></script>
+    <link rel="stylesheet" th:href="@{/css/HYJ/hyj_list.css}">
+    <link rel="stylesheet" th:href="@{/css/HSJ/hsj_list.css}">
+    <link rel="stylesheet" th:href="@{/css/LRH/list.css}">
+    <link rel="stylesheet" th:href="@{/css/LRH/style.css}">
+    <style>
+        .div{
+            outline: solid 1px black;
+            margin: 10rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding:3rem;
+            
+            padding-top: 6rem;
+
+            width:300px;
+            height:180px;
+            text-align: center;
+        }
+        #sp{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        #btn{
+            background-color: rgb(205, 255, 201);
+            font-size: 20px;
+            color: rgb(120, 160, 167);
+
+            height:30px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+         <!-- top 로고 & 검색 & 메뉴navbar -->
+         <div class="top">
+            <div class="logo_wrap">
+                <a th:href="@{/myMain}" class="computa_logo"><img src="/images/LRH/computa icon.png" alt="logo" width="100"></a>
+            </div>
+            
+            <div class="search">
+                <input type="text" placeholder="검색어 입력">
+                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" >
+            </div>
+            <div class="myinfo">
+                <div class="myinfo_icon">
+                    <a th:href="@{/}"><img src="/images/LRH/recent.png">최근내역</a>
+                    <a th:href="@{/}"><img src="/images/LRH/tea-bag.png">마이티백</a>
+                    <a th:href="@{/login}"><img src="/images/LRH/login.png">로그인</a>
+                </div>            
+            </div>
+        </div>
+    
+        <div class="navbar" style="z-index: -1;">      
+            <ul class="navbar_menu">
+                <li><a th:href="@{/}">PC견적</a></li>
+                <li><a th:href="@{/}">부품</a></li>            
+                <li><a th:href="@{/myMain}">마이페이지</a></li>
+                <li><a th:href="@{/}">문의</a></li>
+                <li><a th:href="@{/}" style="color: red;">우려먹기</a></li>                    
+            </ul>        
+        </div>
+
+        <div class="div">
+            <span id="sp">변경되었습니다.</span>
+            <br>
+            <br>
+            <br>
+            <a th:href="@{/login}" >
+                <div id="btn">로그인하기</div></a>
+        </div>
+    
+</body>
+</html>
