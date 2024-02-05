@@ -1,8 +1,9 @@
-// package com.computa.service;
+package com.computa.service;
 
-// import com.computa.entity.User;
+import org.springframework.stereotype.Service;
 
-// public interface FindIdService {
-//     User findUserByUsername(String username);
-//     User findUserBySsid(String ssid);
-// }
+@Service
+public interface FindIdService {
+    String checkName(String name); // FindIdimpl.java line: 20
+
+}
