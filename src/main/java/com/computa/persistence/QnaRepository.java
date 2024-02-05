@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 // import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
+// import org.springframework.transaction.annotation.Transactional;
 
 import com.computa.entity.Qna;
 import com.computa.entity.User;
@@ -18,12 +19,12 @@ import jakarta.transaction.Transactional;
 
 public interface QnaRepository extends JpaRepository<Qna, Long> {
 
-    @PersistenceContext
 
     @Modifying    // @Query의 sql이 insert/delete/update
     @Transactional   // commit, rollback
     @Query("update Qna q set q.cnt = q.cnt + 1 where q.seq = :seq")
     int updateReadCount(@Param("seq") Long seq);
+
 
     List<Qna> findByWriter(String writer);
 

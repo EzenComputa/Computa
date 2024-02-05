@@ -153,17 +153,18 @@
     <!--  검색 & 글쓰기 버튼 영역 -->
     <form th:action="@{/getQnaBoard}" method="get" id="QnaboardForm">
 	<div id="wrap">
-        <!-- <h2>검색 &nbsp;<input type="text" style="margin-top: 20px;"> -->
-        <select name="searchType" id="searchType" style="margin-top: 20px;">
+        <!-- <h2>검색 &nbsp;<input type="text" style="margin-top: 20px;">
+         <select name="searchType" id="searchType" style="margin-top: 20px;">
             <option value="" >검색</option>
             <option value="title" th:selected="${st}=='title'">글제목</option>
             <option value="writer" th:selected="${st}=='writer'">사용자</option>
             <option value="content" th:selected="${st}=='content'">글내용</option>
-        </select>
+        </select> 
         <input type="text" name="searchWord" placeholder="input search keyword..."/>
-        <!-- <input type="button" onclick="saveReq()" value="글쓰기"  style="margin-top: 20px; margin-left: 5px;"> -->
+        <input type="button" onclick="saveReq()" value="글쓰기"  style="margin-top: 20px; margin-left: 5px;"> -->
         <br><br>
-        <button><div><a th:href="@{/insertQnaBoard}" style="margin-top: 20px; margin-left: 5px; font-size:medium; color: black;">글쓰기</a></div></button>
+        <button style="background-color:#eceaea; border-color:#1fa098;"><div><a th:href="@{/insertQnaBoard}" 
+            style="margin-top: 20px; margin-left: 5px; font-size:15px; color:#187771; font-weight: 600;">글쓰기</a></div></button>
     </div> 
     </form>
     

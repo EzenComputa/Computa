@@ -86,7 +86,6 @@ public class QnaServiceImpl implements QnaService{
         }
     }
     
-    @Transactional
     @Override
     public int updateReadCount(Qna qna) {
         return qnaRepo.updateReadCount(qna.getSeq());
