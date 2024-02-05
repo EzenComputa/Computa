@@ -129,7 +129,7 @@ xmlns:th="http://www.thymeleaf.org"
             <ul class="navbar_menu">
                 <li><a href="/src/main/resources/templates/HTML/HSJ/my_main.html">마이페이지</a></li>
                 <li><a href="#">PC견적</a></li>
-                <li><a th:href="@{/product}">부품</a></li>            
+                <li><a th:href="@{/product/list}">부품</a></li>            
                 <li><a href="/src/main/resources/templates/HTML/HYJ/qna_list.html">문의</a></li>
                 <li><a href="/src/main/resources/templates/HTML/LRH/7.used_product_list.html" style="color: red;">우려먹기</a></li>                    
             </ul>        
@@ -167,7 +167,7 @@ xmlns:th="http://www.thymeleaf.org"
                     </td>
                     <td class="title_price">
                         <p class="subject" id="">    <!--id추가-->
-                            <a href onclick="">인텔 코어i9-14세대 14900K</a>
+                            <a th:href="@{/product/Detail}">인텔 코어i9-14세대 14900K</a>
                         </p>
                         <div class="sepc_wrap">
                             <div class="spec_bg">

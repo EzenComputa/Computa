@@ -141,116 +141,96 @@
     <form action="" method="get"><div class="tr_pr">
         <table border="0" class="tr_pr_table">
 
-            <!--상품종류(select)-->
-            <tr>
-                <td class="tr_pr_left">상품종류<span id="star">*</span></td>
-                <td>
-                    <div class="pcpart">
-                        <span>케이스</span>
-                    </div>
-                </td>
-            </tr>
-            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+           <!--상품종류(select)-->
+           <tr>
+            <td class="tr_pr_left">상품종류<span id="star">*</span></td>
+            <td>
+                <div class="pcpart">
+                    <span>쿨러</span>
+                </div>
+            </td>
+        </tr>
+        <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+
 
             <!-- 상세스펙 -->
             <tr>
                 <td class="tr_pr_left">상세 스펙</td>
                 <td>
                     <div class="tr_pr_spec">
-                        <table border="1" class="case_table_i" id="prod_table">
+                        <table border="1" class="cooler_table_i" id="prod_table">
                             <tr>
                                 <td class="prod_title">제조회사</td>
-                                <td class="content" colspan="3"><input type="text" id="company" /></td>
+                                <td class="content" colspan="3"><input type="text" id="company"></td>
                             </tr>
-                            <tr style="height: 20px" class="title">
-                                <td colspan="4"></td>
+                            <tr style="height: 20px;" class="title"><td colspan="4"></td></tr>
+                            <tr>
+                                <td class="prod_title">냉각 방식</td>
+                                <td class="content"><input type="text" id="kind"></td>
+                                <td class="prod_title">히트파이프</td>
+                                <td class="content"><input type="text" id="socket"></td>
                             </tr>
                             <tr>
-                                <td class="prod_title">제품 분류</td>
-                                <td id="kind" class="content"><input type="text" id="" /></td>
-                                <td class="prod_title">케이스 크기</td>
-                                <td id="socket" class="content"><input type="text" id="" /></td>
+                                <td class="prod_title">TDP</td>
+                                <td class="content"><input type="text" id="TDP">W</td>
+                                <td class="prod_title">A/S기간</td>
+                                <td class="content"><input type="text" id="AS">년</td>
                             </tr>
                             <tr>
-                                <td class="prod_title">파워포함여부</td>
-                                <td id="" class="content"><input type="radio" name="board1" />파워포함 <input type="radio" name="board1" />파워미포함</td>
-                                <td class="prod_title"></td>
-                                <td id="ver" class="content"></td>
-                            </tr>
-                            <tr style="height: 20px" class="title">
-                                <td colspan="4">지원보드규격</td>
+                                <td class="prod_title">가로</td>
+                                <td class="content"><input type="text" id="width">mm</td>
+                                <td class="prod_title">높이</td>
+                                <td class="content"><input type="text" id="height">mm</td>
                             </tr>
                             <tr>
-                                <td class="prod_title">표준-ATX</td>
-                                <td class="content"><input type="radio" name="board1" />O <input type="radio" name="board1" />X</td>
-                                <td class="prod_title">Micro-ATX</td>
-                                <td class="content"><input type="radio" name="board2" />O <input type="radio" name="board2" />X</td>
+                                <td class="prod_title">무게</td>
+                                <td class="content"><input type="text" id="weight">g</td>
+                                <td class="prod_title">[구성품/기타]</td>
+                                <td class="content">[<input type="text" id="components">/<input type="text" id="etc">]</td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">인텔 소켓</td></tr>
+                            <tr>
+                                <td class="prod_title">LGA1700</td>
+                                <td class="content"><input type="radio" name="intel_socket1">O 
+                                    <input type="radio" name="intel_socket1">X </td>
+                                <td class="prod_title">LGA1200</td>
+                                <td class="content"><input type="radio" name="intel_socket2">O 
+                                    <input type="radio" name="intel_socket2">X </td>
                             </tr>
                             <tr>
-                                <td class="prod_title">Mini-ITX</td>
-                                <td class="content"><input type="radio" name="board3" />O <input type="radio" name="board3" />X</td>
-                                <td class="prod_title"></td>
-                                <td class="content"></td>
-                            </tr>
-                            <tr style="height: 20px" class="title">
-                                <td colspan="4">내부 확장</td>
-                            </tr>
-                            <tr>
-                                <td class="prod_title">8.9cm베이</td>
-                                <td class="content"><input type="number" id="" />개</td>
-                                <td class="prod_title">6.4cm베이</td>
-                                <td class="content"><input type="number" id="" />개</td>
-                            </tr>
-                            <tr>
-                                <td class="prod_title">저장장치 장착</td>
-                                <td class="content"><input type="number" id="" />개</td>
-                                <td class="prod_title">폼팩터</td>
-                                <td class="content"><input type="text" id="" /></td>
-                            </tr>
-                            <tr style="height: 20px" class="title">
-                                <td colspan="4">쿨러 / 튜닝</td>
-                            </tr>
-                            <tr>
-                                <td class="prod_title">쿨링팬</td>
-                                <td class="content"><input type="number" id="" />개</td>
-                                <td class="prod_title">LED팬</td>
-                                <td class="content"><input type="number" id="" />개</td>
-                            </tr>
-                            <tr>
-                                <td class="prod_title">전면 패널 타입</td>
-                                <td class="content"><input type="text" id="" /></td>
-                                <td class="prod_title">측면</td>
-                                <td class="content"></td>
-                            </tr>
-                            <tr>
-                                <td class="prod_title">후면</td>
-                                <td class="content"><input type="text" id="" />mm</td>
-                                <td class="prod_title">전면</td>
-                                <td class="content"><input type="text" id="" />mm</td>
-                            </tr>
-                            <tr>
-                                <td class="prod_title">상단</td>
-                                <td class="content"><input type="text" id="" />mm</td>
+                                <td class="prod_title">LGA115x</td>
+                                <td class="content"><input type="radio" name="intel_socket3">O 
+                                    <input type="radio" name="intel_socket3">X </td>
                                 <td class="prod_title"></td>
                                 <td class="content"></td>
                             </tr>
-                            <tr style="height: 20px" class="title">
-                                <td colspan="4">외부포트</td>
+                            <tr style="height: 20px;" class="title"><td colspan="4">AMD 소켓</td></tr>
+                            <tr>
+                                <td class="prod_title">AM5</td>
+                                <td class="content"><input type="radio" name="amd_socket1">O 
+                                    <input type="radio" name="amd_socket1">X </td>
+                                <td class="prod_title">AM4</td>
+                                <td class="content"><input type="radio" name="amd_socket2">O 
+                                    <input type="radio" name="amd_socket2">X </td>
+                            </tr>
+                            <tr style="height: 20px;" class="title"><td colspan="4">[쿨링팬]</td></tr>
+                            <tr>
+                                <td class="prod_title">팬 크기</td>
+                                <td class="content"><input type="text" id="fan_size">mm</td>
+                                <td class="prod_title">팬 개수</td>
+                                <td class="content"><input type="text" id="fan_count">개</td>
+                            </tr>                            
+                            <tr>
+                                <td class="prod_title">팬 두께</td>
+                                <td class="content"><input type="text" id="fan_thick">T</td>
+                                <td class="prod_title">팬 커넥터</td>
+                                <td class="content"><input type="text" id="fan_conn">핀</td>
                             </tr>
                             <tr>
-                                <td class="prod_title">USB</td>
-                                <td class="content"><input type="radio" name="port1" />O <input type="radio" name="port1" />X</td>
-                                <td class="prod_title">USB 3.0</td>
-                                <td class="content"><input type="radio" name="port2" />O <input type="radio" name="port2" />X</td>
-                            </tr>
-                            <tr style="height: 20px" class="title">
-                                <td colspan="4">크기</td>
-                            </tr>
-                            <tr>
-                                <td class="prod_title">너비(W)</td>
-                                <td class="content"><input type="text" id="" />mm</td>
-                                <td class="prod_title">깊이(D)</td>
-                                <td class="content"><input type="text" id="" />mm</td>
+                                <td class="prod_title">베어링</td>
+                                <td class="content"><input type="text" id="fan_bearing"></td>
+                                <td class="prod_title">최대 팬속도</td>
+                                <td class="content"><input type="text" id="fan_MAxspeed">RPM</td>
                             </tr>
                         </table>
                     </div>
@@ -306,10 +286,10 @@
 			<tr><td colspan="2"><hr class="hsj_hr"></td></tr>
         </table>
 
-        <!-- 등록버튼 -->
-        <div class="tr_pr_btn">
+        <!-- 등록버튼 지움-->
+        <!-- <div class="tr_pr_btn">
             <input type="submit" id="tr_pr_btn" value="등록하기"></div>
-        </div>        
+        </div>         -->
     </form>  
      <script src="/js/HSJ/upload_img.js"></script>
      <script src="/js/HSJ/call_tbl_input.js"></script>

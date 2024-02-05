@@ -15,24 +15,27 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor 
 @AllArgsConstructor 
-@Table(name = "ram")
-public class Ram extends Product{
+@Table(name = "ssd")
+public class Ssd extends Product{
     
-    @Column(name = "module_type")
-    private String moduleType;
+    @Column(name = "formfactor")
+    private String formfactor;
 
     @Column(name = "kind")
     private String kind;
 
-    @Column(name = "memForm")
-    private String memForm;
+    @Column(name = "ssdInterface")
+    private String ssdInterface;
 
-    @Column(name = "memSize")
-    private double memSize;
+    @Column(name = "size")
+    private double size;
 
-    @Column(name = "clock")
-    private double clock;
+    @Column(name = "memType")
+    private String memType;
 
-    @Column(name = "rams")
-    private Integer rams;
+    @Column(name = "nand")
+    private String nand;
+
+    @Column(name = "ram")
+    private boolean ram;
 }

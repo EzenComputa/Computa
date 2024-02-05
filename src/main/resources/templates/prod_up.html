@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+<!-- &nbsp; 공백 칸 -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제품등록페이지</title>
+
+    <script src="/js/LRH/js17_menu.js"></script>
+    <script src="/js/LRH/hover.js"></script>
+
+	<!-- <link rel="stylesheet" href="../../CSS/HSJ/css_lee/list.css" type="text/css"> -->
+	<link rel="stylesheet" th:href="@{/css/HSJ/hyj_list.css}" type="text/css">
+	<link rel="stylesheet" th:href="@{/css/HSJ/hsj_list.css}" type="text/css">
+	<link rel="stylesheet" th:href="@{/css/LRH/menubar.css}" type="text/css">
+	<link rel="stylesheet" th:href="@{/css/LRH/style.css}"  type="text/css">
+	<link rel="stylesheet" th:href="@{/css/HYJ/table.css}" ttpe="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
+</head>
+<body>
+
+    <div class="top">
+        <div class="logo_wrap">
+            <a th:href="@{/index}" class="computa_logo"><img src="/images/LRH/computa icon.png" alt="logo" width="100"></a>
+        </div>
+        
+        <div class="search">
+            <input type="text" placeholder="검색어 입력">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" >
+        </div>
+        <div class="myinfo">
+            <div class="myinfo_icon">
+                <a href=""><img src="/images/LRH/recent.png">최근내역</a>
+                <a href=""><img src="/images/LRH/tea-bag.png">마이티백</a>
+                <a th:href="@{/login}"><img src="/images/LRH/login.png">로그인</a>
+            </div>            
+        </div>
+        
+    </div>
+
+    <div class="navbar">      
+        <ul class="navbar_menu">
+            <li><a th:href="@{/myMain}">마이페이지</a></li>
+            <li><a href="#">PC견적</a></li>     
+            <li><a th:href="@{/product/list}">부품</a></li>            
+            <li><a href="@{/qna_list}">문의</a></li>
+            <li><a href="/src/main/resources/templates/HTML/LRH/7.used_product_list.html" style="color: red;">우려먹기</a></li>                    
+        </ul>        
+    </div>
+
+	
+        <table border="0" class="tr_pr_table">
+
+            <!--상품종류(select)-->
+            <tr>
+                <td class="tr_pr_left">상품종류<span id="star">*</span></td>
+                <td>
+                    <div class="gridClass">
+                        <div class="selection">
+                            <a th:href="@{/product/cpu}">CPU</a>
+                        </div>
+                        
+                        <div class="selection">
+                            <a th:href="@{/product/gpu}">그래픽카드</a>
+                        </div>
+                        
+                        <div class="selection">
+                            <a th:href="@{/product/motherboard}">메인보드</a>
+                        </div>
+                        
+                        <div class="selection">
+                            <a th:href="@{/product/ssd}">SSD</a>
+                        </div>
+                        
+                        <div class="selection">
+                            <a th:href="@{/product/hdd}">HDD</a>
+                        </div>
+                        
+                        <div class="selection">
+                            <a th:href="@{/product/ram}">RAM</a>
+                        </div>
+                        
+                        <div class="selection">
+                            <a th:href="@{/product/case}">케이스</a>
+                        </div>
+                        
+                        <div class="selection">
+                            <a th:href="@{/product/cooler}">쿨러</a>
+                        </div>
+                        <div class="selection">
+                            <a th:href="@{/product/power}">파워</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+
+</body>
+</html>
