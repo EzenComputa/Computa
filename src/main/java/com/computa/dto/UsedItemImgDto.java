@@ -37,18 +37,16 @@ public class UsedItemImgDto {
                 .usedImgUrl(dto.usedImgUrl)
                 .repUsedImgYn(dto.repUsedImgYn)
                 .build();
-
         return entity;
     }
 
-    public static UsedItemImgDto of(UsedItemImg entity) {
+    public UsedItemImgDto of(UsedItemImg entity) {
         UsedItemImgDto dto = UsedItemImgDto.builder()
                 .usedImgName(entity.getUsedImgName())
                 .oriusedImgName(entity.getOriusedImgName())
                 .usedImgUrl(entity.getUsedImgUrl())
                 .repUsedImgYn(entity.getRepUsedImgYn())
                 .build();
-
         return dto;
     }
 
