@@ -3,21 +3,27 @@ package com.computa.entity.pcparts;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.Digits;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+// formFactor, wattage, efficiency
+
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor 
+@NoArgsConstructor
 @AllArgsConstructor 
-@Table(name = "gpu")
-public class Gpu extends Product{
+@Table(name = "psu")
+public class Psu extends Product{
     
-    @Column(name = "vram")
-    @Digits(fraction = 0, integer = 2)
-    private Integer vram;
+    @Column(name = "form_factor")
+    private String formFactor;
+
+    @Column(name = "wattage")
+    private Integer wattage;
+
+    @Column(name = "efficiency")
+    private String efficiency;
 }

@@ -21,18 +21,12 @@ public class Ram extends Product{
     @Column(name = "module_type")
     private String moduleType;
 
-    @Column(name = "kind")
-    private String kind;
+    @Column(name = "speed")
+    private Integer speed;
 
-    @Column(name = "memForm")
-    private String memForm;
+    @Column(name = "modules")
+    private Integer modules;
 
-    @Column(name = "memSize")
-    private double memSize;
-
-    @Column(name = "clock")
-    private double clock;
-
-    @Column(name = "rams")
-    private Integer rams;
+    @Column(name = "module_size")
+    private Integer moduleSize;
 }

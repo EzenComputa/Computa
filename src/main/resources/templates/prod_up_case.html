@@ -2,6 +2,7 @@
 <html lang="en"
     xmlns:th="http://www.thymeleaf.org"
 >
+<!-- 원본: HTML/HYJ/prod_up_case.html -->
 <head>
 <!-- &nbsp; 공백 칸 -->
 
@@ -25,9 +26,10 @@
 </head>
 <body>
 
-    <div class="top" style="z-index: 1;">
+	<!-- top 로고 & 검색 & 메뉴navbar -->
+	<div class="top">
         <div class="logo_wrap">
-            <a th:href="@{/}" class="computa_logo"><img src="/images/LRH/computa icon.png" alt="logo" width="100"></a>
+            <a th:href="@{/index}" class="computa_logo"><img src="/images/LRH/computa icon.png" alt="logo" width="100"></a>
         </div>
         
         <div class="search">
@@ -35,106 +37,23 @@
             <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" >
         </div>
         <div class="myinfo">
-            <div class="myinfo_icon">                
-                <ul class="recent" id="gnb">
-                    <li class="m">
-                        <a href="#">
-                            <img src="/images/LRH/recent.png" >최근내역<!--최근내역-->
-                        </a> 
-                        <!-- <ul>
-                            <div class="recent_area">
-                                <div class="recent_title">
-                                    <p><strong>최근내역</strong><p>
-                                </div>
-                                <div class="recent_prod_list">
-                                    <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/images/LRH/21314.jpg" alt="중고1">
-                                        </a>
-    
-                                        <div class="recent_like_icon">
-                                            <div class="container">
-                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
-                                            </div>
-                                        </div> 
-    
-                                        <p class="recent_prod_name">
-                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
-                                            <span class="txt_origin_price">76,000원</span>
-                                        </p>  
-                                    </div>          
-                                    <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/images/LRH/21314.jpg" alt="중고1">
-                                        </a>
-    
-                                        <div class="recent_like_icon">
-                                            <div class="container">
-                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
-                                            </div>
-                                        </div> 
-    
-                                        <p class="recent_prod_name">
-                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
-                                            <span class="txt_origin_price">76,000원</span>
-                                        </p>  
-                                    </div>
-                                    <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/images/LRH/21314.jpg" alt="중고1">
-                                        </a>
-    
-                                        <div class="recent_like_icon">
-                                            <div class="container">
-                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
-                                            </div>
-                                        </div> 
-    
-                                        <p class="recent_prod_name">
-                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
-                                            <span class="txt_origin_price">76,000원</span>
-                                        </p>  
-                                    </div>          
-                                    <div class="recent_prod">                                            
-                                        <a href="/src/main/resources/templates/HTML/LRH/5.used_list_detail.html" class="used_img">
-                                            <img src="/images/LRH/21314.jpg" alt="중고1">
-                                        </a>
-    
-                                        <div class="recent_like_icon">
-                                            <div class="container">
-                                                <i class="like fa-regular fa-heart fa-2x" onclick="like(this)"></i>                        
-                                            </div>
-                                        </div> 
-    
-                                        <p class="recent_prod_name">
-                                            <span class="txt_tit_brand">No.13 Cut-Out</span><br>                
-                                            <span class="txt_origin_price">76,000원</span>
-                                        </p>  
-                                    </div>                                                              
-                                </div>
-                                
-                            </div>
-                        </ul> -->
-                    </li>
-                </ul>
-
-                <a href=""><img src="/images/LRH/tea-bag.png">마이티백</a>
+            <div class="myinfo_icon">
+                <a th:href="@{recent_test1.html}"><img src="/images/LRH/recent.png">최근내역</a>
+                <a th:href="@{/}"><img src="/images/LRH/tea-bag.png">마이티백</a>
                 <a th:href="@{/login}"><img src="/images/LRH/login.png">로그인</a>
             </div>            
         </div>
-        
     </div>
 
     <div class="navbar">      
         <ul class="navbar_menu">
-            <li><a th:href="@{/myMain}">마이페이지</a></li>
-            <li><a href="#">PC견적</a></li>
+            <li><a th:href="@{my_main.html}">마이페이지</a></li>
+            <li><a th:href="@{/}">PC견적</a></li>
             <li><a th:href="@{/product}">부품</a></li>            
-            <li><a href="/src/main/resources/templates/HTML/HYJ/qna_list.html">문의</a></li>
-            <li><a href="/src/main/resources/templates/HTML/LRH/7.used_product_list.html" style="color: red;">우려먹기</a></li>                    
+            <li><a th:href="@{/}">문의</a></li>
+            <li><a th:href="@{/}" style="color: red;">우려먹기</a></li>                    
         </ul>        
     </div>
-
 
 	
 
@@ -160,7 +79,9 @@
                         <table border="1" class="case_table_i" id="prod_table">
                             <tr>
                                 <td class="prod_title">제조회사</td>
-                                <td class="content" colspan="3"><input type="text" id="company" /></td>
+                                <td class="content"><input type="text" id="company" /></td>
+                                <td class="prod_title">등록년월</td>
+                                <td class="content"><input type="date" id="date" /></td>
                             </tr>
                             <tr style="height: 20px" class="title">
                                 <td colspan="4"></td>
@@ -174,8 +95,8 @@
                             <tr>
                                 <td class="prod_title">파워포함여부</td>
                                 <td id="" class="content"><input type="radio" name="board1" />파워포함 <input type="radio" name="board1" />파워미포함</td>
-                                <td class="prod_title"></td>
-                                <td id="ver" class="content"></td>
+                                <td class="prod_title">높이(H)</td>
+                                <td id="ver" class="content"><input type="text" id="" />mm</td>
                             </tr>
                             <tr style="height: 20px" class="title">
                                 <td colspan="4">지원보드규격</td>
@@ -220,17 +141,17 @@
                                 <td class="prod_title">전면 패널 타입</td>
                                 <td class="content"><input type="text" id="" /></td>
                                 <td class="prod_title">측면</td>
-                                <td class="content"></td>
+                                <td class="content">강화유리</td>
                             </tr>
                             <tr>
                                 <td class="prod_title">후면</td>
-                                <td class="content"><input type="text" id="" />mm</td>
+                                <td class="content"><input type="text" id="" />mm LED x1</td>
                                 <td class="prod_title">전면</td>
-                                <td class="content"><input type="text" id="" />mm</td>
+                                <td class="content"><input type="text" id="" />mm LED x3</td>
                             </tr>
                             <tr>
                                 <td class="prod_title">상단</td>
-                                <td class="content"><input type="text" id="" />mm</td>
+                                <td class="content"><input type="text" id="" />mm x2</td>
                                 <td class="prod_title"></td>
                                 <td class="content"></td>
                             </tr>
@@ -251,6 +172,48 @@
                                 <td class="content"><input type="text" id="" />mm</td>
                                 <td class="prod_title">깊이(D)</td>
                                 <td class="content"><input type="text" id="" />mm</td>
+                            </tr>
+                            <tr style="height: 20px" class="title">
+                                <td colspan="4">호환성</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">VGA 장착 길이</td>
+                                <td class="content"><input type="text" id="" />mm</td>
+                                <td class="prod_title">CPU쿨러 장착높이</td>
+                                <td class="content"><input type="text" id="" />mm</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">수랭쿨러 규격</td>
+                                <td class="content">최대 <input type="number" id="" />열 지원</td>
+                                <td class="prod_title">라디에이터(상단)</td>
+                                <td class="content">최대 <input type="text" id="" />mm</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">라디에이터(전면)</td>
+                                <td class="content">최대 <input type="text" id="" />mm</td>
+                                <td class="prod_title">라디에이터(후면)</td>
+                                <td class="content">최대 <input type="text" id="" />mm</td>
+                            </tr>
+                            <tr style="height: 20px" class="title">
+                                <td colspan="4">컨트롤러 지원</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">팬 컨트롤</td>
+                                <td class="content"><input type="radio" name="controler" />O <input type="radio" name="controler" />X</td>
+                                <td class="prod_title"></td>
+                                <td class="content"></td>
+                            </tr>
+                
+                            <tr style="height: 20px" class="title">
+                                <td colspan="4">인증</td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">적합성평가인증</td>
+                                <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="rra" onclick="window.open('https://www.rra.go.kr/ko/index.do')">인증번호 확인</button></td>
+                            </tr>
+                            <tr>
+                                <td class="prod_title">안전확인인증</td>
+                                <td colspan="3" class="content">상세설명 / 판매 사이트 문의 <button id="safetykorea" onclick="window.open('https://www.safetykorea.kr/')">인증번호 확인</button></td>
                             </tr>
                         </table>
                     </div>

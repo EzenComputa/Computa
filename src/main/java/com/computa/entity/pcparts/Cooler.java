@@ -15,61 +15,10 @@ import lombok.Setter;
 @AllArgsConstructor 
 @Table(name = "cooler")
 public class Cooler extends Product{
-
-    @Column(name = "way")
-    private String way;
-
-    @Column(name = "heatpipe")
-    private String heatpipe;
-
-    @Column(name = "TDP")
-    private Double TDP;
-
-    @Column(name = "AS")
-    private Integer AS;
-
-    @Column(name = "width")
-    private Double width;
-
-    @Column(name = "height")
-    private Double height;
-
-    @Column(name = "weight")
-    private Double weight;
-
-    @Column(name = "etc")
-    private String etc;
-
-    @Column(name = "LGA17")
-    private boolean LGA17;
-
-    @Column(name = "LGA12")
-    private boolean LGA12;
-
-    @Column(name = "LGA11")
-    private boolean LGA11;
-
-    @Column(name = "AM5")
-    private boolean AM5;
-
-    @Column(name = "AM4")
-    private boolean AM4;
-
-    @Column(name = "fansize")
-    private Double fansize;
-
-    @Column(name = "fancount")
-    private Integer fancount;
-
-    @Column(name = "fanthick")
-    private Double fanthick;
-
-    @Column(name = "fanconnect")
-    private Integer fanconnect;
-
-    @Column(name = "barring")
-    private String barring;
+    
+    @Column(name = "rpm_min")
+    private Integer rpmMin;
 
     @Column(name = "rpm_max")
-    private Double rpmMax;
+    private Integer rpmMax;
 }
