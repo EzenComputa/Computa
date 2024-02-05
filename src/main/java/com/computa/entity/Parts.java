@@ -1,5 +1,10 @@
 package com.computa.entity;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@Getter
+@RequiredArgsConstructor
 public enum Parts {
     CPU,
     GPU,
@@ -8,5 +13,5 @@ public enum Parts {
     Psu,
     Ram,
     Cooler,
-    PcStorage;
+    PcStorage
 }

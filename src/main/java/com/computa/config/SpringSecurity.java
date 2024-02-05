@@ -34,8 +34,7 @@ public class SpringSecurity {
                                                 .permitAll() // anybody can access /register/**
                                                 .requestMatchers("/login", "/index", "/", "", "/product/**",
                                                                 "/product_details", "/addProduct/**", "/saveProduct/**",
-                                                                "/find_user", "/findpw/**", "/newpw/**", "/findid/**",
-                                                                "/useditem", "/useditem/new")
+                                                                "/find_user", "/findpw/**", "/newpw/**", "/findid/**")
                                                 .permitAll() // anybody can access
                                                 .requestMatchers("/wishlist/**", "/product/**", "/profile", "/user/**",
                                                                 "/postDetails/**", "/writePost/**", "/savePost",
