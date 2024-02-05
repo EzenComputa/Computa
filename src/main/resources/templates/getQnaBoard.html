@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="en"
-xmlns:th="http://www.thymeleaf.org"
+<html lang="en" 
+    xmlns:th="http://www.thymeleaf.org"
 >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>마이페이지_메인페이지</title>
-
-    <script src="https://kit.fontawesome.com/3489f966e6.js" crossorigin="anonymous"></script>
-    <script src="/js/click_btn.js"></script>
-    <link rel="stylesheet" th:href="@{/css/HSJ/hsj_list.css}">
-    <link rel="stylesheet" th:href="@{/css/LRH/style.css}">
-    <link rel="stylesheet" th:href="@{/css/LRH/menubar.css}">
+    <title>문의게시판_상세페이지</title>
+    
+    <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/764963a2f9.js" crossorigin="anonymous"></script>
+    <script src="/js/HSJ/popup.js"></script>
     <script src="/js/LRH/js17_menu.js"></script>  
-    <script src="/js/LRH/hvoer.js"></script> 
-</head>
+    <script src="/js/LRH/hvoer.js"></script>
+       
+    <!-- css -->
+    <link rel="stylesheet" th:href="@{/css/LRH/list.css}">
+    <link rel="stylesheet" th:href="@{/css/HSJ/hsj_list.css}">
+    <link rel="stylesheet" th:href="@{/css/LRH/hsj_list.css}">   
+    <!-- <link th:href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet"> -->
+    
 
+</head>
 <body>
     <div class="top">
         <div class="logo_wrap">
@@ -34,7 +36,7 @@ xmlns:th="http://www.thymeleaf.org"
                 <ul class="recent" id="gnb">
                     <li class="m">
                         <a th:href="@{/#}">
-                            <img src="/images/LRH/recent.png" >최근내역
+                            <img src="/images/LRH/recent.png" >최근내역<!--최근내역-->
                         </a> 
                         <ul>
                             <div class="recent_area" >
@@ -113,7 +115,7 @@ xmlns:th="http://www.thymeleaf.org"
                     </li>
                 </ul>
 
-                <a th:href="@{/myTeabag}"><img src="/images/LRH/tea-bag.png">마이티백</a>
+                <a th:href="@{/}"><img src="/images/LRH/tea-bag.png">마이티백</a>
                 <a th:href="@{/login}"><img src="/images/LRH/login.png">로그인</a>
             </div>            
         </div>
@@ -123,59 +125,83 @@ xmlns:th="http://www.thymeleaf.org"
         <ul class="navbar_menu">
             <li><a th:href="@{/myMain}">마이페이지</a></li>
             <li><a th:href="@{/}">PC견적</a></li>
-            <li><a th:href="@{/1.product_list.html}">부품</a></li>            
+            <li><a th:href="@{/}">부품</a></li>            
             <li><a th:href="@{/getQnaList}">문의</a></li>
-            <li><a th:href="@{/7.used_product_list.html}" style="color: red;">우려먹기</a></li>                    
+            <li><a th:href="@{/}" style="color: red;">우려먹기</a></li>                    
         </ul>        
     </div>
 
-    <div class="my_main_container">
-        <!-- 유저 닉네임영역 -->
-        <div class="my_user_container">
-            <table class="my_user" >
+    
+    <!--글영역-->
+    <form th:action="@{/updateQna}" method="post">
+    <div class="qna_detail_container">
+        <div class="qna_detail">
+                <input name="seq" type="hidden" th:value="${qna.seq}">
+            <table border="1" id="qna_detail">
                 <tr>
+                    <td id="qna_detail_title"><input type="text" name="title" th:value="${qna.title}"  style="border: none; font-size: 15px;" ></td>
+                </tr>
+                <tr>
+                    <td class="qna_detail_nick">
+                        <span style="font-weight: bold;">작성자</span>
+                        <span style="color: gray;" id="qna_detail_nick">닉네임</span>
+                        <input type="text" name="writer" th:value="${qna.writer}" style="border: none;" disabled>
+                        <span style="font-weight: bolder;">| 등록일 </span>
+                        <input type="date" name="createdate" th:value="${#dates.format(qna.createDate, 'yyyy-MM-dd')}" readonly style="border: none;">
+                        <span style="font-weight: bolder;">| 조회수 </span>
+                        <input type="text" name="cnt" th:value="${qna.cnt}" style="border: none;" disabled>
 
-                    <td colspan="2"><img src="/images/HSJ/ham.jpg" alt="pf photo" width="200" id="my_main_photo"></td>
                 </tr>
-                <tr>
-                    <td colspan="2" id="my_td_0"><span id="nickname">닉네임</span></td> 
-                </tr>
-                <tr>
-                    <td id="my_td_1"><span id="name">이*름님</span></td>
-                    <td id="my_td_2"><button id="my_main_modify" type="button" th:onclick="location.href='../HYJ/my_modify.html'">회원수정</button> <!-- -location.href=>th:href -->
+                <tr >
+                    <td id="qna_detail_write" style="width: 1000px;">
+                        <textarea th:text="${qna.content}"  name="content"  style="width: 400px; font-size: 17px; height: 200px; border: none; resize: none;"  cols="30" rows="15"></textarea>
                     </td>
                 </tr>
-            </table>   
-        </div>        
-
-        <!-- 마이페이지 바로가기 영역 -->
-        <div class="select_container">
-            <a th:href="@{/likeProd}" class="my_main_a">
-                <table class="my_t">
-                    <tr><td><i class="fa-solid fa-mug-hot fa-4x"></i></td></tr>
-                    <tr><td class="a_tbl_d">관심상품</td></tr>
-                </table>
-            </a>
-            <a th:href="@{/usedMyshop}" class="my_main_a">
-                <table class="my_t">
-                    <tr><td><i class="fa-solid fa-mug-hot fa-4x"></i></td></tr>
-                    <tr><td class="a_tbl_d">우려먹기</td></tr>
-                </table>
-            </a>
-            <a th:href="@{/myQnaList}" class="my_main_a">
-                <table class="my_t">
-                    <tr><td><i class="fa-solid fa-mug-hot fa-4x"></i></td></tr>
-                    <tr><td class="a_tbl_d">문의내역</td></tr>
-                </table>
-            </a>
-            <a th:href="@{/myTeabag}" class="my_main_a">
-                <table class="my_t">
-                    <tr><td><i class="fa-solid fa-mug-hot fa-4x"></i></td></tr>
-                    <tr><td class="a_tbl_d">마이티백</td></tr>
-                </table>
-            </a>
+            </table>
         </div>
-    </div>
-    
+
+        <!--답글영역-->
+        <!-- <form th:action="">
+        <div class="qna_replyarea">            
+            <table  class="qna_reply_table">
+                <th id="qna_reply_1"><span>관리자</span></th>
+                <tr>  
+                    <td class="reply_write">
+                        <div class="qna_reply_container">
+                            <div id="qna_reply_2"><textarea name="qna_reply_write" id="qna_reply_write" cols="103" rows="6"></textarea></div>
+                            <div id="qna_reply_3"><button type="submit" id="qna_rewrite_btn">답변하기</button></div>
+                        </div>
+                    </td>                  
+                </tr>
+            </table>
+        </form>
+        
+            <table  class="qna_replyview_table">
+                <tr>
+                    <div class="reply_view_title">
+                        <td class="qna_admin">
+                            <div id="qna_repbt_wraplyview">관리자</div>
+                            <div id="qna_review_update">2024.01.12  15:43</div>
+                            <div class="reply_view_btn">
+                                <div id=""><button type="button" id="qna_review_btn_mod">수정</button></div>
+                                <div id=""><button id="qna_review_btn_del" onclick="showDelPop()">삭제</button></div>
+                            </div>
+                        </td>                    
+                    </div>
+                </tr>
+                <tr>
+                    <td colspan="4"><div class="qna_review_view">문의주셔서 감사합니다.<br> 관리자 답변입니다. <br>흐겸소입니다. <br>문의주셔서 감사합니다. </div></td>
+                </tr>
+            </table>
+        </div>           -->
+
+        <!--버튼영역-->    
+        <div class="bt_wrap">               
+                <input type="submit" id="btn_modify" class="btn_css" name="btn_modify" value="수정"/>
+                <a th:href="@{/deleteQna(seq=${qna.seq})}" class="btn_css">삭제</a>
+                <!-- th:classappend="@{session['user'].role != 'ADMIN' ? 'disabled':''}"  관리자일 시 삭제하는 버튼 보류--> 
+                <a th:href="@{/getQnaList}"  id="btn_back" class="btn_css" name="btn_back">목록</a>     
+        </div> 
+    </form> 
 </body>
 </html>

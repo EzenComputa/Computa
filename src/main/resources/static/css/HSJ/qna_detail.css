@@ -28,7 +28,7 @@
     padding-left: 1rem;
     height: 40px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 /* 글쓴이+등록일 */
@@ -43,12 +43,23 @@
 #qna_detail_write{    
     padding : 1.5rem 1.5rem 2rem 1.5rem;    
     vertical-align : top;
-    font-size:15px;        
+    font-size:20px;        
  }
 /*================================*/
 
 /* 버튼영역 */
 .qna_modndel{    
+    display : inline-block;
+    min-width: 80px;
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #187771;
+    border-radius: 2px;
+    font-size: 1.4rem;
+}
+
+/* 수정 & 삭제 & 목록 버튼 */
+.btn_css{
     display : inline-block;
     min-width: 80px;
     margin-left: 10px;

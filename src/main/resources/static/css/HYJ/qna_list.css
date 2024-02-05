@@ -26,36 +26,39 @@
   border-collapse: collapse;
   border-color: #187771;
   width: 900px;
-  height: 700px;
+  height: auto;
   margin-top: 20px; 
   margin-left: auto;
   margin-right: auto;
- 
   /* outline: dashed 1px black; */
+  font-size: 20px;
+  
 }
 
+
 .dataTableBody > div {
-    
+   
    border-bottom: 1px solid #187771;
-   font-size: 0;
 }
 
 .click_con{
    cursor: pointer;
 }
 
+.click_con:hover{
+   color: rgba(119, 118, 118, 0.795);
+}
+
 #qna_pagination{
    
-   margin-top: 25px;
-   margin-bottom: 10px;
-   text-align: center;
+   padding-top: 10px;
    font-size: medium;
 
-   width: 250px;
+   color: black;
    display: flex;
+   justify-content: center;
    margin-left: auto;
    margin-right: auto;
-   justify-content: space-around;
    
    
 }

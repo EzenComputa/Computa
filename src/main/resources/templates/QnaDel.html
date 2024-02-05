@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .qnapopup {
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        color: green;
+        border: solid green 5px;
+        width: 500px;
+        height: 400px;
+    }
+
+    .icon {
+        align-items: center;
+        width:100px;
+        height:180px;
+    }
+
+    .btn_css{
+    display : inline-block;
+    min-width: 80px;
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #187771;
+    color: #1fa097;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-decoration: none;
+    }
+
+
+
+</style>
+<body>
+    <div class="qnapopup">
+        <img src="/images/HSH/computa.png" alt="icon" class="icon"><br>
+        <p>게시물이 삭제되었습니다!</p>
+        <br><br><br><br>
+        <a th:href="@{/getQnaList}"  id="btn_back" class="btn_css" name="btn_back">목록으로</a>
+    </div>
+</body>
+</html>
