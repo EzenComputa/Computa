@@ -1,69 +1,52 @@
 <!DOCTYPE html>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org">
-  <!-- 원본: HTML/CMH/login_page.html
+<html lang="ko"
+    xmlns:th="http://www.thymeleaf.org" 
+>
+    
+<!-- 원본: HTML/CMH/login_page.html
 제작자: 최민혁
 코드: 로그인 화면
 사용된 외부 파일: login_page.css -->
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login_page</title>
-    <link
-      th:href="@{/css/CMH/login_page.css}"
-      href="/css/CMH/login_page.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-  </head>
+    <link th:href="@{/css/CMH/login_page.css}" href="/css/CMH/login_page.css" rel="stylesheet" type="text/css"/> 
+</head>
 
-  <body>
-    <form
-      method="post"
-      role="form"
-      th:action="@{/login}"
-      class="login_page_form"
-    >
-      <div class="login_head">
-        <h2>Login</h2>
-      </div>
-
-      <div class="login_box">
-        <label for="ID" class="login_id">ID:</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          placeholder="Enter your ID"
-          required
-        />
-
-        <label for="password" class="login_password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Enter your password"
-          required
-        />
-
-        <label for="remember_ID" class="user_remember_id">
-          <input type="checkbox" id="remember_ID" /> 아이디 저장
-        </label>
-        <div th:if="${param.error}">
-          <div class="alert alert-danger">Invalid Username or Password</div>
+<body>
+    <form method="post" role="form" th:action="@{/login}" class="login_page_form">
+        
+        <div class="login_head">
+            <h2>Login</h2>
         </div>
-        <input type="submit" class="user_login" value="Login" />
-      </div>
 
-      <div class="three_other_link">
-        <ul>
-          <li><a th:href="@{/findid}">아이디 찾기</a></li>
-          /
-          <li><a th:href="@{/findpw}">비밀번호 찾기</a></li>
-          /
-          <li><a th:href="@{/register}">회원가입</a></li>
-        </ul>
-      </div>
+        <div class="login_box">
+            <label for="ID" class="login_id">ID:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your ID" required>
+
+            <label for="password" class="login_password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <label for="remember_ID" class="user_remember_id">
+                <input type="checkbox" id="remember_ID"> 아이디 저장
+            </label>
+            <div th:if="${param.error}">
+                <div class="alert alert-danger">Invalid Username or Password</div>
+            </div>
+            <input type="submit" class="user_login" value="Login">
+        </div>
+
+        <div class="three_other_link">
+            <ul>
+                <li><a th:href="@{/find_user}">아이디 찾기</a></li>
+                /
+                <li><a th:href="@{/findpw}">비밀번호 찾기</a></li>
+                /
+                <li><a th:href="@{/register}">회원가입</a></li>
+            </ul>
+        </div>
     </form>
-  </body>
+</body>
+
 </html>
