@@ -17,14 +17,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.computa.entity.ProductComment;
-import com.computa.entity.pcparts.Cooler;
 import com.computa.entity.pcparts.Cpu;
 import com.computa.entity.pcparts.Gpu;
 import com.computa.entity.pcparts.Motherboard;
 import com.computa.entity.pcparts.PcCase;
-import com.computa.entity.pcparts.PcStorage;
 import com.computa.entity.pcparts.Product;
-import com.computa.entity.pcparts.Psu;
 import com.computa.entity.pcparts.Ram;
 import com.computa.exceptions.ResourceNotFoundException;
 import com.computa.persistence.pcparts.ProductRepository;
@@ -81,9 +78,7 @@ public class ProductController {
     @GetMapping("/product/add/{type}")
     public String addProduct(@PathVariable String type, Model model) {
         switch (type.toLowerCase()) {
-            case "cooler":
-                model.addAttribute("cooler", new Cooler());
-                return "addProduct/addCooler";
+            
             case "cpu":
                 model.addAttribute("cpu", new Cpu());
                 return "addProduct/addCpu";
@@ -97,12 +92,8 @@ public class ProductController {
                 model.addAttribute("pcCase", new PcCase());
                 // return "addProduct/addPcCase";
                 return "prod_up_case.html";
-            case "storage":
-                model.addAttribute("pcStorage", new PcStorage());
-                return "addProduct/addPcStorage";
-            case "psu":
-                model.addAttribute("psu", new Psu());
-                return "addProduct/addPsu";
+            
+            
             case "ram":
                 model.addAttribute("ram", new Ram());
                 return "addProduct/addRam";
@@ -113,12 +104,7 @@ public class ProductController {
     }
 
     // The fact that I have to make a postMapping for every single product type is outrageous
-    @PostMapping("/saveProduct/Cooler")
-    public String saveCooler(@ModelAttribute Cooler cooler, RedirectAttributes redirectAttributes) {
-        productServiceMap.get("coolerServiceImpl").save(cooler);
-        redirectAttributes.addFlashAttribute("message", "Cooler added successfully");
-        return "redirect:/addProduct/cooler";
-    }
+
 
     @PostMapping("/saveProduct/Cpu")
     public String saveCpu(@ModelAttribute Cpu cpu, RedirectAttributes redirectAttributes) {
@@ -148,19 +134,6 @@ public class ProductController {
         return "redirect:/addProduct/pc_case";
     }
 
-    @PostMapping("/saveProduct/PcStorage")
-    public String savePcStorage(@ModelAttribute PcStorage pcStorage, RedirectAttributes redirectAttributes) {
-        productServiceMap.get("pcStorageServiceImpl").save(pcStorage);
-        redirectAttributes.addFlashAttribute("message", "PC Storage added successfully");
-        return "redirect:/addProduct/pc_storage";
-    }
-
-    @PostMapping("/saveProduct/Psu")
-    public String savePsu(@ModelAttribute Psu psu, RedirectAttributes redirectAttributes) {
-        productServiceMap.get("psuServiceImpl").save(psu);
-        redirectAttributes.addFlashAttribute("message", "PSU added successfully");
-        return "redirect:/addProduct/psu";
-    }
 
     @PostMapping("/saveProduct/Ram")
     public String saveRam(@ModelAttribute Ram ram, RedirectAttributes redirectAttributes) {
