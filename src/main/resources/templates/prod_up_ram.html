@@ -142,19 +142,19 @@
         <table border="0" class="tr_pr_table">
 
             <!--상품종류(select)-->
+            <form th:action="@{ramUp/submit}" method="post">
             <tr>
                 <td class="tr_pr_left">상품종류<span id="star">*</span></td>
                 <td>
                     <div class="pcpart">
-                        <span><input type="text" name="productType" placeholder="RAM 을 입력해주세요">RAM</span>
+                        <span><input type="text" name="productType" placeholder="(RAM)을 입력해주세요"></span>
                     </div>
                 </td>
             </tr>
             <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
-
-
+            
+            
             <!-- 상세스펙 -->
-            <form th:action="@{ramUp/submit}" method="post">
             <tr>
                 <td class="tr_pr_left">상세 스펙</td>
                 <td>
@@ -177,7 +177,7 @@
                                 <td class="content"><input type="text" id="" name="memSize">GB</td>
                             </tr>
                             <tr>
-                                <td class="prod_title">동작클럭</td>
+                                <td class="prod_title  ">동작클럭</td>
                                 <td class="content"><input type="text" id="" name="clock">MHz</td>
                                 <td class="prod_title">램개수</td>
                                 <td class="content"><input type="text" name="rams">개</td>

@@ -43,7 +43,10 @@ public abstract class Product {
 
     private String company;
 
+
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<ProductImage> productImages = new ArrayList<>();
+    private List<Ram> ramList = new ArrayList<>();
+    // private List<ProductImage> productImages = new ArrayList<>();
+
 
 }
