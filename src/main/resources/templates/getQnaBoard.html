@@ -203,5 +203,37 @@
                 <a th:href="@{/getQnaList}"  id="btn_back" class="btn_css" name="btn_back">목록</a>     
         </div> 
     </form> 
+    <div id="comments">
+        <div th:each="comment : ${orderedComments}" th:style="'margin-left:' + ${comment.level * 40} + 'px'">
+        <p><strong>Nickname:</strong> <span th:text="${comment.user.nickname}"></span></p>
+        <p><strong>Created Date:</strong> <span th:text="${#dates.format(comment.createdDate, 'yyyy-MM-dd HH:mm')}"></span></p>
+        <p th:if="${comment.updatedDate != null}"><strong>Updated Date:</strong> <span th:text="${#dates.format(comment.updatedDate, 'yyyy-MM-dd HH:mm')}"></span></p>
+        <p><strong>Content:</strong> <span th:text="${comment.content}"></span></p>
+            <button type="button" class="btn btn-primary reply-button" th:data-target="'#replyForm'+${comment.id}">Reply</button>
+            <div class="reply-form" th:id="'replyForm'+${comment.id}" style="display: none;">
+                <form action="#" th:action="@{/getQnaBoard/{seq}/postReply(seq=${qna.seq})}" th:object="${reply}" method="post">
+                    <div class="form-group">
+                        <label for="content">Reply:</label>
+                        <textarea id="content" class="form-control" th:field="*{content}" required></textarea>
+                    </div>
+                    <input type="hidden" th:value="${comment.id}" name="parentId" />
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+            <div th:if="${comment.replies.size() > 0}">
+                    <li th:each="reply : ${comment.replies}" th:style="'margin-left:' + ${reply.level * 40} + 'px'">
+                        <p><strong>Nickname:</strong> <span th:text="${comment.user.nickname}"></span></p>
+                        <p><strong>Created Date:</strong> <span th:text="${#dates.format(comment.createdDate, 'yyyy-MM-dd HH:mm')}"></span></p>
+                        <p th:if="${comment.updatedDate != null}"><strong>Updated Date:</strong> <span th:text="${#dates.format(comment.updatedDate, 'yyyy-MM-dd HH:mm')}"></span></p>
+                        <p><strong>Content:</strong> <span th:text="${comment.content}"></span></p>                
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
 </body>
 </html>
