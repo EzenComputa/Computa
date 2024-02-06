@@ -162,15 +162,14 @@
     </div>
 
     <!--제품영역-->     
-    <div class="pr_dt_pf">    
-        <input name="seq" type="hidden" th:value="${ram.id}">        
+    <div class="pr_dt_pf">            
         <table class="pr_dt_table">
             <tr>
                 <td rowspan="3" colspan="5" class="pr_dt_photo"><img src="/images/HSJ/cpu1.png" alt="" width="400px" height="400px" id="pr_dt_photo"></td>
-                <td class="pr_dt_name"><span id="pr_dt_name"><input type="text" name="fullname" th:value="${product.fullname}" readonly></span></td>         
+                <td class="pr_dt_name"><span id="pr_dt_name">SSD-Ham9700ster</span></td>         
             </tr>
             <tr>
-                <td class="pr_dt_price"><span id="pr_dt_price"><input type="text" name="price" th:value="${product.price}" readonly></span></td>
+                <td class="pr_dt_price"><span id="pr_dt_price">53,000원</span></td>
             </tr>
             <tr>
                 <!--가격비교 영역-->
@@ -179,8 +178,8 @@
                         <table border="1" class="price_tbl">
                             <tr class="company">
                                 <td id="com_img_td"><img src="/images/HSJ/computa.png" alt="" width="40px" height="40px" id="com_img"></td>
-                                <td id="com_name_td"><span id="com_name"><input type="text" name="company" th:value="${product.company}" readonly></span></td>
-                                <td id="com_price_td"><span id="com_price"><input type="text" name="price" th:value="${product.price}" readonly></span></td>    
+                                <td id="com_name_td"><span id="com_name">회사명</span></td>
+                                <td id="com_price_td"><span id="com_price">53,000원</span></td>    
                                 <td id="com_link_td"><a th:href="@{/}" id="com_link">링크</a></td>
                             </tr>        
                         </table>
@@ -198,32 +197,7 @@
                 <td colspan="6">
                     <div class="pr_detail">
                         제품상세사양 
-                    </div>
-                    <table border="1" class="ram_table_i" id="prod_table">
-                        <tr>
-                            <td class="prod_title">제조회사</td>
-                            <td class="content" colspan="3"><input type="text" id="company" name="company" th:value="${product.company}" readonly></td>
-                        </tr>
-                        <tr>
-                            <td class="prod_title">사용장치</td>
-                            <td id="" class="content"><input type="text" id="" name="moduleType" th:value="${ram.moduleType}" readonly></td>
-                            <td class="prod_title">제품 분류</td>
-                            <td id="ver" class="content"><input type="text" id="" name="kind" th:value="${ram.kind}" readonly></td>
-                        </tr>
-                        <tr>
-                            <td class="prod_title">메모리 규격</td>
-                            <td class="content"><input type="text" id="" name="memForm" th:value="${ram.memForm}" readonly></td>
-                            <td class="prod_title">메모리 용량</td>
-                            <td class="content"><input type="text" id="" name="memSize" th:value="${ram.memSize}" readonly>GB</td>
-                        </tr>
-                        <tr>
-                            <td class="prod_title">동작클럭</td>
-                            <td class="content"><input type="text" id="" name="clock" th:value="${ram.clock}" readonly >MHz</td>
-                            <td class="prod_title">램개수</td>
-                            <td class="content"><input type="text" name="rams" th:value="${ram.rams}" readonly>개</td>
-                        </tr>
-                    </table>
-                </td>
+                    </div></td>
             </tr>
         </table>
     </div>
