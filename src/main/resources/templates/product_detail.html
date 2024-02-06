@@ -128,13 +128,15 @@
     </div>
 
     <div class="navbar">      
-        <ul class="navbar_menu">
-            <li><a th:href="@{/myMain}">마이페이지</a></li>
-            <li><a href="#">PC견적</a></li>
-            <li><a th:href="@{/product}">부품</a></li>            
-            <li><a href="/src/main/resources/templates/HTML/HYJ/qna_list.html">문의</a></li>
-            <li><a href="/src/main/resources/templates/HTML/LRH/7.used_product_list.html" style="color: red;">우려먹기</a></li>                    
-        </ul>        
+        <div class="navbar" style="z-index: -1;">      
+            <ul class="navbar_menu">
+                <li><a th:href="@{/myMain}">마이페이지</a></li>
+                <li><a th:href="@{/}">PC견적</a></li>
+                <li><a th:href="@{/product/list}">부품</a></li>            
+                <li><a th:href="@{/getQnaList}">문의</a></li>
+                <li><a th:href="@{/7.used_product_list.html}" style="color: red;">우려먹기</a></li>                    
+            </ul>        
+        </div>    
     </div>
     <nav class="navbar" style="z-index: -1;">        
         <ul class="navbar_menu">

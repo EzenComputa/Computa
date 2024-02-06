@@ -157,9 +157,9 @@ public class QnaController {
 
     @GetMapping("/getQnaBoard")
     public String getQnaBoard(@ModelAttribute("user") User user, Qna qna, Model model) {
-        if(user.getId() == null) {
-            return "redirect:/login";
-        }
+        // if(user.getId() == null) {
+        //     return "redirect:/login";
+        // }
 
         // qnaService.updateReadCount(qna);
         model.addAttribute("qna", qnaService.getQnaBoard(qna));
