@@ -1,0 +1,338 @@
+CREATE TABLE `cooler` (
+  `rpm_max` int(11) DEFAULT NULL,
+  `rpm_min` int(11) DEFAULT NULL,
+  `id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `FK6yygyehtstjoe52dson3v0x4n` FOREIGN KEY (`id`) REFERENCES `product` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `cpu` (
+  `cores` int(11) DEFAULT NULL,
+  `socket` varchar(255) DEFAULT NULL,
+  `threads` int(11) DEFAULT NULL,
+  `id` bigint(20) NOT NULL,
+  `l2` int(11) DEFAULT NULL,
+  `l3` int(11) DEFAULT NULL,
+  `pcie` varchar(255) DEFAULT NULL,
+  `basic_clock` int(11) DEFAULT NULL,
+  `cal_sys` varchar(255) DEFAULT NULL,
+  `cooler` varchar(255) DEFAULT NULL,
+  `factory` int(11) DEFAULT NULL,
+  `gen` varchar(255) DEFAULT NULL,
+  `gpu` bit(1) DEFAULT NULL,
+  `gpu_name` varchar(255) DEFAULT NULL,
+  `gpu_speed` int(11) DEFAULT NULL,
+  `kinds` varchar(255) DEFAULT NULL,
+  `max_clock` int(11) DEFAULT NULL,
+  `mem_ch` int(11) DEFAULT NULL,
+  `mem_clock` int(11) DEFAULT NULL,
+  `mem_size` int(11) DEFAULT NULL,
+  `package_form` varchar(255) DEFAULT NULL,
+  `reldate` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `FKhjvorea8fb1lfyck60aq56vo5` FOREIGN KEY (`id`) REFERENCES `product` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `gpu` (
+  `vram` int(11) DEFAULT NULL,
+  `id` bigint(20) NOT NULL,
+  `hdcp` bit(1) DEFAULT NULL,
+  `hdr` bit(1) DEFAULT NULL,
+  `chip_company` varchar(255) DEFAULT NULL,
+  `chipset` varchar(255) DEFAULT NULL,
+  `disp4k` bit(1) DEFAULT NULL,
+  `disp8k` bit(1) DEFAULT NULL,
+  `displayport` int(11) DEFAULT NULL,
+  `fancooler` bit(1) DEFAULT NULL,
+  `fancount` int(11) DEFAULT NULL,
+  `heatpipe` bit(1) DEFAULT NULL,
+  `interface_gpu` varchar(255) DEFAULT NULL,
+  `kinds` varchar(255) DEFAULT NULL,
+  `kudaprocess` int(11) DEFAULT NULL,
+  `max_moniter` int(11) DEFAULT NULL,
+  `maxpower` int(11) DEFAULT NULL,
+  `mem_bus` int(11) DEFAULT NULL,
+  `mem_kind` varchar(255) DEFAULT NULL,
+  `mem_size` int(11) DEFAULT NULL,
+  `protectheat` bit(1) DEFAULT NULL,
+  `width` int(11) DEFAULT NULL,
+  `zerofan` bit(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `FKd1s9c36icv8t7qicpoq81uqnw` FOREIGN KEY (`id`) REFERENCES `product` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `motherboard` (
+  `form_factor` varchar(255) DEFAULT NULL,
+  `max_ram` int(11) DEFAULT NULL,
+  `ram_slots` int(11) DEFAULT NULL,
+  `socket` varchar(255) DEFAULT NULL,
+  `id` bigint(20) NOT NULL,
+  `backusb2` bit(1) DEFAULT NULL,
+  `backusb3` bit(1) DEFAULT NULL,
+  `dp` bit(1) DEFAULT NULL,
+  `d-sub` bit(1) DEFAULT NULL,
+  `dvi` bit(1) DEFAULT NULL,
+  `hdmi` bit(1) DEFAULT NULL,
+  `lan_chip` varchar(255) DEFAULT NULL,
+  `lan_speed` varchar(255) DEFAULT NULL,
+  `m2` bit(1) DEFAULT NULL,
+  `m2count` int(11) DEFAULT NULL,
+  `m2form2242` bit(1) DEFAULT NULL,
+  `m2form2260` bit(1) DEFAULT NULL,
+  `m2form2280` bit(1) DEFAULT NULL,
+  `nvme` bit(1) DEFAULT NULL,
+  `pci` bit(1) DEFAULT NULL,
+  `pcislot` int(11) DEFAULT NULL,
+  `pcie` bit(1) DEFAULT NULL,
+  `pcie3` bit(1) DEFAULT NULL,
+  `pcie4` bit(1) DEFAULT NULL,
+  `pciex1` int(11) DEFAULT NULL,
+  `pciex16` int(11) DEFAULT NULL,
+  `rj45` bit(1) DEFAULT NULL,
+  `rj45count` int(11) DEFAULT NULL,
+  `sata` bit(1) DEFAULT NULL,
+  `sata3` bit(1) DEFAULT NULL,
+  `sata3count` int(11) DEFAULT NULL,
+  `usb2` int(11) DEFAULT NULL,
+  `usb3` int(11) DEFAULT NULL,
+  `vga` varchar(255) DEFAULT NULL,
+  `audiochipset` varchar(255) DEFAULT NULL,
+  `back_audio` bit(1) DEFAULT NULL,
+  `chipset` varchar(255) DEFAULT NULL,
+  `cpu_count` varchar(255) DEFAULT NULL,
+  `kinds` varchar(255) DEFAULT NULL,
+  `mem_chan` varchar(255) DEFAULT NULL,
+  `mem_kind` varchar(255) DEFAULT NULL,
+  `mem_max` int(11) DEFAULT NULL,
+  `mem_slots` varchar(255) DEFAULT NULL,
+  `mem_speed` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `FK426q3lkgc49elfrqh30ywmq7j` FOREIGN KEY (`id`) REFERENCES `product` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `pc_case` (
+  `form_factor` varchar(255) DEFAULT NULL,
+  `id` bigint(20) NOT NULL,
+  `ledfan` int(11) DEFAULT NULL,
+  `usb` bit(1) DEFAULT NULL,
+  `usb3` bit(1) DEFAULT NULL,
+  `backsize` double DEFAULT NULL,
+  `basic_atx` bit(1) DEFAULT NULL,
+  `bay6` int(11) DEFAULT NULL,
+  `bay8` int(11) DEFAULT NULL,
+  `coolfan` int(11) DEFAULT NULL,
+  `depth` double DEFAULT NULL,
+  `frontpan` varchar(255) DEFAULT NULL,
+  `frontsize` double DEFAULT NULL,
+  `kinds` varchar(255) DEFAULT NULL,
+  `micro_atx` bit(1) DEFAULT NULL,
+  `mini-itx` bit(1) DEFAULT NULL,
+  `power` bit(1) DEFAULT NULL,
+  `saver` int(11) DEFAULT NULL,
+  `sidepan` varchar(255) DEFAULT NULL,
+  `size` int(11) DEFAULT NULL,
+  `upsize` double DEFAULT NULL,
+  `width` double DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `FK7c563g3s8f9468ryg28n6wy2j` FOREIGN KEY (`id`) REFERENCES `product` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `pc_storage` (
+  `capacity` int(11) DEFAULT NULL,
+  `form_factor` varchar(255) DEFAULT NULL,
+  `storage_type` varchar(255) DEFAULT NULL,
+  `id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `FK8t47roftdqhbph5dpls42rx9m` FOREIGN KEY (`id`) REFERENCES `product` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `product` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `fullname` varchar(255) DEFAULT NULL,
+  `product_type` varchar(255) DEFAULT NULL,
+  `detail` varchar(255) DEFAULT NULL,
+  `price` varchar(255) DEFAULT NULL,
+  `company` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `product_comment_images` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `url` varchar(255) DEFAULT NULL,
+  `product_comment_id` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKilaqmmnf9wab39p7br120fpoa` (`product_comment_id`),
+  CONSTRAINT `FKilaqmmnf9wab39p7br120fpoa` FOREIGN KEY (`product_comment_id`) REFERENCES `product_comments` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `product_comments` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `content` varchar(255) DEFAULT NULL,
+  `created_date` datetime(6) DEFAULT NULL,
+  `parent_id` bigint(20) DEFAULT NULL,
+  `product_id` bigint(20) DEFAULT NULL,
+  `user_id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKdh0yrg2ww5acujtot2cc0pulg` (`parent_id`),
+  KEY `FKh4dk46lpqxf9ctll1py5qpuw7` (`product_id`),
+  KEY `FKgl4kke0pjaht09vx7wilce0n0` (`user_id`),
+  CONSTRAINT `FKdh0yrg2ww5acujtot2cc0pulg` FOREIGN KEY (`parent_id`) REFERENCES `product_comments` (`id`),
+  CONSTRAINT `FKgl4kke0pjaht09vx7wilce0n0` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  CONSTRAINT `FKh4dk46lpqxf9ctll1py5qpuw7` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `product_images` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `url` varchar(255) DEFAULT NULL,
+  `product_id` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKi8jnqq05sk5nkma3pfp3ylqrt` (`product_id`),
+  CONSTRAINT `FKi8jnqq05sk5nkma3pfp3ylqrt` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `psu` (
+  `efficiency` varchar(255) DEFAULT NULL,
+  `form_factor` varchar(255) DEFAULT NULL,
+  `wattage` int(11) DEFAULT NULL,
+  `id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `FKa2fj0ush945rntfhw7j4kka4w` FOREIGN KEY (`id`) REFERENCES `product` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;     
+
+CREATE TABLE `qna_list` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `date` varchar(255) NOT NULL,
+  `view` int(11) NOT NULL,
+  `nickname` varchar(255) DEFAULT NULL,
+  `title` varchar(255) NOT NULL,
+  `user_id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UK_opybhpyg5v9lm2yc6gebijfy9` (`title`),
+  KEY `FKcdad3ws5d58sjyde4gpglglxf` (`user_id`),
+  CONSTRAINT `FKcdad3ws5d58sjyde4gpglglxf` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `qnalist` (
+  `seq` bigint(20) NOT NULL AUTO_INCREMENT,
+  `cnt` bigint(20) DEFAULT 0,
+  `content` varchar(255) NOT NULL,
+  `create_date` date DEFAULT current_timestamp(),
+  `file_name` varchar(255) DEFAULT NULL,
+  `qna_lev` bigint(20) DEFAULT NULL,
+  `qna_ref` bigint(20) DEFAULT NULL,
+  `qna_seq` bigint(20) DEFAULT NULL,
+  `title` varchar(255) NOT NULL,
+  `writer` varchar(255) NOT NULL,
+  PRIMARY KEY (`seq`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `ram` (
+  `module_size` int(11) DEFAULT NULL,
+  `module_type` varchar(255) DEFAULT NULL,
+  `modules` int(11) DEFAULT NULL,
+  `speed` int(11) DEFAULT NULL,
+  `id` bigint(20) NOT NULL,
+  `buffersize` double DEFAULT NULL,
+  `diskformsize` double DEFAULT NULL,
+  `disksize` double DEFAULT NULL,
+  `hddinterface` varchar(255) DEFAULT NULL,
+  `kinds` varchar(255) DEFAULT NULL,
+  `record` varchar(255) DEFAULT NULL,
+  `rotatecount` double DEFAULT NULL,
+  `sendspeed` double DEFAULT NULL,
+  `sound` double DEFAULT NULL,
+  `thick` double DEFAULT NULL,
+  `clock` double DEFAULT NULL,
+  `kind` varchar(255) DEFAULT NULL,
+  `mem_form` varchar(255) DEFAULT NULL,
+  `mem_size` double DEFAULT NULL,
+  `rams` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `FK8esh81pbxnajqa2a7uscu2kqx` FOREIGN KEY (`id`) REFERENCES `product` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `roles` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UK_ofx66keruapi6vyqpv6f2or37` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `ssd` (
+  `formfactor` varchar(255) DEFAULT NULL,
+  `kind` varchar(255) DEFAULT NULL,
+  `mem_type` varchar(255) DEFAULT NULL,
+  `nand` varchar(255) DEFAULT NULL,
+  `ram` bit(1) DEFAULT NULL,
+  `size` double DEFAULT NULL,
+  `ssd_interface` varchar(255) DEFAULT NULL,
+  `id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `FK7ihxio9vbg9ma2hhpb1ny3d4k` FOREIGN KEY (`id`) REFERENCES `product` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `used_product_images` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `url` varchar(255) DEFAULT NULL,
+  `used_product_id` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKofwue6ltwr10ouiidbsw1wi0w` (`used_product_id`),
+  CONSTRAINT `FKofwue6ltwr10ouiidbsw1wi0w` FOREIGN KEY (`used_product_id`) REFERENCES `usedproduct` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `used_product_list` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `used_product_id` bigint(20) NOT NULL,
+  `user_id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKt4c1bb166uo8b34eqlaa9a0s7` (`used_product_id`),
+  KEY `FK1vy99csre7mu4hwx1ku191l21` (`user_id`),
+  CONSTRAINT `FK1vy99csre7mu4hwx1ku191l21` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  CONSTRAINT `FKt4c1bb166uo8b34eqlaa9a0s7` FOREIGN KEY (`used_product_id`) REFERENCES `product` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `usedproduct` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `item_detail` tinytext NOT NULL,
+  `item_name` varchar(100) NOT NULL,
+  `item_sell_status` varchar(255) NOT NULL,
+  `price` int(11) NOT NULL,
+  `reg_date_time` datetime(6) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `users` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `nickname` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `ssid` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `reportcount` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UK_6dotkott2kjsp8vw4d0m25fb7` (`email`),
+  UNIQUE KEY `UK_2ty1xmrrgtn89xt7kyxx6ta7h` (`nickname`),
+  UNIQUE KEY `UK_r43af9ap4edm43mmtq01oddj6` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `users_roles` (
+  `user_id` bigint(20) NOT NULL,
+  `role_id` bigint(20) NOT NULL,
+  KEY `FKj6m8fwv7oqv74fcehir1a9ffy` (`role_id`),
+  KEY `FK2o0jvgh89lemvvo17cbqvdxaa` (`user_id`),
+  CONSTRAINT `FK2o0jvgh89lemvvo17cbqvdxaa` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  CONSTRAINT `FKj6m8fwv7oqv74fcehir1a9ffy` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `wishlist` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `product_id` bigint(20) NOT NULL,
+  `user_id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKqchevbfw5wq0f4uqacns02rp7` (`product_id`),
+  KEY `FKtrd6335blsefl2gxpb8lr0gr7` (`user_id`),
+  CONSTRAINT `FKqchevbfw5wq0f4uqacns02rp7` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`),
+  CONSTRAINT `FKtrd6335blsefl2gxpb8lr0gr7` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
