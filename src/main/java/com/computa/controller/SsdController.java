@@ -32,16 +32,8 @@ public class SsdController {
     public String insertSsd(Model model, Ssd ssd) throws IOException{
         ssdRepository.save(ssd);
         ssdService.insertSsd(ssd);
-        return "product_detail_ssd";
+        return "product_list";
     }
-
-    // @PostMapping("/product/ssd")
-    // public String post(@RequestBody SomeEnityData entity) {
-    //     //TODO: process POST request
-        
-    //     return entity;
-    // }
-    
     
     
 }

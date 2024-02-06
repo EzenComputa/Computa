@@ -20,11 +20,7 @@
         <div class="membership_head">
             <h2>회원가입</h2>  
         </div>
-        <div th:if="${param.success}">
-            <div class="alert alert-info">
-              가입성공!
-            </div>
-        </div>
+        
         <!-- <div class="middle-user-inf"></div> -->
         <div class="membership_information">
             <label for="username" class="user_name">사용자 이름<span style="color: black;">*</span></label>
@@ -55,7 +51,7 @@
             <label for="ID" class="user_id">아이디<span style="color: black;">*</span></label>
             <input class="id_box" type="text" id="username" name="username" th:field="*{username}" placeholder="Enter your ID" required>
 
-            <input type="button" class="duplication_butten" value="중복확인" onclick="alert('사용이 OO합니다.')" />
+            <input type="button" class="duplication_butten" value="중복확인" onclick="alert('사용이 가능합니다.')" />
             <p th:errors = "*{username}" class="text-danger"
               th:if="${#fields.hasErrors('username')}"></p>
             <br>
@@ -72,11 +68,17 @@
             <p th:errors = "*{nickname}" class="text-danger"
               th:if="${#fields.hasErrors('nickname')}"></p>
 
-            <input type="button" class="duplication_butten" value="중복확인" onclick="alert('사용이 OO합니다.')" />
+            <input type="button" class="duplication_butten" value="중복확인" onclick="alert('사용이 가능합니다.')" />
             <br>
             <span class="nickname_warning"> < 경고:  비속어 사용시 닉네임 사용에 제한됩니다.> </span>
 
             <button type="submit" class="join_button">가입하기</button>
+            <div th:if="${param.success}">
+              <script th:inline="javascript">
+                alert('가입성공!');
+                window.location.href="/login";
+              </script>          
+            </div>
         </div>
 
     </form>
