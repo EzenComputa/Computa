@@ -1,5 +1,6 @@
 package com.computa.serviceImpl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -47,9 +48,30 @@ public class QnaCommentServiceImpl implements QnaCommentService {
         return qnaCommentRepository.save(comment);
     }
 
-
     @Override
     public List<QnaComment> findCommentByQna(Qna qna) {
         return qnaCommentRepository.findCommentByQna(qna);
+    }
+
+    @Override
+    public List<QnaComment> getTopLevelComments(Qna qna) {
+        return qnaCommentRepository.findByParentIsNullAndQnaOrderByCreatedDateAsc(qna);
+    }
+
+    @Override
+    public List<QnaComment> getOrderedComments(Qna qna) {
+        List<QnaComment> topLevelComments = getTopLevelComments(qna);
+        List<QnaComment> orderedComments = new ArrayList<>();
+        for (QnaComment comment : topLevelComments) {
+            addCommentAndReplies(comment, orderedComments);
+        }
+        return orderedComments;
+    }
+
+    private void addCommentAndReplies(QnaComment comment, List<QnaComment> orderedComments) {
+        orderedComments.add(comment);
+        for (QnaComment reply : comment.getReplies()) {
+            addCommentAndReplies(reply, orderedComments);
+        }
     }
 }

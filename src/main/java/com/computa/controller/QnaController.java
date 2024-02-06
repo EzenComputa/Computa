@@ -177,10 +177,9 @@ public class QnaController {
         // qnaService.updateReadCount(qna);
         model.addAttribute("qna", qnaService.getQnaBoard(qna));
 
-        List<QnaComment> comments = qnaCommentService.findCommentByQna(qna);
-        model.addAttribute("comments", comments);
+        List<QnaComment> orderedComments = qnaCommentService.getOrderedComments(qna);
+        model.addAttribute("orderedComments", orderedComments);
         model.addAttribute("reply", new QnaComment());
-        System.out.println(comments);
         return "getQnaBoard";
 
     }

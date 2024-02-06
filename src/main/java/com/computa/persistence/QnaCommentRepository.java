@@ -9,4 +9,5 @@ import com.computa.entity.QnaComment;
 
 public interface QnaCommentRepository extends JpaRepository<QnaComment, Long>{
     List<QnaComment> findCommentByQna(Qna qna);
+    List<QnaComment> findByParentIsNullAndQnaOrderByCreatedDateAsc(Qna qna);
 }
