@@ -19,7 +19,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.ListIterator;
 
 
 // 1. 각 페이지마다 등록된 데이터(여기서는 게시글)가 있으므로 Entity 객체를 만들어 DB에 등록한다. 
@@ -82,6 +85,7 @@ public class Qna {
     // @JoinColumn(name="user_nickname", referencedColumnName="ID", nullable=false)
     // private User nickname;
 
-
+    @OneToMany(mappedBy = "qna", cascade = CascadeType.ALL)
+    private List<QnaComment> comments = new ArrayList<>();
 
 }

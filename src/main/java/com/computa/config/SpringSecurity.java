@@ -32,7 +32,7 @@ public class SpringSecurity {
                 .authorizeHttpRequests((authorize) ->
                         authorize.requestMatchers("/register/**").permitAll() // anybody can access /register/**
                                 .requestMatchers("/login","/index","/","","/product/**", "/product_details","/addProduct/**","/saveProduct/**","/find_user", "/findpw/**", "/getQnaList/**", "/getQnaBoard/**","/newpw/**","/findid/**").permitAll() // anybody can access 
-                                .requestMatchers("/wishlist/**", "/product/**", "/profile", "/user/**", "/postDetails/**","/writePost/**", "/savePost", "/saveComment", "/saveProductComment", "/uploadImage", "/images/**","/uploadCommentImage", "/myMain", "/likeProd", "/usedMyshop", "/myQnaList", "/myTeabag", "/insertQnaBoard/**", "/deleteQna/**", "/updateQna/**").hasRole("USER") // only users with USER role can access
+                                .requestMatchers("/wishlist/**", "/product/**", "/profile", "/user/**", "/postDetails/**","/writePost/**", "/savePost", "/saveComment", "/saveProductComment", "/uploadImage", "/images/**","/uploadCommentImage", "/myMain", "/likeProd", "/usedMyshop", "/myQnaList", "/myTeabag", "/insertQnaBoard/**", "/deleteQna/**", "/updateQna/**", "/postComment").hasRole("USER") // only users with USER role can access
                                 .requestMatchers("/manage_users", "/qnawrite").hasRole("ADMIN") // only users with ADMIN role can access /users
                 ).formLogin(
                         form -> form
