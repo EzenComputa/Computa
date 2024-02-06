@@ -35,7 +35,4 @@ public class Ssd extends Product{
 
     @Column(name = "nand")
     private String nand;
-
-    @Column(name = "ram")
-    private boolean ram;
 }
