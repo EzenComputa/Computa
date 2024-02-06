@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URLEncoder;
+import java.security.Principal;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,6 +13,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.multipart.MultipartFile;
@@ -25,8 +28,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.computa.entity.PagingInfo;
 import com.computa.entity.Qna;
+import com.computa.entity.QnaComment;
 import com.computa.entity.User;
 import com.computa.persistence.QnaRepository;
+import com.computa.service.QnaCommentService;
 import com.computa.service.QnaService;
 import com.computa.service.UserService;
 
@@ -38,6 +43,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestBody;
 
 
@@ -68,12 +74,17 @@ public class QnaController {
 
     private final QnaService qnaService;
 
+    @Autowired
+    private final QnaCommentService qnaCommentService;
+
     // 생성자 주입
     @Autowired
-    public QnaController(UserService userService, QnaRepository qnaRepository, QnaService qnaService) {
+    public QnaController(UserService userService, QnaRepository qnaRepository, QnaService qnaService
+    , QnaCommentService qnaCommentService) {
         this.userService = userService;
         this.qnaRepository = qnaRepository;
         this.qnaService = qnaService;
+        this.qnaCommentService = qnaCommentService;
     }
 
     @RequestMapping("/getQnaList")
@@ -156,14 +167,20 @@ public class QnaController {
 
 
     @GetMapping("/getQnaBoard")
-    public String getQnaBoard(@ModelAttribute("user") User user, Qna qna, Model model) {
-        if(user.getId() == null) {
+    public String getQnaBoard(@RequestParam("seq") Long seq, Qna qna, @ModelAttribute("comment") QnaComment comment, Model model, Principal principal) {
+        // use principal to get current user
+        User user = userService.findUserByUsername(principal.getName());
+        if (user == null) {
             return "redirect:/login";
         }
 
         // qnaService.updateReadCount(qna);
         model.addAttribute("qna", qnaService.getQnaBoard(qna));
 
+        List<QnaComment> comments = qnaCommentService.findCommentByQna(qna);
+        model.addAttribute("comments", comments);
+        model.addAttribute("reply", new QnaComment());
+        System.out.println(comments);
         return "getQnaBoard";
 
     }
@@ -234,7 +251,16 @@ public class QnaController {
                 return "forward:getQnaList";
 	}
 
-    
+    @PostMapping("/getQnaBoard/{seq}/postComment")
+    public String postComment(@ModelAttribute("comment") QnaComment comment, Principal principal, @PathVariable("seq") Long qnaSeq, @RequestParam(value = "parentId", required = false) Long parentId, BindingResult result, Model model) {
+        if (result.hasErrors()) {
+            return "errorPage";
+        }
+        User currentUser = userService.findUserByUsername(principal.getName());
+        qnaCommentService.save(comment, currentUser, qnaSeq, parentId);
+
+        return "redirect:/getQnaBoard?seq=" + qnaSeq;
+    }
 
     @RequestMapping("/download")
     public void download(HttpServletRequest req, HttpServletResponse res) throws Exception {
