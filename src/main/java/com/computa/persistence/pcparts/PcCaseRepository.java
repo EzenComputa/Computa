@@ -1,11 +1,13 @@
 package com.computa.persistence.pcparts;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 import com.computa.entity.pcparts.PcCase;
 
+public interface PcCaseRepository extends JpaRepository<PcCase, Long>{
 
-@Repository
-public interface PcCaseRepository extends JpaRepository<PcCase, Long> {
+    List<PcCase> findAll();
+    
 }
