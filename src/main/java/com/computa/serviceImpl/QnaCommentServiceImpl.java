@@ -38,6 +38,15 @@ public class QnaCommentServiceImpl implements QnaCommentService {
         return qnaCommentRepository.save(comment);
     }
 
+    @Override
+    public QnaComment save(QnaComment comment, User user, Long qnaSeq) {
+        Qna qna = qnaRepository.findById(qnaSeq).orElseThrow(() -> new IllegalArgumentException("Qna not found"));
+        comment.setQna(qna);
+        comment.setUser(user);
+        comment.setLevel(0);
+        return qnaCommentRepository.save(comment);
+    }
+
 
     @Override
     public List<QnaComment> findCommentByQna(Qna qna) {

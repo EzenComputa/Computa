@@ -206,7 +206,6 @@
             <label for="content">Comment:</label>
             <textarea id="content" class="form-control" th:field="*{content}" required></textarea>
         </div>
-        <input type="hidden" th:field="*{parent.id}" />
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
@@ -218,7 +217,7 @@
             <p><strong>Content:</strong> <span th:text="${comment.content}"></span></p>
             <button type="button" class="btn btn-primary reply-button" th:data-target="'#replyForm'+${comment.id}">Reply</button>
             <div class="reply-form" th:id="'replyForm'+${comment.id}" style="display: none;">
-                <form action="#" th:action="@{/getQnaBoard/{seq}/postComment(seq=${qna.seq})}" th:object="${reply}" method="post">
+                <form action="#" th:action="@{/getQnaBoard/{seq}/postReply(seq=${qna.seq})}" th:object="${reply}" method="post">
                     <div class="form-group">
                         <label for="content">Reply:</label>
                         <textarea id="content" class="form-control" th:field="*{content}" required></textarea>

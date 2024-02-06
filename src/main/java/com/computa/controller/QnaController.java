@@ -251,6 +251,17 @@ public class QnaController {
                 return "forward:getQnaList";
 	}
 
+    @PostMapping("/getQnaBoard/{seq}/postReply")
+    public String postReply(@ModelAttribute("comment") QnaComment comment, Principal principal, @PathVariable("seq") Long qnaSeq, @RequestParam(value = "parentId", required = false) Long parentId, BindingResult result, Model model) {
+        if (result.hasErrors()) {
+            return "errorPage";
+        }
+        User currentUser = userService.findUserByUsername(principal.getName());
+        qnaCommentService.save(comment, currentUser, qnaSeq, parentId);
+
+        return "redirect:/getQnaBoard?seq=" + qnaSeq;
+    }
+
     @PostMapping("/getQnaBoard/{seq}/postComment")
     public String postComment(@ModelAttribute("comment") QnaComment comment, Principal principal, @PathVariable("seq") Long qnaSeq, @RequestParam(value = "parentId", required = false) Long parentId, BindingResult result, Model model) {
         if (result.hasErrors()) {

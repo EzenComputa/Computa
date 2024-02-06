@@ -8,5 +8,6 @@ import com.computa.entity.User;
 
 public interface QnaCommentService {
     QnaComment save(QnaComment comment, User user, Long qnaSeq, Long parentId);
+    QnaComment save(QnaComment comment, User user, Long qnaSeq);
     List<QnaComment> findCommentByQna(Qna qna);
 }
