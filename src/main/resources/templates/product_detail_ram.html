@@ -120,7 +120,7 @@
                     </li>
                 </ul>
 
-                <a href=""><img src="/images/LRH/tea-bag.png">마이티백</a>
+                <a th:href="@{/}"><img src="/images/LRH/tea-bag.png">마이티백</a>
                 <a th:href="@{/login}"><img src="/images/LRH/login.png">로그인</a>
             </div>            
         </div>
@@ -128,15 +128,13 @@
     </div>
 
     <div class="navbar">      
-        <div class="navbar" style="z-index: -1;">      
-            <ul class="navbar_menu">
-                <li><a th:href="@{/myMain}">마이페이지</a></li>
-                <li><a th:href="@{/}">PC견적</a></li>
-                <li><a th:href="@{/product/list}">부품</a></li>            
-                <li><a th:href="@{/getQnaList}">문의</a></li>
-                <li><a th:href="@{/7.used_product_list.html}" style="color: red;">우려먹기</a></li>                    
-            </ul>        
-        </div>    
+        <ul class="navbar_menu">
+            <li><a th:href="@{/myMain}">마이페이지</a></li>
+            <li><a th:href="@{/#}">PC견적</a></li>
+            <li><a th:href="@{/product}">부품</a></li>            
+            <li><a th:href="@{/getQnaList}">문의</a></li>
+            <li><a th:href="@{/7.used_product_list.html}" style="color: red;">우려먹기</a></li>                    
+        </ul>        
     </div>
     <nav class="navbar" style="z-index: -1;">        
         <ul class="navbar_menu">
@@ -156,10 +154,10 @@
     <div id="remote">
         <table border="1" class="remote">
             <tr>
-                <td class="pr_dt_short"><a href="#pr_dt_com_write" id="pr_dt_shortcut">의견보기</a></td>
+                <td class="pr_dt_short"><a th:href="@{/#pr_dt_com_write}" id="pr_dt_shortcut">의견보기</a></td>
             </tr>
             <tr>
-                <td class="pr_dt_short"><a href="#body" id="pr_dt_top">맨위로</a></td></tr>
+                <td class="pr_dt_short"><a th:href="@{/#body}" id="pr_dt_top">맨위로</a></td></tr>
         </table>
     </div>
 
@@ -182,7 +180,7 @@
                                 <td id="com_img_td"><img src="/images/HSJ/computa.png" alt="" width="40px" height="40px" id="com_img"></td>
                                 <td id="com_name_td"><span id="com_name">회사명</span></td>
                                 <td id="com_price_td"><span id="com_price">53,000원</span></td>    
-                                <td id="com_link_td"><a href="" id="com_link">링크</a></td>
+                                <td id="com_link_td"><a th:href="@{/}" id="com_link">링크</a></td>
                             </tr>        
                         </table>
                     </div>

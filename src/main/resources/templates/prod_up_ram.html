@@ -128,16 +128,17 @@
     <div class="navbar">      
         <ul class="navbar_menu">
             <li><a th:href="@{/myMain}">마이페이지</a></li>
-            <li><a href="#">PC견적</a></li>
+            <li><a th:href="@{/#}">PC견적</a></li>
             <li><a th:href="@{/product}">부품</a></li>            
-            <li><a href="/src/main/resources/templates/HTML/HYJ/qna_list.html">문의</a></li>
-            <li><a href="/src/main/resources/templates/HTML/LRH/7.used_product_list.html" style="color: red;">우려먹기</a></li>                    
+            <li><a th:href="@{/getQnaList}">문의</a></li>
+            <li><a th:href="@{/7.used_product_list.html}" style="color: red;">우려먹기</a></li>                    
         </ul>        
     </div>
 
 	
 
-    <form action="" method="get"><div class="tr_pr">
+    <!-- <form action="" method="get"> -->
+        <div class="tr_pr">
         <table border="0" class="tr_pr_table">
 
             <!--상품종류(select)-->
@@ -145,7 +146,7 @@
                 <td class="tr_pr_left">상품종류<span id="star">*</span></td>
                 <td>
                     <div class="pcpart">
-                        <span>RAM</span>
+                        <span><input type="text" name="productType" placeholder="RAM 을 입력해주세요">RAM</span>
                     </div>
                 </td>
             </tr>
@@ -153,6 +154,7 @@
 
 
             <!-- 상세스펙 -->
+            <form th:action="@{ramUp/submit}" method="post">
             <tr>
                 <td class="tr_pr_left">상세 스펙</td>
                 <td>
@@ -160,25 +162,25 @@
                         <table border="1" class="ram_table_i" id="prod_table">
                             <tr>
                                 <td class="prod_title">제조회사</td>
-                                <td class="content" colspan="3"><input type="text" id="company"></td>
+                                <td class="content" colspan="3"><input type="text" id="company" name="company"></td>
                             </tr>
                             <tr>
                                 <td class="prod_title">사용장치</td>
-                                <td id="" class="content"><input type="text" id=""></td>
+                                <td id="" class="content"><input type="text" id="" name="moduleType"></td>
                                 <td class="prod_title">제품 분류</td>
-                                <td id="ver" class="content"><input type="text" id=""></td>
+                                <td id="ver" class="content"><input type="text" id="" name="kind"></td>
                             </tr>
                             <tr>
                                 <td class="prod_title">메모리 규격</td>
-                                <td class="content"><input type="text" id=""></td>
+                                <td class="content"><input type="text" id="" name="memForm"></td>
                                 <td class="prod_title">메모리 용량</td>
-                                <td class="content"><input type="text" id="">GB</td>
+                                <td class="content"><input type="text" id="" name="memSize">GB</td>
                             </tr>
                             <tr>
                                 <td class="prod_title">동작클럭</td>
-                                <td class="content"><input type="text" id="">MHz</td>
+                                <td class="content"><input type="text" id="" name="clock">MHz</td>
                                 <td class="prod_title">램개수</td>
-                                <td class="content"><input type="text">개</td>
+                                <td class="content"><input type="text" name="rams">개</td>
                             </tr>
                         </table>
                     </div>
@@ -186,14 +188,15 @@
                 </td>
             </tr>
             <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+
             
             <!-- 상품 이미지-->
-            <tr>
+            <!-- <tr>
                 <td class="tr_pr_left">상품이미지<span id="star">*</span></td>
-                <td>
+                <td> -->
                     <!-- 상품이미지 등록하기 -->
                     
-                    <div id='image_preview'>
+                    <!-- <div id='image_preview'>
                         <input type='file' id='btnAtt' multiple='multiple'/>
                         <label for="file">
                             <div class="file_upload"><span style="font-size: 13px;">파일 업로드하기</span></div>
@@ -206,17 +209,17 @@
                     </div>
                 </td>
             </tr>
-            <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+            <tr><td colspan="2"><hr class="hsj_hr"></td></tr> -->
             
             <!-- 상품명&상품가격 -->
             <tr>
                 <td class="tr_pr_left">상품명<span id="star">*</span></td>
-                <td><input type="text" id="tr_pr_name" required></td>
+                <td><input type="text" id="tr_pr_name" name="fullname" required></td>
             </tr>
             <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
             <tr>
                 <td class="tr_pr_left">상품가격<span id="star">*</span></td>
-                <td><input type="text" id="tr_pr_price" required></td>
+                <td><input type="text" id="tr_pr_price" name="price" required ></td>
             </tr>
             <tr><td colspan="2"><hr class="hsj_hr"></td></tr>
 
@@ -224,21 +227,22 @@
             <!-- 상품설명 -->
             <tr>
                 <td class="tr_pr_left2">상품설명</td>
-                <td><textarea name="tr_pr_detail" id="tr_pr_detail" cols="68" rows="20" placeholder="-상품의 하자정도 &#13;-연락처 남겨주세요&#13;-최대3000자"></textarea></td>
+                <td><textarea name="detail" id="tr_pr_detail" cols="68" rows="20" placeholder="-상품의 하자정도 &#13;-연락처 남겨주세요&#13;-최대3000자"></textarea></td>
             </tr>
 			<tr><td colspan="2"><hr class="hsj_hr"></td></tr>
 			<!-- 상세 이미지 -->
-			<tr>
+			<!-- <tr>
 				<td class="tr_pr_left">상세이미지<span id="star">*</span></td>
 				<td><input type="file" value="upload"></td>
 			</tr>
-			<tr><td colspan="2"><hr class="hsj_hr"></td></tr>
+			<tr><td colspan="2"><hr class="hsj_hr"></td></tr> -->
         </table>
 
         <!-- 등록버튼 -->
         <div class="tr_pr_btn">
             <input type="submit" id="tr_pr_btn" value="등록하기"></div>
-        </div>        
+        </div>     
+    <!-- </form>   -->
     </form>  
      <script src="/js/HSJ/upload_img.js"></script>
      <script src="/js/HSJ/call_tbl_input.js"></script>

@@ -167,12 +167,19 @@ public class QnaController {
 
 
     @GetMapping("/getQnaBoard")
+<<<<<<< HEAD
     public String getQnaBoard(@RequestParam("seq") Long seq, Qna qna, @ModelAttribute("comment") QnaComment comment, Model model, Principal principal) {
         // use principal to get current user
         User user = userService.findUserByUsername(principal.getName());
         if (user == null) {
             return "redirect:/login";
         }
+=======
+    public String getQnaBoard(@ModelAttribute("user") User user, Qna qna, Model model) {
+        // if(user.getId() == null) {
+        //     return "redirect:/login";
+        // }
+>>>>>>> 7d563ffde60d9cf343895e2c1e77543001271e1e
 
         // qnaService.updateReadCount(qna);
         model.addAttribute("qna", qnaService.getQnaBoard(qna));
@@ -251,6 +258,7 @@ public class QnaController {
                 return "forward:getQnaList";
 	}
 
+<<<<<<< HEAD
     @PostMapping("/getQnaBoard/{seq}/postComment")
     public String postComment(@ModelAttribute("comment") QnaComment comment, Principal principal, @PathVariable("seq") Long qnaSeq, @RequestParam(value = "parentId", required = false) Long parentId, BindingResult result, Model model) {
         if (result.hasErrors()) {
@@ -261,6 +269,33 @@ public class QnaController {
 
         return "redirect:/getQnaBoard?seq=" + qnaSeq;
     }
+=======
+    // 내 문의내역 보류
+    @GetMapping("/MyQnaList")
+    public String MyQnaList(@ModelAttribute("user") User user, Qna qna, 
+                            @AuthenticationPrincipal UserDetails currentUser,
+                            Model model) {
+
+          Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+           String currentUsername = authentication.getName(); 
+           User currentUserInfo = userService.findUserByUsername(currentUsername);
+           String currentNickname = currentUserInfo.getNickname();
+           String writerNickname = qnaService.getWriter(qna);
+    
+           if (currentNickname.equals(writerNickname)) {
+               qnaService.deleteQna(qna); 
+               return "QnaDel";
+           } else {
+               System.out.println(currentNickname + " " + writerNickname);
+           }
+
+
+          return "forward:getQnaList";
+    }
+
+    
+>>>>>>> 7d563ffde60d9cf343895e2c1e77543001271e1e
 
     @RequestMapping("/download")
     public void download(HttpServletRequest req, HttpServletResponse res) throws Exception {
@@ -294,6 +329,9 @@ public class QnaController {
         os.close();
         fis.close();
     }
+
+
+    
     
     
     
