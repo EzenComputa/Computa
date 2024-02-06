@@ -234,6 +234,30 @@ public class QnaController {
                 return "forward:getQnaList";
 	}
 
+    // 내 문의내역 보류
+    @GetMapping("/MyQnaList")
+    public String MyQnaList(@ModelAttribute("user") User user, Qna qna, 
+                            @AuthenticationPrincipal UserDetails currentUser,
+                            Model model) {
+
+          Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+           String currentUsername = authentication.getName(); 
+           User currentUserInfo = userService.findUserByUsername(currentUsername);
+           String currentNickname = currentUserInfo.getNickname();
+           String writerNickname = qnaService.getWriter(qna);
+    
+           if (currentNickname.equals(writerNickname)) {
+               qnaService.deleteQna(qna); 
+               return "QnaDel";
+           } else {
+               System.out.println(currentNickname + " " + writerNickname);
+           }
+
+
+          return "forward:getQnaList";
+    }
+
     
 
     @RequestMapping("/download")
@@ -268,6 +292,9 @@ public class QnaController {
         os.close();
         fis.close();
     }
+
+
+    
     
     
     

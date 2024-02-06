@@ -15,7 +15,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor 
 @AllArgsConstructor 
-@Table(name = "ram")
+@Table(name = "hdd")
 public class Hdd extends Product{
     
     @Column(name = "kinds")
