@@ -15,8 +15,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor 
-@Table(name = "power")
-public class Power extends Product{
+@Table(name = "pc_power")
+public class PcPower extends Product{
 
     @Column(name = "kind")
     private String kind;
@@ -45,8 +45,8 @@ public class Power extends Product{
     @Column(name = "depth")
     private Double depth;
 
-    @Column(name = "AS")
-    private Integer AS;
+    // @Column(name = "AS")
+    // private Integer AS;
 
     @Column(name = "DC3")
     private Double DC3;
