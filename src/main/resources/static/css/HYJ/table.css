@@ -29,10 +29,11 @@ table {
     width: 150px;
     height: 30px;
     font-family: "Noto Sans KR", sans-serif;
-    font-size: 14px;
+    font-size: 10px;
     font-optical-sizing: auto;
     font-style: normal;
     background-color: #e1f4f3;
+    padding-left: 5px;
 }
 
 .content {
@@ -54,4 +55,8 @@ table {
     left: 50%;
     top: 30px;
     transform: translate(-50%);
+}
+
+.content > input{    
+    margin-left: 10px;
 }
