@@ -174,7 +174,7 @@ public class QnaController {
             return "redirect:/login";
         }
 
-        // qnaService.updateReadCount(qna);
+        qnaService.updateReadCount(qna);
         model.addAttribute("qna", qnaService.getQnaBoard(qna));
 
         List<QnaComment> orderedComments = qnaCommentService.getOrderedComments(qna);
