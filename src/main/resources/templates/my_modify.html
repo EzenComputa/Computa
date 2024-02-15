@@ -39,7 +39,7 @@ top 로고 & 검색 & 메뉴navbar
         <input type="text" placeholder="검색어 입력">
         <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" >
     </div>
-    <div class="myinfo">
+    <!-- <div class="myinfo">
         <div class="myinfo_icon">                
             <ul class="recent" id="gnb">
                 <li class="m">
@@ -126,13 +126,12 @@ top 로고 & 검색 & 메뉴navbar
             <a th:href="@{}"><img src="/images/LRH/tea-bag.png">마이티백</a>
             <a th:href="@{/login}"><img src="/images/LRH/login.png">로그인</a>
         </div>            
-    </div>
+    </div> -->
     
 </div>
     
-    회원번호 수정 영역
+<form method="post" th:action="@{/user/modify}">
 
-    프로필이미지 선택하기 영역테이블
     <table class="pf_select" >
         <tr>
             <td colspan="6" class="pr_title_style">회원정보 수정</td>
@@ -148,55 +147,50 @@ top 로고 & 검색 & 메뉴navbar
             <td><img src="/images/HYJ/cat3.jpeg" alt="" id="pr_dt_img6"></td>
             <td><img src="/images/HYJ/cat2.jpg" alt="" id="pr_dt_img5"></td>
         </tr>
+    </table>
 
-        </table>
+    <hr class="hr_style"></hr>
 
-        <hr class="hr_style"></hr>
-
-
-        <table  class="pf_info">
+    <table  class="pf_info">
         <tr>
             <td class="pf_list"><label for="userid" style="margin-top: 20px;" class="modi_title">닉네임 </label></td>
-            <td class="pf_input"><input type="text" id="userid" class="input_style" maxlength="10" />
-            <input type="button" id="btn_check" value="중복확인"></td>
+            <td class="pf_input"><input type="text" id="userid" class="input_style" name="nickname" maxlength="10"  />
+            <input type="button" id="btn_check" value="중복확인"/></td>
         </tr>
         <tr>
             <td class="pf_list"><label for="pw" class="modi_title">비밀번호 </label></td>
-            <td class="pf_input"><input id="pw" class="input_style" type="password" maxlength="20" />
+            <td class="pf_input"><input id="pw" class="input_style" type="password" name="password" maxlength="20" />
             </td>
         </tr>
-        <tr>
+        <!-- <tr>
             <td class="pf_list"><label for="pw" class="modi_title">비밀번호 확인 </label></td>
             <td class="pf_input"><input id="checkpw" class="input_style" type="password" maxlength="20" />
             </td>
-        </tr>
+        </tr> -->
         <tr>
-            <td class="pf_list"><label for="userid" class="modi_title">이름</label></td>
+            <td class="pf_list"><label for="name" class="modi_title">이름</label></td>
              <td class="pf_input">
-                <input type="text" id="username" class="input_style" maxlength="10" />
+                <input type="text" id="name" class="input_style" name="name" maxlength="10"  />
             </td>
         </tr>
         <tr>
-            <td class="pf_list"><label for="userid" class="modi_title">이메일 </label></td>
+            <td class="pf_list"><label for="email" class="modi_title">이메일 </label></td>
             <td class="pf_input">
-                <input type="email" id="email" class="input_style" maxlength="40" />
+                <input type="email" id="email" class="input_style" name="email" maxlength="40"  />
             </td>
         </tr>
-        <tr>
-            <td class="pf_list"><label for="rrn" class="modi_title">주민번호</label></td>
-            <td class="pf_input">
-                <input id="rrn" type="text" class="input_style" maxlength="6" /> - 
-                <input type="password" maxlength="7" id="rrn" class="input_style"/>
-            </td>
-        </tr>
+
         <tr>
             <td colspan="2" id="pf_mod" class="pf_list">
-                <input type="button" id="btn_modi" value="수정하기"  onclick=showPopup_modi()>  
-                <input type="button" id="btn_unregi" value="탈퇴하기" onclick=showPopup_check()>
+                <input type="submit" id="btn_unregi" value="수정하기">  
+    </form>
+        
+        <form method="post" th:action="@{/user/delete}">
+            <input type="submit" id="btn_unregi" value="탈퇴하기">
+        </form>
             </td>
         </tr>
     </table>
-
 
     <script>
         function readImage(input){
@@ -217,5 +211,12 @@ top 로고 & 검색 & 메뉴navbar
             readImage(e.target);});
     </script>
     <script src="/js/HSJ/change_img.js"></script>
+    <div th:if="${param.success}">
+        <script th:inline="javascript">
+          alert('가입성공!');
+          window.location.href="/myMain";
+        </script>          
+      </div>
+
 </body>
 </html>
