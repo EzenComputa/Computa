@@ -45,8 +45,8 @@ public class PcPower extends Product{
     @Column(name = "depth")
     private Double depth;
 
-    // @Column(name = "AS")
-    // private Integer AS;
+    @Column(name = "alimit")
+    private Integer alimit;
 
     @Column(name = "DC3")
     private Double DC3;

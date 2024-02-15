@@ -18,19 +18,19 @@ import com.app.service.UserService;
 public class PcPowerController {
     private UserService userService;
     private final PcPowerRepository pcpowerRepository;
-    private final PcPowerService pcPowerService;
+    private final PcPowerService pcpowerService;
 
     @Autowired
     public PcPowerController(PcPowerRepository pcpowerRepository, PcPowerService pcpowerService, UserService userService){
         this.pcpowerRepository = pcpowerRepository;
-        this.pcPowerService = pcpowerService;
+        this.pcpowerService = pcpowerService;
         this.userService = userService;
     }
 
     @PostMapping("/product/pcpowerUp/submit")
     public String insertPcPower(Model model, PcPower pcpower) throws IOException{
         pcpowerRepository.save(pcpower);
-        pcPowerService.insertPcPower(pcpower);
+        pcpowerService.insertPcPower(pcpower);
         return "product_list";
     }
     
