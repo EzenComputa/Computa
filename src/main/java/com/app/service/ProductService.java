@@ -11,6 +11,7 @@ public interface ProductService {
     // ProductService getProductServiceById(Long id);
     // ProductService saveProductService(Long productId, Long userId, Long parentId, String content);
     // void deleteProductService(Long id);
+    Product getProductById(Long productId);
 
     void insertProduct(Product product);
     void updateProduct(Product product);

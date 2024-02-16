@@ -1,6 +1,7 @@
 package com.app.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -12,7 +13,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.app.entity.User;
+import com.app.entity.pcparts.Product;
 import com.app.entity.pcparts.Ram;
+import com.app.persistence.pcparts.ProductRepository;
 import com.app.persistence.pcparts.RamRepository;
 import com.app.service.RamService;
 import com.app.service.UserService;
@@ -24,15 +27,19 @@ public class RamController {
     private UserService userService;
     private final RamRepository ramRepository;
     private final RamService ramService;
+    private final ProductRepository productRepository;
+
 
     @Autowired
-    public RamController(RamRepository ramRepository, RamService ramService, UserService userService){
+    public RamController(RamRepository ramRepository, RamService ramService
+                , UserService userService, ProductRepository productRepository){
         this.ramRepository = ramRepository;
         this.ramService = ramService;
         this.userService = userService;
-
+        this.productRepository = productRepository;
     }
 
+    
     // @GetMapping("/product/ram")
     // public String insertRamForm(Model model, Ram ram,
     //                              @AuthenticationPrincipal UserDetails currentUser) {
@@ -48,6 +55,9 @@ public class RamController {
 
     @PostMapping("/product/ramUp/submit")
     public String insertRam(Model model, Ram ram) throws IOException {
+        List<Product> productList = productRepository.findAll();
+        model.addAttribute("products", productList);
+
         // 데이터베이스에 저장
         ramRepository.save(ram);
         ramService.insertRam(ram);

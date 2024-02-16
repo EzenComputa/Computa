@@ -41,7 +41,7 @@ xmlns:th="http://www.thymeleaf.org"
                             <a href="#">
                                 <img src="/images/LRH/recent.png" >최근내역<!--최근내역-->
                             </a> 
-                            <ul>
+                            <!-- <ul>
                                 <div class="recent_area">
                                     <div class="recent_title">
                                         <p><strong>최근내역</strong><p>
@@ -114,7 +114,7 @@ xmlns:th="http://www.thymeleaf.org"
                                     </div>
                                     
                                 </div>
-                            </ul>
+                            </ul> -->
                         </li>
                     </ul>
     
@@ -156,7 +156,7 @@ xmlns:th="http://www.thymeleaf.org"
             </colgroup>
             <thead></thead>
             <tbody>
-                <tr class="product_list">
+                <tr th:each="product : ${products}" class="product_list">
                     <td class="product_img">
                         <div class="product_img_box">
                             <img src="/images/LRH/인텔 코어i9-14세대 14900K.jpg" alt="인텔 코어i9-14세대 14900K" width="150" id=""/>    <!--id추가-->
@@ -167,7 +167,9 @@ xmlns:th="http://www.thymeleaf.org"
                     </td>
                     <td class="title_price">
                         <p class="subject" id="">    <!--id추가-->
-                            <a th:href="@{/product/Detail}">인텔 코어i9-14세대 14900K</a>
+                            <a th:href="@{/product/Detail(productId=${product.id})}">
+                                <span th:text="${product.fullname}"></span>
+                            </a>
                         </p>
                         <div class="sepc_wrap">
                             <div class="spec_bg">
@@ -182,7 +184,7 @@ xmlns:th="http://www.thymeleaf.org"
                     <td class="rig_line">
                         <p class="low_price">
                             <span class="prod_price">최소가격</span><br />
-                            <span class="prod_price" id="">770,000원</span>     <!--id추가-->
+                            <span class="prod_price" id="" th:text="${product.price}"></span>    <!--id추가-->
                         </p>
                     </td>
                 </tr>
