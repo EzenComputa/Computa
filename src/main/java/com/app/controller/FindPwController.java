@@ -58,9 +58,4 @@ public class FindPwController {
         FindPwService.updateUserPassword(username, password);    
         return "find_pw_new2";
     }
-
-
-    
-    // String ssid = firstSsid+secondSsid;
-    // model.addAttribute("message",ssid);
 }

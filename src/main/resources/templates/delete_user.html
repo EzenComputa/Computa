@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .qnapopup {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 30px;
+      padding: 30px;
+      color: #333;
+      border: 2px solid #3498db;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .qnapopup p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .qnapopup form {
+      display: flex;
+      flex-direction: column; /* Change to column to stack buttons */
+      gap: 15px; /* Increase the gap between form elements */
+      align-items: center; /* Center the buttons horizontally */
+    }
+
+    .qnapopup input[type="submit"] {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin: 5px;
+    }
+
+    .qnapopup input[type="submit"]:hover {
+      background-color: #267bb6;
+    }
+  </style>
+
+  <body>
+    <div class="qnapopup">
+      <p>회원탈퇴를 하시겠습니까?</p>
+      <form method="post" th:action="@{/user/delete/yes}">
+        <input type="submit" value="Yes" />
+      </form>
+      <form method="post" th:action="@{/user/delete/no}">
+        <input type="submit" value="No" />
+      </form>
+    </div>
+  </body>
+</html>

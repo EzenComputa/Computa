@@ -142,7 +142,7 @@ xmlns:th="http://www.thymeleaf.org"
                 </tr>
                 <tr>
                     <td id="my_td_1"><span id="name" th:text="${name}"></span></td>
-                    <td id="my_td_2"><button id="my_main_modify" type="button">회원수정</button> <!-- -location.href=>th:href -->
+                    <td id="my_td_2"><button id="my_main_modify" type="button"><a th:href="@{/user/mymodify}">회원수정</a></button>
                     </td>
                 </tr>
             </table>   
